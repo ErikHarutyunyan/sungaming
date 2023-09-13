@@ -1,6 +1,7 @@
 .slick-list,.slick-slider,.slick-track {
     position: relative;
-    display: block
+    display: block;
+    align-items: stretch;
 }
 
 .slick-slider {
@@ -13,7 +14,30 @@
     touch-action: pan-y;
     -webkit-tap-highlight-color: rgba(0,0,0,0)
 }
-
+.services-carousel  .title-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 80px);
+}
+.services-carousel  .slick-track {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+}
+.services-carousel  .slide-area {
+    height: 100%;
+}
+.our-services .single-slider {
+    height: 100% !important;
+}
+.our-services .slick-slide {
+    height: auto !important;
+}
+.services-carousel .slick-slide > div:first-child {
+    height: 100%;
+}
 .slick-list {
     overflow: hidden;
     margin: 0;
@@ -37787,7 +37811,7 @@ textarea.form-control-lg {
     --p75: #9cf9dd;
     --p100: #73f6cf;
     --p200: #37f3bb;
-    --p300: #ff58fd;
+    --p300: #0ef0ad;
     --p400: #0aa879;
     --p500: #09926a;
     --s50: #e9ebfd;
@@ -37851,9 +37875,9 @@ body {
     position: relative
 }
 
-body,footer,section {
-    overflow-x: hidden
-}
+/*body,footer,section {*/
+/*    overflow-x: hidden*/
+/*}*/
 
 .display-five,.display-four,.display-one,.display-six,.display-three,.display-two,.h1,.h1>a,.h2,.h2>a,.h3,.h3>a,.h4,.h4>a,.h5,.h5>a,.h6,.h6>a,.heading,.heading-five,.heading-four,.heading-one,.heading-six,.heading-three,.heading-two,h1,h1>a,h2,h2>a,h3,h3>a,h4,h4>a,h5,h5>a,h6,h6>a {
     font-family: var(--head-font);
@@ -37969,8 +37993,8 @@ a:focus,a:hover {
 .box-style:before {
     content: "";
     position: absolute;
-    top: var(--y);
-    left: var(--x);
+    top: 100%;
+    left: 100%;
     transform: translate(-50%,-50%);
     width: 0;
     height: 0;
@@ -38620,19 +38644,18 @@ li {
     box-shadow: var(--box-shadow-one)
 }
 
-.slick-arrow:hover i {
-    color: var(--n900)
+.slick-arrow:hover svg {
+    fill: var(--n900)
 }
 
-.slick-arrow i {
-    color: var(--n0);
+.slick-arrow svg {
+    fill: var(--n0);
     font-size: 24px;
     transition: .1s
 }
 
 .slick-arrow.arafat-prev {
     left: calc(50% - 60px);
-    transform: rotate(180deg)
 }
 
 .slick-arrow.arafat-next {
@@ -38669,8 +38692,8 @@ li {
     right: 32px
 }
 
-.slick-arrow.bottom-right:hover i {
-    color: var(--n0)
+.slick-arrow.bottom-right:hover svg {
+    fill: var(--n0)
 }
 
 @keyframes progressBar {
@@ -39700,7 +39723,8 @@ li {
 
 .banner-section.index-one {
     position: relative;
-    z-index: 1
+    z-index: 1;
+    overflow: hidden;
 }
 
 .banner-section.index-one:after,.banner-section.index-one:before {
@@ -40122,13 +40146,18 @@ li {
     background-position: top 65px center
 }
 
-.footer-section .form-contact {
-    background: var(--p500);
+.subscribe .form-contact {
+    background: #09926a99;
     border-radius: 16px
 }
-
-.footer-section .form-contact .input-area {
-    border: 1px solid var(--n30)
+.subscribe{
+    background-color: var(--n800);
+}
+.form-contact .input-area {
+    border: 1px solid #ffffffb3;
+}
+.form-contact .input-area input::placeholder{
+    color: #ffffffb3;
 }
 
 .footer-section .get-start a {
@@ -40417,7 +40446,6 @@ li {
 }
 
 .our-games.all-games {
-    background-image: url(/images/all-games-bg.png);
     background-position: 50%;
     background-repeat: no-repeat
 }
@@ -40505,8 +40533,12 @@ li {
     font-weight: 400
 }
 
-.counter-section .display-one,.counter-section span {
-    color: var(--n800)
+.counter-section .display-one,.counters span {
+    color: #454e56a1;
+}
+
+.box-first:hover .counters span{
+    color: #4f5a67;
 }
 
 .counter-section.index-two .single-box {
@@ -40546,8 +40578,12 @@ li {
     background-color: var(--p500)
 }
 
-.our-services .icon-box i {
-    color: var(--n0)
+.our-services .icon-box svg {
+    width: 35px;
+}
+
+.our-services .icon-box svg path {
+    fill: var(--n0);
 }
 
 .our-services .link-area a {
@@ -41082,6 +41118,11 @@ li {
 .recently-completed.blogs .content-box:hover .h4,.recently-completed.blogs .content-box:hover h4 {
     color: var(--p300)
 }
+.block.container s
+.asd {
+    /*width: 639px;*/
+    min-width: 0;
+}
 
 .recently-completed.blogs .content-box:hover a {
     background-color: var(--p300)
@@ -41185,7 +41226,7 @@ li {
 }
 
 .faqs-section,.our-partners {
-    background-color: var(--n800)
+    background-color: var(--n900)
 }
 
 .faqs-section .accordion-item {
@@ -41325,7 +41366,7 @@ li {
     bottom: 15px!important;
     display: inline-flex!important;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background: var(--n500);
     height: 1px;
     width: 90%;
@@ -41339,7 +41380,10 @@ li {
     width: 20%;
     transition: all .3s
 }
-
+.recently-completed.blogs .box-style {
+    height: 40px;
+    width: 40px;
+}
 .gaming-character .section-dots li .dot {
     display: block;
     width: 20%;
