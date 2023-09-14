@@ -1,5 +1,3 @@
-import {useState} from 'react'
-import './App.css'
 import Slider from "react-slick";
 
 import planet from "./assets/img/planet.webp"
@@ -17,7 +15,14 @@ import allGames1 from "./assets/img/all-games-1.webp"
 import allGamesProfile1 from "./assets/img/all-games-profile-1.webp"
 import allGameBg from "./assets/img/all-games-bg.png"
 import blogsImg1 from "./assets/img/blogs-img-2.webp"
+import ellipse7 from "./assets/img/ellipse-7.webp"
+import ellipse8 from "./assets/img/ellipse-8.webp"
+import ourGamesShape1 from "./assets/img/our-games-shape-1.webp"
+import ourGamesShape2 from "./assets/img/our-games-shape-2.webp"
+import ourGamesShape3 from "./assets/img/our-games-shape-3.webp"
 import {MdOutlineArrowBack, MdOutlineArrowForward, MdOutlineNorthEast} from "react-icons/md";
+import {Footer} from "./components/Footer/";
+import {Header} from "./components/Header/";
 
 function PrevArrow(props) {
   const {onClick} = props;
@@ -38,7 +43,6 @@ function NextArrow(props) {
     </button>
   );
 }
-
 
 function ServicePrevArrow(props) {
   const {onClick} = props;
@@ -99,7 +103,22 @@ function App() {
     slidesToScroll: 1,
     adaptiveHeight: false,
     nextArrow: <ServiceNextArrow/>,
-    prevArrow: <ServicePrevArrow/>
+    prevArrow: <ServicePrevArrow/>,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }]
   };
   let settingsBlog = {
     dots: true,
@@ -121,6 +140,7 @@ function App() {
   };
   return (
     <>
+      <Header/>
       <section className="banner-section index-one overflow-hiden">
         <div className="shape-area">
           <img src={planet} alt="planet" loading="lazy" width="219" height="144" className="shape-1"/>
@@ -473,7 +493,7 @@ function App() {
 
       <div className="counter-section pt-120 pb-120">
         <div className="container">
-          <div className="row cus-mar">
+          <div className="row cus-mar ">
             <div className="col-sm-6 col-xl-4">
               <div
                 className="single-box py-6 box-style box-first d-center position-relative">
@@ -501,6 +521,11 @@ function App() {
 
       <section className="our-games all-games overflow-hidden pt-120 pb-120"
                style={{backgroundImage: `url(${allGameBg})`}}>
+        <div className="shape-area">
+          <img src={ourGamesShape1} alt="icon" loading="lazy" width="204" height="177" className="shape-1"/>
+          <img src={ourGamesShape2} alt="icon" loading="lazy" width="151" height="151" className="shape-4"/>
+          <img src={ourGamesShape3} alt="icon" loading="lazy" width="172" height="170" className="shape-3"/>
+        </div>
         <div className="container singletab">
           <div className="row justify-content-center">
             <div className="col-lg-6">
@@ -549,7 +574,7 @@ function App() {
             <div className="col-lg-10">
               <div className="tabcontents tab-content">
                 <div className="tabitem active">
-                  <div className="row cus-mar">
+                  <div className="row cus-mar justify-content-center">
                     <div className="col-xl-4 col-sm-6 col-8">
                       <div className="single-box">
                         <div className="img-area"><img alt="img" loading="lazy" width="416" height="290"
@@ -598,7 +623,11 @@ function App() {
 
       </section>
 
-      <section className="recently-completed blogs gaming-character">
+      <section className=" about-block  recently-completed blogs gaming-character">
+        <div className="shape-area">
+          <img src={ellipse7} alt="elipse7" className="shape-1" loading="lazy" width="173" height="206"/>
+          <img src={ellipse8} alt="elipse8" className="shape-2" loading="lazy" width="128" height="152"/>
+        </div>
         <div className="container pt-120 pb-120">
           <div className="row section-header justify-content-center">
             <div className="col-lg-6 text-center"><h4 className="sub-title">The
@@ -741,6 +770,7 @@ function App() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   )
 }
