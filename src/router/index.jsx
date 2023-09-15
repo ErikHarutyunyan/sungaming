@@ -8,20 +8,38 @@ import {
 // import PrivateRouter from './PrivateRouter'
 
 import Layout from "../layout/Layout";
-import {ABOUT, NEWS, HOME, NOT_FOUND_PAGE, NEWS_BLOG} from "./route-path";
+import {
+  ABOUT,
+  NEWS,
+  HOME,
+  NOT_FOUND_PAGE,
+  NEWS_BLOG,
+  TERMS,
+  GAMES,
+  GAMES_SINGLE,
+  CAREERS,
+  CONTACT,
+  SERVICES,
+  PRIVACY,
+  INTEGRATION
+} from "./route-path";
 // Pages
 import {
-  About,
-  Blog,
-  ErrorPage,
   Home,
-  Login,
+  About,
+  News,
+  Careers,
+  Contact,
+  Games,
+  Integration,
+  PrivacyPolicy,
+  Services,
+  SingleGame,
+  SingleNews,
+  TermsConditions,
   NotFoundPage,
-  SingleBlog,
 } from "../pages";
-import PrivateRouter from "./PrivateRouter";
 
-const user = TokenService.getUser() || null;
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path={HOME} element={<Layout/>}>
@@ -31,22 +49,20 @@ const router = createBrowserRouter(
         element={<About/>}
         handle={{scrollMode: "pathname"}}
       >
-        <Route path="contacts" element={<h2>Contact </h2>}/>
+        <Route path={CONTACT} element={<Contact>Contact </Contact>}/>
         <Route path="team" element={<h2>Team </h2>}/>
       </Route>
       <Route
         path={NEWS}
         element={
-          <Blog/>
+          <News/>
         }
-        errorElement={<ErrorPage/>}
       />
       <Route
         path={NEWS_BLOG}
         element={
-          <SingleBlog/>
+          <SingleNews/>
         }
-        errorElement={<ErrorPage/>}
       />
       <Route path={NOT_FOUND_PAGE} element={<NotFoundPage/>}/>
     </Route>

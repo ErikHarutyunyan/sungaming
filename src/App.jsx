@@ -23,6 +23,7 @@ import ourGamesShape3 from "./assets/img/our-games-shape-3.webp"
 import {MdOutlineArrowBack, MdOutlineArrowForward, MdOutlineNorthEast} from "react-icons/md";
 import {Footer} from "./components/Footer/";
 import {Header} from "./components/Header/";
+import Subscribe from "./components/Subscribe";
 
 function PrevArrow(props) {
   const {onClick} = props;
@@ -751,25 +752,7 @@ function App() {
         </div>
       </section>
 
-      <section className="subscribe">
-        <div className="container">
-          <div className="row justify-content-between align-items-center pt-120 pb-120">
-            <div className="col-xl-5 col-lg-6 get-start">
-              <span className="mb-2 display-four">Let’s Get started</span>
-              <p>For further info &amp; support, <a href="contact">Contact us</a></p></div>
-            <div className="col-xl-5 col-lg-6 col-md-8">
-              <form className="form-contact mt-8 mt-lg-0 py-8 px-4 px-sm-8" action="#">
-                <div className="input-area p-4 d-grid d-sm-flex align-items-center justify-content-between">
-                  <input type="text" placeholder="Enter Your Email"/>
-                  <div className="btn-area alt-bg mt-6 mt-sm-0">
-                    <a className="box-style btn-box d-center">Subscribe</a>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Subscribe/>
       <Footer/>
     </>
   )
