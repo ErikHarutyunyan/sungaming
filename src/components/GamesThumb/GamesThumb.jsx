@@ -1,9 +1,5 @@
-import { MdSportsSoccer } from "react-icons/md";
-
 import {
   allGameBg,
-  allGames1,
-  allGamesProfile1,
   ourGamesShape1,
   ourGamesShape2,
   ourGamesShape3,
@@ -16,20 +12,20 @@ import { useState } from "react";
 const GamesThumb = () => {
   const [menuItems, setMenuItems] = useState(dataGames);
   const [isActive, setIsActive] = useState(false);
+  const [isActiveTable, setIsActiveTable] = useState(null);
 
   const handleClick = (e) => {
     setIsActive(e.target.id);
+    setIsActiveTable("active");
   };
 
   const filterItems = (category) => {
-    console.log("category :", category);
     if (category[0] === "All Games") {
       setMenuItems(dataGames);
       return;
     }
 
     const newItems = dataGames.filter((item) => {
-      console.log(item.category[0]);
       return item.category[0] == category;
     });
     setMenuItems(newItems);
@@ -85,30 +81,34 @@ const GamesThumb = () => {
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-lg-6 text-center">
+          <div className="col-lg-7 text-center">
             <ul className="nav tablinks flex-wrap d-center mb-10 d-inline-flex gap-4 p-3 tab-area">
               {allCategoriesGames.map((item, index) => {
-                const category =
-                  Array.isArray(item[0]) == true ? item[0] : [item[0]];
-                // const ids = item[1];
+                const category = item;
                 return (
-                  <li className="nav-item pointer" key={index}>
+                  <li
+                    className="nav-item pointer"
+                    key={index}
+                    onClick={(e) => {
+                      const className = e.target.className;
+                      if (!className.includes("active_category")) {
+                        filterItems(
+                          category[0] === "All Games"
+                            ? [category[0]]
+                            : category[0]
+                        );
+                        handleClick(e);
+                      }
+                    }}>
                     <button
                       id={`category_${index}`}
                       className={
                         isActive === `category_${index}`
                           ? `${category[0]}_category nav-link d-center box-style btn-box active_category`
                           : `${category[0]}_category nav-link d-center box-style btn-box`
-                      }
-                      onClick={(e) => {
-                        const className = e.target.className;
-                        if (!className.includes("active_category")) {
-                          filterItems(category[0]);
-                          handleClick(e);
-                        }
-                      }}>
+                      }>
                       {category[1] !== undefined && (
-                        <span className="icon-area">{category[1]}</span>
+                        <span className="icon-area pe-none">{category[1]}</span>
                       )}
                       {category[0]}
                     </button>
@@ -122,228 +122,50 @@ const GamesThumb = () => {
           <div className="col-lg-10">
             <div className="tabcontents tab-content">
               {menuItems.map((item) => {
-                const { category } = item;
-                console.log("category :", category);
+                const { id, title, imgMain, imgSmall, about } = item;
 
-                <div className="tabitem active">
-                  <div className="row cus-mar justify-content-center">
-                    <div className="col-xl-4 col-sm-6 col-8">
-                      <div className="single-box">
-                        <div className="img-area">
-                          <img
-                            alt="img"
-                            loading="lazy"
-                            width="416"
-                            height="290"
-                            src={allGames1}
-                          />
-                        </div>
-                        <div className="footer-area mb-7 text-center">
-                          <div className="logo-area">
+                return (
+                  <div key={id} className={`tabitem ${isActiveTable}`}>
+                    <div className="row cus-mar justify-content-center">
+                      <div className="col-xl-4 col-sm-6 col-8">
+                        <div className="single-box">
+                          <div className="img-area">
                             <img
                               alt="img"
                               loading="lazy"
-                              width="80"
-                              height="80"
-                              src={allGamesProfile1}
+                              width="416"
+                              height="290"
+                              src={imgMain}
                             />
                           </div>
-                          <h3 className="visible-slowly-bottom my-4">
-                            Crazy Wild
-                          </h3>
-                          <p>Empire of the Stars</p>
-                          <div className="btn-area alt-bg">
-                            <a
-                              className="box-style btn-box mt-7 d-center"
-                              href="game">
-                              Learn More
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-xl-4 col-sm-6 col-8">
-                      <div className="single-box">
-                        <div className="img-area">
-                          <img
-                            alt="img"
-                            loading="lazy"
-                            width="416"
-                            height="290"
-                            src={allGames1}
-                          />
-                        </div>
-                        <div className="footer-area mb-7 text-center">
-                          <div className="logo-area">
-                            <img
-                              alt="img"
-                              loading="lazy"
-                              width="80"
-                              height="80"
-                              src={allGamesProfile1}
-                            />
-                          </div>
-                          <h3 className="visible-slowly-bottom my-4">
-                            Crazy Wild
-                          </h3>
-                          <p>Empire of the Stars</p>
-                          <div className="btn-area alt-bg">
-                            <a
-                              className="box-style btn-box mt-7 d-center"
-                              href="game">
-                              Learn More
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-xl-4 col-sm-6 col-8">
-                      <div className="single-box">
-                        <div className="img-area">
-                          <img
-                            alt="img"
-                            loading="lazy"
-                            width="416"
-                            height="290"
-                            src={allGames1}
-                          />
-                        </div>
-                        <div className="footer-area mb-7 text-center">
-                          <div className="logo-area">
-                            <img
-                              alt="img"
-                              loading="lazy"
-                              width="80"
-                              height="80"
-                              src={allGamesProfile1}
-                            />
-                          </div>
-                          <h3 className="visible-slowly-bottom my-4">
-                            Crazy Wild
-                          </h3>
-                          <p>Empire of the Stars</p>
-                          <div className="btn-area alt-bg">
-                            <a
-                              className="box-style btn-box mt-7 d-center"
-                              href="game">
-                              Learn More
-                            </a>
+                          <div className="footer-area mb-7 text-center">
+                            <div className="logo-area">
+                              <img
+                                alt="img"
+                                loading="lazy"
+                                width="80"
+                                height="80"
+                                src={imgSmall}
+                              />
+                            </div>
+                            <h3 className="visible-slowly-bottom my-4">
+                              {title}
+                            </h3>
+                            <p>{about}</p>
+                            <div className="btn-area alt-bg">
+                              <a
+                                className="box-style btn-box mt-7 d-center"
+                                href="game">
+                                Learn More
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>;
+                );
               })}
-              <div className="tabitem active">
-                <div className="row cus-mar justify-content-center">
-                  <div className="col-xl-4 col-sm-6 col-8">
-                    <div className="single-box">
-                      <div className="img-area">
-                        <img
-                          alt="img"
-                          loading="lazy"
-                          width="416"
-                          height="290"
-                          src={allGames1}
-                        />
-                      </div>
-                      <div className="footer-area mb-7 text-center">
-                        <div className="logo-area">
-                          <img
-                            alt="img"
-                            loading="lazy"
-                            width="80"
-                            height="80"
-                            src={allGamesProfile1}
-                          />
-                        </div>
-                        <h3 className="visible-slowly-bottom my-4">
-                          Crazy Wild
-                        </h3>
-                        <p>Empire of the Stars</p>
-                        <div className="btn-area alt-bg">
-                          <a
-                            className="box-style btn-box mt-7 d-center"
-                            href="game">
-                            Learn More
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-4 col-sm-6 col-8">
-                    <div className="single-box">
-                      <div className="img-area">
-                        <img
-                          alt="img"
-                          loading="lazy"
-                          width="416"
-                          height="290"
-                          src={allGames1}
-                        />
-                      </div>
-                      <div className="footer-area mb-7 text-center">
-                        <div className="logo-area">
-                          <img
-                            alt="img"
-                            loading="lazy"
-                            width="80"
-                            height="80"
-                            src={allGamesProfile1}
-                          />
-                        </div>
-                        <h3 className="visible-slowly-bottom my-4">
-                          Crazy Wild
-                        </h3>
-                        <p>Empire of the Stars</p>
-                        <div className="btn-area alt-bg">
-                          <a
-                            className="box-style btn-box mt-7 d-center"
-                            href="game">
-                            Learn More
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-4 col-sm-6 col-8">
-                    <div className="single-box">
-                      <div className="img-area">
-                        <img
-                          alt="img"
-                          loading="lazy"
-                          width="416"
-                          height="290"
-                          src={allGames1}
-                        />
-                      </div>
-                      <div className="footer-area mb-7 text-center">
-                        <div className="logo-area">
-                          <img
-                            alt="img"
-                            loading="lazy"
-                            width="80"
-                            height="80"
-                            src={allGamesProfile1}
-                          />
-                        </div>
-                        <h3 className="visible-slowly-bottom my-4">
-                          Crazy Wild
-                        </h3>
-                        <p>Empire of the Stars</p>
-                        <div className="btn-area alt-bg">
-                          <a
-                            className="box-style btn-box mt-7 d-center"
-                            href="game">
-                            Learn More
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

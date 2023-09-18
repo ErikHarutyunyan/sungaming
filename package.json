@@ -12,6 +12,7 @@
     "page": "generate-react component  --type=page"
   },
   "dependencies": {
+    "framer-motion": "^10.16.4",
     "generate-react-cli": "^8.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -4,7 +4,6 @@ import { Footer } from "./../components/Footer";
 import { Header } from "./../components/Header";
 
 const Layout = () => {
-console.log("object");
   let getKey = React.useCallback((location, matches) => {
     let match = matches.find((m) => m.handle?.scrollMode);
     if (match?.handle?.scrollMode === "pathname") {
@@ -12,6 +11,7 @@ console.log("object");
     }
     return location.key;
   }, []);
+
   return (
     <>
       <Header />
