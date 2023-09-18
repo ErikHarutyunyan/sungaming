@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Navigate,
   Route,
@@ -7,7 +6,7 @@ import {
 } from "react-router-dom";
 // import PrivateRouter from './PrivateRouter'
 
-import Layout from "../layout/Layout";
+import Layout from "../layout";
 import {
   ABOUT,
   NEWS,
@@ -21,7 +20,7 @@ import {
   CONTACT,
   SERVICES,
   PRIVACY,
-  INTEGRATION
+  INTEGRATION,
 } from "./route-path";
 // Pages
 import {
@@ -42,29 +41,17 @@ import {
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path={HOME} element={<Layout/>}>
-      <Route index element={<Home/>}/>
+    <Route path={HOME} element={<Layout />}>
+      <Route index element={<Home />} />
       <Route
         path={ABOUT}
-        element={<About/>}
-        handle={{scrollMode: "pathname"}}
-      >
-        <Route path={CONTACT} element={<Contact>Contact </Contact>}/>
-        <Route path="team" element={<h2>Team </h2>}/>
-      </Route>
-      <Route
-        path={NEWS}
-        element={
-          <News/>
-        }
-      />
-      <Route
-        path={NEWS_BLOG}
-        element={
-          <SingleNews/>
-        }
-      />
-      <Route path={NOT_FOUND_PAGE} element={<NotFoundPage/>}/>
+        element={<About />}
+        // handle={{ scrollMode: "pathname" }}
+      ></Route>
+      <Route path={CONTACT} element={<Contact />} />
+      <Route path={NEWS} element={<News />} />
+      <Route path={NEWS_BLOG} element={<SingleNews />} />
+      <Route path={NOT_FOUND_PAGE} element={<NotFoundPage />} />
     </Route>
   )
 );

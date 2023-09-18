@@ -1,10 +1,8 @@
 // Styles
-import "./NotFoundPage.css"
+import "./NotFoundPage.css";
 
 const NotFoundPage = () => {
-  return (
-    <section className={}>NotFoundPage</section>
-  )
-}
+  return <section>NotFoundPage</section>;
+};
 
-export default NotFoundPage
+export default NotFoundPage;
