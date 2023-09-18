@@ -1,11 +1,4 @@
-import React from 'react'
 // Styles
-import "./TemplateName.css"
-
-const TemplateName = () => {
-  return (
-    <section className={}>TemplateName</section>
-  )
-}
+import TemplateName from "./TemplateName.jsx"
 
 export default TemplateName

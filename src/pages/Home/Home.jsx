@@ -1,5 +1,3 @@
-import Slider from "react-slick";
-
 import {
   planet,
   console1,
@@ -10,22 +8,24 @@ import {
   ellipse4,
   ellipse5,
   topBottom,
-  gameSlide,
   brandLogo,
-  allGames1,
-  allGamesProfile1,
-  allGameBg,
   blogsImg1,
   ellipse7,
   ellipse8,
-  ourGamesShape1,
-  ourGamesShape2,
-  ourGamesShape3,
 } from "../../components/Images";
 import { MdOutlineArrowForward, MdOutlineNorthEast } from "react-icons/md";
 import Subscribe from "../../components/Subscribe";
-import { settingsBlog, settingsFeatured, settingsServices } from "../../features/SliderConfig";
+import {
+  settingsBlog,
+  settingsFeatured,
+  settingsServices,
+} from "../../features/SliderConfig";
 import SimpleSlider from "../../components/SimpleSlider";
+import Service from "../../components/Service/index.jsx";
+import { GAMES } from "../../router/route-path";
+import { Link } from "react-router-dom";
+import { featuredGames } from "../../data/dataGames";
+import GamesThumb from "../../components/GamesThumb/GamesThumb";
 
 function Home() {
   return (
@@ -187,214 +187,62 @@ function Home() {
                       </p>
                     </div>
                     <div className="btn-area alt-bg undefined">
-                      <a className="box-style btn-box d-center" href="/game">
+                      <Link
+                        to={GAMES}
+                        className="box-style btn-box d-center"
+                        href="/game">
                         Explore Our Games
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
                 <div className="col-xl-4 col-lg-5 col-md-7 col-sm-9 mt-10 mt-lg-0 col-10">
+                  <div className="top-area d-flex justify-content-end gap-4 mb-5 align-items-end">
+                    <img
+                      alt="Image"
+                      loading="lazy"
+                      width="33"
+                      height="29"
+                      src={topBottom}
+                    />
+                    <h4 className="mb-1">Featured Games</h4>
+                  </div>
                   <SimpleSlider
                     setting={settingsFeatured}
                     className={"game-carousel pb-20 slick-initialized"}>
-                    <div
-                      className="slide-area"
-                      style="width:100%;display:inline-block">
-                      <div className="top-area d-flex justify-content-end gap-4 mb-5 align-items-end">
-                        <img
-                          alt="Image"
-                          loading="lazy"
-                          width="33"
-                          height="29"
-                          src={topBottom}
-                        />
-                        <h4 className="mb-1">Featured Games</h4>
-                      </div>
-                      <div className="single-slider p-3 p-sm-5">
-                        <div className="thumb-wrapper">
-                          <div className="thumb">
-                            <img
-                              alt="Image"
-                              loading="lazy"
-                              width="392"
-                              height="491"
-                              src={gameSlide}
-                            />
-                          </div>
-                          <div className="app-download-title pt-5 pb-3 text-center">
-                            <h3>Crazy Wild</h3>
-                          </div>
-                          <div className="app-download d-flex gap-5 align-items-center">
-                            <a href="/">Detal Game</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="slide-area"
-                      style="width:100%;display:inline-block">
-                      <div className="top-area d-flex justify-content-end gap-4 mb-5 align-items-end">
-                        <img
-                          alt="Image"
-                          loading="lazy"
-                          width="33"
-                          height="29"
-                          src={topBottom}
-                        />
-                        <h4 className="mb-1">Featured Games</h4>
-                      </div>
-                      <div className="single-slider p-3 p-sm-5">
-                        <div className="thumb-wrapper">
-                          <div className="thumb">
-                            <img
-                              alt="Image"
-                              loading="lazy"
-                              width="392"
-                              height="491"
-                              src={gameSlide}
-                            />
-                          </div>
-                          <div className="app-download-title pt-5 pb-3 text-center">
-                            <h3>Crazy Wild</h3>
-                          </div>
-                          <div className="app-download d-flex gap-5 align-items-center">
-                            <a href="/">Detal Game</a>
+                    {featuredGames.map((featuredItem) => {
+                      const { id, title, imgMain } = featuredItem;
+                      return (
+                        <div
+                          key={id}
+                          className="slide-area"
+                          style="width:100%;display:inline-block">
+                          <div className="single-slider p-3 p-sm-5">
+                            <div className="thumb-wrapper">
+                              <div className="thumb ">
+                                <img
+                                  alt="Image"
+                                  loading="lazy"
+                                  width="392"
+                                  height="491"
+                                  src={imgMain}
+                                />
+                              </div>
+                              <div className="app-download-title pt-5 pb-3 text-center">
+                                <h3>{title}</h3>
+                              </div>
+                              <div className="link-item-featured app-download d-flex gap-5 align-items-center">
+                                <Link
+                                  className="text-decoration-underline"
+                                  to={`${GAMES}/${id}`}>
+                                  Detal Game
+                                </Link>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div
-                      className="slide-area"
-                      style="width:100%;display:inline-block">
-                      <div className="top-area d-flex justify-content-end gap-4 mb-5 align-items-end">
-                        <img
-                          alt="Image"
-                          loading="lazy"
-                          width="33"
-                          height="29"
-                          src={topBottom}
-                        />
-                        <h4 className="mb-1">Featured Games</h4>
-                      </div>
-                      <div className="single-slider p-3 p-sm-5">
-                        <div className="thumb-wrapper">
-                          <div className="thumb">
-                            <img
-                              alt="Image"
-                              loading="lazy"
-                              width="392"
-                              height="491"
-                              src={gameSlide}
-                            />
-                          </div>
-                          <div className="app-download-title pt-5 pb-3 text-center">
-                            <h3>Crazy Wild</h3>
-                          </div>
-                          <div className="app-download d-flex gap-5 align-items-center">
-                            <a href="/">Detal Game</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="slide-area"
-                      style="width:100%;display:inline-block">
-                      <div className="top-area d-flex justify-content-end gap-4 mb-5 align-items-end">
-                        <img
-                          alt="Image"
-                          loading="lazy"
-                          width="33"
-                          height="29"
-                          src={topBottom}
-                        />
-                        <h4 className="mb-1">Featured Games</h4>
-                      </div>
-                      <div className="single-slider p-3 p-sm-5">
-                        <div className="thumb-wrapper">
-                          <div className="thumb">
-                            <img
-                              alt="Image"
-                              loading="lazy"
-                              width="392"
-                              height="491"
-                              src={gameSlide}
-                            />
-                          </div>
-                          <div className="app-download-title pt-5 pb-3 text-center">
-                            <h3>Crazy Wild</h3>
-                          </div>
-                          <div className="app-download d-flex gap-5 align-items-center">
-                            <a href="/">Detal Game</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="slide-area"
-                      style="width:100%;display:inline-block">
-                      <div className="top-area d-flex justify-content-end gap-4 mb-5 align-items-end">
-                        <img
-                          alt="Image"
-                          loading="lazy"
-                          width="33"
-                          height="29"
-                          src={topBottom}
-                        />
-                        <h4 className="mb-1">Featured Games</h4>
-                      </div>
-                      <div className="single-slider p-3 p-sm-5">
-                        <div className="thumb-wrapper">
-                          <div className="thumb">
-                            <img
-                              alt="Image"
-                              loading="lazy"
-                              width="392"
-                              height="491"
-                              src={gameSlide}
-                            />
-                          </div>
-                          <div className="app-download-title pt-5 pb-3 text-center">
-                            <h3>Crazy Wild</h3>
-                          </div>
-                          <div className="app-download d-flex gap-5 align-items-center">
-                            <a href="/">Detal Game</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="slide-area"
-                      style="width:100%;display:inline-block">
-                      <div className="top-area d-flex justify-content-end gap-4 mb-5 align-items-end">
-                        <img
-                          alt="Image"
-                          loading="lazy"
-                          width="33"
-                          height="29"
-                          src={topBottom}
-                        />
-                        <h4 className="mb-1">Featured Games</h4>
-                      </div>
-                      <div className="single-slider p-3 p-sm-5">
-                        <div className="thumb-wrapper">
-                          <div className="thumb">
-                            <img
-                              alt="Image"
-                              loading="lazy"
-                              width="392"
-                              height="491"
-                              src={gameSlide}
-                            />
-                          </div>
-                          <div className="app-download-title pt-5 pb-3 text-center">
-                            <h3>Crazy Wild</h3>
-                          </div>
-                          <div className="app-download d-flex gap-5 align-items-center">
-                            <a href="/">Detal Game</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      );
+                    })}
                   </SimpleSlider>
                 </div>
               </div>
@@ -426,7 +274,7 @@ function Home() {
           <SimpleSlider
             setting={settingsServices}
             className="services-carousel">
-            <div className="slide-area" style="width:100%;display:inline-block">
+            {/* <div className="slide-area" style="width:100%;display:inline-block">
               <div className="single-slider box-style box-first p-5 px-xl-9 py-xl-10">
                 <div className="icon-box d-center">
                   <svg
@@ -586,7 +434,8 @@ function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+
             <div className="slide-area" style="width:100%;display:inline-block">
               <div className="single-slider box-style box-first p-5 px-xl-9 py-xl-10">
                 <div className="icon-box d-center">
@@ -655,7 +504,7 @@ function Home() {
           </SimpleSlider>
         </div>
       </section>
-
+      <Service />
       <div className="counter-section pt-120 pb-120">
         <div className="container">
           <div className="row cus-mar ">
@@ -696,226 +545,7 @@ function Home() {
         </div>
       </div>
 
-      <section
-        className="our-games all-games overflow-hidden pt-120 pb-120"
-        style={{ backgroundImage: `url(${allGameBg})` }}>
-        <div className="shape-area">
-          <img
-            src={ourGamesShape1}
-            alt="icon"
-            loading="lazy"
-            width="204"
-            height="177"
-            className="shape-1"
-          />
-          <img
-            src={ourGamesShape2}
-            alt="icon"
-            loading="lazy"
-            width="151"
-            height="151"
-            className="shape-4"
-          />
-          <img
-            src={ourGamesShape3}
-            alt="icon"
-            loading="lazy"
-            width="172"
-            height="170"
-            className="shape-3"
-          />
-        </div>
-        <div className="container singletab">
-          <div className="row justify-content-center">
-            <div className="col-lg-6">
-              <div className="section-text text-center">
-                <h4 className="sub-title">
-                  Crafting Unforgettable <span>Gaming Experiences</span>
-                </h4>
-                <span className="fs-two heading mb-6">
-                  Our Games are <span>Vibrant</span> Worlds With
-                  <span>Charming</span> Characters
-                </span>
-                <p>
-                  Our projects feature unique mechanics, fine-tuned game play,
-                  and eye-catching visual style.Over 100 million people play our
-                  games every month
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-6 text-center">
-              <ul className="nav tablinks flex-wrap d-center mb-10 d-inline-flex gap-4 p-3 tab-area">
-                <li className="nav-item">
-                  <button className="nav-link d-center box-style btn-box p-0 false">
-                    <span className="icon-area">
-                      <i className="ri-macbook-line fs-two"></i>
-                    </span>
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button className="nav-link d-center box-style btn-box p-0 false">
-                    <span className="icon-area">
-                      <i className="ri-apple-line fs-two"></i>
-                    </span>
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button className="nav-link d-center box-style btn-box p-0 active">
-                    <span className="icon-area">
-                      <i className="ri-google-play-line fs-two"></i>
-                    </span>
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button className="nav-link d-center box-style btn-box p-0 false">
-                    <span className="icon-area">
-                      <i className="ri-amazon-line fs-two"></i>
-                    </span>
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button className="nav-link d-center box-style btn-box p-0 false">
-                    <span className="icon-area">
-                      <i className="ri-windows-line fs-two"></i>
-                    </span>
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button className="nav-link d-center box-style btn-box p-0 false">
-                    <span className="icon-area">
-                      <i className="ri-steam-line fs-two"></i>
-                    </span>
-                  </button>
-                </li>
-                <li className="nav-item">
-                  <button className="nav-link d-center box-style btn-box p-0 false">
-                    <span className="icon-area">
-                      <i className="ri-app-store-line fs-two"></i>
-                    </span>
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="tabcontents tab-content">
-                <div className="tabitem active">
-                  <div className="row cus-mar justify-content-center">
-                    <div className="col-xl-4 col-sm-6 col-8">
-                      <div className="single-box">
-                        <div className="img-area">
-                          <img
-                            alt="img"
-                            loading="lazy"
-                            width="416"
-                            height="290"
-                            src={allGames1}
-                          />
-                        </div>
-                        <div className="footer-area mb-7 text-center">
-                          <div className="logo-area">
-                            <img
-                              alt="img"
-                              loading="lazy"
-                              width="80"
-                              height="80"
-                              src={allGamesProfile1}
-                            />
-                          </div>
-                          <h3 className="visible-slowly-bottom my-4">
-                            Crazy Wild
-                          </h3>
-                          <p>Empire of the Stars</p>
-                          <div className="btn-area alt-bg">
-                            <a
-                              className="box-style btn-box mt-7 d-center"
-                              href="game">
-                              Learn More
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-xl-4 col-sm-6 col-8">
-                      <div className="single-box">
-                        <div className="img-area">
-                          <img
-                            alt="img"
-                            loading="lazy"
-                            width="416"
-                            height="290"
-                            src={allGames1}
-                          />
-                        </div>
-                        <div className="footer-area mb-7 text-center">
-                          <div className="logo-area">
-                            <img
-                              alt="img"
-                              loading="lazy"
-                              width="80"
-                              height="80"
-                              src={allGamesProfile1}
-                            />
-                          </div>
-                          <h3 className="visible-slowly-bottom my-4">
-                            Crazy Wild
-                          </h3>
-                          <p>Empire of the Stars</p>
-                          <div className="btn-area alt-bg">
-                            <a
-                              className="box-style btn-box mt-7 d-center"
-                              href="game">
-                              Learn More
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-xl-4 col-sm-6 col-8">
-                      <div className="single-box">
-                        <div className="img-area">
-                          <img
-                            alt="img"
-                            loading="lazy"
-                            width="416"
-                            height="290"
-                            src={allGames1}
-                          />
-                        </div>
-                        <div className="footer-area mb-7 text-center">
-                          <div className="logo-area">
-                            <img
-                              alt="img"
-                              loading="lazy"
-                              width="80"
-                              height="80"
-                              src={allGamesProfile1}
-                            />
-                          </div>
-                          <h3 className="visible-slowly-bottom my-4">
-                            Crazy Wild
-                          </h3>
-                          <p>Empire of the Stars</p>
-                          <div className="btn-area alt-bg">
-                            <a
-                              className="box-style btn-box mt-7 d-center"
-                              href="game">
-                              Learn More
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GamesThumb />
 
       <section className=" about-block  recently-completed blogs gaming-character">
         <div className="shape-area">

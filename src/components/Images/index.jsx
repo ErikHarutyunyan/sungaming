@@ -18,6 +18,8 @@ import ellipse8 from "../../assets/img/ellipse-8.webp";
 import ourGamesShape1 from "../../assets/img/our-games-shape-1.webp";
 import ourGamesShape2 from "../../assets/img/our-games-shape-2.webp";
 import ourGamesShape3 from "../../assets/img/our-games-shape-3.webp";
+import star from "../../assets/img/star.webp";
+import serviceThumb from "../../assets/img/services-thumb.webp"
 
 export {
   planet,
@@ -40,4 +42,6 @@ export {
   ourGamesShape1,
   ourGamesShape2,
   ourGamesShape3,
+  star,
+  serviceThumb,
 };

@@ -7,7 +7,8 @@
     "default": {
       "customTemplates": {
         "style": "templates/default/TemplateName.css",
-        "index": "templates/default/index.jsx"
+        "index": "templates/default/index.jsx",
+        "component": "templates/default/TemplateName.jsx"
       },
       "path": "src/components",
       "withStyle": true,
