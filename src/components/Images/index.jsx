@@ -20,6 +20,8 @@ import ourGamesShape2 from "../../assets/img/our-games-shape-2.webp";
 import ourGamesShape3 from "../../assets/img/our-games-shape-3.webp";
 import star from "../../assets/img/star.webp";
 import serviceThumb from "../../assets/img/services-thumb.webp"
+import bubble from "../../assets/img/bubble.png";
+import bannerGame from "../../assets/img/bannerGame.png"
 
 export {
   planet,
@@ -44,4 +46,6 @@ export {
   ourGamesShape3,
   star,
   serviceThumb,
+  bubble,
+  bannerGame
 };

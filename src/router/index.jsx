@@ -41,17 +41,18 @@ import {
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path={HOME} element={<Layout />}>
-      <Route index element={<Home />} />
+    <Route path={HOME} element={<Layout/>}>
+      <Route index element={<Home/>}/>
+      <Route path={GAMES} element={<Games/>}/>
       <Route
         path={ABOUT}
-        element={<About />}
+        element={<About/>}
         // handle={{ scrollMode: "pathname" }}
       ></Route>
-      <Route path={CONTACT} element={<Contact />} />
-      <Route path={NEWS} element={<News />} />
-      <Route path={NEWS_BLOG} element={<SingleNews />} />
-      <Route path={NOT_FOUND_PAGE} element={<NotFoundPage />} />
+      <Route path={CONTACT} element={<Contact/>}/>
+      <Route path={NEWS} element={<News/>}/>
+      <Route path={NEWS_BLOG} element={<SingleNews/>}/>
+      <Route path={NOT_FOUND_PAGE} element={<NotFoundPage/>}/>
     </Route>
   )
 );

@@ -24181,10 +24181,10 @@ fieldset:disabled .btn {
 }
 
 .breadcrumb-item + .breadcrumb-item:before {
-  float: left;
-  padding-right: var(--bs-breadcrumb-item-padding-x);
-  color: var(--bs-breadcrumb-divider-color);
-  content: var(--bs-breadcrumb-divider, "/");
+  /*float: left;*/
+  /*padding-right: var(--bs-breadcrumb-item-padding-x);*/
+  /*color: var(--bs-breadcrumb-divider-color);*/
+  /*content: var(--bs-breadcrumb-divider, "/");*/
 }
 
 .breadcrumb-item.active {
@@ -41899,8 +41899,8 @@ li {
   display: flex;
   align-items: center;
   color: var(--n0);
-  padding-left: 32px;
-  margin-left: 12px;
+  /*padding-left: 32px;*/
+  /*margin-left: 12px;*/
   position: relative;
 }
 
@@ -41912,20 +41912,20 @@ li {
   color: var(--p300);
 }
 
-.banner-section.inner-banner
-  .banner-content
-  .breadcrumb-area
-  .breadcrumb
-  .breadcrumb-item
-  + .breadcrumb-item:before {
-  content: "chevron_right";
-  font-family: Material Symbols Outlined;
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  font-size: 24px;
-  color: var(--n0);
-}
+/*.banner-section.inner-banner*/
+/*  .banner-content*/
+/*  .breadcrumb-area*/
+/*  .breadcrumb*/
+/*  .breadcrumb-item*/
+/*  + .breadcrumb-item:before {*/
+/*  content: "chevron_right";*/
+/*  font-family: Material Symbols Outlined;*/
+/*  z-index: 1;*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  font-size: 24px;*/
+/*  color: var(--n0);*/
+/*}*/
 
 .banner-section.about {
   background-image: url(/images/about-banner-illus.png);
@@ -41949,8 +41949,24 @@ li {
 }
 
 .banner-section.game {
-  background-image: url(/images/game-banner-illus.png);
+  position: relative;
+  background-color: #161829;
+  background-image: url(./assets/img/bannerGameCut.gif);
+  background-size: 60% 100% !important;
+  background-position: bottom right;
+  overflow: hidden;
 }
+.banner-section.game::before {
+  content: "";
+  background-color: #161829;
+  position: absolute;
+  width: 35%;
+  height: 180%;
+  top: -70px;
+  right: 43%;
+  transform: rotate(8deg);
+}
+
 
 .banner-section.services {
   background-image: url(/images/services-banner-illus.png);
@@ -43425,6 +43441,7 @@ li {
   cursor: pointer;
   transition: all 0.3s;
   position: absolute;
+  top:0;
 }
 
 .gaming-character .section-dots li .dot .string {

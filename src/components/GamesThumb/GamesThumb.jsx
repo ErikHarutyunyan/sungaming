@@ -4,11 +4,13 @@ import {
   ourGamesShape2,
   ourGamesShape3,
 } from "../Images";
-import { allCategoriesGames, dataGames } from "../../data/dataGames";
-import { useReducer, useState } from "react";
+import {allCategoriesGames, dataGames, categoryIcons} from "../../data/dataGames";
+import {useReducer, useState} from "react";
 
 // import "./GamesThumb.css";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
+import {Link} from "react-router-dom";
+import {GAMES} from "../../router/route-path.jsx";
 
 const GamesThumb = () => {
   const [menuItems, setMenuItems] = useState(dataGames);
@@ -37,7 +39,7 @@ const GamesThumb = () => {
   return (
     <section
       className="our-games all-games overflow-hidden pt-120 pb-120"
-      style={{ backgroundImage: `url(${allGameBg})` }}>
+      style={{backgroundImage: `url(${allGameBg})`}}>
       <div className="shape-area">
         <img
           src={ourGamesShape1}
@@ -111,7 +113,7 @@ const GamesThumb = () => {
                           ? `${category[0]}_category nav-link d-center box-style btn-box active_category`
                           : `${category[0]}_category nav-link d-center box-style btn-box`
                       }>
-                      {category[1] !== undefined && (
+                      {categoryIcons[category] !== undefined && (
                         <span className="icon-area pe-none">{category[1]}</span>
                       )}
                       {category[0]}
@@ -128,30 +130,34 @@ const GamesThumb = () => {
               <div className={`tabitem active`}>
                 <div className="row cus-mar justify-content-center">
                   {menuItems?.map((item) => {
-                    const { id, title, imgMain, imgSmall, about } = item;
+                    const {id, title, imgMain, imgSmall, about} = item;
                     return (
                       <motion.div
                         animate={{
                           opacity: 1,
                           y: 0,
-                          transition: { ease: "easeInOut" },
+                          transition: {ease: "easeInOut", delay: 0.2, stiffness: 10, duration: 0.5},
                         }}
                         initial={{
                           opacity: 0,
                           y: 50,
-                          transition: { ease: "easeInOut" },
+                          transition: {ease: "easeInOut", delay: 0.2, stiffness: 10, duration: 0.5}
                         }}
                         transition={{
                           stiffness: 400,
                           damping: 10,
-                          transition: { ease: "easeInOut" },
+                          transition: {ease: "easeInOut", delay: 0.2, stiffness: 10, duration: 0.5}
                         }}
-                        exit={{ y: -50, opacity: 0 }}
+                        exit={{
+                          y: -50,
+                          opacity: 0,
+                          transition: {ease: "easeInOut", delay: 0.2, stiffness: 10, duration: 0.5}
+                        }}
                         key={id}
                         className={`col-xl-4 col-sm-6 col-8`}>
                         <div className="single-box">
                           <div className="img-area">
-                            <img alt="img" loading="lazy" src={imgMain} />
+                            <img alt="img" loading="lazy" src={imgMain}/>
                           </div>
                           <div className="footer-area mb-5 text-center">
                             <div className="logo-area">
@@ -168,11 +174,11 @@ const GamesThumb = () => {
                             </h3>
                             <p>{about}</p>
                             <div className="btn-area alt-bg">
-                              <a
+                              <Link
                                 className="box-style btn-box mt-4 d-center"
-                                href="game">
+                                to={`${GAMES}\${id}`}>
                                 Learn More
-                              </a>
+                              </Link>
                             </div>
                           </div>
                         </div>

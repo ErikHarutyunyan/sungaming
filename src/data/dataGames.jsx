@@ -1,7 +1,8 @@
-import { MdSportsSoccer } from "react-icons/md";
-import { allGames1, allGamesProfile1, gameSlide } from "../components/Images";
-import { v4 as uuidv4 } from "uuid";
-import { IconsCasino, IconsSlot, IconsTable } from "../components/Icons";
+import {MdSportsSoccer} from "react-icons/md";
+import {allGames1, allGamesProfile1, gameSlide} from "../components/Images";
+import {v4 as uuidv4} from "uuid";
+import {IconsCasino, IconsSlot, IconsTable} from "../components/Icons";
+
 export const dataGames = [
   {
     id: uuidv4(),
@@ -12,7 +13,7 @@ export const dataGames = [
     about: "Empire of the Stars",
     url: "",
     logo: "",
-    category: ["Casino", <IconsCasino key="casino" size={38} />],
+    category: ["Casino", "Sports"],
     features: [],
     platforms: "",
     featured: true,
@@ -50,7 +51,7 @@ export const dataGames = [
     title: "Crazy Tables",
     imgMain: gameSlide,
     imgSmall: allGamesProfile1,
-    category: ["Tables", <IconsTable key="table" size={35} />],
+    category: ["Tables"],
     desc: "",
     about: "Empire of the Stars",
     url: "",
@@ -64,7 +65,7 @@ export const dataGames = [
     title: "Crazy Casino",
     imgMain: allGames1,
     imgSmall: allGamesProfile1,
-    category: ["Casino", <IconsCasino key="casino" size={38} />],
+    category: ["Casino", <IconsCasino key="casino" size={38}/>],
     desc: "",
     about: "Empire of the Stars",
     url: "",
@@ -78,7 +79,7 @@ export const dataGames = [
     title: "Crazy Slots",
     imgMain: allGames1,
     imgSmall: allGamesProfile1,
-    category: ["Slots", <IconsSlot key="slot" size={27} />],
+    category: ["Slots"],
     desc: "",
     about: "Empire of the Stars",
     url: "",
@@ -92,7 +93,7 @@ export const dataGames = [
     title: "Crazy Sport",
     imgMain: allGames1,
     imgSmall: allGamesProfile1,
-    category: ["Sports", <MdSportsSoccer key="sport" size={25} />],
+    category: ["Sports"],
     desc: "",
     about: "Empire of the Stars",
     url: "",
@@ -102,6 +103,15 @@ export const dataGames = [
     featured: false,
   },
 ];
+
+export const categoryIcons =
+  {
+    sports: <MdSportsSoccer key="sport" size={25}/>,
+    slots: <IconsSlot key="slot" size={27}/>,
+    casino: <IconsCasino key="casino" size={38}/>,
+    tables: <IconsTable key="table" size={35}/>
+  }
+
 
 export const featuredGames = dataGames.filter((game) => game.featured === true);
 
@@ -121,5 +131,16 @@ const allCategoriesGames = dataGames.reduce((categories, game) => {
 }, []);
 
 allCategoriesGames.unshift(["All Games"]);
-console.log('allCategoriesGames :', allCategoriesGames);
-export { allCategoriesGames };
+// const allCategoriesGamess = ["all", ...new Set(dataGames.map((item) => item.category).sort(function (a, b) {
+//   return a === b ? 0 : a < b ? -1 : 1
+// }))];
+debugger
+const allCategoriesGamess = Array.from(
+  new Set(dataGames.map((game, index) => game.category[index]))
+)
+
+
+console.log("qwe", allCategoriesGamess)
+
+console.log('allCategoriesGames :', allCategoriesGamess);
+export {allCategoriesGames};
