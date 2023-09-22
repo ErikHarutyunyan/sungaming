@@ -5,18 +5,18 @@ import {
   ourGamesShape3,
 } from "../Images";
 import { allCategoriesGames, dataGames } from "../../data/dataGames";
-import { useState } from "react";
+import { useReducer, useState } from "react";
 
 // import "./GamesThumb.css";
+import { motion } from "framer-motion";
 
 const GamesThumb = () => {
   const [menuItems, setMenuItems] = useState(dataGames);
-  const [isActive, setIsActive] = useState(false);
-  const [isActiveTable, setIsActiveTable] = useState(null);
+  const [isActive, setIsActive] = useState("category_0");
+  console.log("isActive :", isActive);
 
   const handleClick = (e) => {
     setIsActive(e.target.id);
-    setIsActiveTable("active");
   };
 
   const filterItems = (category) => {
@@ -30,6 +30,9 @@ const GamesThumb = () => {
     });
     setMenuItems(newItems);
   };
+
+  const [toggled, toggle] = useReducer((state) => !state, true);
+  console.log("toggled :", toggled);
 
   return (
     <section
@@ -81,7 +84,7 @@ const GamesThumb = () => {
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-lg-7 text-center">
+          <div className="col-lg-9 text-center">
             <ul className="nav tablinks flex-wrap d-center mb-10 d-inline-flex gap-4 p-3 tab-area">
               {allCategoriesGames.map((item, index) => {
                 const category = item;
@@ -90,6 +93,7 @@ const GamesThumb = () => {
                     className="nav-item pointer"
                     key={index}
                     onClick={(e) => {
+                      toggle();
                       const className = e.target.className;
                       if (!className.includes("active_category")) {
                         filterItems(
@@ -121,24 +125,35 @@ const GamesThumb = () => {
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className="tabcontents tab-content">
-              {menuItems.map((item) => {
-                const { id, title, imgMain, imgSmall, about } = item;
-
-                return (
-                  <div key={id} className={`tabitem ${isActiveTable}`}>
-                    <div className="row cus-mar justify-content-center">
-                      <div className="col-xl-4 col-sm-6 col-8">
+              <div className={`tabitem active`}>
+                <div className="row cus-mar justify-content-center">
+                  {menuItems?.map((item) => {
+                    const { id, title, imgMain, imgSmall, about } = item;
+                    return (
+                      <motion.div
+                        animate={{
+                          opacity: 1,
+                          y: 0,
+                          transition: { ease: "easeInOut" },
+                        }}
+                        initial={{
+                          opacity: 0,
+                          y: 50,
+                          transition: { ease: "easeInOut" },
+                        }}
+                        transition={{
+                          stiffness: 400,
+                          damping: 10,
+                          transition: { ease: "easeInOut" },
+                        }}
+                        exit={{ y: -50, opacity: 0 }}
+                        key={id}
+                        className={`col-xl-4 col-sm-6 col-8`}>
                         <div className="single-box">
                           <div className="img-area">
-                            <img
-                              alt="img"
-                              loading="lazy"
-                              width="416"
-                              height="290"
-                              src={imgMain}
-                            />
+                            <img alt="img" loading="lazy" src={imgMain} />
                           </div>
-                          <div className="footer-area mb-7 text-center">
+                          <div className="footer-area mb-5 text-center">
                             <div className="logo-area">
                               <img
                                 alt="img"
@@ -148,24 +163,24 @@ const GamesThumb = () => {
                                 src={imgSmall}
                               />
                             </div>
-                            <h3 className="visible-slowly-bottom my-4">
+                            <h3 className="visible-slowly-bottom my-3">
                               {title}
                             </h3>
                             <p>{about}</p>
                             <div className="btn-area alt-bg">
                               <a
-                                className="box-style btn-box mt-7 d-center"
+                                className="box-style btn-box mt-4 d-center"
                                 href="game">
                                 Learn More
                               </a>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
