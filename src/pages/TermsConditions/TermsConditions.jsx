@@ -1,10 +1,8 @@
 // Styles
-import "./TermsConditions.css"
+import "./TermsConditions.css";
 
 const TermsConditions = () => {
-  return (
-    <section className={}>TermsConditions</section>
-  )
-}
+  return <section>TermsConditions</section>;
+};
 
-export default TermsConditions
+export default TermsConditions;

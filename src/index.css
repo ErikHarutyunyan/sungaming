@@ -42339,8 +42339,13 @@ li {
 }
 
 .our-games .single-box:hover .thumb-img {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.our-games .single-box:hover .gameTitle {
+  opacity:0;
+  transition: all 0.3s ease;
 }
 
 .our-games .single-box .position-relative.d-center img {

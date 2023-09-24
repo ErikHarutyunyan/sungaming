@@ -1,10 +1,8 @@
 // Styles
-import "./PrivacyPolicy.css"
+import "./PrivacyPolicy.css";
 
 const PrivacyPolicy = () => {
-  return (
-    <section className={}>PrivacyPolicy</section>
-  )
-}
+  return <section>PrivacyPolicy</section>;
+};
 
-export default PrivacyPolicy
+export default PrivacyPolicy;

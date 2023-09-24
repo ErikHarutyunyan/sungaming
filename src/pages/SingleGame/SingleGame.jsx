@@ -1,10 +1,8 @@
 // Styles
-import "./SingleGame.css"
+import "./SingleGame.css";
 
 const SingleGame = () => {
-  return (
-    <section className={}>SingleGame</section>
-  )
-}
+  return <section>SingleGame</section>;
+};
 
-export default SingleGame
+export default SingleGame;

@@ -4,7 +4,7 @@ import News from "./News";
 import NotFoundPage from "./NotFoundPage";
 import Careers from "./Careers";
 import Contact from "./Contact";
-import Games from "./Games";
+import Games from "./Games/Games";
 import Integration from "./Integration";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Services from "./Services";

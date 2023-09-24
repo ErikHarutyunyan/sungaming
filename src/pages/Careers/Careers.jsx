@@ -1,10 +1,8 @@
 // Styles
-import "./Careers.css"
+import "./Careers.css";
 
 const Careers = () => {
-  return (
-    <section className={}>Careers</section>
-  )
-}
+  return <section>Careers</section>;
+};
 
-export default Careers
+export default Careers;

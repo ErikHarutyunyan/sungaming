@@ -1,10 +1,8 @@
 // Styles
-import "./TemplateName.css"
+import "./TemplateName.css";
 
 const TemplateName = () => {
-  return (
-    <section className={}>TemplateName</section>
-  )
-}
+  return <section>TemplateName</section>;
+};
 
-export default TemplateName
+export default TemplateName;

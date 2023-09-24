@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 // Styles
-import "./GamesCard.css"
+import "./GamesCard.css";
 
 const GamesCard = () => {
-  return (
-    <section className={}>GamesCard</section>
-  )
-}
+  return <section>GamesCard</section>;
+};
 
-export default GamesCard
+export default GamesCard;

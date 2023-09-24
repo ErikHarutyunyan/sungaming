@@ -34,8 +34,8 @@ const GamesThumb = () => {
   };
 
   const [toggled, toggle] = useReducer((state) => !state, true);
-  console.log("toggled :", toggled);
 
+  
   return (
     <section
       className="our-games all-games overflow-hidden pt-120 pb-120"
@@ -88,8 +88,7 @@ const GamesThumb = () => {
         <div className="row justify-content-center">
           <div className="col-lg-9 text-center">
             <ul className="nav tablinks flex-wrap d-center mb-10 d-inline-flex gap-4 p-3 tab-area">
-              {allCategoriesGames.map((item, index) => {
-                const category = item;
+              {allCategoriesGames.map((category, index) => {
                 return (
                   <li
                     className="nav-item pointer"
@@ -99,9 +98,7 @@ const GamesThumb = () => {
                       const className = e.target.className;
                       if (!className.includes("active_category")) {
                         filterItems(
-                          category[0] === "All Games"
-                            ? [category[0]]
-                            : category[0]
+                          category === "All Games" ? [category] : category
                         );
                         handleClick(e);
                       }
@@ -110,13 +107,15 @@ const GamesThumb = () => {
                       id={`category_${index}`}
                       className={
                         isActive === `category_${index}`
-                          ? `${category[0]}_category nav-link d-center box-style btn-box active_category`
-                          : `${category[0]}_category nav-link d-center box-style btn-box`
+                          ? `${category}_category nav-link d-center box-style btn-box active_category`
+                          : `${category}_category nav-link d-center box-style btn-box`
                       }>
-                      {categoryIcons[category] !== undefined && (
-                        <span className="icon-area pe-none">{category[1]}</span>
+                      {categoryIcons[category.toLowerCase()] !== undefined && (
+                        <span className="icon-area pe-none">
+                          {categoryIcons[category.toLowerCase()]}
+                        </span>
                       )}
-                      {category[0]}
+                      {category}
                     </button>
                   </li>
                 );
@@ -136,28 +135,49 @@ const GamesThumb = () => {
                         animate={{
                           opacity: 1,
                           y: 0,
-                          transition: {ease: "easeInOut", delay: 0.2, stiffness: 10, duration: 0.5},
+                          transition: {
+                            ease: "easeInOut",
+                            delay: 0.2,
+                            stiffness: 10,
+                            duration: 0.5,
+                          },
                         }}
                         initial={{
                           opacity: 0,
                           y: 50,
-                          transition: {ease: "easeInOut", delay: 0.2, stiffness: 10, duration: 0.5}
+                          transition: {
+                            ease: "easeInOut",
+                            delay: 0.2,
+                            stiffness: 10,
+                            duration: 0.5,
+                          },
                         }}
                         transition={{
                           stiffness: 400,
                           damping: 10,
-                          transition: {ease: "easeInOut", delay: 0.2, stiffness: 10, duration: 0.5}
+                          transition: {
+                            ease: "easeInOut",
+                            delay: 0.2,
+                            stiffness: 10,
+                            duration: 0.5,
+                          },
                         }}
                         exit={{
                           y: -50,
                           opacity: 0,
-                          transition: {ease: "easeInOut", delay: 0.2, stiffness: 10, duration: 0.5}
+                          transition: {
+                            ease: "easeInOut",
+                            delay: 0.2,
+                            stiffness: 10,
+                            duration: 0.5,
+                          },
                         }}
+                    
                         key={id}
                         className={`col-xl-4 col-sm-6 col-8`}>
                         <div className="single-box">
                           <div className="img-area">
-                            <img alt="img" loading="lazy" src={imgMain}/>
+                            <img alt="img" loading="lazy" src={imgMain} />
                           </div>
                           <div className="footer-area mb-5 text-center">
                             <div className="logo-area">

@@ -1,10 +1,8 @@
 // Styles
-import "./Contact.css"
+import "./Contact.css";
 
 const Contact = () => {
-  return (
-    <section className={}>Contact</section>
-  )
-}
+  return <section>Contact</section>;
+};
 
-export default Contact
+export default Contact;

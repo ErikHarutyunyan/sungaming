@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 // Styles
-import "./GamesFeatured.css"
+import "./GamesFeatured.css";
 
 const GamesFeatured = () => {
-  return (
-    <section className={}>GamesFeatured</section>
-  )
-}
+  return <section>GamesFeatured</section>;
+};
 
-export default GamesFeatured
+export default GamesFeatured;

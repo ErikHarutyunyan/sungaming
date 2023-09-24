@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 // Styles
-import "./NewsLatest.css"
+import "./NewsLatest.css";
 
 const NewsLatest = () => {
-  return (
-    <section className={}>NewsLatest</section>
-  )
-}
+  return <section>NewsLatest</section>;
+};
 
-export default NewsLatest
+export default NewsLatest;

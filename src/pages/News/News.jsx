@@ -1,10 +1,8 @@
 // Styles
-import "./News.css"
+import "./News.css";
 
 const News = () => {
-  return (
-    <section className={}>News</section>
-  )
-}
+  return <section>News</section>;
+};
 
-export default News
+export default News;

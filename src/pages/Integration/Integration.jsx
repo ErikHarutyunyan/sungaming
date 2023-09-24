@@ -1,10 +1,8 @@
 // Styles
-import "./Integration.css"
+import "./Integration.css";
 
 const Integration = () => {
-  return (
-    <section className={}>Integration</section>
-  )
-}
+  return <section>Integration</section>;
+};
 
-export default Integration
+export default Integration;

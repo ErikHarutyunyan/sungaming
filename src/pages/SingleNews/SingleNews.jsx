@@ -1,10 +1,8 @@
 // Styles
-import "./SingleNews.css"
+import "./SingleNews.css";
 
 const SingleNews = () => {
-  return (
-    <section className={}>SingleNews</section>
-  )
-}
+  return <section>SingleNews</section>;
+};
 
-export default SingleNews
+export default SingleNews;

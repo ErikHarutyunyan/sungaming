@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 // Styles
-import "./Brands.css"
+import "./Brands.css";
 
 const Brands = () => {
-  return (
-    <section className={}>Brands</section>
-  )
-}
+  return <section>Brands</section>;
+};
 
-export default Brands
+export default Brands;

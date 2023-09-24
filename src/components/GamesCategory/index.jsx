@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 // Styles
-import "./GamesCategory.css"
+import "./GamesCategory.css";
 
 const GamesCategory = () => {
-  return (
-    <section className={}>GamesCategory</section>
-  )
-}
+  return <section>GamesCategory</section>;
+};
 
-export default GamesCategory
+export default GamesCategory;

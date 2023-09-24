@@ -1,10 +1,8 @@
 // Styles
-import "./Services.css"
+import "./Services.css";
 
 const Services = () => {
-  return (
-    <section className={}>Services</section>
-  )
-}
+  return <section>Services</section>;
+};
 
-export default Services
+export default Services;
