@@ -41557,6 +41557,7 @@ li {
 
 .banner-section {
   background-color: var(--n800);
+  background-size: cover;
 }
 
 .banner-section .banner-content {
@@ -41944,6 +41945,17 @@ li {
   animation: rotate 35s linear infinite;
 }
 
+.banner-section.banner-page .shape-area .shape-1 {
+  top: -10%;
+  left: 20%;
+}
+
+.banner-section.banner-page .shape-area .shape-2 {
+  top: 30%;
+  left: 5%;
+  animation: rotate 35s linear infinite;
+}
+
 .banner-section.career {
   background-image: url(/images/career-banner-illus.png);
 }
@@ -41951,10 +41963,10 @@ li {
 .banner-section.game {
   position: relative;
   background-color: #161829;
-  background-image: url(./assets/img/bannerGameCut.gif);
   background-size: 60% 100% !important;
   background-position: bottom right;
   overflow: hidden;
+  background-repeat: no-repeat;
 }
 .banner-section.game::before {
   content: "";
@@ -42338,12 +42350,12 @@ li {
   color: var(--p300);
 }
 
-.our-games .single-box:hover .thumb-img {
+.our-games .game-section-block:hover .thumb-img {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.our-games .single-box:hover .gameTitle {
+.our-games .game-section-block:hover .gameTitle {
   opacity:0;
   transition: all 0.3s ease;
 }
@@ -44778,7 +44790,9 @@ li {
   .banner-section.about .shape-area .shape-2 {
     top: 5%;
   }
-
+  .banner-section.banner-page .shape-area .shape-2 {
+    top: 5%;
+  }
   .our-gaming-community .community-box .community-area .community-item img {
     width: 55%;
   }

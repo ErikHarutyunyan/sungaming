@@ -13,7 +13,7 @@ import {
   ellipse7,
   ellipse8,
 } from "../../components/Images";
-import { MdOutlineArrowForward, MdOutlineNorthEast } from "react-icons/md";
+import {MdOutlineArrowForward, MdOutlineNorthEast} from "react-icons/md";
 import Subscribe from "../../components/Subscribe";
 import {
   settingsBlog,
@@ -22,10 +22,11 @@ import {
 } from "../../features/SliderConfig";
 import SimpleSlider from "../../components/SimpleSlider";
 import Service from "../../components/Service/index.jsx";
-import { GAMES } from "../../router/route-path";
-import { Link } from "react-router-dom";
-import { featuredGames } from "../../data/dataGames";
+import {GAMES} from "../../router/route-path";
+import {Link} from "react-router-dom";
+import {featuredGames} from "../../data/dataGames";
 import GamesThumb from "../../components/GamesThumb/GamesThumb";
+import CounterActive from "../../components/CounterActive/CounterActive.jsx";
 
 function Home() {
   return (
@@ -176,7 +177,7 @@ function Home() {
                       </h3>
                       <span className="display-one">
                         We Craft Games
-                        <br />
+                        <br/>
                         <span className="index-module_type__E-SaG typed d-inline-block">
                           Entertai
                         </span>
@@ -211,7 +212,7 @@ function Home() {
                     setting={settingsFeatured}
                     className={"game-carousel pb-20 slick-initialized"}>
                     {featuredGames.map((featuredItem) => {
-                      const { id, title, imgMain } = featuredItem;
+                      const {id, title, imgMain} = featuredItem;
                       return (
                         <div
                           key={id}
@@ -462,7 +463,7 @@ function Home() {
                       className="d-flex align-items-center"
                       href="our-services-details">
                       Learn More
-                      <MdOutlineArrowForward />
+                      <MdOutlineArrowForward/>
                     </a>
                   </div>
                 </div>
@@ -495,7 +496,7 @@ function Home() {
                       className="d-flex align-items-center"
                       href="our-services-details">
                       Learn More
-                      <MdOutlineArrowForward />
+                      <MdOutlineArrowForward/>
                     </a>
                   </div>
                 </div>
@@ -504,48 +505,10 @@ function Home() {
           </SimpleSlider>
         </div>
       </section>
-      <Service />
-      <div className="counter-section pt-120 pb-120">
-        <div className="container">
-          <div className="row cus-mar ">
-            <div className="col-sm-6 col-xl-4">
-              <div className="single-box py-6 box-style box-first d-center position-relative">
-                <div className="counters d-flex align-items-center">
-                  <span className="display-one">500</span>
-                  <span className="display-one symbol">+</span>
-                </div>
-                <p className="name-area fs-five position-absolute">
-                  Active Partners
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-6 col-xl-4">
-              <div className="single-box py-6 box-style box-first d-center position-relative false">
-                <div className="counters d-flex align-items-center">
-                  <span className="display-one">200</span>
-                  <span className="display-one">K+</span>
-                </div>
-                <p className="name-area fs-five position-absolute">
-                  Active Players/Monthly
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-6 col-xl-4">
-              <div className="single-box py-6 box-style box-first d-center position-relative false">
-                <div className="counters d-flex align-items-center">
-                  <span className="display-one">30</span>
-                  <span className="display-one symbol">M+</span>
-                </div>
-                <p className="name-area fs-five position-absolute">
-                  Transactions/Monthly
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Service/>
+      <CounterActive/>
 
-      <GamesThumb />
+      <GamesThumb/>
 
       <section className=" about-block  recently-completed blogs gaming-character">
         <div className="shape-area">
@@ -612,7 +575,7 @@ function Home() {
                         <a
                           className="end-area mt-8 d-center"
                           href="/blog-single">
-                          <MdOutlineNorthEast />
+                          <MdOutlineNorthEast/>
                         </a>
                       </div>
                     </div>
@@ -647,7 +610,7 @@ function Home() {
                         <a
                           className="end-area mt-8 d-center"
                           href="/blog-single">
-                          <MdOutlineNorthEast />
+                          <MdOutlineNorthEast/>
                         </a>
                       </div>
                     </div>
@@ -682,7 +645,7 @@ function Home() {
                         <a
                           className="end-area mt-8 d-center"
                           href="/blog-single">
-                          <MdOutlineNorthEast />
+                          <MdOutlineNorthEast/>
                         </a>
                       </div>
                     </div>
@@ -717,7 +680,7 @@ function Home() {
                         <a
                           className="end-area mt-8 d-center"
                           href="/blog-single">
-                          <MdOutlineNorthEast />
+                          <MdOutlineNorthEast/>
                         </a>
                       </div>
                     </div>
@@ -829,7 +792,7 @@ function Home() {
         </div>
       </section>
 
-      <Subscribe />
+      <Subscribe/>
     </>
   );
 }

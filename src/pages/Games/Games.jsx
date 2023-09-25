@@ -1,35 +1,49 @@
 // Styles
 import "./Games.css";
-import { bubble, ellipse7 } from "../../components/Images/index.jsx";
-import { FiChevronRight } from "react-icons/fi";
-import { GrShieldSecurity } from "react-icons/gr";
-import { FaStudiovinari } from "react-icons/fa";
-import { PiLightbulbLight } from "react-icons/pi";
-import { MdSecurity } from "react-icons/md";
+import {bubble, ellipse7} from "../../components/Images/index.jsx";
+import {FiChevronRight} from "react-icons/fi";
+import {GrShieldSecurity} from "react-icons/gr";
+import {FaStudiovinari} from "react-icons/fa";
+import {PiLightbulbLight} from "react-icons/pi";
+import {MdSecurity} from "react-icons/md";
 import gameimg6 from "../../assets/img/game-image-6.png";
 import money from "../../assets/img/money-drive.jpg";
 import gameShape1 from "../../assets/img/gameShape5.gif";
 import gameShape2 from "../../assets/img/gameShape3.gif";
-import { Suspense, useReducer, useState } from "react";
-import { motion, MotionConfig, useMotionValue } from "framer-motion";
-import { Shapes } from "../../components/Shapes/Shapes.jsx";
-import { transition } from "../../settings/gameButtonSetings.js";
+import {Suspense, useReducer, useState} from "react";
+import {motion, MotionConfig, useMotionValue} from "framer-motion";
+import {Shapes} from "../../components/Shapes/Shapes.jsx";
+import {transition} from "../../settings/gameButtonSetings.js";
 import useMeasure from "react-use-measure";
+import bannerGameCut from "../../assets/img/bannerGameCut.gif"
 import {
   allCategoriesGames,
   categoryIcons,
   dataGames,
 } from "../../data/dataGames";
-import { GAMES } from "../../router/route-path";
-import { Link } from "react-router-dom";
+import {GAMES} from "../../router/route-path";
+import {Link} from "react-router-dom";
+import Subscribe from "../../components/Subscribe/index.jsx";
+import CounterActive from "../../components/CounterActive/CounterActive.jsx";
+import BannerPages from "../../components/BannerPages/BannerPages.jsx";
+
+
+const gamesPerRow = 4;
 
 const Games = () => {
+  const [next, setNext] = useState(gamesPerRow);
+
   const [menuItems, setMenuItems] = useState(dataGames);
-  const [ref, bounds] = useMeasure({ scroll: false });
+  const [ref, bounds] = useMeasure({scroll: false});
   const [isHover, setIsHover] = useState(false);
   const [isPress, setIsPress] = useState(false);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+
+  const handleMoreGames = () => {
+    debugger
+    setNext(next + gamesPerRow);
+  };
 
   const resetMousePosition = () => {
     mouseX.set(0);
@@ -59,42 +73,9 @@ const Games = () => {
 
   return (
     <>
-      <section className="banner-section inner-banner position-relative about game">
-        <div className="shape-area">
-          <img src={bubble} className="shape-1" alt="icon" />
-          <img src={ellipse7} className="shape-2" alt="icon" />
-        </div>
-        <div className="container position-relative">
-          <div className="banner-content row justify-content-between">
-            <div className="col-lg-6 col-md-10">
-              <div className="main-content">
-                <h2 className="visible-slowly-bottom display-four mb-6">
-                  Our <span>Games</span>
-                </h2>
-                <p className="fs-four">
-                  Our projects feature unique mechanics, fine-tuned gameplay,
-                  and eye-catching visual style.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-10 d-grid align-items-end justify-content-end">
-              <div className="breadcrumb-area position-absolute end-0 bottom-0">
-                <nav aria-label="breadcrumb">
-                  <ol className="breadcrumb m-0 py-3 px-8 fs-six d-flex align-items-center justify-content-center">
-                    <li className="breadcrumb-item p-0 m-0">
-                      <a href="index.html">Home</a>
-                    </li>
-                    <FiChevronRight size={20} color={"white"} />
-                    <li className="breadcrumb-item active" aria-current="page">
-                      Games
-                    </li>
-                  </ol>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <BannerPages classNames={"game"} bg={bannerGameCut} page={"Games"} title={'Our'} titleSecond={"Games"}
+                   desc={"Our projects feature unique mechanics, fine-tuned gameplay, and eye-catching visual style."}/>
 
       <section className="our-game-features pt-120 pb-120">
         <div className="container">
@@ -109,7 +90,8 @@ const Games = () => {
           </div>
           <div className="row cus-mar">
             <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
+              <div
+                className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
                 <div className="content-box d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
                     <svg
@@ -162,10 +144,11 @@ const Games = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
+              <div
+                className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
                 <div className="content-box d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
-                    <MdSecurity size={45} color={"#0ef0ad"} />
+                    <MdSecurity size={45} color={"#0ef0ad"}/>
                   </div>
                   <div className="info-box">
                     <h5 className="mb-2">For Everyone</h5>
@@ -182,10 +165,11 @@ const Games = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
+              <div
+                className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
                 <div className="content-box d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
-                    <FaStudiovinari size={45} color={"#0ef0ad"} />
+                    <FaStudiovinari size={45} color={"#0ef0ad"}/>
                   </div>
                   <div className="info-box">
                     <h5 className="mb-2">Fast Gaming</h5>
@@ -201,10 +185,11 @@ const Games = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
+              <div
+                className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
                 <div className="content-box d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
-                    <PiLightbulbLight size={45} color={"#0ef0ad"} />
+                    <PiLightbulbLight size={45} color={"#0ef0ad"}/>
                   </div>
                   <div className="info-box">
                     <h5 className="mb-2">Unique Twist</h5>
@@ -282,10 +267,10 @@ const Games = () => {
                         }>
                         {categoryIcons[category.toLowerCase()] !==
                           undefined && (
-                          <span className="icon-area pe-none">
+                            <span className="icon-area pe-none">
                             {categoryIcons[category.toLowerCase()]}
                           </span>
-                        )}
+                          )}
                         {category}
                       </button>
                     </li>
@@ -380,8 +365,8 @@ const Games = () => {
                         </div>
                       </div>
                     </div> */}
-                    {menuItems?.map((item) => {
-                      const { id, title, imgMain, imgSmall, about } = item;
+                    {menuItems?.slice(0, next)?.map((item) => {
+                      const {id, title, imgMain, imgSmall, about} = item;
                       return (
                         <motion.div
                           animate={{
@@ -433,82 +418,10 @@ const Games = () => {
                                 className="w-100 thumb-img"
                                 alt="sec-img"
                               />
-                              <MotionConfig transition={transition}>
-                                <motion.a
-                                  href="/google.com"
-                                  style={{ position: "absolute" }}
-                                  className="buttonPlay"
-                                  ref={ref}
-                                  initial={false}
-                                  animate={isHover ? "hover" : "rest"}
-                                  whileTap="press"
-                                  variants={{
-                                    rest: {
-                                      scale: 0.7,
-                                      translateX: "0%",
-                                      translateY: "0%",
-                                    },
-                                    hover: {
-                                      scale: 0.85,
-                                      translateX: "0%",
-                                      translateY: "0%",
-                                    },
-                                    press: {
-                                      scale: 0.7,
-                                      translateX: "0%",
-                                      translateY: "0%",
-                                    },
-                                  }}
-                                  onHoverStart={() => {
-                                    resetMousePosition();
-                                    setIsHover(true);
-                                  }}
-                                  onHoverEnd={() => {
-                                    resetMousePosition();
-                                    setIsHover(false);
-                                  }}
-                                  onTapStart={() => setIsPress(true)}
-                                  onTap={() => setIsPress(false)}
-                                  onTapCancel={() => setIsPress(false)}
-                                  onPointerMove={(e) => {
-                                    mouseX.set(
-                                      e.clientX - bounds.x - bounds.width / 2
-                                    );
-                                    mouseY.set(
-                                      e.clientY - bounds.y - bounds.height / 2
-                                    );
-                                  }}>
-                                  <motion.div
-                                    className="shapesPlay"
-                                    variants={{
-                                      rest: { opacity: 0 },
-                                      hover: { opacity: 1 },
-                                    }}>
-                                    <div className="pink blush" />
-                                    <div className="blue blush" />
-                                    <div className="containerr">
-                                      <Suspense fallback={null}>
-                                        <Shapes
-                                          isHover={isHover}
-                                          isPress={isPress}
-                                          mouseX={mouseX}
-                                          mouseY={mouseY}
-                                        />
-                                      </Suspense>
-                                    </div>
-                                  </motion.div>
-                                  <motion.div
-                                    variants={{
-                                      hover: { scale: 0.85 },
-                                      press: { scale: 1.1 },
-                                    }}
-                                    className="labelPlay">
-                                    Play Demo
-                                  </motion.div>
-                                </motion.a>
-                              </MotionConfig>
+
                               <h3 className="gameTitle">{title}</h3>
                             </div>
+
                             <div className="link-item py-3">
                               <Link
                                 className=" px-5 text-decoration-underline"
@@ -517,6 +430,74 @@ const Games = () => {
                               </Link>
                             </div>
                           </div>
+                          <MotionConfig transition={transition}>
+                            <motion.a
+                              href="/google.com"
+                              className="buttonPlay"
+                              style={{position: "absolute"}}
+                              ref={ref}
+                              initial={false}
+                              animate={isHover ? "hover" : "rest"}
+                              whileTap="press"
+                              variants={{
+                                rest: {
+                                  scale: 1,
+                                },
+                                hover: {
+                                  scale: 1.1,
+                                },
+                                press: {
+                                  scale: 0.95,
+                                },
+                              }}
+                              onHoverStart={() => {
+                                resetMousePosition();
+                                setIsHover(true);
+                              }}
+                              onHoverEnd={() => {
+                                resetMousePosition();
+                                setIsHover(false);
+                              }}
+                              onTapStart={() => setIsPress(true)}
+                              onTap={() => setIsPress(false)}
+                              onTapCancel={() => setIsPress(false)}
+                              onPointerMove={(e) => {
+                                mouseX.set(
+                                  e.clientX - bounds.x - bounds.width / 2
+                                );
+                                mouseY.set(
+                                  e.clientY - bounds.y - bounds.height / 2
+                                );
+                              }}>
+                              <motion.div
+                                className="shapesPlay"
+                                variants={{
+                                  rest: {opacity: 0},
+                                  hover: {opacity: 1},
+                                }}>
+                                <div className="pink blush"/>
+                                <div className="blue blush"/>
+                                <div className="containerr">
+                                  <Suspense fallback={null}>
+                                    <Shapes
+                                      isHover={isHover}
+                                      isPress={isPress}
+                                      mouseX={mouseX}
+                                      mouseY={mouseY}
+                                    />
+                                  </Suspense>
+                                </div>
+                              </motion.div>
+                              <motion.div
+                                variants={{
+                                  hover: {scale: 1.1},
+                                  press: {scale: 0.85},
+                                }}
+                                className="labelPlay">
+                                Play Demo
+                              </motion.div>
+                            </motion.a>
+                          </MotionConfig>
                         </motion.div>
                       );
                     })}
@@ -524,9 +505,16 @@ const Games = () => {
                   <div className="text-center mt-10 mt-sm-15">
                     <div className="loading py-3 px-8 d-inline-flex align-items-center gap-2">
                       <div className="icon-box d-center">
-                        <i className="material-symbols-outlined"> pending </i>
+                        {next < menuItems?.length && (
+                          <button
+                            className=""
+                            onClick={handleMoreGames}
+                          >
+                            Load more
+                          </button>
+                        )}
                       </div>
-                      <span>Loading</span>
+                      {/*<span>Loading</span>*/}
                     </div>
                   </div>
                 </div>
@@ -535,6 +523,8 @@ const Games = () => {
           </div>
         </div>
       </section>
+      <CounterActive/>
+      <Subscribe/>
     </>
   );
 };

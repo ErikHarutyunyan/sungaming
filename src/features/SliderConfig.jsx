@@ -132,3 +132,14 @@ export const settingsBlog = {
   nextArrow: <BlogNextArrow/>,
   prevArrow: <BlogPrevArrow/>,
 };
+
+export const settingsAbout = {
+  infinite: true,
+  autoplay: true,
+  speed: 600,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  adaptiveHeight: false,
+  nextArrow: <BlogNextArrow/>,
+  prevArrow: <BlogPrevArrow/>,
+};
