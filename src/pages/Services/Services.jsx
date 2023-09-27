@@ -8,6 +8,7 @@ const Services = () => {
   return (
     <>
       <BannerPages
+        classNames={"services"}
         page={"Services"}
         bg={serviceBanner}
         title={"Our"}
