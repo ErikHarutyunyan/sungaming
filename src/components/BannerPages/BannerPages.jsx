@@ -1,17 +1,26 @@
-import "./BannerPages.css"
-import {bubble, ellipse7} from "../Images/index.jsx";
-import {FiChevronRight} from "react-icons/fi";
-import {HOME} from "../../router/route-path.jsx";
-import {Link} from "react-router-dom";
+import "./BannerPages.css";
+import { bubble, ellipse7 } from "../Images/index.jsx";
+import { FiChevronRight } from "react-icons/fi";
+import { HOME } from "../../router/route-path.jsx";
+import { Link } from "react-router-dom";
 
-
-const BannerPages = ({bg, page, desc, title, titleSecond, classNames, rightImg}) => {
+const BannerPages = ({
+  bg,
+  page,
+  desc,
+  title,
+  titleSecond,
+  classNames,
+  rightImg,
+}) => {
   return (
-    <section className={`banner-section inner-banner position-relative banner-page ${classNames}`}
-             style={{backgroundImage: `url(${bg})`}}>
+    <section
+      className={`banner-section inner-banner position-relative banner-page ${classNames}`}
+      style={{ backgroundImage: `url(${bg})` }}
+    >
       <div className="shape-area">
-        <img src={bubble} className="shape-1" alt="icon"/>
-        <img src={ellipse7} className="shape-2" alt="icon"/>
+        <img src={bubble} className="shape-1" alt="icon" />
+        <img src={ellipse7} className="shape-2" alt="icon" />
       </div>
       <div className="container position-relative">
         <div className="banner-content row justify-content-between">
@@ -20,17 +29,21 @@ const BannerPages = ({bg, page, desc, title, titleSecond, classNames, rightImg})
               <h2 className="visible-slowly-bottom display-four mb-6">
                 {title} <span>{titleSecond}</span>
               </h2>
-              <p className="fs-four">
-                {desc}
-              </p>
+              <p className="fs-four">{desc}</p>
             </div>
           </div>
           <div className="col-lg-6 col-md-10 d-grid align-items-end justify-content-end">
-            {
-              rightImg &&
-              <div className="breadcrumb__img"><img alt="img" loading="lazy" width="402" height="412" src={rightImg}/>
+            {rightImg && (
+              <div className="breadcrumb__img">
+                <img
+                  alt="img"
+                  loading="lazy"
+                  width="402"
+                  height="412"
+                  src={rightImg}
+                />
               </div>
-            }
+            )}
 
             <div className="breadcrumb-area position-absolute end-0 bottom-0">
               <nav aria-label="breadcrumb">
@@ -38,7 +51,7 @@ const BannerPages = ({bg, page, desc, title, titleSecond, classNames, rightImg})
                   <li className="breadcrumb-item p-0 m-0">
                     <Link to={HOME}>Home</Link>
                   </li>
-                  <FiChevronRight size={20} color={"white"}/>
+                  <FiChevronRight size={20} color={"white"} />
                   <li className="breadcrumb-item active" aria-current="page">
                     {page}
                   </li>
@@ -49,6 +62,6 @@ const BannerPages = ({bg, page, desc, title, titleSecond, classNames, rightImg})
         </div>
       </div>
     </section>
-  )
-}
-export default BannerPages
+  );
+};
+export default BannerPages;

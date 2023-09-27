@@ -27756,7 +27756,11 @@ fieldset:disabled .btn {
 .min-vh-100 {
   min-height: 100vh ;
 }
-
+.d-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .flex-fill {
   flex: 1 1 auto ;
 }
@@ -39676,7 +39680,6 @@ h6 > a {
   color: var(--n0);
   font-weight: 700;
   padding: 0;
-  margin: 0;
   display: block;
   text-transform: capitalize;
   transition: all 0.3s;
@@ -40330,11 +40333,7 @@ li {
   font-size: inherit;
 }
 
-.d-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .section-text {
   margin-bottom: 32px;
@@ -43321,7 +43320,7 @@ li {
 }
 
 .faqs-section .accordion-button:after {
-  content: "remove";
+  content: url('./assets/svg/remove.svg');
   font-family: Material Symbols Outlined;
   z-index: 1;
   position: absolute;
@@ -43337,7 +43336,7 @@ li {
 }
 
 .faqs-section .accordion-button.collapsed:after {
-  content: "add";
+  content: url('./assets/svg/add.svg');
 }
 
 .faqs-section .accordion {
