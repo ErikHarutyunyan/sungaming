@@ -425,7 +425,7 @@ const Games = () => {
                             <div className="link-item py-3">
                               <Link
                                 className=" px-5 text-decoration-underline"
-                                to={`${GAMES}\${id}`}>
+                                to={`${GAMES}\\${id}`}>
                                 More Details
                               </Link>
                             </div>

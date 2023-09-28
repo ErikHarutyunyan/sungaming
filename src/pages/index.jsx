@@ -3,6 +3,7 @@ import About from "./About";
 import News from "./News";
 import NotFoundPage from "./NotFoundPage";
 import Careers from "./Careers";
+import CareersSingle from "./CareersSingle/CareersSingle";
 import Contact from "./Contact";
 import Games from "./Games/Games";
 import Integration from "./Integration";
@@ -18,6 +19,7 @@ export {
   About,
   News,
   Careers,
+  CareersSingle,
   Contact,
   Games,
   Integration,

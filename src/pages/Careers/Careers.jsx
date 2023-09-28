@@ -4,7 +4,11 @@ import "./Careers.css";
 import SimpleSlider from "../../components/SimpleSlider";
 import { settingsAbout } from "../../features/SliderConfig";
 import Subscribe from "../../components/Subscribe";
-
+import { dataCareers } from "../../data/dataCareers";
+import { MdWorkOutline } from "react-icons/md";
+import { IoTimeOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import { CAREERS } from "../../router/route-path";
 const Careers = () => {
   return (
     <>
@@ -129,293 +133,43 @@ const Careers = () => {
             </div>
           </div>
           <div className="row cus-mar">
-            <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
-                <div className="content-box d-flex flex-wrap gap-4 gap-md-6">
-                  <div className="icon-box d-inline-flex d-center">
-                    <i className="material-symbols-outlined fs-three"> draw </i>
-                  </div>
-                  <div className="info-box">
-                    <a href="career-details.html">
-                      <h5>Senior Level Game Designer</h5>
-                    </a>
-                    <a href="career-details.html"></a>
-                    <span className="fs-seven mt-2">
-                      Al. Brucknera Aleksandra63, Wrocław 51-410
-                    </span>
-                    <ul className="d-flex gap-6 mt-6">
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          work{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          schedule{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="end-area">
-                  <span className="fs-seven p-1 px-2">Design</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
-                <div className="content-box d-flex flex-wrap gap-4 gap-md-6">
-                  <div className="icon-box d-inline-flex d-center">
-                    <i className="material-symbols-outlined fs-three"> draw </i>
-                  </div>
-                  <div className="info-box">
-                    <a href="career-details.html">
-                      <h5>Level Game Designer</h5>
-                    </a>
-                    <span className="fs-seven mt-2">Al10</span>
-                    <ul className="d-flex gap-6 mt-6">
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          work{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          schedule{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                    </ul>
+            {dataCareers?.map((data) => {
+              const { id, title, area, term, types, location, icon } = data;
+              return (
+                <div className="col-md-6" key={id}>
+                  <div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
+                    <div className="content-box d-flex flex-wrap gap-4 gap-md-6">
+                      {icon && (
+                        <div className="icon-box d-inline-flex d-center">
+                          {icon}
+                        </div>
+                      )}
+
+                      <div className="info-box">
+                        <Link to={`${CAREERS}\\${id}`} params={{ asd: data }}>
+                          <h5>{title}</h5>
+                        </Link>
+                        <a href="career-details.html"></a>
+                        <span className="fs-seven mt-2">{location}</span>
+                        <ul className="d-flex gap-6 mt-6">
+                          <li className="d-flex align-items-center gap-2">
+                            <MdWorkOutline size={24} />
+                            <span className="fs-seven">{term}</span>
+                          </li>
+                          <li className="d-flex align-items-center gap-2">
+                            <IoTimeOutline size={24} />
+                            <span className="fs-seven">{types}</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="end-area">
+                      <span className="fs-seven p-1 px-2">{area}</span>
+                    </div>
                   </div>
                 </div>
-                <div className="end-area">
-                  <span className="fs-seven p-1 px-2">Design</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
-                <div className="content-box d-flex flex-wrap gap-4 gap-md-6">
-                  <div className="icon-box d-inline-flex d-center">
-                    <i className="material-symbols-outlined fs-three">
-                      {" "}
-                      view_in_ar{" "}
-                    </i>
-                  </div>
-                  <div className="info-box">
-                    <a href="career-details.html">
-                      <h5>SR UI/UX Game designer</h5>
-                    </a>
-                    <span className="fs-seven mt-2">Al10</span>
-                    <ul className="d-flex gap-6 mt-6">
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          work{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          schedule{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="end-area">
-                  <span className="fs-seven p-1 px-2">Design</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
-                <div className="content-box d-flex flex-wrap gap-4 gap-md-6">
-                  <div className="icon-box d-inline-flex d-center">
-                    <i className="material-symbols-outlined fs-three"> draw </i>
-                  </div>
-                  <div className="info-box">
-                    <a href="career-details.html">
-                      <h5>Sr. Unity Developer</h5>
-                    </a>
-                    <span className="fs-seven mt-2">Al10</span>
-                    <ul className="d-flex gap-6 mt-6">
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          work{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          schedule{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="end-area">
-                  <span className="fs-seven danger p-1 px-2">Developer</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
-                <div className="content-box d-flex flex-wrap gap-4 gap-md-6">
-                  <div className="icon-box d-inline-flex d-center">
-                    <i className="material-symbols-outlined fs-three"> draw </i>
-                  </div>
-                  <div className="info-box">
-                    <a href="career-details.html">
-                      <h5>Lead VFX Artist</h5>
-                    </a>
-                    <span className="fs-seven mt-2">Al10</span>
-                    <ul className="d-flex gap-6 mt-6">
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          work{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          schedule{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="end-area">
-                  <span className="fs-seven info p-1 px-2">VFX Artist</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
-                <div className="content-box d-flex flex-wrap gap-4 gap-md-6">
-                  <div className="icon-box d-inline-flex d-center">
-                    <i className="material-symbols-outlined fs-three">
-                      {" "}
-                      view_in_ar{" "}
-                    </i>
-                  </div>
-                  <div className="info-box">
-                    <a href="career-details.html">
-                      <h5>3D Artist</h5>
-                    </a>
-                    <span className="fs-seven mt-2">Al10</span>
-                    <ul className="d-flex gap-6 mt-6">
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          work{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          schedule{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="end-area">
-                  <span className="fs-seven p-1 px-2">3D Artist</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
-                <div className="content-box d-flex flex-wrap gap-4 gap-md-6">
-                  <div className="icon-box d-inline-flex d-center">
-                    <i className="material-symbols-outlined fs-three">
-                      {" "}
-                      view_in_ar{" "}
-                    </i>
-                  </div>
-                  <div className="info-box">
-                    <a href="career-details.html">
-                      <h5>SR. 3D Artist</h5>
-                    </a>
-                    <span className="fs-seven mt-2">Al10</span>
-                    <ul className="d-flex gap-6 mt-6">
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          work{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          schedule{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="end-area">
-                  <span className="fs-seven p-1 px-2">3D Artist</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
-                <div className="content-box d-flex flex-wrap gap-4 gap-md-6">
-                  <div className="icon-box d-inline-flex d-center">
-                    <i className="material-symbols-outlined fs-three">
-                      {" "}
-                      manage_accounts{" "}
-                    </i>
-                  </div>
-                  <div className="info-box">
-                    <a href="career-details.html">
-                      <h5>Product Manager</h5>
-                    </a>
-                    <span className="fs-seven mt-2">Al10</span>
-                    <ul className="d-flex gap-6 mt-6">
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          work{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                      <li className="d-flex align-items-center gap-2">
-                        <i className="material-symbols-outlined mat-icon">
-                          {" "}
-                          schedule{" "}
-                        </i>
-                        <span className="fs-seven">Full Time</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="end-area">
-                  <span className="fs-seven success p-1 px-2">Manager</span>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>

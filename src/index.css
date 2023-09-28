@@ -41923,6 +41923,11 @@ li {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.banner-section.privacy {
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 .banner-section.services-details {
   background-image: url(/images/services-details-banner-illus.png);
@@ -44724,6 +44729,11 @@ li {
     background-size: 50%;
   }
 
+ .banner-section.privacy {
+    background-size: 50%;
+  }
+
+
   .banner-section.about .shape-area .shape-2 {
     top: 5%;
   }
@@ -45124,7 +45134,12 @@ li {
   .banner-section.about {
     background-image: none;
   }
-
+  .banner-section.privacy {
+    background-image: none;
+  }
+ .banner-section.services {
+    background-image: none;
+  }
   .section-header {
     margin-bottom: 40px;
   }

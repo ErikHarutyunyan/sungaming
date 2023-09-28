@@ -20,6 +20,7 @@ import {
   SERVICES,
   PRIVACY,
   INTEGRATION,
+  CAREERS_SINGLE,
 } from "./route-path";
 // Pages
 import {
@@ -27,6 +28,7 @@ import {
   About,
   News,
   Careers,
+  CareersSingle,
   Contact,
   Games,
   Integration,
@@ -54,6 +56,7 @@ const router = createBrowserRouter(
       <Route path={NEWS_BLOG} element={<SingleNews />} />
       <Route path={PRIVACY} element={<PrivacyPolicy />} />
       <Route path={CAREERS} element={<Careers />} />
+      <Route path={CAREERS_SINGLE} element={<CareersSingle />} />
       <Route path={NOT_FOUND_PAGE} element={<NotFoundPage />} />
     </Route>
   )
