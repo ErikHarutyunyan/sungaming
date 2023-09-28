@@ -4,6 +4,8 @@ import {
   MdOutlinePhone,
   MdSchedule,
 } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { CAREERS, PRIVACY } from "../../router/route-path";
 
 export const Footer = () => {
   return (
@@ -87,8 +89,8 @@ export const Footer = () => {
               </div>
               <div className="col-md-4">
                 <div className="copyright d-flex gap-3 align-items-center justify-content-center justify-content-md-end">
-                  <a href="privacy-policy">Privacy</a>
-                  <a href="terms-conditions">Careers</a>
+                  <Link to={PRIVACY}>Privacy</Link>
+                  <Link to={CAREERS}>Careers</Link>
                 </div>
               </div>
             </div>

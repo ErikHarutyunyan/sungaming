@@ -184,14 +184,14 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section class="our-vision">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10">
-              <div class="section-heading">
-                <h5 class="subtitle">Take a look</h5>
-                <h2 class="title">Our vision & Mission</h2>
-                <p class="text">
+      <section className="our-vision">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 col-md-10">
+              <div className="section-heading">
+                <h5 className="subtitle">Take a look</h5>
+                <h2 className="title">Our vision & Mission</h2>
+                <p className="text">
                   We create long term value for our partners by putting
                   innovations, data and sustainability at the very heart of our
                   business.
@@ -199,41 +199,41 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="single-vision">
-                <div class="icon one">
+          <div className="row">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-vision">
+                <div className="icon one">
                   <IoDiamondOutline size={35} color="white" />
                 </div>
-                <div class="content">
-                  <h4 class="title">Uniqueness</h4>
-                  <p class="text">
+                <div className="content">
+                  <h4 className="title">Uniqueness</h4>
+                  <p className="text">
                     To give back to the people that support our company
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-vision">
-                <div class="icon two">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-vision">
+                <div className="icon two">
                   <MdOutlineDiversity1 size={35} color="white" />
                 </div>
-                <div class="content">
-                  <h4 class="title">Diversity</h4>
-                  <p class="text">
+                <div className="content">
+                  <h4 className="title">Diversity</h4>
+                  <p className="text">
                     To give back to the people that support our company
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-vision">
-                <div class="icon three">
+            <div className="col-lg-4 col-md-6">
+              <div className="single-vision">
+                <div className="icon three">
                   <IoAccessibilityOutline size={35} color="white" />
                 </div>
-                <div class="content">
-                  <h4 class="title">Accessibility</h4>
-                  <p class="text">
+                <div className="content">
+                  <h4 className="title">Accessibility</h4>
+                  <p className="text">
                     To give back to the people that support our company
                   </p>
                 </div>
@@ -424,12 +424,12 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section class="services-area services__bg-color pt-120 pb-120">
-        <div class="container">
-          <div class="row align-items-end align-items-xl-start">
-            <div class="col-lg-6">
-              <div class="section__title text-start mb-20">
-                <span class="sub-title tg__animate-text ready">
+      <section className="services-area services__bg-color pt-120 pb-120">
+        <div className="container">
+          <div className="row align-items-end align-items-xl-start">
+            <div className="col-lg-6">
+              <div className="section__title text-start mb-20">
+                <span className="sub-title tg__animate-text ready">
                   <span>P</span>
                   <span>O</span>
                   <span>W</span>
@@ -448,15 +448,15 @@ const About = () => {
                   <span>E</span>
                   <span>S</span>
                 </span>
-                <h3 class="title">Our Powerful Services Done on time</h3>
+                <h3 className="title">Our Powerful Services Done on time</h3>
               </div>
-              <div class="services__wrapper">
-                <div class="services__item">
-                  <div class="services__icon">
+              <div className="services__wrapper">
+                <div className="services__item">
+                  <div className="services__icon">
                     <IoShareSocialOutline size={45} color="#0ef0ad" />
                   </div>
-                  <div class="services__content">
-                    <h4 class="title">
+                  <div className="services__content">
+                    <h4 className="title">
                       <a href="/service-details">Social Responsibility</a>
                     </h4>
                     <p>
@@ -465,12 +465,12 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                <div class="services__item">
-                  <div class="services__icon">
+                <div className="services__item">
+                  <div className="services__icon">
                     <MdOutlineGames size={45} color="#0ef0ad" />
                   </div>
-                  <div class="services__content">
-                    <h4 class="title">
+                  <div className="services__content">
+                    <h4 className="title">
                       <a href="/service-details">Gambling Aware</a>
                     </h4>
                     <p>
@@ -479,12 +479,12 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                <div class="services__item">
-                  <div class="services__icon">
+                <div className="services__item">
+                  <div className="services__icon">
                     <AiOutlineSafetyCertificate size={45} color="#0ef0ad" />
                   </div>
-                  <div class="services__content">
-                    <h4 class="title">
+                  <div className="services__content">
+                    <h4 className="title">
                       <a href="/service-details">Licences & Certifications</a>
                     </h4>
                     <p>
@@ -493,12 +493,12 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                <div class="services__item">
-                  <div class="services__icon">
+                <div className="services__item">
+                  <div className="services__icon">
                     <LuLayoutPanelLeft size={45} color="#0ef0ad" />
                   </div>
-                  <div class="services__content">
-                    <h4 class="title">
+                  <div className="services__content">
+                    <h4 className="title">
                       <a href="/service-details">Comprehensive Backoffice</a>
                     </h4>
                     <p>
@@ -509,18 +509,18 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="services__images" ref={serviceImgs}>
-                <div class="services__images-item active">
+            <div className="col-lg-6">
+              <div className="services__images" ref={serviceImgs}>
+                <div className="services__images-item active">
                   <img src={services_img04} />
                 </div>
-                <div class="services__images-item ">
+                <div className="services__images-item ">
                   <img src={services_img02} />
                 </div>
-                <div class="services__images-item ">
+                <div className="services__images-item ">
                   <img src={services_img03} />
                 </div>
-                <div class="services__images-item ">
+                <div className="services__images-item ">
                   <img src={services_img01} />
                 </div>
               </div>

@@ -52,6 +52,8 @@ const router = createBrowserRouter(
       <Route path={SERVICES} element={<Services />} />
       <Route path={NEWS} element={<News />} />
       <Route path={NEWS_BLOG} element={<SingleNews />} />
+      <Route path={PRIVACY} element={<PrivacyPolicy />} />
+      <Route path={CAREERS} element={<Careers />} />
       <Route path={NOT_FOUND_PAGE} element={<NotFoundPage />} />
     </Route>
   )

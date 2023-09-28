@@ -1,0 +1,24 @@
+.counter-section .display-one,
+.counters span {
+  font-size: 80px;
+  font-family: "Chakra Petch", sans-serif;
+  color: var(--p300);
+  font-weight: inherit;
+  width: auto;
+  padding: 0;
+  border: none;
+}
+
+.number:before {
+  content: none;
+}
+
+.our-focus.index-two {
+  background-color: var(--n800);
+}
+.our-focus.index-two {
+  background-color: var(--n800);
+}
+.our-focus.index-two:before {
+  content: none;
+}

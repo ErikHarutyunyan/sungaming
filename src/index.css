@@ -42948,8 +42948,8 @@ li {
 }
 
 .contact-us {
-  background-image: url(/images/contact-us-obj.png),
-    url(/images/contact-us-object-2.png);
+  background-image: url("./assets/img/contact-us-obj.png"),
+    url("./assets/img/contact-us-object-2.png");
   background-position: 0, 100%;
   background-repeat: no-repeat;
 }
@@ -44675,9 +44675,6 @@ li {
   font-weight: 700;
 }
 
-.privacy-content .cookies {
-  margin-bottom: -36px;
-}
 
 .privacy-content.terms .safe-data {
   margin-bottom: -23px;
