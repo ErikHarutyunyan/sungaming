@@ -39778,7 +39778,6 @@ a:hover {
   padding: 13px 25px;
   display: inline-flex;
   background-color: var(--p300);
-  width: auto;
   height: auto;
   font-weight: 600;
   border-radius: 16px;
@@ -41895,7 +41894,10 @@ li {
 }
 
 .banner-section.career {
-  background-image: url(/images/career-banner-illus.png);
+  background-image: url("./assets/img/career-banner-illus.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .banner-section.game {
@@ -42795,11 +42797,11 @@ li {
   height: 100px;
 }
 
-.job-opens.details .btn-area a {
+.job-opens.details .btn-area button {
   color: var(--n0);
 }
 
-.job-opens.details .btn-area a,
+.job-opens.details .btn-area button,
 .job-opens.details .icon-box {
   background-color: var(--n700);
 }
@@ -44732,7 +44734,9 @@ li {
  .banner-section.privacy {
     background-size: 50%;
   }
-
+.banner-section.career {
+    background-size: 50%;
+  }
 
   .banner-section.about .shape-area .shape-2 {
     top: 5%;
@@ -45135,6 +45139,9 @@ li {
     background-image: none;
   }
   .banner-section.privacy {
+    background-image: none;
+  }
+  .banner-section.career {
     background-image: none;
   }
  .banner-section.services {

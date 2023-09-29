@@ -2,3 +2,12 @@
   width: 55px;
   height: 55px;
 }
+
+.attachFile {
+  width: 180px;
+}
+
+.closeFile span {
+  color: var(--p300);
+  font-size: 14px;
+}

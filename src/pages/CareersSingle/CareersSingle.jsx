@@ -7,11 +7,34 @@ import { IoTimeOutline } from "react-icons/io5";
 import Subscribe from "../../components/Subscribe";
 import { bubble, ellipse7 } from "../../components/Images";
 import { HOME } from "../../router/route-path";
-import { FiChevronRight } from "react-icons/fi";
+import { FiChevronRight, FiMessageSquare } from "react-icons/fi";
+import { useRef, useState } from "react";
+import OnboardModal from "../../components/OnboardModal/OnboardModal";
+import { AiOutlineMail, AiOutlineUser } from "react-icons/ai";
+import { ImAttachment } from "react-icons/im";
+import { PiUserFocusLight } from "react-icons/pi";
+
 const CareersSingle = () => {
   const { id: idCareers } = useParams();
   const filteredCareer = dataCareers.find((career) => career.id === idCareers);
-
+  const [isOpen, setIsOpen] = useState(false);
+  const hiddenFileInput = useRef(null);
+  const [fileName, setFileName] = useState("");
+  // Programatically click the hidden file input element
+  // when the Button component is clicked
+  const handleClick = (event) => {
+    hiddenFileInput.current.click();
+  };
+  const reset = (event) => {
+    hiddenFileInput.current.value = null;
+    setFileName("");
+  };
+  // Call a function (passed as a prop from the parent component)
+  // to handle the user-selected file
+  const handleChange = (event) => {
+    const fileUploaded = event.target.files[0];
+    setFileName(fileUploaded.name);
+  };
   return (
     <>
       <section className="banner-section inner-banner position-relative about career">
@@ -66,9 +89,8 @@ const CareersSingle = () => {
                     <li className="d-flex align-items-center gap-2">
                       <li className="d-flex align-items-center gap-2">
                         <MdWorkOutline size={24} />
-                        <span className="fs-seven">{filteredCareer.term}</span>
                       </li>
-                      <span className="fs-seven">Full Time</span>
+                      <span className="fs-seven">{filteredCareer.term}</span>
                     </li>
                     <li className="d-flex align-items-center gap-2">
                       <IoTimeOutline size={24} />
@@ -117,9 +139,116 @@ const CareersSingle = () => {
                 </div>
                 <div className="btn-area">
                   <div className="btn-area mt-5 mt-sm-8 flex-wrap gap-6 d-center">
-                    <a href="index.html" className="box-style btn-box d-center">
+                    <button
+                      onClick={() => setIsOpen(true)}
+                      className="box-style btn-box d-center">
                       Apply Now
-                    </a>
+                    </button>
+                    <OnboardModal
+                      open={isOpen}
+                      onClose={() => setIsOpen(false)}>
+                      <div className="modal-content">
+                        <div className="modal-header text-center">
+                          <h4 className="modal-title w-100 font-weight-bold">
+                            Apply For The Position Now!
+                          </h4>
+                        </div>
+                        <div className="modal-body d-center row mx-3">
+                          <div className="md-form col-xl-7 col-lg-7 mt-8 mb-5">
+                            <AiOutlineUser size={24} color="#0ef0ad" />
+                            <label
+                              htmlFor="modalContactInput1"
+                              className="ms-2">
+                              Full Name
+                            </label>
+                            <input
+                              type="text"
+                              id="modalContactInput1"
+                              className="form-control validate mt-3"
+                            />
+                          </div>
+
+                          <div className="md-form col-xl-7 col-lg-7 mb-5">
+                            <AiOutlineMail size={24} color="#0ef0ad" />
+                            <label
+                              className="ms-2"
+                              htmlFor="modalContactInput2">
+                              Your email
+                            </label>
+                            <input
+                              type="email"
+                              id="modalContactInput2"
+                              className="form-control validate mt-3"
+                            />
+                          </div>
+
+                          <div className="md-form col-xl-7 col-lg-7 mb-5">
+                            <PiUserFocusLight size={30} color="#0ef0ad" />
+                            <label
+                              className="ms-2"
+                              htmlFor="modalContactInput3">
+                              Vacancy
+                            </label>
+                            <input
+                              type="text"
+                              id="modalContactInput3"
+                              className="form-control validate mt-3"
+                            />
+                          </div>
+
+                          <div className="md-form col-xl-7 col-lg-7 mb-5">
+                            <FiMessageSquare size={28} color="#0ef0ad" />
+                            <label
+                              className="ms-2"
+                              htmlFor="modalContactTextarea">
+                              Your message
+                            </label>
+                            <textarea
+                              type="text"
+                              id="modalContactTextarea"
+                              className="md-textarea form-control mt-3"
+                              rows="4"></textarea>
+                          </div>
+                          <div className="md-form col-xl-7 col-lg-7">
+                            <ImAttachment size={24} color="#0ef0ad" />
+                            <label
+                              className="ms-2 pointer d-inline-flex align-items-center"
+                              onClick={handleClick}>
+                              {fileName ? (
+                                <>
+                                  <p className="attachFile text-truncate">
+                                    File: {fileName}
+                                  </p>
+                                  <button
+                                    type="button"
+                                    onClick={reset}
+                                    className="closeFile mx-2 d-inline">
+                                    <span className="small">x</span>
+                                  </button>
+                                </>
+                              ) : (
+                                "Click Attach CV"
+                              )}
+                            </label>
+
+                            <input
+                              type="file"
+                              onChange={handleChange}
+                              ref={hiddenFileInput}
+                              accept=".jpg,.jpeg,.png,.doc,.docx,.pdf,.html,.ppt,.pptx,.odp"
+                              style={{ display: "none" }}
+                            />
+                          </div>
+                        </div>
+                        <div className="modal-footer d-flex justify-content-center">
+                          <div className="btn-area mt-6 ">
+                            <button className="w-25 justify-content-center box-style text-nowrap btn-box">
+                              Apply
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </OnboardModal>
                   </div>
                 </div>
               </div>
