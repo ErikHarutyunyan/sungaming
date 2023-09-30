@@ -15,7 +15,6 @@ import {GAMES} from "../../router/route-path.jsx";
 const GamesThumb = () => {
   const [menuItems, setMenuItems] = useState(dataGames);
   const [isActive, setIsActive] = useState("category_0");
-  console.log("isActive :", isActive);
 
   const handleClick = (e) => {
     setIsActive(e.target.id);

@@ -177,7 +177,7 @@ function Home() {
                       </h3>
                       <span className="display-one">
                         We Craft Games
-                        <br/>
+                        <br />
                         <span className="index-module_type__E-SaG typed d-inline-block">
                           Entertai
                         </span>
@@ -212,7 +212,7 @@ function Home() {
                     setting={settingsFeatured}
                     className={"game-carousel pb-20 slick-initialized"}>
                     {featuredGames.map((featuredItem) => {
-                      const {id, title, imgMain} = featuredItem;
+                      const { id, title, imgMain } = featuredItem;
                       return (
                         <div
                           key={id}
@@ -251,7 +251,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="our-services pt-120">
+      {/* <section className="our-services pt-120">
         <div className="container overflow-hidden">
           <div className="row align-items-center section-text">
             <div className="col-lg-4">
@@ -273,9 +273,9 @@ function Home() {
             </div>
           </div>
           <SimpleSlider
-            setting={settingsServices}
-            className="services-carousel">
-            {/* <div className="slide-area" style="width:100%;display:inline-block">
+            setting={settingsServices} 
+            className="services-carousel">*/}
+      {/* <div className="slide-area" style="width:100%;display:inline-block">
               <div className="single-slider box-style box-first p-5 px-xl-9 py-xl-10">
                 <div className="icon-box d-center">
                   <svg
@@ -437,7 +437,7 @@ function Home() {
               </div>
             </div> */}
 
-            <div className="slide-area" style="width:100%;display:inline-block">
+      {/* <div className="slide-area" style="width:100%;display:inline-block">
               <div className="single-slider box-style box-first p-5 px-xl-9 py-xl-10">
                 <div className="icon-box d-center">
                   <svg
@@ -504,11 +504,11 @@ function Home() {
             </div>
           </SimpleSlider>
         </div>
-      </section>
-      <Service/>
-      <CounterActive/>
+      </section> */}
+      <Service />
+      <CounterActive />
 
-      <GamesThumb/>
+      <GamesThumb />
 
       <section className=" about-block  recently-completed blogs gaming-character">
         <div className="shape-area">
@@ -575,7 +575,7 @@ function Home() {
                         <a
                           className="end-area mt-8 d-center"
                           href="/blog-single">
-                          <MdOutlineNorthEast/>
+                          <MdOutlineNorthEast />
                         </a>
                       </div>
                     </div>
@@ -610,7 +610,7 @@ function Home() {
                         <a
                           className="end-area mt-8 d-center"
                           href="/blog-single">
-                          <MdOutlineNorthEast/>
+                          <MdOutlineNorthEast />
                         </a>
                       </div>
                     </div>
@@ -645,7 +645,7 @@ function Home() {
                         <a
                           className="end-area mt-8 d-center"
                           href="/blog-single">
-                          <MdOutlineNorthEast/>
+                          <MdOutlineNorthEast />
                         </a>
                       </div>
                     </div>
@@ -680,7 +680,7 @@ function Home() {
                         <a
                           className="end-area mt-8 d-center"
                           href="/blog-single">
-                          <MdOutlineNorthEast/>
+                          <MdOutlineNorthEast />
                         </a>
                       </div>
                     </div>
@@ -792,7 +792,7 @@ function Home() {
         </div>
       </section>
 
-      <Subscribe/>
+      <Subscribe />
     </>
   );
 }

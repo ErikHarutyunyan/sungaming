@@ -14,7 +14,7 @@ function App() {
       {isDialog !== null && isDialog ? (
         <RouterProvider router={router} />
       ) : (
-        <OnboardModal open={true}>
+        <OnboardModal open={true} iframePath="https://sunhorse.netlify.app/">
           <Dialog setDialog={setDialog} />
         </OnboardModal>
       )}

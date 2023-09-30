@@ -1,0 +1,32 @@
+.checkAge-form button {
+  padding: 0.8rem 1.1rem;
+  color: #2ed573;
+  border: 1px solid #2ed573;
+  margin: 1rem 0.5rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+.checkAge-form button:hover {
+  background-color: #2ed573;
+  color: #fff;
+}
+.checkAge-form button.rejectAge:hover {
+  background-color: #ed5050;
+  color: #fff;
+}
+.checkAge-form button.rejectAge {
+  color: #ed5050;
+  margin-top: 0rem;
+  border: 1px solid #ed5050;
+}
+.checkAge-form h3 {
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 1rem 0;
+  text-transform: none;
+}

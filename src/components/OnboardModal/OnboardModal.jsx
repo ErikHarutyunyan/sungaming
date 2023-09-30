@@ -12,6 +12,20 @@ const MODAL_STYLES = {
   borderRadius: "16px",
 };
 
+const MODAL_AGE_STYLES = {
+  position: "fixed",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  backgroundColor: "rgb(34 36 52 / 33%)",
+  padding: "50px",
+  zIndex: 1000,
+  borderRadius: "16px",
+  maxWidth: "500px",
+  fontWeight: "700",
+  textAlign: "center",
+};
+
 const OVERLAY_STYLES = {
   position: "fixed",
   top: 0,
@@ -23,21 +37,43 @@ const OVERLAY_STYLES = {
   backdropFilter: "blur(5px)",
 };
 
-const OnboardModal = ({ open, onClose, children }) => {
+const IFRAME_STYLES = {
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  width: "100vw",
+  height: "100vh",
+};
+
+const OnboardModal = ({ open, onClose, children, iframePath="" }) => {
   if (!open) return null;
 
   return ReactDom.createPortal(
     <>
-      <div style={OVERLAY_STYLES} />
-      <div style={MODAL_STYLES}>
-        <button
-          onClick={onClose}
-          type="button"
-          className="close"
-          data-dismiss="modal"
-          aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
+      {iframePath && (
+        <iframe
+          seamless
+          loading="eager"
+          src={iframePath}
+          allowFullScreen
+          style={IFRAME_STYLES}
+        />
+      )}
+      <div style={iframePath ? null : OVERLAY_STYLES} />
+      <div style={iframePath ? MODAL_AGE_STYLES : MODAL_STYLES}>
+        {!iframePath && (
+          <button
+            onClick={onClose}
+            type="button"
+            className="close"
+            data-dismiss="modal"
+            aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        )}
+
         {children}
       </div>
     </>,
