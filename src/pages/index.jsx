@@ -12,12 +12,13 @@ import Services from "./Services";
 import SingleGame from "./SingleGame";
 import SingleNews from "./SingleNews";
 import TermsConditions from "./TermsConditions";
-
+import NewsSingle from "./NewsSingle";
 
 export {
   Home,
   About,
   News,
+  NewsSingle,
   Careers,
   CareersSingle,
   Contact,

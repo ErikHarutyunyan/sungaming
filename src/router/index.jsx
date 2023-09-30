@@ -38,6 +38,7 @@ import {
   SingleNews,
   TermsConditions,
   NotFoundPage,
+  NewsSingle,
 } from "../pages";
 
 const router = createBrowserRouter(
@@ -53,7 +54,7 @@ const router = createBrowserRouter(
       <Route path={CONTACT} element={<Contact />} />
       <Route path={SERVICES} element={<Services />} />
       <Route path={NEWS} element={<News />} />
-      <Route path={NEWS_BLOG} element={<SingleNews />} />
+      <Route path={NEWS_BLOG} element={<NewsSingle />} />
       <Route path={PRIVACY} element={<PrivacyPolicy />} />
       <Route path={CAREERS} element={<Careers />} />
       <Route path={CAREERS_SINGLE} element={<CareersSingle />} />
