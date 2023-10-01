@@ -23,7 +23,7 @@ export const Header = () => {
             <span className="fs-six">MENU</span>
           </button>
         </div>
-        <a
+        {/* <a
           className="navbar-brand ms-4 ms-xxl-15 d-flex align-items-center gap-2"
           href="/">
           <img
@@ -46,7 +46,7 @@ export const Header = () => {
             data-nimg="1"
             className="logo-text d-xxl-block d-none"
           />
-        </a>
+        </a> */}
         <div
           className="collapse navbar-collapse d-flex gap-10 w-100 justify-content-end px-8 pe-2"
           id="navbar-content">

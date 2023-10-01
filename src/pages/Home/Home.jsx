@@ -173,18 +173,20 @@ function Home() {
                   <div className="main-content">
                     <div className="mb-8">
                       <h3 className="visible-slowly-bottom sub-title">
-                        <span>Building Gaming Worlds</span>
+                        <span>Building Sun Gaming Worlds</span>
                       </h3>
                       <span className="display-one">
-                        We Craft Games
+                        Modern iGaming
                         <br />
                         <span className="index-module_type__E-SaG typed d-inline-block">
-                          Entertai
+                          content
                         </span>
                       </span>
                       <p className="fs-four">
-                        Developing games that are imaginative, fun and bringing
-                        colors to the gaming world
+                        We uplift our passion creating a perfectly tailored
+                        range of products with hugely engaging game features,
+                        appealing design and courage to go beyond the limits of
+                        the ordinary.
                       </p>
                     </div>
                     <div className="btn-area alt-bg undefined">
