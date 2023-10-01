@@ -1,0 +1,46 @@
+.player-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: auto;
+  z-index: 1000;
+  padding: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  width: 100%;
+}
+
+.react-player {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border-radius: 5px;
+  object-fit: cover;
+  z-index: 1000;
+}
+
+@media (max-width: 800px) {
+  .react-player {
+    width: 500px !important;
+    height: 300px !important;
+  }
+}
+@media (max-width: 500px) {
+  .react-player {
+    width: 370px !important;
+    height: 240px !important;
+  }
+  .player-wrapper {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .react-player {
+    width: 325px !important;
+    height: 240px !important;
+  }
+}

@@ -133,6 +133,29 @@ export const settingsBlog = {
   prevArrow: <BlogPrevArrow/>,
 };
 
+
+export const settingsGameSingle = {
+  dots: true,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 1500,
+  cssEase: "ease-in-out",
+  speed: 600,
+  pauseOnHover: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  adaptiveHeight: false,
+  dotsClass: "section-dots",
+  appendDots: (dots) => <ul style={{ display: "block" }}>{dots}</ul>,
+  customPaging: (i) => (
+    <span className="dot" role="button" title={`${i}`}>
+      <span className="string">{i} </span>
+    </span>
+  ),
+  nextArrow: <BlogNextArrow />,
+  prevArrow: <BlogPrevArrow />,
+};
+
 export const settingsAbout = {
   infinite: true,
   autoplay: true,

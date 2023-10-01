@@ -1,32 +1,31 @@
 // Styles
 import "./Games.css";
-import {bubble, ellipse7} from "../../components/Images/index.jsx";
-import {FiChevronRight} from "react-icons/fi";
-import {GrShieldSecurity} from "react-icons/gr";
-import {FaStudiovinari} from "react-icons/fa";
-import {PiLightbulbLight} from "react-icons/pi";
-import {MdSecurity} from "react-icons/md";
+import { bubble, ellipse7 } from "../../components/Images/index.jsx";
+import { FiChevronRight } from "react-icons/fi";
+import { GrShieldSecurity } from "react-icons/gr";
+import { FaStudiovinari } from "react-icons/fa";
+import { PiLightbulbLight } from "react-icons/pi";
+import { MdSecurity } from "react-icons/md";
 import gameimg6 from "../../assets/img/game-image-6.png";
 import money from "../../assets/img/money-drive.jpg";
 import gameShape1 from "../../assets/img/gameShape5.gif";
 import gameShape2 from "../../assets/img/gameShape3.gif";
-import {Suspense, useReducer, useState} from "react";
-import {motion, MotionConfig, useMotionValue} from "framer-motion";
-import {Shapes} from "../../components/Shapes/Shapes.jsx";
-import {transition} from "../../settings/gameButtonSetings.js";
+import { Suspense, useReducer, useState } from "react";
+import { motion, MotionConfig, useMotionValue } from "framer-motion";
+import { Shapes } from "../../components/Shapes/Shapes.jsx";
+import { transition } from "../../settings/gameButtonSetings.js";
 import useMeasure from "react-use-measure";
-import bannerGameCut from "../../assets/img/bannerGameCut.gif"
+import bannerGameCut from "../../assets/img/bannerGameCut.gif";
 import {
   allCategoriesGames,
   categoryIcons,
   dataGames,
 } from "../../data/dataGames";
-import {GAMES} from "../../router/route-path";
-import {Link} from "react-router-dom";
+import { GAMES } from "../../router/route-path";
+import { Link } from "react-router-dom";
 import Subscribe from "../../components/Subscribe/index.jsx";
 import CounterActive from "../../components/CounterActive/CounterActive.jsx";
 import BannerPages from "../../components/BannerPages/BannerPages.jsx";
-
 
 const gamesPerRow = 4;
 
@@ -34,14 +33,13 @@ const Games = () => {
   const [next, setNext] = useState(gamesPerRow);
 
   const [menuItems, setMenuItems] = useState(dataGames);
-  const [ref, bounds] = useMeasure({scroll: false});
+  const [ref, bounds] = useMeasure({ scroll: false });
   const [isHover, setIsHover] = useState(false);
   const [isPress, setIsPress] = useState(false);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
   const handleMoreGames = () => {
-    debugger
     setNext(next + gamesPerRow);
   };
 
@@ -72,9 +70,16 @@ const Games = () => {
 
   return (
     <>
-
-      <BannerPages classNames={"game"} bg={bannerGameCut} page={"Games"} title={'Our'} titleSecond={"Games"}
-                   desc={"Our projects feature unique mechanics, fine-tuned gameplay, and eye-catching visual style."}/>
+      <BannerPages
+        classNames={"game"}
+        bg={bannerGameCut}
+        page={"Games"}
+        title={"Our"}
+        titleSecond={"Games"}
+        desc={
+          "Our projects feature unique mechanics, fine-tuned gameplay, and eye-catching visual style."
+        }
+      />
 
       <section className="our-game-features pt-120 pb-120">
         <div className="container">
@@ -89,8 +94,7 @@ const Games = () => {
           </div>
           <div className="row cus-mar">
             <div className="col-md-6">
-              <div
-                className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
+              <div className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
                 <div className="content-box d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
                     <svg
@@ -143,11 +147,10 @@ const Games = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div
-                className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
+              <div className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
                 <div className="content-box d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
-                    <MdSecurity size={45} color={"#0ef0ad"}/>
+                    <MdSecurity size={45} color={"#0ef0ad"} />
                   </div>
                   <div className="info-box">
                     <h5 className="mb-2">For Everyone</h5>
@@ -164,11 +167,10 @@ const Games = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div
-                className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
+              <div className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
                 <div className="content-box d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
-                    <FaStudiovinari size={45} color={"#0ef0ad"}/>
+                    <FaStudiovinari size={45} color={"#0ef0ad"} />
                   </div>
                   <div className="info-box">
                     <h5 className="mb-2">Fast Gaming</h5>
@@ -184,11 +186,10 @@ const Games = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div
-                className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
+              <div className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
                 <div className="content-box d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
-                    <PiLightbulbLight size={45} color={"#0ef0ad"}/>
+                    <PiLightbulbLight size={45} color={"#0ef0ad"} />
                   </div>
                   <div className="info-box">
                     <h5 className="mb-2">Unique Twist</h5>
@@ -266,10 +267,10 @@ const Games = () => {
                         }>
                         {categoryIcons[category.toLowerCase()] !==
                           undefined && (
-                            <span className="icon-area pe-none">
+                          <span className="icon-area pe-none">
                             {categoryIcons[category.toLowerCase()]}
                           </span>
-                          )}
+                        )}
                         {category}
                       </button>
                     </li>
@@ -365,7 +366,8 @@ const Games = () => {
                       </div>
                     </div> */}
                     {menuItems?.slice(0, next)?.map((item) => {
-                      const {id, title, imgMain, imgSmall, about} = item;
+                      const { id, title, imgMain, path, imgSmall, about } =
+                        item;
                       return (
                         <motion.div
                           animate={{
@@ -424,7 +426,8 @@ const Games = () => {
                             <div className="link-item py-3">
                               <Link
                                 className=" px-5 text-decoration-underline"
-                                to={`${GAMES}\\${id}`}>
+                                to={`${GAMES}\\${path}`}
+                                state={{ data: item }}>
                                 More Details
                               </Link>
                             </div>
@@ -433,7 +436,7 @@ const Games = () => {
                             <motion.a
                               href="/google.com"
                               className="buttonPlay"
-                              style={{position: "absolute"}}
+                              style={{ position: "absolute" }}
                               ref={ref}
                               initial={false}
                               animate={isHover ? "hover" : "rest"}
@@ -471,11 +474,11 @@ const Games = () => {
                               <motion.div
                                 className="shapesPlay"
                                 variants={{
-                                  rest: {opacity: 0},
-                                  hover: {opacity: 1},
+                                  rest: { opacity: 0 },
+                                  hover: { opacity: 1 },
                                 }}>
-                                <div className="pink blush"/>
-                                <div className="blue blush"/>
+                                <div className="pink blush" />
+                                <div className="blue blush" />
                                 <div className="containerr">
                                   <Suspense fallback={null}>
                                     <Shapes
@@ -489,8 +492,8 @@ const Games = () => {
                               </motion.div>
                               <motion.div
                                 variants={{
-                                  hover: {scale: 1.1},
-                                  press: {scale: 0.85},
+                                  hover: { scale: 1.1 },
+                                  press: { scale: 0.85 },
                                 }}
                                 className="labelPlay">
                                 Play Demo
@@ -505,10 +508,7 @@ const Games = () => {
                     <div className="loading py-3 px-8 d-inline-flex align-items-center gap-2">
                       <div className="icon-box d-center">
                         {next < menuItems?.length && (
-                          <button
-                            className=""
-                            onClick={handleMoreGames}
-                          >
+                          <button className="" onClick={handleMoreGames}>
                             Load more
                           </button>
                         )}
@@ -522,8 +522,8 @@ const Games = () => {
           </div>
         </div>
       </section>
-      <CounterActive/>
-      <Subscribe/>
+      <CounterActive />
+      <Subscribe />
     </>
   );
 };

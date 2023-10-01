@@ -5,6 +5,7 @@ import { blogsImg1 } from "../../components/Images";
 import newsBg from "../../assets/img/bg2.jpg";
 import { Link } from "react-router-dom";
 import { NEWS, NEWS_BLOG } from "../../router/route-path";
+import { dataNews } from "../../data/dataNews";
 
 const News = () => {
   return (
@@ -181,22 +182,18 @@ const News = () => {
                 <div className="newsItem">
                   <div className="newsImg-a">
                     <a href="/news/SBCSummitBarcelona2023">
-                      <img alt="Image" loading="lazy" src={blogsImg1} />
+                      {}
+                      <img
+                        alt="Image"
+                        loading="lazy"
+                        src={dataNews[0].imgMain}
+                      />
                     </a>
                   </div>
-                  <i>12.09.2023</i>
-                  <h6>The Role Of Music And Sound Effects In Game Design</h6>
-                  <p>
-                    When you think about your favourite video games, what stands
-                    out? Is it the gameplay, the graphics, or maybe the story?
-                    Chances are, the music and sound effects played a big role
-                    in creating the overall experience. In fact, music and sound
-                    effects are an essential component of game design, helping
-                    to set the tone, build immersion, and create memorable
-                    moments.Here are just a few ways music and sound effects
-                    impact game design:
-                  </p>
-                  <Link to={`${NEWS}\\news-blog`}>Read More</Link>
+                  <i>{dataNews[0].data}</i>
+                  <h6>{dataNews[0].title}</h6>
+                  <p>{dataNews[0].shortInfo}</p>
+                  <Link to={`${NEWS}\\${dataNews[0].path}`}>Read More</Link>
                 </div>
                 <div className="newsItem">
                   <div className="newsImg-a">

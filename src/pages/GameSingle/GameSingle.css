@@ -1,0 +1,31 @@
+.banner-section.gameDetails {
+  background-blend-mode: overlay;
+  background-position: center top, center bottom;
+  background-repeat: no-repeat;
+  background-size: 100%, 80%;
+}
+
+.gameDetails:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1.5rem;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  background-color: var(--p400);
+}
+.gameDetails:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 1.5rem;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  background-color: var(--p400);
+}
+
+.circle-text.video {
+    position: absolute;
+}

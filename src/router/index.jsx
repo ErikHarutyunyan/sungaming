@@ -31,11 +31,10 @@ import {
   CareersSingle,
   Contact,
   Games,
+  GameSingle,
   Integration,
   PrivacyPolicy,
   Services,
-  SingleGame,
-  SingleNews,
   TermsConditions,
   NotFoundPage,
   NewsSingle,
@@ -46,6 +45,7 @@ const router = createBrowserRouter(
     <Route path={HOME} element={<Layout />}>
       <Route index element={<Home />} />
       <Route path={GAMES} element={<Games />} />
+      <Route path={GAMES_SINGLE} element={<GameSingle />} />
       <Route
         path={ABOUT}
         element={<About />}

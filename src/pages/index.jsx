@@ -6,11 +6,10 @@ import Careers from "./Careers";
 import CareersSingle from "./CareersSingle/CareersSingle";
 import Contact from "./Contact";
 import Games from "./Games/Games";
+import GameSingle from "./GameSingle/GameSingle";
 import Integration from "./Integration";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Services from "./Services";
-import SingleGame from "./SingleGame";
-import SingleNews from "./SingleNews";
 import TermsConditions from "./TermsConditions";
 import NewsSingle from "./NewsSingle";
 
@@ -23,11 +22,10 @@ export {
   CareersSingle,
   Contact,
   Games,
+  GameSingle,
   Integration,
   PrivacyPolicy,
   Services,
-  SingleGame,
-  SingleNews,
   TermsConditions,
   NotFoundPage,
 };

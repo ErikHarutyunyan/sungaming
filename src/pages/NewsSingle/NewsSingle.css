@@ -1,0 +1,50 @@
+.newsDetails {
+  background-blend-mode: overlay;
+}
+
+.newsDetails:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1.5rem;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  background-color: var(--p400);
+}
+.newsDetails:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 1.5rem;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  background-color: var(--p400);
+}
+
+.firstLetter:not(:focus):first-letter {
+  float: left;
+  margin: 0.05em 0.1em 0 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: transparent;
+  color: var(--p300);
+  font-size: 57px;
+  height: 55px;
+  line-height: 55px;
+  margin: 10px 10px 0 0;
+  text-align: left;
+  min-width: 60px;
+}
+
+.postContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+p.newsText {
+  font-size: 17px;
+  line-height: 30px;
+}

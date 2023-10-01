@@ -19,9 +19,35 @@ import ourGamesShape1 from "../../assets/img/our-games-shape-1.webp";
 import ourGamesShape2 from "../../assets/img/our-games-shape-2.webp";
 import ourGamesShape3 from "../../assets/img/our-games-shape-3.webp";
 import star from "../../assets/img/star.webp";
-import serviceThumb from "../../assets/img/services-thumb.webp"
+import serviceThumb from "../../assets/img/services-thumb.webp";
 import bubble from "../../assets/img/bubble.png";
-import bannerGame from "../../assets/img/bannerGame.png"
+import bannerGame from "../../assets/img/bannerGame.png";
+
+// Games
+import pokerSmall from "../../assets/img/games/ha-three-card-poker.jpg";
+import soccerSmall from "../../assets/img/games/ha-knockout-football-rush.jpg";
+import outherspaceSmall from "../../assets/img/games/screen_1.jpg";
+import aladdinSmall from "../../assets/img/games/sy-alladin-and-the-golden-palace.jpg";
+import baccaratSmall from "../../assets/img/games/ha-american-baccarat.jpg";
+import bingoSmall from "../../assets/img/games/wz-extra-bingo.jpg";
+import blackJackSmall from "../../assets/img/games/o2-blackjack-classic.jpg";
+import studPokerSmall from "../../assets/img/games/qf-caribbean-stud.jpg";
+import crapsSmall from "../../assets/img/games/craps.jpg";
+import crazyMonkeySmall from "../../assets/img/games/ks-crazy-monkey.jpg";
+import harnessSmall from "../../assets/img/games/vg-sports.jpg";
+import kenoSmall from "../../assets/img/games/p0-keno.jpg";
+import mummySmall from "../../assets/img/games/ha-mummy-money.jpg";
+import olympusKenoSmall from "../../assets/img/games/pg-keno.jpg";
+import rouletteRoyaleSmall from "../../assets/img/games/nv-lux-roulette.jpg";
+import royalSlotSmall from "../../assets/img/games/codecanyon.png";
+import katanaFruitsSmall from "../../assets/img/games/katana.jpg";
+import spaceSmall from "../../assets/img/games/ha-space-fortune.jpg";
+import fruitsSmall from "../../assets/img/games/no-fruits.jpg";
+import goldPotSmall from "../../assets/img/games/pot.jpg";
+import footballSmall from "../../assets/img/games/ult.jpg";
+import whellSmall from "../../assets/img/games/fort.jpg";
+import pokerBig from "../../assets/img/games/ha-three-card-pokerBig.jpg";
+
 
 export {
   planet,
@@ -47,5 +73,28 @@ export {
   star,
   serviceThumb,
   bubble,
-  bannerGame
+  bannerGame,
+  pokerSmall,
+  soccerSmall,
+  outherspaceSmall,
+  aladdinSmall,
+  baccaratSmall,
+  bingoSmall,
+  blackJackSmall,
+  studPokerSmall,
+  crapsSmall,
+  crazyMonkeySmall,
+  harnessSmall,
+  kenoSmall,
+  mummySmall,
+  olympusKenoSmall,
+  rouletteRoyaleSmall,
+  royalSlotSmall,
+  katanaFruitsSmall,
+  spaceSmall,
+  fruitsSmall,
+  goldPotSmall,
+  footballSmall,
+  whellSmall,
+  pokerBig,
 };

@@ -1,6 +1,6 @@
 import "./OnboardModal.css";
 import ReactDom from "react-dom";
-
+import ReactPlayer from "react-player";
 const MODAL_STYLES = {
   position: "fixed",
   top: "50%",
@@ -47,11 +47,26 @@ const IFRAME_STYLES = {
   height: "100vh",
 };
 
-const OnboardModal = ({ open, onClose, children, iframePath="" }) => {
+const OnboardModal = ({
+  open,
+  onClose,
+  children,
+  iframePath = "",
+  videoPath = "",
+}) => {
   if (!open) return null;
 
   return ReactDom.createPortal(
     <>
+      {/* <div className="player-wrapper">
+        <ReactPlayer
+          className="react-player"
+          url={`${videoPath}`}
+          width="100%"
+          height="100%"
+          controls
+        />
+      </div> */}
       {iframePath && (
         <iframe
           seamless
@@ -62,8 +77,27 @@ const OnboardModal = ({ open, onClose, children, iframePath="" }) => {
         />
       )}
       <div style={iframePath ? null : OVERLAY_STYLES} />
-      <div style={iframePath ? MODAL_AGE_STYLES : MODAL_STYLES}>
-        {!iframePath && (
+
+      {!iframePath && videoPath !== "" ? (
+        <>
+          <div className="player-wrapper">
+            <button
+              onClick={onClose}
+              type="button"
+              className="close"
+              data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <ReactPlayer
+              className="react-player"
+              url={`${videoPath}`}
+              controls
+            />
+          </div>
+        </>
+      ) : (
+        <div style={iframePath ? MODAL_AGE_STYLES : MODAL_STYLES}>
           <button
             onClick={onClose}
             type="button"
@@ -72,10 +106,9 @@ const OnboardModal = ({ open, onClose, children, iframePath="" }) => {
             aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
-        )}
-
-        {children}
-      </div>
+          {children}
+        </div>
+      )}
     </>,
     document.getElementById("portal")
   );

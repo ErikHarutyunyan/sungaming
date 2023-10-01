@@ -29939,7 +29939,7 @@ fieldset:disabled .btn {
 
 .bg-transparent {
   --bs-bg-opacity: 1;
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .bg-body-secondary {
@@ -43376,7 +43376,7 @@ li {
   text-align: center;
   position: absolute;
   bottom: 15px;
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   justify-content: space-between;
   background: var(--n500);
