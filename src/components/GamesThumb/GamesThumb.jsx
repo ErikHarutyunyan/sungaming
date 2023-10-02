@@ -4,13 +4,17 @@ import {
   ourGamesShape2,
   ourGamesShape3,
 } from "../Images";
-import {allCategoriesGames, dataGames, categoryIcons} from "../../data/dataGames";
-import {useReducer, useState} from "react";
+import {
+  allCategoriesGames,
+  dataGames,
+  categoryIcons,
+} from "../../data/dataGames";
+import { useReducer, useState } from "react";
 
 // import "./GamesThumb.css";
-import {motion} from "framer-motion";
-import {Link} from "react-router-dom";
-import {GAMES} from "../../router/route-path.jsx";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { GAMES } from "../../router/route-path.jsx";
 
 const GamesThumb = () => {
   const [menuItems, setMenuItems] = useState(dataGames);
@@ -25,20 +29,23 @@ const GamesThumb = () => {
       setMenuItems(dataGames);
       return;
     }
-
+    console.log("category", category);
     const newItems = dataGames.filter((item) => {
-      return item.category[0] == category;
+      if (item.category.length > 1)
+        return item.category.filter(
+          (categoryItem) => categoryItem === category
+        );
+      else return item.category[0] == category;
     });
     setMenuItems(newItems);
   };
 
   const [toggled, toggle] = useReducer((state) => !state, true);
 
-  
   return (
     <section
       className="our-games all-games overflow-hidden pt-120 pb-120"
-      style={{backgroundImage: `url(${allGameBg})`}}>
+      style={{ backgroundImage: `url(${allGameBg})` }}>
       <div className="shape-area">
         <img
           src={ourGamesShape1}
@@ -128,7 +135,7 @@ const GamesThumb = () => {
               <div className={`tabitem active`}>
                 <div className="row cus-mar justify-content-center">
                   {menuItems?.map((item) => {
-                    const {id, title, imgMain, imgSmall, about} = item;
+                    const { id, title, imgMain, imgSmall, about } = item;
                     return (
                       <motion.div
                         animate={{
@@ -171,7 +178,6 @@ const GamesThumb = () => {
                             duration: 0.5,
                           },
                         }}
-                    
                         key={id}
                         className={`col-xl-4 col-sm-6 col-8`}>
                         <div className="single-box">

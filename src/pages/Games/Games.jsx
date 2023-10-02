@@ -59,9 +59,13 @@ const Games = () => {
       setMenuItems(dataGames);
       return;
     }
-
+    console.log("<category></category> :", category);
     const newItems = dataGames.filter((item) => {
-      return item.category[0] == category;
+      if (item.category.length > 1 && item.category.includes(category))
+        return item.category.filter(
+          (categoryItem) => categoryItem === category
+        );
+      else return item.category[0] == category;
     });
     setMenuItems(newItems);
   };

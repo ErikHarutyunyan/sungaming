@@ -9,7 +9,7 @@ const NewsSingle = () => {
       <section
         className="banner-section inner-banner position-relative store newsDetails "
         style={{
-          backgroundImage: `url(${dataNews[0].imgMain}), linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5))`,
+          backgroundImage: `url(${dataNews[1].imgMain}), linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5))`,
         }}>
         <div className="shape-area">
           <img src={bubble} className="shape-1" alt="icon" />
@@ -20,7 +20,7 @@ const NewsSingle = () => {
             <div className="col-lg-8 col-md-10 justify-content-center">
               <div className="main-content">
                 <h2 className="visible-slowly-bottom teact-center display-four mb-6">
-                  <span className="text-center">{dataNews[0].title}</span>
+                  <span className="text-center">{dataNews[1].title}</span>
                 </h2>
               </div>
             </div>
@@ -30,7 +30,7 @@ const NewsSingle = () => {
       <section>
         <div className="container pt-20">
           <div className="row">
-            <div dangerouslySetInnerHTML={{ __html: dataNews[0].desc }} />
+            <div dangerouslySetInnerHTML={{ __html: dataNews[1].desc }} />
           </div>
         </div>
       </section>

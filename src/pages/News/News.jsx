@@ -186,14 +186,14 @@ const News = () => {
                       <img
                         alt="Image"
                         loading="lazy"
-                        src={dataNews[0].imgMain}
+                        src={dataNews[1].imgMain}
                       />
                     </a>
                   </div>
-                  <i>{dataNews[0].data}</i>
-                  <h6>{dataNews[0].title}</h6>
-                  <p>{dataNews[0].shortInfo}</p>
-                  <Link to={`${NEWS}\\${dataNews[0].path}`}>Read More</Link>
+                  <i>{dataNews[1].data}</i>
+                  <h6>{dataNews[1].title}</h6>
+                  <p>{dataNews[1].shortInfo}</p>
+                  <Link to={`${NEWS}\\${dataNews[1].path}`}>Read More</Link>
                 </div>
                 <div className="newsItem">
                   <div className="newsImg-a">

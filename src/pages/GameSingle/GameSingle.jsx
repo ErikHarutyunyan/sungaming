@@ -6,8 +6,7 @@ import circle from "../../assets/img/circle.png";
 import objectImg from "../../assets/img/object-1.png";
 import lineImg from "../../assets/img/line-1.png";
 import videoBg from "../../assets/img/video-bg.png";
-import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css";
+
 console.log("circle :", circle);
 import gameDetalis from "../../assets/img/gameDtalisBig.png";
 import { IoPlay } from "react-icons/io5";
