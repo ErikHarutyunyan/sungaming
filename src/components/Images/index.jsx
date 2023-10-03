@@ -23,6 +23,18 @@ import serviceThumb from "../../assets/img/services-thumb.webp";
 import bubble from "../../assets/img/bubble.png";
 import bannerGame from "../../assets/img/bannerGame.png";
 
+// News
+import news1 from "../../assets/img/news/news1.png";
+import news2 from "../../assets/img/news/news2.jpeg";
+import news3 from "../../assets/img/news/news3.png";
+import news4 from "../../assets/img/news/news4.jpeg";
+import news5 from "../../assets/img/news/news5.png";
+import news6 from "../../assets/img/news/news6.png";
+import news7 from "../../assets/img/news/news7.png";
+import news8 from "../../assets/img/news/news8.jpeg";
+import news9 from "../../assets/img/news/news9.png";
+import news10 from "../../assets/img/news/news10.jpg";
+
 // Games
 import pokerSmall from "../../assets/img/games/ha-three-card-poker.jpg";
 import soccerSmall from "../../assets/img/games/ha-knockout-football-rush.jpg";
@@ -47,7 +59,6 @@ import goldPotSmall from "../../assets/img/games/pot.jpg";
 import footballSmall from "../../assets/img/games/ult.jpg";
 import whellSmall from "../../assets/img/games/fort.jpg";
 import pokerBig from "../../assets/img/games/ha-three-card-pokerBig.jpg";
-
 
 export {
   planet,
@@ -97,4 +108,15 @@ export {
   footballSmall,
   whellSmall,
   pokerBig,
+  // news
+  news1,
+  news2,
+  news3,
+  news4,
+  news5,
+  news6,
+  news7,
+  news8,
+  news9,
+  news10,
 };

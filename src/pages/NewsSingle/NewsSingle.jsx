@@ -1,15 +1,25 @@
 // Styles
+import { useLocation, useParams } from "react-router-dom";
 import { bubble, ellipse7 } from "../../components/Images";
 import { dataNews } from "../../data/dataNews";
 import "./NewsSingle.css";
 
 const NewsSingle = () => {
+  const location = useLocation();
+  const { id: title } = useParams();
+  let data = location.state?.data;
+  if (!data) {
+    const singleNews = dataNews.find((news) => {
+      return news.path === title;
+    });
+    data = singleNews;
+  }
   return (
     <>
       <section
         className="banner-section inner-banner position-relative store newsDetails "
         style={{
-          backgroundImage: `url(${dataNews[1].imgMain}), linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5))`,
+          backgroundImage: `url(${data.imgMain}), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3))`,
         }}>
         <div className="shape-area">
           <img src={bubble} className="shape-1" alt="icon" />
@@ -20,7 +30,7 @@ const NewsSingle = () => {
             <div className="col-lg-8 col-md-10 justify-content-center">
               <div className="main-content">
                 <h2 className="visible-slowly-bottom teact-center display-four mb-6">
-                  <span className="text-center">{dataNews[1].title}</span>
+                  <span className="text-center">{data.title}</span>
                 </h2>
               </div>
             </div>
@@ -30,7 +40,8 @@ const NewsSingle = () => {
       <section>
         <div className="container pt-20">
           <div className="row">
-            <div dangerouslySetInnerHTML={{ __html: dataNews[1].desc }} />
+            <p>{data.data}</p>
+            <div dangerouslySetInnerHTML={{ __html: data.desc }} />
           </div>
         </div>
       </section>

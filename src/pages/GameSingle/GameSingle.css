@@ -4,7 +4,13 @@
   background-repeat: no-repeat;
   background-size: 100%, 80%;
 }
-
+.top-features .single-content li:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: var(--n800);
+  border-radius: 12px;
+}
 .gameDetails:before {
   content: "";
   position: absolute;
@@ -27,5 +33,85 @@
 }
 
 .circle-text.video {
-    position: absolute;
+  position: absolute;
+}
+
+.fCheck {
+  position: absolute;
+  left: -38px;
+  z-index: 1;
+  top: 2px;
+}
+
+.buttonPlaySingle {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  outline: none;
+  margin: 0;
+  padding: 0px 25px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -1px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  transition: none;
+  background-color: transparent;
+  border: 1px solid var(--p400);
+  color: #fff;
+  margin-top: 40px;
+}
+
+.gameCategory li {
+  position: relative;
+}
+
+.gameCategory li::before {
+  position: absolute;
+  content: "";
+  background-color: var(--n40);
+  width: 1px;
+  height: 15px;
+  right: -20px;
+  top: 3px;
+}
+.gameCategory li:last-child::before {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.gameSingleCart img {
+  border-radius: 12px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gameSingleCart .shapesPlay {
+  border-radius: 12px;
+}
+
+.gameSingleContent {
+  padding-top: calc(100% - 80px);
+}
+
+.gameSingleCart {
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+
+.singleGameImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 330px;
+  height: 100%;
+}
+
+.gameSingleContent h4 {
+  margin: 0;
 }

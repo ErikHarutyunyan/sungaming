@@ -17,7 +17,12 @@ export const dataGames = [
     subTitle: "Enjoy this stylish 3 Card Poker game!",
     imgMain: pokerBig,
     imgSmall: pokerSmall,
-    desc: "Experience the thrill of poker with a twist in our 3 Card Poker game! This fast-paced and exciting casino classic combines elements of traditional poker with a simplified three-card hand format, making it easy to learn and play for both beginners and seasoned card sharks. Test your luck and skill as you aim to beat the dealer's hand and win big. With the chance to place bonus bets and enjoy the excitement of pair-plus payouts, 3 Card Poker offers endless entertainment and the potential for significant winnings. Whether you're a poker pro or just looking for a fun and accessible card game, 3 Card Poker is the perfect choice for a memorable casino experience.",
+    desc: `Step into the thrilling world of 3 Card Poker, where simplicity meets excitement! This popular casino game combines the best of poker and simplicity, making it a perfect choice for both beginners and seasoned players.
+In 3 Card Poker, your goal is to create the best three-card hand possible, aiming to beat the dealer's hand. With just three cards to work with, the action is fast-paced and every decision counts. Will you have a Straight, Flush, or even a Three of a Kind in your hand? The suspense is palpable as the cards are revealed.
+
+But the excitement doesn't stop there. 3 Card Poker offers optional bonus bets, like the Pair Plus, where you can win big for landing pairs or better. This adds an extra layer of anticipation and the potential for significant payouts.
+
+Whether you're a poker pro or just looking for a quick and thrilling card game, 3 Card Poker has it all. It's the perfect combination of strategy, luck, and adrenaline, making it a favorite in the world of casino gaming. So, take your seat at the table, place your bets, and see if you can outplay the dealer for a chance to win big!`,
     about: "Empire of the Stars",
     url: "https://sgaming.netlify.app/3card_poker/",
     logo: "",
@@ -29,7 +34,7 @@ export const dataGames = [
       "Multiplayer Mode",
       "Progressive Jackpot",
     ],
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: true,
     video: "https://www.youtube.com/watch?v=isiQJ4XIyqw&ab_channel=AdamKontor",
   },
@@ -52,7 +57,7 @@ export const dataGames = [
       "Progressive Jackpot",
       "Soccer Commentator Audio",
     ],
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: true,
   },
   {
@@ -73,7 +78,7 @@ export const dataGames = [
       "Cosmic Soundtrack",
       "Space Exploration Progression",
     ],
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: true,
   },
   {
@@ -94,7 +99,7 @@ export const dataGames = [
       "Agrabah Adventure Mode",
       "Arabian Nights Soundtrack",
     ],
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: true,
   },
   {
@@ -115,7 +120,7 @@ export const dataGames = [
       "Statistics and Scorecards",
       "Betting Strategies and Tips",
     ],
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -136,7 +141,7 @@ export const dataGames = [
       "Auto-Daubing and Sorting",
       "Bingo Mini-Games",
     ],
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -157,7 +162,7 @@ export const dataGames = [
       "Strategy Guides and Tips",
       "Tournament Mode",
     ],
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -176,7 +181,7 @@ export const dataGames = [
       "Strategy Guides and Tips",
       "Side Bets and Bonus Features",
     ],
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -195,7 +200,7 @@ export const dataGames = [
       "Strategy Guides and Tips",
       "Tutorial and Strategy Guides",
     ],
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -213,7 +218,7 @@ export const dataGames = [
       "Crazy Monkey Scatter",
     ],
     desc: "Get ready for some wild jungle action in Crazy Monkey Scatter, a thrilling casino game that's full of adventure! Venture deep into the heart of the tropical rainforest and join our playful primate friend on a quest for treasures. Spin the reels and encounter bananas, coconuts, and cheeky monkeys on your journey. But watch out for the Crazy Monkey Scatter symbol – when it appears, it triggers a frenzy of excitement with free spins and bonus features that can lead to incredible payouts. Whether you're a seasoned slot enthusiast or just looking for a fun and vibrant game, Crazy Monkey Scatter offers non-stop entertainment and the chance to swing from the trees with a bundle of winnings!",
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -232,7 +237,7 @@ export const dataGames = [
       "Progressive Jackpot",
     ],
     desc: "Experience the thrill of the racetrack in our Harness Racing game! Step into the world of high-speed, high-stakes horse racing where finely tuned trotters and pacers compete for victory. Place your bets and watch as these remarkable equine athletes speed around the track, guided by skilled drivers in their sulkies. Will your chosen horse outpace the competition and cross the finish line first? With the excitement of live commentary and the potential for impressive payouts, Harness Racing delivers the excitement of the racetrack right to your casino experience. Whether you're a racing aficionado or simply seeking heart-pounding action, Harness Racing promises an exhilarating ride for both newcomers and seasoned bettors.",
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -250,7 +255,7 @@ export const dataGames = [
       "Multi-platform Compatibility",
       "Real-time Draw Simulation",
     ],
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -268,7 +273,7 @@ export const dataGames = [
       "Achievements and Rewards",
     ],
     desc: "Embark on an ancient adventure with our Mummy Slot game! Journey back in time to the mystical world of pharaohs, pyramids, and hidden treasures. Spin the reels adorned with hieroglyphics, scarab beetles, and mysterious mummies as you uncover the secrets of the past. With each spin, you have the chance to unearth incredible riches, including jackpots that rival the treasures of the Egyptian tombs. Whether you're an archaeology enthusiast or simply seeking spine-tingling thrills, Mummy Slot offers an unforgettable casino experience filled with ancient mystique and the potential for dazzling wins. So, grab your torch, explore the ancient chambers, and let the Mummy Slot take you on an adventure of a lifetime!",
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -286,7 +291,7 @@ export const dataGames = [
       "Achievements and Rewards",
       "Mythical Symbols",
     ],
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -304,7 +309,7 @@ export const dataGames = [
       "Special Bets and Call Bets",
       "Responsible Gaming Features",
     ],
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -322,7 +327,7 @@ export const dataGames = [
       "Responsible Gaming Features",
     ],
     desc: "Enter a world of regal elegance and opulent riches with our Royal Slot game! This majestic slot machine transports you to a palace of wealth and luxury, where crowns, jewels, and treasures await. Spin the royal reels adorned with symbols of grandeur as you chase the dream of hitting that coveted royal combination. With each spin, you have the chance to experience the thrill of a royal win, fit for a king or queen. Whether you're a slot enthusiast or simply seeking a taste of the high life, Royal Slot promises a gaming experience that's both grand and rewarding. So, prepare to be treated like royalty and try your luck in this exquisite and regal casino adventure!",
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -340,7 +345,7 @@ export const dataGames = [
       "Achievements and Rewards",
     ],
     desc: "Unleash your inner ninja and master the art of slicing in Katana Fruits! This action-packed casino game combines the thrill of slots with the precision of a martial artist. Swipe your way through a whirlwind of juicy fruits with your virtual katana, aiming to slice and dice your way to fantastic prizes. Watch out for special power-ups and bonus rounds that can multiply your winnings. Whether you're a fruit ninja pro or just seeking fast-paced casino fun, Katana Fruits offers a slicing good time and the chance to enjoy the fruits of your labor with impressive payouts. So, sharpen your skills, grab your katana, and prepare for a fruit-slashing adventure like no other!",
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -358,7 +363,7 @@ export const dataGames = [
       "Scatter Spaceships",
     ],
     desc: "Embark on an epic Space Adventure in this out-of-this-world casino game! Launch into the cosmos and explore the vastness of the universe as you spin the reels adorned with futuristic spaceships, mysterious planets, and cosmic treasures. Navigate through asteroid fields and wormholes to uncover incredible bonuses and extraterrestrial rewards. With every spin, you're one step closer to discovering the secrets of the galaxy and winning cosmic-sized prizes. Whether you're an interstellar explorer or just seeking thrilling casino action, Space Adventure promises an astronomical gaming experience that's truly stellar. So, suit up, strap in, and prepare to take your casino journey to new frontiers!",
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -376,7 +381,7 @@ export const dataGames = [
       "Scatter Fruit Basket",
     ],
     desc: "Experience a burst of fruity fun with The Fruits Slots! This colorful and vibrant slot machine game takes you to an orchard of excitement, where juicy fruits spin across the reels in a whirlwind of flavor. Match fruits like cherries, oranges, and watermelons to create winning combinations and enjoy delicious payouts. With each spin, you're in for a fruity surprise, as you chase the ultimate fruit salad of prizes. Whether you're a slot aficionado or just looking for a taste of fruity fortune, The Fruits Slots offers a refreshing and delightful casino experience that will have you craving more. So, grab a virtual fruit basket and spin the reels for a sweet and juicy adventure!",
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -394,7 +399,7 @@ export const dataGames = [
       "Scatter Gold Pot",
     ],
     desc: "Unlock the secrets of riches with The Gold Pot, a casino game that promises a journey to wealth and prosperity! Venture deep into a magical realm filled with shimmering treasures, enchanted forests, and the elusive gold pot that could change your fortunes forever. Spin the reels adorned with symbols of wealth and good luck, and aim to strike it rich with each spin. With every turn, you'll get closer to uncovering the hidden gold pot and its bountiful rewards. Whether you're a seasoned treasure hunter or just seeking the thrill of the hunt, The Gold Pot offers a golden opportunity for big wins in a whimsical and enchanting casino adventure!",
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -412,7 +417,7 @@ export const dataGames = [
       "Mobile Compatibility",
     ],
     desc: "Get ready for the ultimate touchdown in Ultimate Football Slots! Step onto the virtual field and experience the thrill of the game with this action-packed slot machine. Spin the reels adorned with footballs, helmets, and cheerleaders as you aim to score big. Watch for special bonus symbols that can trigger exciting features and free spins, giving you a chance to win like a true MVP. Whether you're a devoted football fan or just seeking some high-energy casino action, Ultimate Football Slots delivers a winning combination of excitement and potential for big rewards. So, strap on your virtual cleats and get ready to tackle your way to victory in this game of gridiron glory!",
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
   {
@@ -430,7 +435,7 @@ export const dataGames = [
       "Mobile Compatibility",
     ],
     desc: "Take a spin on the Wheel of Fortune tables and unleash your luck! Inspired by the iconic TV game show, these tables offer a chance to test your fortune and intuition. Place your bets on various outcomes and watch as the colorful wheel spins, creating moments of suspense and excitement. Will you land on a big win or trigger a thrilling bonus round? With the anticipation of the spinning wheel and the potential for incredible payouts, the Wheel of Fortune tables provide an electrifying and engaging casino experience that's bound to keep you on the edge of your seat. Come and give the wheel a whirl, and see if fortune smiles upon you!",
-    platforms: "PC, iOS, Android",
+    platforms: ["PC", "iOS", "Android"],
     featured: false,
   },
 ];

@@ -1,5 +1,5 @@
 // Styles
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import "./GameSingle.css";
 import { blogsImg1, bubble, ellipse7 } from "../../components/Images";
 import circle from "../../assets/img/circle.png";
@@ -9,27 +9,38 @@ import videoBg from "../../assets/img/video-bg.png";
 
 console.log("circle :", circle);
 import gameDetalis from "../../assets/img/gameDtalisBig.png";
-import { IoPlay } from "react-icons/io5";
-import { useState } from "react";
+import { IoCheckmark, IoPlay } from "react-icons/io5";
+import { Suspense, useState } from "react";
 import OnboardModal from "../../components/OnboardModal/OnboardModal";
-import { MdOutlineNorthEast } from "react-icons/md";
-import { settingsBlog, settingsGameSingle } from "../../features/SliderConfig";
+import { settingsGameSingle } from "../../features/SliderConfig";
 import SimpleSlider from "../../components/SimpleSlider";
-console.log("gameDetalis :", gameDetalis);
-
-// const popupConfig = {
-//   disableOn: 700,
-//   type: "iframe",
-//   mainClass: "mfp-fade",
-//   removalDelay: 160,
-//   preloader: false,
-//   fixedContentPos: false,
-// };
+import { dataGames } from "../../data/dataGames";
+import { motion, MotionConfig, useMotionValue } from "framer-motion";
+import { transition } from "../../settings/gameButtonSetings";
+import useMeasure from "react-use-measure";
+import { Shapes } from "../../components/Shapes/Shapes";
 
 const GameSingle = () => {
-  const location = useLocation();
-  const data = location.state?.data;
   const [isOpen, setIsOpen] = useState(false);
+  const { id: title } = useParams();
+  const location = useLocation();
+  let data = location.state?.data;
+  if (!data) {
+    const singleGame = dataGames.find((game) => {
+      return game.path === title;
+    });
+    data = singleGame;
+  }
+
+  const [ref, bounds] = useMeasure({ scroll: false });
+  const [isHover, setIsHover] = useState(false);
+  const [isPress, setIsPress] = useState(false);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const resetMousePosition = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+  };
   return (
     <>
       <section
@@ -42,7 +53,7 @@ const GameSingle = () => {
           <img src={ellipse7} className="shape-2" alt="icon" />
         </div>
         <div className="container position-relative">
-          <div className="banner-content row justify-content-center">
+          <div className="banner-content row justify-content-start">
             <div className="col-lg-8 col-md-10 justify-content-center">
               <div className="main-content">
                 <h2 className="visible-slowly-bottom teact-center display-four mb-6">
@@ -60,62 +71,109 @@ const GameSingle = () => {
               <div className="d-grid gap-15">
                 <div className="single-content">
                   <h2 className="visible-slowly-bottom display-four mb-5">
-                    Ready to Become a Dragon Master?
+                    {data.subTitle}
                   </h2>
-                  <p className="mb-3">
-                    Take on the hottest dragon game and collect tons of adorable
-                    fire-breathing dragons! Train them to your will, grow your
-                    collection, and prove your might to claim the title of top
-                    Dragon Master in the world!
-                  </p>
-                  <p>
-                    Play on all devices and take your baby dragons wherever you
-                    go! Available on Windows, iOS, and Android.Play through
-                    thousands of relaxing levels, team up with your friends in
-                    Clubs, and win prizes in daily events.
-                  </p>
+                  <p>{data.desc}</p>
                 </div>
                 <div className="single-content">
                   <ul className="ms-10 d-grid gap-4">
-                    <li>Thousands of levels across multiple worlds</li>
-                    <li>Challenging gameplay to train your brain</li>
-                    <li>
-                      Club Tournaments and other exciting ways to play with
-                      friends
-                    </li>
-                    <li>Daily events to help you win more prizes</li>
-                    <li>Free rewards every day</li>
+                    {data.features?.map((feature, i) => {
+                      return (
+                        <li key={i}>
+                          <IoCheckmark
+                            size={20}
+                            color={"#0ef0ad"}
+                            className="fCheck"
+                          />
+                          {feature}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>
             </div>
             <div className="col-xl-5 col-lg-6 col-md-10 mt-8 mt-lg-0">
-              <div className="single-box tab-content position-relative text-center p-3 p-md-15">
-                <div className="main-content py-4">
-                  <h3 className="visible-slowly-bottom mb-4">Download Now</h3>
-                  <ul className="d-flex flex-wrap mb-6 fs-seven align-items-center gap-5 gap-md-10">
-                    <li>Horror Adventure</li>
-                    <li>Mobile</li>
-                    <li>Action RPG</li>
-                    <li>PC</li>
+              <div className="single-box cus-scrollbar gameSingleCart tab-content position-relative text-center p-3 p-md-15">
+                <div className="singleGameImg">
+                  <img src={data.imgMain} alt="" />
+                </div>
+                <div className="main-content gameSingleContent py-4">
+                  <h3 className="visible-slowly-bottom mb-4">{data.title}</h3>
+                  <ul className="d-flex flex-wrap gameCategory mt-8 fs-seven align-items-center gap-5 gap-md-10">
+                    {data.platforms?.map((platform, index) => {
+                      return <li key={index}>{platform} </li>;
+                    })}
                   </ul>
-                  <div className="review-box mt-5 mt-md-8 mb-6 mb-md-10 w-100 p-2 p-sm-4 d-center gap-3 justify-content-evenly">
-                    <div className="single-area">
-                      <div className="d-flex gap-1 align-items-center mb-1">
-                        <i className="material-symbols-outlined mat-icon">
-                          star
-                        </i>
-                        <h4 className="fs-four">4.5</h4>
-                      </div>
-                      <p className="fs-seven">5.2M Reviews</p>
-                    </div>
-                    <div className="single-area">
-                      <h4 className="fs-four mb-1">500M+</h4>
-                      <p className="fs-seven">Downloads</p>
-                    </div>
+                  <div className="review-box mt-4 mt-md-8 mb-5 mb-md-8 w-100 p-2 p-sm-4 d-center gap-3 justify-content-evenly">
+                    {data.category?.map((category, i) => {
+                      return (
+                        <div className="single-area" key={i}>
+                          <div className="d-flex gap-1 align-items-center">
+                            <h4 className="fs-four">{category}</h4>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
 
-                  <p>Game includes optional in-app purchases</p>
+                  <MotionConfig transition={transition}>
+                    <motion.a
+                      href="/google.com"
+                      className="buttonPlaySingle"
+                      ref={ref}
+                      initial={false}
+                      animate={isHover ? "hover" : "rest"}
+                      whileTap="press"
+                      variants={{
+                        rest: { scale: 1 },
+                        hover: { scale: 1.1 },
+                        press: { scale: 1.05 },
+                      }}
+                      onHoverStart={() => {
+                        resetMousePosition();
+                        setIsHover(true);
+                      }}
+                      onHoverEnd={() => {
+                        resetMousePosition();
+                        setIsHover(false);
+                      }}
+                      onTapStart={() => setIsPress(true)}
+                      onTap={() => setIsPress(false)}
+                      onTapCancel={() => setIsPress(false)}
+                      onPointerMove={(e) => {
+                        mouseX.set(e.clientX - bounds.x - bounds.width / 2);
+                        mouseY.set(e.clientY - bounds.y - bounds.height / 2);
+                      }}>
+                      <motion.div
+                        className="shapesPlay"
+                        variants={{
+                          rest: { opacity: 0 },
+                          hover: { opacity: 1 },
+                        }}>
+                        <div className="pink blush" />
+                        <div className="blue blush" />
+                        <div className="containerr">
+                          <Suspense fallback={null}>
+                            <Shapes
+                              isHover={isHover}
+                              isPress={isPress}
+                              mouseX={mouseX}
+                              mouseY={mouseY}
+                            />
+                          </Suspense>
+                        </div>
+                      </motion.div>
+                      <motion.div
+                        variants={{
+                          hover: { scale: 1.1 },
+                          press: { scale: 0.85 },
+                        }}
+                        className="labelPlay">
+                        Play Game
+                      </motion.div>
+                    </motion.a>
+                  </MotionConfig>
                 </div>
               </div>
             </div>
@@ -192,7 +250,7 @@ const GameSingle = () => {
                     <IoPlay size={40} color="#0ef0ad" />
                   </button>
                   <OnboardModal
-                    videoPath="https://vimeo.com/243556536"
+                    videoPath={data.video}
                     open={isOpen}
                     onClose={() => setIsOpen(false)}
                   />
