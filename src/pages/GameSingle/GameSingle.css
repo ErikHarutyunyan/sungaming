@@ -102,13 +102,15 @@
 .gameSingleCart {
   padding-bottom: 30px;
   overflow: hidden;
+  max-height: initial;
 }
 
 .singleGameImg {
   position: absolute;
   top: 0;
   left: 0;
-  max-height: 330px;
+  right: 0;
+  max-height: 360px;
   height: 100%;
 }
 

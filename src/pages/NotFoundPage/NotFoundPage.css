@@ -1,0 +1,109 @@
+section.error {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/img/404Bg2.png"),
+    url("../../assets/img/404Bg1.png");
+  background-repeat: no-repeat;
+  background-size: contain, contain;
+  background-position: top left, bottom right;
+}
+
+.error_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+a.go_home.theme_button {
+  position: relative;
+  font-size: 15px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 21px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: var(--n800);
+  border-color: var(--p300);
+  background-color: var(--p300);
+  padding: 12px 30px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* a.go_home.theme_button:before {
+  content: "";
+  position: absolute;
+  top: 36px;
+  left: 49px;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  background-color: var(--p300);
+  transition: all 0.7s ease;
+  z-index: -1;
+} */
+
+/* a.go_home.theme_button:hover {
+  color: #fff;
+} */
+
+/* a.go_home.theme_button:hover:before {
+  width: 300%;
+  height: 300%;
+  background-color: var(--p500);
+} */
+
+h1.error_title {
+  float: none;
+  width: 100%;
+  font-size: 270px;
+  line-height: 1em;
+  margin: 0;
+  margin-top: 0 !important;
+  letter-spacing: 0;
+  text-align: center;
+  hyphens: none;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+h2.error_subtitle {
+  margin: 20px 0 0;
+  font-size: 47px;
+  line-height: 1.1em;
+}
+
+p.error_description {
+  font-size: 19px;
+  margin-top: 20px;
+  margin-bottom: 43px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+section.error:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/img/404.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
