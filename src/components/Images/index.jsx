@@ -36,7 +36,7 @@ import news9 from "../../assets/img/news/news9.png";
 import news10 from "../../assets/img/news/news10.jpg";
 
 // Games
-import pokerSmall from "../../assets/img/games/ha-three-card-poker.jpg";
+import pokerSmall from "../../assets/img/games/3poker.jpg";
 import soccerSmall from "../../assets/img/games/ha-knockout-football-rush.jpg";
 import outherspaceSmall from "../../assets/img/games/screen_1.jpg";
 import aladdinSmall from "../../assets/img/games/sy-alladin-and-the-golden-palace.jpg";
@@ -58,7 +58,7 @@ import fruitsSmall from "../../assets/img/games/no-fruits.jpg";
 import goldPotSmall from "../../assets/img/games/pot.jpg";
 import footballSmall from "../../assets/img/games/ult.jpg";
 import whellSmall from "../../assets/img/games/fort.jpg";
-import pokerBig from "../../assets/img/games/ha-three-card-pokerBig.jpg";
+import pokerBig from "../../assets/img/games/3poker.jpg";
 
 export {
   planet,

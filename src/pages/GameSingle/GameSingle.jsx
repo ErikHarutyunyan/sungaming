@@ -95,6 +95,9 @@ const GameSingle = () => {
             </div>
             <div className="col-xl-5 col-lg-6 col-md-10 mt-8 mt-lg-0">
               <div className="single-box cus-scrollbar gameSingleCart tab-content position-relative text-center p-3 p-md-15">
+                <span className="feature-tag d-none d-sm-flex d-center categoryTag">
+                  {data.category[0]}
+                </span>
                 <div className="singleGameImg">
                   <img src={data.imgMain} alt="" />
                 </div>
@@ -105,18 +108,30 @@ const GameSingle = () => {
                       return <li key={index}>{platform} </li>;
                     })}
                   </ul>
-                  <div className="review-box mt-4 mt-md-8 mb-5 mb-md-8 w-100 p-2 p-sm-4 d-center gap-3 justify-content-evenly">
-                    {data.category?.map((category, i) => {
+                  <div className="review-box infoData mt-4 mt-md-8 mb-5 mb-md-8 w-100 p-2 p-sm-4 d-center gap-3 justify-content-evenly">
+                    {/* {data.category?.map((category, i) => {
                       return (
                         <div className="single-area" key={i}>
-                          <div className="d-flex gap-1 align-items-center">
-                            <h4 className="fs-four">{category}</h4>
+                          <div className="d-flex gap-1 align-items-center mb-1">
+                            <h4 className="fs-four">96%</h4>
                           </div>
+                          <p className="fs-seven">RTP</p>
                         </div>
                       );
-                    })}
+                    })} */}
+                    <div className="single-area">
+                      <div className="d-flex gap-1 align-items-center mb-1 justify-content-center">
+                        <h4 className="fs-four">96%</h4>
+                      </div>
+                      <p className="fs-seven">RTP</p>
+                    </div>
+                    <div className="single-area ">
+                      <div className="d-flex gap-1 align-items-center mb-1 justify-content-center">
+                        <h4 className="fs-four">2500x</h4>
+                      </div>
+                      <p className="fs-seven ">Max Multiplier</p>
+                    </div>
                   </div>
-
                   <MotionConfig transition={transition}>
                     <motion.a
                       href="/google.com"

@@ -66,7 +66,10 @@
   color: #fff;
   margin-top: 40px;
 }
-
+.gameCategory {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--n400);
+}
 .gameCategory li {
   position: relative;
 }
@@ -116,4 +119,12 @@
 
 .gameSingleContent h4 {
   margin: 0;
+}
+
+.categoryTag {
+  position: absolute;
+}
+
+.infoData h4 {
+  color: var(--p300);
 }
