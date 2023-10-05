@@ -127,4 +127,18 @@
 
 .infoData h4 {
   color: var(--p300);
+  font-size: 21px;
+}
+
+.gameVideoPoster {
+  max-width: 1200px;
+  width: 100%;
+  max-height: 552px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-carousel .slick-track {
+  display: flex;
+  align-items: center;
 }

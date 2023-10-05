@@ -1,14 +1,13 @@
 // Styles
 import { useLocation, useParams } from "react-router-dom";
 import "./GameSingle.css";
-import { blogsImg1, bubble, ellipse7 } from "../../components/Images";
+import { bubble, ellipse7 } from "../../components/Images";
 import circle from "../../assets/img/circle.png";
 import objectImg from "../../assets/img/object-1.png";
 import lineImg from "../../assets/img/line-1.png";
-import videoBg from "../../assets/img/video-bg.png";
 
 console.log("circle :", circle);
-import gameDetalis from "../../assets/img/gameDtalisBig.png";
+import gameDetails from "../../assets/img/gameDtalisBig.png";
 import { IoCheckmark, IoPlay } from "react-icons/io5";
 import { Suspense, useState } from "react";
 import OnboardModal from "../../components/OnboardModal/OnboardModal";
@@ -46,7 +45,7 @@ const GameSingle = () => {
       <section
         className="banner-section inner-banner position-relative store gameDetails "
         style={{
-          backgroundImage: `url(${circle}), url(${gameDetalis}), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5))`,
+          backgroundImage: `url(${circle}), url(${gameDetails}), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5))`,
         }}>
         <div className="shape-area">
           <img src={bubble} className="shape-1" alt="icon" />
@@ -56,7 +55,7 @@ const GameSingle = () => {
           <div className="banner-content row justify-content-start">
             <div className="col-lg-8 col-md-10 justify-content-center">
               <div className="main-content">
-                <h2 className="visible-slowly-bottom teact-center display-four mb-6">
+                <h2 className="visible-slowly-bottom teact-center display-four">
                   <span className="text-center">{data.title}</span>
                 </h2>
               </div>
@@ -109,32 +108,47 @@ const GameSingle = () => {
                     })}
                   </ul>
                   <div className="review-box infoData mt-4 mt-md-8 mb-5 mb-md-8 w-100 p-2 p-sm-4 d-center gap-3 justify-content-evenly">
-                    {/* {data.category?.map((category, i) => {
-                      return (
-                        <div className="single-area" key={i}>
-                          <div className="d-flex gap-1 align-items-center mb-1">
-                            <h4 className="fs-four">96%</h4>
+                    {/* {data?.rtp || data?.multi ? (
+                   
+                      {data?.rtp && (
+                        <div className="single-area">
+                          <div className="d-flex gap-1 align-items-center mb-1 justify-content-center">
+                            <h4 className="fs-four">{data.rtp}</h4>
                           </div>
                           <p className="fs-seven">RTP</p>
                         </div>
-                      );
-                    })} */}
-                    <div className="single-area">
-                      <div className="d-flex gap-1 align-items-center mb-1 justify-content-center">
-                        <h4 className="fs-four">96%</h4>
-                      </div>
-                      <p className="fs-seven">RTP</p>
+                      )}
+
+                      {data?.multi && (
+                        <div className="single-area ">
+                          <div className="d-flex gap-1 align-items-center mb-1 justify-content-center">
+                            <h4 className="fs-four">{data.multi}</h4>
+                          </div>
+                          
+                        </div>
+                      )}
                     </div>
-                    <div className="single-area ">
-                      <div className="d-flex gap-1 align-items-center mb-1 justify-content-center">
-                        <h4 className="fs-four">2500x</h4>
+                  ) : null} */}
+
+                    {data?.info.map((item, index) => (
+                      <div className="single-area" key={index}>
+                        {Object.keys(item).map((key) => (
+                          <>
+                            <div
+                              className="d-flex gap-1 align-items-center mb-1 justify-content-center"
+                              key={key}>
+                              <h4 className="fs-four">{item[key]}</h4>
+                            </div>
+                            <p className="fs-seven ">{key}</p>
+                          </>
+                        ))}
                       </div>
-                      <p className="fs-seven ">Max Multiplier</p>
-                    </div>
+                    ))}
                   </div>
                   <MotionConfig transition={transition}>
                     <motion.a
-                      href="/google.com"
+                      href={data.url}
+                      target="_blank"
                       className="buttonPlaySingle"
                       ref={ref}
                       initial={false}
@@ -218,7 +232,11 @@ const GameSingle = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="position-relative d-center">
-                <img src={videoBg} className="w-100" alt="sec-img" />
+                <img
+                  src={data.imgMore[0]}
+                  className="w-100 gameVideoPoster"
+                  alt="sec-img"
+                />
                 <div className="circle-text video position-absolute">
                   <div className="text">
                     <p>
@@ -286,35 +304,23 @@ const GameSingle = () => {
         <div className="container-fluid">
           <div className="row justify-content-end">
             <div className="col-lg-12">
-              <SimpleSlider
-                className={"gallery-carousel"}
-                setting={settingsGameSingle}>
-                <div className="slide-area slick-slide slick-cloned">
-                  <div className="single-slider">
-                    <img src={blogsImg1} alt="gallery" />
-                  </div>
-                </div>
-                <div className="slide-area slick-slide slick-cloned">
-                  <div className="single-slider">
-                    <img src={blogsImg1} alt="gallery" />
-                  </div>
-                </div>
-                <div className="slide-area slick-slide slick-cloned">
-                  <div className="single-slider">
-                    <img src={blogsImg1} alt="gallery" />
-                  </div>
-                </div>
-                <div className="slide-area slick-slide slick-cloned">
-                  <div className="single-slider">
-                    <img src={blogsImg1} alt="gallery" />
-                  </div>
-                </div>
-                <div className="slide-area slick-slide slick-cloned">
-                  <div className="single-slider">
-                    <img src={blogsImg1} alt="gallery" />
-                  </div>
-                </div>
-              </SimpleSlider>
+              {data.imgMore.length !== 0 ? (
+                <SimpleSlider
+                  className={"gallery-carousel"}
+                  setting={settingsGameSingle}>
+                  {data.imgMore?.map((imgMore, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className="slide-area slick-slide slick-cloned">
+                        <div className="single-slider">
+                          <img src={imgMore} alt="gallery" />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </SimpleSlider>
+              ) : null}
             </div>
           </div>
         </div>

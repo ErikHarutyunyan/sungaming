@@ -53,6 +53,7 @@ const OnboardModal = ({
   children,
   iframePath = "",
   videoPath = "",
+  poster,
 }) => {
   if (!open) return null;
 

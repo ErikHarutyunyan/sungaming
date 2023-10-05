@@ -11,7 +11,7 @@ import {
 } from "../../data/dataGames";
 import { useReducer, useState } from "react";
 
-// import "./GamesThumb.css";
+import "./GamesThumb.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { GAMES } from "../../router/route-path.jsx";
@@ -135,7 +135,7 @@ const GamesThumb = () => {
               <div className={`tabitem active`}>
                 <div className="row cus-mar justify-content-center">
                   {menuItems?.map((item) => {
-                    const { id, title, imgMain, imgSmall, about } = item;
+                    const { id, title, imgMain, imgSmall, desc, path } = item;
                     return (
                       <motion.div
                         animate={{
@@ -185,7 +185,7 @@ const GamesThumb = () => {
                             <img alt="img" loading="lazy" src={imgMain} />
                           </div>
                           <div className="footer-area mb-5 text-center">
-                            <div className="logo-area">
+                            <div className="logo-area logoGame">
                               <img
                                 alt="img"
                                 loading="lazy"
@@ -197,11 +197,11 @@ const GamesThumb = () => {
                             <h3 className="visible-slowly-bottom my-3">
                               {title}
                             </h3>
-                            <p>{about}</p>
+                            <p className="text-truncate ps-10 pe-10 ">{desc}</p>
                             <div className="btn-area alt-bg">
                               <Link
                                 className="box-style btn-box mt-4 d-center"
-                                to={`${GAMES}\${id}`}>
+                                to={`${GAMES}\\${path}`}>
                                 Learn More
                               </Link>
                             </div>
