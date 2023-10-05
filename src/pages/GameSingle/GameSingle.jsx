@@ -107,44 +107,26 @@ const GameSingle = () => {
                       return <li key={index}>{platform} </li>;
                     })}
                   </ul>
-                  <div className="review-box infoData mt-4 mt-md-8 mb-5 mb-md-8 w-100 p-2 p-sm-4 d-center gap-3 justify-content-evenly">
-                    {/* {data?.rtp || data?.multi ? (
-                   
-                      {data?.rtp && (
-                        <div className="single-area">
-                          <div className="d-flex gap-1 align-items-center mb-1 justify-content-center">
-                            <h4 className="fs-four">{data.rtp}</h4>
-                          </div>
-                          <p className="fs-seven">RTP</p>
-                        </div>
-                      )}
 
-                      {data?.multi && (
-                        <div className="single-area ">
-                          <div className="d-flex gap-1 align-items-center mb-1 justify-content-center">
-                            <h4 className="fs-four">{data.multi}</h4>
-                          </div>
-                          
+                  {data.info && (
+                    <div className="review-box infoData mt-4 mt-md-8 mb-5 mb-md-8 w-100 p-2 p-sm-4 d-center gap-3 justify-content-evenly">
+                      {data?.info?.map((item, index) => (
+                        <div className="single-area" key={index}>
+                          {Object.keys(item).map((key) => (
+                            <>
+                              <div
+                                className="d-flex gap-1 align-items-center mb-1 justify-content-center"
+                                key={key}>
+                                <h4 className="fs-four">{item[key]}</h4>
+                              </div>
+                              <p className="fs-seven ">{key}</p>
+                            </>
+                          ))}
                         </div>
-                      )}
+                      ))}
                     </div>
-                  ) : null} */}
+                  )}
 
-                    {data?.info.map((item, index) => (
-                      <div className="single-area" key={index}>
-                        {Object.keys(item).map((key) => (
-                          <>
-                            <div
-                              className="d-flex gap-1 align-items-center mb-1 justify-content-center"
-                              key={key}>
-                              <h4 className="fs-four">{item[key]}</h4>
-                            </div>
-                            <p className="fs-seven ">{key}</p>
-                          </>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
                   <MotionConfig transition={transition}>
                     <motion.a
                       href={data.url}

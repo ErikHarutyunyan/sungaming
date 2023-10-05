@@ -65,7 +65,13 @@ import aladdinImg1 from "../../assets/img/games/aladdin.png";
 import aladdinImg2 from "../../assets/img/games/aladdin2.png";
 import aladdinImg3 from "../../assets/img/games/aladdin3.png";
 
-import baccaratSmall from "../../assets/img/games/ha-american-baccarat.jpg";
+import baccaratBig from "../../assets/img/games/baccaratBig.png";
+import baccaratSmall from "../../assets/img/games/baccaratIcon.jpg";
+import baccaratImg1 from "../../assets/img/games/baccarat.jpg";
+import baccaratImg2 from "../../assets/img/games/baccarat1.jpg";
+import baccaratImg3 from "../../assets/img/games/baccarat3.jpg";
+import baccaratImg4 from "../../assets/img/games/baccarat2.jpg";
+
 import bingoSmall from "../../assets/img/games/wz-extra-bingo.jpg";
 import blackJackSmall from "../../assets/img/games/o2-blackjack-classic.jpg";
 import studpokerSmall3 from "../../assets/img/games/qf-caribbean-stud.jpg";
@@ -135,7 +141,12 @@ export {
   aladdinImg1,
   aladdinImg2,
   aladdinImg3,
+  baccaratBig,
   baccaratSmall,
+  baccaratImg1,
+  baccaratImg2,
+  baccaratImg3,
+  baccaratImg4,
   bingoSmall,
   blackJackSmall,
   studpokerSmall3,
