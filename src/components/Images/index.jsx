@@ -72,7 +72,12 @@ import baccaratImg2 from "../../assets/img/games/baccarat1.jpg";
 import baccaratImg3 from "../../assets/img/games/baccarat3.jpg";
 import baccaratImg4 from "../../assets/img/games/baccarat2.jpg";
 
-import bingoSmall from "../../assets/img/games/wz-extra-bingo.jpg";
+import bingoBig from "../../assets/img/games/bingo.png";
+import bingoSmall from "../../assets/img/games/bingoIcon.jpg";
+import bingoImg1 from "../../assets/img/games/bingoImg3.jpg";
+import bingoImg2 from "../../assets/img/games/bingoImg2.jpg";
+import bingoImg3 from "../../assets/img/games/bingoImg.jpg";
+
 import blackJackSmall from "../../assets/img/games/o2-blackjack-classic.jpg";
 import studpokerSmall3 from "../../assets/img/games/qf-caribbean-stud.jpg";
 import crapsSmall from "../../assets/img/games/craps.jpg";
@@ -147,7 +152,11 @@ export {
   baccaratImg2,
   baccaratImg3,
   baccaratImg4,
+  bingoBig,
   bingoSmall,
+  bingoImg1,
+  bingoImg2,
+  bingoImg3,
   blackJackSmall,
   studpokerSmall3,
   crapsSmall,
