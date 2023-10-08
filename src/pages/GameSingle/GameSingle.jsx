@@ -18,6 +18,9 @@ import { motion, MotionConfig, useMotionValue } from "framer-motion";
 import { transition } from "../../settings/gameButtonSetings";
 import useMeasure from "react-use-measure";
 import { Shapes } from "../../components/Shapes/Shapes";
+import CounterActive from "../../components/CounterActive/CounterActive";
+import Subscribe from "../../components/Subscribe";
+import Brands from "../../components/Brands";
 
 const GameSingle = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -191,91 +194,93 @@ const GameSingle = () => {
           </div>
         </div>
       </section>
-
-      <section className="our-focus bg-transparent game-trailers position-relative overflow-hidden pt-120">
-        <div className="shape-area">
-          <img src={lineImg} className="shape-1" alt="icon" />
-          <img src={objectImg} className="shape-2" alt="icon" />
-        </div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <div className="section-text text-center">
-                <h4 className="sub-title">
-                  Game <span>Trailers</span>
-                </h4>
-                <span className="fs-two heading mb-6">
-                  Our games build worlds, connect communities, and entertain
-                  billions.
-                </span>
+      {data.video ? (
+        <section className="our-focus bg-transparent game-trailers position-relative overflow-hidden pt-120">
+          <div className="shape-area">
+            <img src={lineImg} className="shape-1" alt="icon" />
+            <img src={objectImg} className="shape-2" alt="icon" />
+          </div>
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-lg-8">
+                <div className="section-text text-center">
+                  <h4 className="sub-title">
+                    Game <span>Trailers</span>
+                  </h4>
+                  <span className="fs-two heading mb-6">
+                    Our games build worlds, connect communities, and entertain
+                    billions.
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="position-relative d-center">
-                <img
-                  src={data.imgMore[0]}
-                  className="w-100 gameVideoPoster"
-                  alt="sec-img"
-                />
-                <div className="circle-text video position-absolute">
-                  <div className="text">
-                    <p>
-                      <span style={{ transform: "rotate(0deg)" }}>W</span>
-                      <span style={{ transform: "rotate(10deg)" }}>a</span>
-                      <span style={{ transform: "rotate(20deg" }}>t</span>
-                      <span style={{ transform: "rotate(30deg" }}>c</span>
-                      <span style={{ transform: "rotate(40deg" }}>h</span>
-                      <span style={{ transform: "rotate(50deg" }}> </span>
-                      <span style={{ transform: "rotate(60deg" }}>t</span>
-                      <span style={{ transform: "rotate(70deg" }}>h</span>
-                      <span style={{ transform: "rotate(80deg" }}>e</span>
-                      <span style={{ transform: "rotate(90deg" }}> </span>
-                      <span style={{ transform: "rotate(100deg" }}>v</span>
-                      <span style={{ transform: "rotate(110deg" }}>i</span>
-                      <span style={{ transform: "rotate(120deg" }}>d</span>
-                      <span style={{ transform: "rotate(130deg" }}>e</span>
-                      <span style={{ transform: "rotate(140deg" }}>o</span>
-                      <span style={{ transform: "rotate(150deg" }}> </span>
-                      <span style={{ transform: "rotate(160deg" }}>*</span>
-                      <span style={{ transform: "rotate(170deg" }}> </span>
-                      <span style={{ transform: "rotate(180deg" }}>W</span>
-                      <span style={{ transform: "rotate(190deg" }}>a</span>
-                      <span style={{ transform: "rotate(200deg" }}>t</span>
-                      <span style={{ transform: "rotate(210deg" }}>c</span>
-                      <span style={{ transform: "rotate(220deg" }}>h</span>
-                      <span style={{ transform: "rotate(230deg" }}> </span>
-                      <span style={{ transform: "rotate(240deg" }}>t</span>
-                      <span style={{ transform: "rotate(250deg" }}>h</span>
-                      <span style={{ transform: "rotate(260deg" }}>e</span>
-                      <span style={{ transform: "rotate(270deg" }}> </span>
-                      <span style={{ transform: "rotate(280deg" }}>v</span>
-                      <span style={{ transform: "rotate(290deg" }}>i</span>
-                      <span style={{ transform: "rotate(300deg" }}>d</span>
-                      <span style={{ transform: "rotate(310deg" }}>e</span>
-                      <span style={{ transform: "rotate(320deg" }}>o</span>
-                      <span style={{ transform: "rotate(330deg" }}> </span>
-                      <span style={{ transform: "rotate(340deg" }}>*</span>
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => setIsOpen(true)}
-                    className="box-style btn-box-second heading-five fs-five mfp-iframe popupvideo text-uppercase d-center position-absolute">
-                    <IoPlay size={40} color="#0ef0ad" />
-                  </button>
-                  <OnboardModal
-                    videoPath={data.video}
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="position-relative d-center">
+                  <img
+                    src={data.imgMore[0]}
+                    className="w-100 gameVideoPoster"
+                    alt="sec-img"
                   />
+                  <div className="circle-text video position-absolute">
+                    <div className="text">
+                      <p>
+                        <span style={{ transform: "rotate(0deg)" }}>W</span>
+                        <span style={{ transform: "rotate(10deg)" }}>a</span>
+                        <span style={{ transform: "rotate(20deg" }}>t</span>
+                        <span style={{ transform: "rotate(30deg" }}>c</span>
+                        <span style={{ transform: "rotate(40deg" }}>h</span>
+                        <span style={{ transform: "rotate(50deg" }}> </span>
+                        <span style={{ transform: "rotate(60deg" }}>t</span>
+                        <span style={{ transform: "rotate(70deg" }}>h</span>
+                        <span style={{ transform: "rotate(80deg" }}>e</span>
+                        <span style={{ transform: "rotate(90deg" }}> </span>
+                        <span style={{ transform: "rotate(100deg" }}>v</span>
+                        <span style={{ transform: "rotate(110deg" }}>i</span>
+                        <span style={{ transform: "rotate(120deg" }}>d</span>
+                        <span style={{ transform: "rotate(130deg" }}>e</span>
+                        <span style={{ transform: "rotate(140deg" }}>o</span>
+                        <span style={{ transform: "rotate(150deg" }}> </span>
+                        <span style={{ transform: "rotate(160deg" }}>*</span>
+                        <span style={{ transform: "rotate(170deg" }}> </span>
+                        <span style={{ transform: "rotate(180deg" }}>W</span>
+                        <span style={{ transform: "rotate(190deg" }}>a</span>
+                        <span style={{ transform: "rotate(200deg" }}>t</span>
+                        <span style={{ transform: "rotate(210deg" }}>c</span>
+                        <span style={{ transform: "rotate(220deg" }}>h</span>
+                        <span style={{ transform: "rotate(230deg" }}> </span>
+                        <span style={{ transform: "rotate(240deg" }}>t</span>
+                        <span style={{ transform: "rotate(250deg" }}>h</span>
+                        <span style={{ transform: "rotate(260deg" }}>e</span>
+                        <span style={{ transform: "rotate(270deg" }}> </span>
+                        <span style={{ transform: "rotate(280deg" }}>v</span>
+                        <span style={{ transform: "rotate(290deg" }}>i</span>
+                        <span style={{ transform: "rotate(300deg" }}>d</span>
+                        <span style={{ transform: "rotate(310deg" }}>e</span>
+                        <span style={{ transform: "rotate(320deg" }}>o</span>
+                        <span style={{ transform: "rotate(330deg" }}> </span>
+                        <span style={{ transform: "rotate(340deg" }}>*</span>
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => setIsOpen(true)}
+                      className="box-style btn-box-second heading-five fs-five mfp-iframe popupvideo text-uppercase d-center position-absolute">
+                      <IoPlay size={40} color="#0ef0ad" />
+                    </button>
+                    <OnboardModal
+                      videoPath={data.video}
+                      open={isOpen}
+                      onClose={() => setIsOpen(false)}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="gaming-character ongoing-values bg-transparent gallery pt-120">
+        </section>
+      ) : null}
+      <CounterActive className={`bg-800`} />
+      <section className="gaming-character ongoing-values bg-transparent gallery pt-20 pb-120">
         <div className="container">
           <div className="row section-text justify-content-center">
             <div className="col-lg-7 text-center">
@@ -307,6 +312,8 @@ const GameSingle = () => {
           </div>
         </div>
       </section>
+      <Brands />
+      <Subscribe />
     </>
   );
 };

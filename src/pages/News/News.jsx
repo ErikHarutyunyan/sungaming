@@ -113,14 +113,14 @@ const News = () => {
                         className="newsItem"
                         key={id}>
                         <div className="newsImg-a">
-                          <Link to={`${NEWS}\\${path}`} state={{ data: news }}>
+                          <Link to={`${NEWS}/${path}`} state={{ data: news }}>
                             <img alt="Image" loading="lazy" src={imgMain} />
                           </Link>
                         </div>
                         <i>{data}</i>
                         <h6>{title}</h6>
                         <p>{shortInfo}</p>
-                        <Link to={`${NEWS}\\${path}`} state={{ data: news }}>
+                        <Link to={`${NEWS}/${path}`} state={{ data: news }}>
                           Read More
                         </Link>
                       </motion.div>

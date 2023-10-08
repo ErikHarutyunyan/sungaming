@@ -185,7 +185,7 @@ const Careers = () => {
                       )}
 
                       <div className="info-box">
-                        <Link to={`${CAREERS}\\${id}`} params={{ asd: data }}>
+                        <Link to={`${CAREERS}/${id}`} params={{ asd: data }}>
                           <h5>{title}</h5>
                         </Link>
                         <a href="career-details.html"></a>

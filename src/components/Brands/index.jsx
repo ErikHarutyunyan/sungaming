@@ -1,9 +1,3 @@
-import React from "react";
-// Styles
-import "./Brands.css";
-
-const Brands = () => {
-  return <section>Brands</section>;
-};
+import Brands from "./Brands.jsx";
 
 export default Brands;

@@ -36,6 +36,16 @@ import news9 from "../../assets/img/news/news9.png";
 import news10 from "../../assets/img/news/news10.jpg";
 
 // Games
+import njGambitBg from "../../assets/img/games/njGambitBg.gif"
+import njGambitSmall from "../../assets/img/games/nftIcon2.jpg";
+import njGambitImg1 from "../../assets/img/games/njGambit.gif";
+import njGambitImg2 from "../../assets/img/games/njGambit1.gif";
+import njGambitImg3 from "../../assets/img/games/njGambit2.gif";
+import njGambitImg4 from "../../assets/img/games/njGambitImg1.png";
+import njGambitImg5 from "../../assets/img/games/njGambitImg2.png";
+import njGambitImg6 from "../../assets/img/games/njGambitImg3.png";
+import njGambitImg7 from "../../assets/img/games/njGambitImg4.png";
+
 import pokerBig3 from "../../assets/img/games/3poker.jpg";
 import pokerSmall3 from "../../assets/img/games/3pokerIcon.jpg";
 import pokerImg1 from "../../assets/img/games/poker1.jpg";
@@ -78,22 +88,101 @@ import bingoImg1 from "../../assets/img/games/bingoImg3.jpg";
 import bingoImg2 from "../../assets/img/games/bingoImg2.jpg";
 import bingoImg3 from "../../assets/img/games/bingoImg.jpg";
 
-import blackJackSmall from "../../assets/img/games/o2-blackjack-classic.jpg";
-import studpokerSmall3 from "../../assets/img/games/qf-caribbean-stud.jpg";
-import crapsSmall from "../../assets/img/games/craps.jpg";
-import crazyMonkeySmall from "../../assets/img/games/ks-crazy-monkey.jpg";
+import blackJackSmall from "../../assets/img/games/blackjackIcon.jpg";
+import blackJackBig from "../../assets/img/games/blackjackBig.png";
+import blackJackImg1 from "../../assets/img/games/blackjackImg.jpg";
+import blackJackImg3 from "../../assets/img/games/blackjackImg2.jpg";
+
+import caripokerSmall from "../../assets/img/games/caripokerIcon.jpg";
+import caripokerBig from "../../assets/img/games/caripokerBg.jpg";
+import caripokerImg1 from "../../assets/img/games/caripokerImg1.jpg";
+import caripokerImg2 from "../../assets/img/games/caripokerImg2.jpg";
+import caripokerImg3 from "../../assets/img/games/caripokerImg3.jpg";
+import caripokerImg4 from "../../assets/img/games/caripokerImg4.jpg";
+
+import crapsSmall from "../../assets/img/games/crapsIcon.jpg";
+import crapsBig from "../../assets/img/games/crapsBg.jpg";
+import crapsImg1 from "../../assets/img/games/crapsImg.jpg";
+import crapsImg2 from "../../assets/img/games/crapsImg2.jpg";
+import crapsImg3 from "../../assets/img/games/craps.jpg";
+
+import crazyMonkeyBig from "../../assets/img/games/ks-crazy-monkey.jpg";
+import crazyMonkeySmall from "../../assets/img/games/cmIcon.png";
+import crazyMonkeyImg1 from "../../assets/img/games/cm1.jpg";
+import crazyMonkeyImg2 from "../../assets/img/games/cm2.jpg";
+import crazyMonkeyImg3 from "../../assets/img/games/cm3.jpg";
+import crazyMonkeyImg4 from "../../assets/img/games/cm4.jpg";
+
 import harnessSmall from "../../assets/img/games/vg-sports.jpg";
-import kenoSmall from "../../assets/img/games/p0-keno.jpg";
-import mummySmall from "../../assets/img/games/ha-mummy-money.jpg";
-import olympusKenoSmall from "../../assets/img/games/pg-keno.jpg";
-import rouletteRoyaleSmall from "../../assets/img/games/nv-lux-roulette.jpg";
-import royalSlotSmall from "../../assets/img/games/codecanyon.png";
-import katanaFruitsSmall from "../../assets/img/games/katana.jpg";
-import spaceSmall from "../../assets/img/games/ha-space-fortune.jpg";
-import fruitsSmall from "../../assets/img/games/no-fruits.jpg";
-import goldPotSmall from "../../assets/img/games/pot.jpg";
-import footballSmall from "../../assets/img/games/ult.jpg";
-import whellSmall from "../../assets/img/games/fort.jpg";
+import harnessBig from "../../assets/img/games/hmBg.jpg";
+import harnessImg1 from "../../assets/img/games/hrImg.jpg";
+import harnessImg2 from "../../assets/img/games/hrImg2.jpg";
+
+import kenoSmall from "../../assets/img/games/kenoIcon.jpg";
+import kenoBig from "../../assets/img/games/kenobg.jpg";
+import kenoImg1 from "../../assets/img/games/kenoImg.jpg";
+import kenoImg2 from "../../assets/img/games/kenoImg2.jpg";
+
+import mummySmall from "../../assets/img/games/mummyIcon.png";
+import mummyBig from "../../assets/img/games/mummyBg.jpg";
+import mummyImg1 from "../../assets/img/games/mummyImg.png";
+import mummyImg2 from "../../assets/img/games/mummyImg2.png";
+import mummyImg3 from "../../assets/img/games/mummyImg3.png";
+import mummyImg4 from "../../assets/img/games/mummyImg4.png";
+import mummyImg5 from "../../assets/img/games/mummyImg5.png";
+import mummyImg6 from "../../assets/img/games/mummyImg6.png";
+
+import olympusKenoSmall from "../../assets/img/games/okenoIcon.jpg";
+import okenoBig from "../../assets/img/games/okenoBg.jpg";
+import okenoImg from "../../assets/img/games/okenoImg.jpg";
+import okenoImg1 from "../../assets/img/games/okenoImg2.jpg";
+
+import rouletteRoyaleSmall from "../../assets/img/games/rrIcon.jpg";
+import rrBig from "../../assets/img/games/rrBg.jpg";
+import rrImg from "../../assets/img/games/rrImg1.jpg";
+import rrImg2 from "../../assets/img/games/rrImg2.jpg";
+
+import royalSlotSmall from "../../assets/img/games/rsIcon.png";
+import rsBig from "../../assets/img/games/rsbg.png";
+import rsImg from "../../assets/img/games/rsImg1.png";
+
+import spaceSmall from "../../assets/img/games/saIcon.jpg";
+import saBg from "../../assets/img/games/saBg.jpg";
+import saImg1 from "../../assets/img/games/saImg1.jpg";
+import saImg2 from "../../assets/img/games/saImg2.jpg";
+import saImg3 from "../../assets/img/games/saImg3.jpg";
+import saImg4 from "../../assets/img/games/saImg1.jpg";
+
+import fruitsSmall from "../../assets/img/games/fIcon.jpg";
+import fruitsBg from "../../assets/img/games/fBg.jpg";
+import fruitsImg1 from "../../assets/img/games/fImg1.jpg";
+import fruitsImg2 from "../../assets/img/games/fImg2.jpg";
+
+import potSmall from "../../assets/img/games/potIcon.jpg";
+import potBig from "../../assets/img/games/potBg.jpg";
+import potImg1 from "../../assets/img/games/potImg.jpg";
+import potImg2 from "../../assets/img/games/potImg4.jpg";
+import potImg3 from "../../assets/img/games/potImg2.jpg";
+import potImg4 from "../../assets/img/games/potImg5.jpg";
+import potImg5 from "../../assets/img/games/potImg3.jpg";
+import potImg6 from "../../assets/img/games/potImg6.jpg";
+import potImg7 from "../../assets/img/games/potImg7.jpg";
+
+import ufSmall from "../../assets/img/games/ufIcon.jpg";
+import ufBig from "../../assets/img/games/ufBg.jpg";
+import ufImg1 from "../../assets/img/games/ufImg1.jpg";
+import ufImg2 from "../../assets/img/games/ufImg2.jpg";
+import ufImg3 from "../../assets/img/games/ufImg3.jpg";
+import ufImg4 from "../../assets/img/games/ufImg4.jpg";
+import ufImg5 from "../../assets/img/games/ufImg5.jpg";
+import ufImg6 from "../../assets/img/games/ufImg6.jpg";
+import ufImg7 from "../../assets/img/games/ufImg7.jpg";
+import ufImg8 from "../../assets/img/games/ufImg8.jpg";
+
+import wfSmall from "../../assets/img/games/wfIcon.jpg";
+import wfBig from "../../assets/img/games/wfBg.jpg";
+import wfImg1 from "../../assets/img/games/wfImg1.jpg";
+import wfImg2 from "../../assets/img/games/wfImg2.jpg";
 
 export {
   planet,
@@ -121,6 +210,15 @@ export {
   bubble,
   bannerGame,
   // games
+  njGambitBg,
+  njGambitSmall,
+  njGambitImg1,
+  njGambitImg2,
+  njGambitImg3,
+  njGambitImg4,
+  njGambitImg5,
+  njGambitImg6,
+  njGambitImg7,
   pokerSmall3,
   pokerBig3,
   pokerImg1,
@@ -157,22 +255,87 @@ export {
   bingoImg1,
   bingoImg2,
   bingoImg3,
+  blackJackBig,
   blackJackSmall,
-  studpokerSmall3,
+  blackJackImg1,
+  blackJackImg3,
+  caripokerBig,
+  caripokerSmall,
+  caripokerImg1,
+  caripokerImg2,
+  caripokerImg3,
+  caripokerImg4,
   crapsSmall,
+  crapsBig,
+  crapsImg1,
+  crapsImg2,
+  crapsImg3,
+  crazyMonkeyBig,
   crazyMonkeySmall,
+  crazyMonkeyImg1,
+  crazyMonkeyImg2,
+  crazyMonkeyImg3,
+  crazyMonkeyImg4,
+  harnessBig,
   harnessSmall,
+  harnessImg1,
+  harnessImg2,
+  kenoBig,
   kenoSmall,
+  kenoImg1,
+  kenoImg2,
+  mummyBig,
   mummySmall,
+  mummyImg1,
+  mummyImg2,
+  mummyImg3,
+  mummyImg4,
+  mummyImg5,
+  mummyImg6,
   olympusKenoSmall,
+  okenoBig,
+  okenoImg,
+  okenoImg1,
   rouletteRoyaleSmall,
+  rrBig,
+  rrImg,
+  rrImg2,
   royalSlotSmall,
-  katanaFruitsSmall,
+  rsBig,
+  rsImg,
   spaceSmall,
+  saBg,
+  saImg1,
+  saImg2,
+  saImg3,
+  saImg4,
   fruitsSmall,
-  goldPotSmall,
-  footballSmall,
-  whellSmall,
+  fruitsBg,
+  fruitsImg1,
+  fruitsImg2,
+  potSmall,
+  potBig,
+  potImg1,
+  potImg2,
+  potImg3,
+  potImg4,
+  potImg5,
+  potImg6,
+  potImg7,
+  ufSmall,
+  ufBig,
+  ufImg1,
+  ufImg2,
+  ufImg3,
+  ufImg4,
+  ufImg5,
+  ufImg6,
+  ufImg7,
+  ufImg8,
+  wfSmall,
+  wfBig,
+  wfImg1,
+  wfImg2,
   // news
   news1,
   news2,

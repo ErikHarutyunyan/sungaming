@@ -1,3 +1,5 @@
+import "./Home.css";
+
 import {
   planet,
   console1,
@@ -13,7 +15,7 @@ import {
   ellipse7,
   ellipse8,
 } from "../../components/Images";
-import {MdOutlineArrowForward, MdOutlineNorthEast} from "react-icons/md";
+import { MdOutlineArrowForward, MdOutlineNorthEast } from "react-icons/md";
 import Subscribe from "../../components/Subscribe";
 import {
   settingsBlog,
@@ -22,16 +24,17 @@ import {
 } from "../../features/SliderConfig";
 import SimpleSlider from "../../components/SimpleSlider";
 import Service from "../../components/Service/index.jsx";
-import {GAMES} from "../../router/route-path";
-import {Link} from "react-router-dom";
-import {featuredGames} from "../../data/dataGames";
+import { GAMES } from "../../router/route-path";
+import { Link } from "react-router-dom";
+import { featuredGames } from "../../data/dataGames";
 import GamesThumb from "../../components/GamesThumb/GamesThumb";
 import CounterActive from "../../components/CounterActive/CounterActive.jsx";
+import Brands from "../../components/Brands";
 
 function Home() {
   return (
     <>
-      <section className="banner-section index-one overflow-hiden">
+      <section className="banner-section homeBanner index-one overflow-hiden">
         <div className="shape-area">
           <img
             src={planet}
@@ -214,7 +217,7 @@ function Home() {
                     setting={settingsFeatured}
                     className={"game-carousel pb-20 slick-initialized"}>
                     {featuredGames.map((featuredItem) => {
-                      const { id, title, imgMain } = featuredItem;
+                      const { id, title, imgMain, path } = featuredItem;
                       return (
                         <div
                           key={id}
@@ -237,7 +240,7 @@ function Home() {
                               <div className="link-item-featured app-download d-flex gap-5 align-items-center">
                                 <Link
                                   className="text-decoration-underline"
-                                  to={`${GAMES}/${id}`}>
+                                  to={`${GAMES}/${path}`}>
                                   Detal Game
                                 </Link>
                               </div>
@@ -693,107 +696,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="our-partners pt-120 pb-120">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-6">
-              <div className="section-header text-center">
-                <h4 className="sub-title">
-                  <span>Trusted</span> By
-                </h4>
-                <span className="fs-two heading mb-6">
-                  We are happy to work with <span>global largest brands</span>
-                </span>
-                <p>
-                  We are proud to support industry leaders around the world.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="all-items mb-7 d-flex gap-3 justify-content-between flex-wrap">
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-              </div>
-              <div className="all-items d-flex gap-3 justify-content-between flex-wrap">
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <Brands />
       <Subscribe />
     </>
   );

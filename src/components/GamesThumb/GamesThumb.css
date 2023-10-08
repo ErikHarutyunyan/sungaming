@@ -3,3 +3,48 @@
   height: 80px;
   object-fit: cover;
 }
+
+.our-games button.box-style.btn-box {
+  max-width: 120px;
+}
+.tabcontents .loading {
+  cursor: pointer;
+  background: var(--n900);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  z-index: 0;
+}
+
+.tabcontents .loading button {
+  color: var(--p300);
+  transition: all 0.3s;
+}
+
+.tabcontents .loading:hover button {
+  color: white;
+}
+
+.tabcontents .loading:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  background-color: var(--p300);
+  transition: all 0.7s ease;
+  z-index: -1;
+}
+
+.tabcontents .loading:hover:before {
+  border-radius: 15px;
+  background-color: var(--p500);
+}
+
+.tabcontents .loading:hover:before {
+  width: 300%;
+  height: 300%;
+}

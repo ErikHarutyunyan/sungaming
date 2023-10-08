@@ -1,0 +1,29 @@
+.homeBanner .box-style.btn-box {
+  width: auto;
+}
+
+.homeBanner .game-carousel .thumb img {
+  height: 320px;
+  object-fit: cover;
+}
+
+.homeBanner.banner-section .banner-content {
+  padding: 100px 0;
+}
+
+.homeBanner.banner-section .banner-content {
+  padding-bottom: 70px;
+}
+
+.homeBanner .slick-track {
+  padding-bottom: 0px;
+}
+
+.homeBanner .display-one {
+    font-size: 65px;
+    line-height: initial;
+}
+.homeBanner .fs-four {
+    font-size: 20px;
+    color: var(--n20);
+}

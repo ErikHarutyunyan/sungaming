@@ -1,8 +1,8 @@
-import "./CounterActive.css"
+import "./CounterActive.css";
 
-const CounterActive = () => {
+const CounterActive = ({ className }) => {
   return (
-    <section className="counter-section pt-120 pb-120">
+    <section className={`counter-section counter-head my-20 ${className}`}>
       <div className="container">
         <div className="row cus-mar ">
           <div className="col-sm-6 col-xl-4">
@@ -41,6 +41,6 @@ const CounterActive = () => {
         </div>
       </div>
     </section>
-  )
-}
-export default CounterActive
+  );
+};
+export default CounterActive;

@@ -16,14 +16,20 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { GAMES } from "../../router/route-path.jsx";
 
+const gamesPerRow = 6;
+
 const GamesThumb = () => {
   const [menuItems, setMenuItems] = useState(dataGames);
   const [isActive, setIsActive] = useState("category_0");
+  const [next, setNext] = useState(gamesPerRow);
 
   const handleClick = (e) => {
     setIsActive(e.target.id);
+    setNext(6)
   };
-
+  const handleMoreGames = () => {
+    setNext(next + gamesPerRow);
+  };
   const filterItems = (category) => {
     if (category[0] === "All Games") {
       setMenuItems(dataGames);
@@ -31,11 +37,11 @@ const GamesThumb = () => {
     }
     console.log("category", category);
     const newItems = dataGames.filter((item) => {
-      if (item.category.length > 1)
-        return item.category.filter(
-          (categoryItem) => categoryItem === category
-        );
-      else return item.category[0] == category;
+      if (Array.isArray(category)) {
+        return category.some((cat) => item.category.includes(cat));
+      } else {
+        return item.category.includes(category);
+      }
     });
     setMenuItems(newItems);
   };
@@ -134,7 +140,7 @@ const GamesThumb = () => {
             <div className="tabcontents tab-content">
               <div className={`tabitem active`}>
                 <div className="row cus-mar justify-content-center">
-                  {menuItems?.map((item) => {
+                  {menuItems?.slice(0, next)?.map((item) => {
                     const { id, title, imgMain, imgSmall, desc, path } = item;
                     return (
                       <motion.div
@@ -201,7 +207,7 @@ const GamesThumb = () => {
                             <div className="btn-area alt-bg">
                               <Link
                                 className="box-style btn-box mt-4 d-center"
-                                to={`${GAMES}\\${path}`}>
+                                to={`${GAMES}/${path}`}>
                                 Learn More
                               </Link>
                             </div>
@@ -210,6 +216,19 @@ const GamesThumb = () => {
                       </motion.div>
                     );
                   })}
+                  {next < menuItems?.length && (
+                    <div className="text-center mt-10 mt-sm-15">
+                      <div
+                        className="loading py-3 px-8 d-inline-flex align-items-center gap-2"
+                        onClick={handleMoreGames}>
+                        <div className="icon-box d-center">
+                          <button className="">
+                            Load more
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

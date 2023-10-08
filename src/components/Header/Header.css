@@ -1,0 +1,18 @@
+.header-section{
+    transition: all 0.8s;
+}
+
+.sticky {
+  animation: stickyAnimation 0.8s ease-in-out forwards;
+}
+
+@keyframes stickyAnimation {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -370,7 +370,7 @@ const Games = () => {
                       </div>
                     </div> */}
                     {menuItems?.slice(0, next)?.map((item) => {
-                      const { id, title, imgMain, path, imgSmall, about } =
+                      const { id, title, imgMain, path, } =
                         item;
                       return (
                         <motion.div
@@ -430,7 +430,7 @@ const Games = () => {
                             <div className="link-item py-3">
                               <Link
                                 className=" px-5 text-decoration-underline"
-                                to={`${GAMES}\\${path}`}
+                                to={`${GAMES}/${path}`}
                                 state={{ data: item }}>
                                 More Details
                               </Link>

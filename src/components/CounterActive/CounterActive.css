@@ -1,0 +1,12 @@
+.counter-section .single-box {
+  margin-bottom: 0;
+}
+
+.counter-section.bg-800 {
+  background-color: var(--n800);
+}
+
+.counter-head.counter-section .display-one,
+.counters span {
+  color: #454e56a1;
+}

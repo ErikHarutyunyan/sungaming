@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-import fav from "../../assets/img/fav.webp";
-import logo from "../../assets/img/logo-text.webp";
+import { NavLink } from "react-router-dom";
+import "./Header.css"
 import {
   GAMES,
   HOME,
@@ -9,11 +8,33 @@ import {
   NEWS,
   CONTACT,
 } from "../../router/route-path";
+import { useEffect, useState } from "react";
 
 export const Header = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <header className="header-section header-menu false">
-      <nav className="navbar w-100 flex-nowrap px-2 py-6 ps-2 navbar-expand-xl">
+    <header
+      className={`header-section header-menu ${isSticky ? "sticky" : ""}`}>
+      <nav
+        className={`navbar w-100 flex-nowrap px-2  ps-2 navbar-expand-xl ${
+          isSticky ? "py-4" : "py-6"
+        }`}>
         <div className="sidebar-close mobile-menu">
           <button className="d-center d-grid d-xl-none">
             <i className="material-symbols-outlined mat-icon fs-four">
@@ -52,22 +73,46 @@ export const Header = () => {
           id="navbar-content">
           <ul className="navbar-nav d-xl-flex d-none gap-3 py-4 py-lg-0 m-auto pe-20 align-self-center">
             <li>
-              <Link to={HOME}>Home</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to={HOME}>
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to={GAMES}>Games</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to={GAMES}>
+                Games
+              </NavLink>
             </li>
             <li>
-              <Link to={SERVICES}>Services</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to={SERVICES}>
+                Services
+              </NavLink>
             </li>
             <li>
-              <Link to={ABOUT}>About Us</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to={ABOUT}>
+                About Us
+              </NavLink>
             </li>
             <li>
-              <Link to={NEWS}>News</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to={NEWS}>
+                News
+              </NavLink>
             </li>
             <li>
-              <Link to={CONTACT}>Contact</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                to={CONTACT}>
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
