@@ -23,7 +23,6 @@ const MODAL_AGE_STYLES = {
   borderRadius: "16px",
   maxWidth: "500px",
   fontWeight: "700",
-  textAlign: "center",
 };
 
 const OVERLAY_STYLES = {
@@ -59,15 +58,6 @@ const OnboardModal = ({
 
   return ReactDom.createPortal(
     <>
-      {/* <div className="player-wrapper">
-        <ReactPlayer
-          className="react-player"
-          url={`${videoPath}`}
-          width="100%"
-          height="100%"
-          controls
-        />
-      </div> */}
       {iframePath && (
         <iframe
           seamless
@@ -104,7 +94,8 @@ const OnboardModal = ({
             type="button"
             className="close"
             data-dismiss="modal"
-            aria-label="Close">
+            aria-label="Close"
+            >
             <span aria-hidden="true">×</span>
           </button>
           {children}
