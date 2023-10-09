@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-import "./Header.css"
+import { Link, NavLink } from "react-router-dom";
+import "./Header.css";
 import {
   GAMES,
   HOME,
@@ -9,6 +9,7 @@ import {
   CONTACT,
 } from "../../router/route-path";
 import { useEffect, useState } from "react";
+import { logo } from "../Images";
 
 export const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -44,10 +45,10 @@ export const Header = () => {
             <span className="fs-six">MENU</span>
           </button>
         </div>
-        {/* <a
+        <Link
           className="navbar-brand ms-4 ms-xxl-15 d-flex align-items-center gap-2"
-          href="/">
-          <img
+          to={HOME}>
+          {/* <img
             alt="logo"
             loading="lazy"
             width="42"
@@ -55,8 +56,8 @@ export const Header = () => {
             decoding="async"
             data-nimg="1"
             className="logo"
-            src={fav}
-          />
+            src={logo}
+          /> */}
           <img
             src={logo}
             alt="logo-text"
@@ -67,7 +68,7 @@ export const Header = () => {
             data-nimg="1"
             className="logo-text d-xxl-block d-none"
           />
-        </a> */}
+        </Link>
         <div
           className="collapse navbar-collapse d-flex gap-10 w-100 justify-content-end px-8 pe-2"
           id="navbar-content">

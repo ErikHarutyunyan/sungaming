@@ -1,20 +1,32 @@
-import { brandLogo } from "../Images";
-import "./Brands.css"
+import {
+  brand1,
+  brand2,
+  brand3,
+  brand4,
+  brand5,
+  brand6,
+  brand7,
+  brand8,
+  brand9,
+} from "../Images";
+import "./Brands.css";
 
 const Brands = () => {
   return (
-    <section className="our-partners pt-120 pb-120">
+    <section className="brands our-partners pt-120 pb-120">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="section-header text-center">
               <h4 className="sub-title">
-                <span>Trusted</span> By
+                <span>Endorsed </span> By
               </h4>
               <span className="fs-two heading mb-6">
-                We are happy to work with <span>global largest brands</span>
+                We're Delighted to Collaborate with the{" "}
+                <span>World's Top Brands</span>
               </span>
-              <p>We are proud to support industry leaders around the world.</p>
+              <p>We take pride in assisting global industry frontrunners.</p>
+              <p>Feel free to explore our accolades!</p>
             </div>
           </div>
         </div>
@@ -23,12 +35,23 @@ const Brands = () => {
           <div className="col-lg-10">
             <div className="all-items mb-7 d-flex gap-3 justify-content-between flex-wrap">
               <div className="thumb">
+                {" "}
                 <img
                   alt="Image"
                   loading="lazy"
                   width="207"
                   height="46"
-                  src={brandLogo}
+                  src={brand9}
+                />
+              </div>
+              <div className="thumb">
+                {" "}
+                <img
+                  alt="Image"
+                  loading="lazy"
+                  width="207"
+                  height="46"
+                  src={brand2}
                 />
               </div>
               <div className="thumb">
@@ -37,7 +60,7 @@ const Brands = () => {
                   loading="lazy"
                   width="207"
                   height="46"
-                  src={brandLogo}
+                  src={brand3}
                 />
               </div>
               <div className="thumb">
@@ -46,16 +69,7 @@ const Brands = () => {
                   loading="lazy"
                   width="207"
                   height="46"
-                  src={brandLogo}
-                />
-              </div>
-              <div className="thumb">
-                <img
-                  alt="Image"
-                  loading="lazy"
-                  width="207"
-                  height="46"
-                  src={brandLogo}
+                  src={brand4}
                 />
               </div>
             </div>
@@ -66,7 +80,7 @@ const Brands = () => {
                   loading="lazy"
                   width="207"
                   height="46"
-                  src={brandLogo}
+                  src={brand5}
                 />
               </div>
               <div className="thumb">
@@ -75,7 +89,7 @@ const Brands = () => {
                   loading="lazy"
                   width="207"
                   height="46"
-                  src={brandLogo}
+                  src={brand6}
                 />
               </div>
               <div className="thumb">
@@ -84,7 +98,7 @@ const Brands = () => {
                   loading="lazy"
                   width="207"
                   height="46"
-                  src={brandLogo}
+                  src={brand7}
                 />
               </div>
               <div className="thumb">
@@ -93,7 +107,7 @@ const Brands = () => {
                   loading="lazy"
                   width="207"
                   height="46"
-                  src={brandLogo}
+                  src={brand8}
                 />
               </div>
             </div>
@@ -102,5 +116,5 @@ const Brands = () => {
       </div>
     </section>
   );
-}
-export default Brands
+};
+export default Brands;

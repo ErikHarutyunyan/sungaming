@@ -23,6 +23,23 @@ import serviceThumb from "../../assets/img/services-thumb.webp";
 import bubble from "../../assets/img/bubble.png";
 import bannerGame from "../../assets/img/bannerGame.png";
 
+// logo
+import logo from "../../assets/img/logo.png";
+// team
+import team1 from "../../assets/img/team01.webp";
+import team2 from "../../assets/img/team3.jpg";
+import team3 from "../../assets/img/team4.jpg";
+import team4 from "../../assets/img/team5.jpg";
+import team5 from "../../assets/img/team2.jpg";
+
+// service
+import sevice1 from "../../assets/img/services1.jpg";
+import sevice2 from "../../assets/img/services2.jpg";
+import sevice3 from "../../assets/img/services3.jpg";
+import sevice4 from "../../assets/img/services4.jpg";
+import sevice5 from "../../assets/img/services5.jpg";
+import sevice6 from "../../assets/img/services6.jpg";
+
 // News
 import news1 from "../../assets/img/news/news1.png";
 import news2 from "../../assets/img/news/news2.jpeg";
@@ -35,6 +52,16 @@ import news8 from "../../assets/img/news/news8.jpeg";
 import news9 from "../../assets/img/news/news9.png";
 import news10 from "../../assets/img/news/news10.jpg";
 
+// brands
+import brand1 from "../../assets/img/brands/askgamblers.png";
+import brand2 from "../../assets/img/brands/award_sbc_2022_dark.png";
+import brand3 from "../../assets/img/brands/CasinoBeats_GameDeveloperAwards_logo-white.png";
+import brand4 from "../../assets/img/brands/EGR-B2B.png";
+import brand5 from "../../assets/img/brands/GAA.png";
+import brand6 from "../../assets/img/brands/IGA.png";
+import brand7 from "../../assets/img/brands/iGB-Affiliate-logo.png";
+import brand8 from "../../assets/img/brands/MiGEA.png";
+import brand9 from "../../assets/img/brands/SIGMA-AMERICAS-logo.png";
 // Games
 import njGambitBg from "../../assets/img/games/njGambitBg.gif";
 import njGambitSmall from "../../assets/img/games/nftIcon2.jpg";
@@ -209,6 +236,30 @@ export {
   serviceThumb,
   bubble,
   bannerGame,
+  logo,
+  // team
+  team1,
+  team2,
+  team3,
+  team4,
+  team5,
+  // services
+  sevice1,
+  sevice2,
+  sevice3,
+  sevice4,
+  sevice5,
+  sevice6,
+  // brands
+  brand1,
+  brand2,
+  brand3,
+  brand4,
+  brand5,
+  brand6,
+  brand7,
+  brand8,
+  brand9,
   // games
   njGambitBg,
   njGambitSmall,

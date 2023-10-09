@@ -37,8 +37,7 @@ export const Footer = () => {
                     <MdOutlineMailOutline className="material-symbols-outlined" />
                   </div>
                   <div className="text-area">
-                    <span>Example@gmail.com</span>
-                    <span>Example@gmail.com</span>
+                    <span>sungaming@gmail.com</span>
                   </div>
                 </div>
               </div>
@@ -53,8 +52,7 @@ export const Footer = () => {
                     <MdOutlinePhone className="material-symbols-outlined" />
                   </div>
                   <div className="text-area">
-                    <span>(302) 555-0107</span>
-                    <span>(704) 555-0127</span>
+                    <span>(374) 0010133</span>
                   </div>
                 </div>
               </div>

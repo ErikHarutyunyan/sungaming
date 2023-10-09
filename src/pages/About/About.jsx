@@ -15,7 +15,11 @@ import aboutNftImg1 from "../../assets/img/aboutNftImg1.webp";
 import aboutNftImg2 from "../../assets/img/aboutNftImg2.webp";
 import cricleNft from "../../assets/img/cricleNft.svg";
 import teamImg from "../../assets/img/team01.webp";
-import { MdOutlineDiversity1, MdOutlineGames, MdOutlineNorthEast } from "react-icons/md";
+import {
+  MdOutlineDiversity1,
+  MdOutlineGames,
+  MdOutlineNorthEast,
+} from "react-icons/md";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { LuLayoutPanelLeft } from "react-icons/lu";
 import { useEffect, useRef } from "react";
@@ -24,8 +28,20 @@ import services_img02 from "../../assets/img/services_img02.webp";
 import services_img03 from "../../assets/img/services_img03.webp";
 import services_img01 from "../../assets/img/services_img01.webp";
 import { useState } from "react";
-import { blogsImg1, brandLogo, ellipse7, ellipse8 } from "../../components/Images";
+import { brandLogo, team2, team3, team4, team5 } from "../../components/Images";
 import Subscribe from "../../components/Subscribe";
+import Brands from "../../components/Brands";
+import {
+  FaBalanceScale,
+  FaCertificate,
+  FaGavel,
+  FaLightbulb,
+  FaMagic,
+  FaShieldAlt,
+  FaSmile,
+  FaStar,
+  FaUsers,
+} from "react-icons/fa";
 
 const About = () => {
   const serviceImgs = useRef(null);
@@ -105,72 +121,72 @@ const About = () => {
               <div
                 className={
                   "ongoing-values-carousel slick-initialized slick-slider slick-dotted"
-                }
-              >
+                }>
                 <SimpleSlider setting={settingsAbout}>
                   <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
                     <div className="icon-box d-center">
-                      <BiFlag />
+                      <FaBalanceScale size={35} color="white" />
                     </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
+                    <h3 className="mt-6 pb-2">Integrity</h3>
                     <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
+                      We uphold the highest ethical standards, ensuring fairness
+                      and transparency in all our operations.
                     </p>
                   </div>
                   <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
                     <div className="icon-box d-center">
-                      <BiFlag />
+                      <FaLightbulb size={35} color="white" />
                     </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
+                    <h3 className="mt-6 pb-2">Innovation</h3>
                     <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
+                      We constantly strive to innovate, delivering cutting-edge
+                      solutions and experiences to our users.
                     </p>
                   </div>
                   <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
                     <div className="icon-box d-center">
-                      <BiFlag />
+                      <FaCertificate size={35} color="white" />
                     </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
+                    <h3 className="mt-6 pb-2">Excellence</h3>
                     <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
+                      We pursue excellence in everything we do, from game
+                      development to customer support.
                     </p>
                   </div>
                   <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
                     <div className="icon-box d-center">
-                      <BiFlag />
+                      <FaUsers size={35} color="white" />
                     </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
+                    <h3 className="mt-6 pb-2">Teamwork</h3>
                     <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
+                      We believe in the power of collaboration, working together
+                      to achieve our goals.
                     </p>
                   </div>
                   <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
                     <div className="icon-box d-center">
-                      <BiFlag />
+                      <FaSmile size={35} color="white" />
                     </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
+                    <h3 className="mt-6 pb-2">Fun and Entertainment</h3>
                     <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
+                      We aim to provide fun and entertaining experiences for our
+                      players while maintaining a responsible gaming
+                      environment.
                     </p>
                   </div>
                   <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
                     <div className="icon-box d-center">
-                      <BiFlag />
+                      <FaGavel size={35} color="white" />
                     </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
+                    <h3 className="mt-6 pb-2">Fair Play</h3>
                     <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
+                      Commitment to fair play, transparency, and integrity in
+                      all aspects of our gambling offerings.
                     </p>
                   </div>
                   <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
                     <div className="icon-box d-center">
-                      <BiFlag />
+                      <FaMagic size={35} color="white" />
                     </div>
                     <h3 className="mt-6 pb-2">Creativity</h3>
                     <p>
@@ -266,8 +282,7 @@ const About = () => {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 150 150"
-                    version="1.1"
-                  >
+                    version="1.1">
                     <path id="textPath" d="M 0,75 a 75,75 0 1,1 0,1 z"></path>
                     <text>
                       <textPath href="#textPath">
@@ -302,8 +317,7 @@ const About = () => {
                     height="35"
                     viewBox="0 0 109 35"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                    xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 0H0V7H9V0Z" fill="currentcolor"></path>
                     <path d="M24 0H15V7H24V0Z" fill="currentcolor"></path>
                     <path d="M38 0H29V7H38V0Z" fill="currentcolor"></path>
@@ -365,7 +379,7 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <img alt="img" loading="lazy" width="224" src={teamImg} />
+                    <img alt="img" loading="lazy" width="224" src={team5} />
                   </a>
                 </div>
                 <div className="team__content">
@@ -380,14 +394,14 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <img alt="img" loading="lazy" width="224" src={teamImg} />
+                    <img alt="img" loading="lazy" width="224" src={team2} />
                   </a>
                 </div>
                 <div className="team__content">
                   <h4 className="name">
-                    <a href="/team-details">killer master</a>
+                    <a href="/team-details">code expert</a>
                   </h4>
-                  <span className="designation">Blockchain Expert</span>
+                  <span className="designation">Developer</span>
                 </div>
               </div>
             </div>
@@ -395,14 +409,14 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <img alt="img" loading="lazy" width="224" src={teamImg} />
+                    <img alt="img" loading="lazy" width="224" src={team3} />
                   </a>
                 </div>
                 <div className="team__content">
                   <h4 className="name">
-                    <a href="/team-details">killer master</a>
+                    <a href="/team-details">Diamond</a>
                   </h4>
-                  <span className="designation">Blockchain Expert</span>
+                  <span className="designation">Art Director</span>
                 </div>
               </div>
             </div>
@@ -410,14 +424,14 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <img alt="img" loading="lazy" width="224" src={teamImg} />
+                    <img alt="img" loading="lazy" width="224" src={team4} />
                   </a>
                 </div>
                 <div className="team__content">
                   <h4 className="name">
-                    <a href="/team-details">killer master</a>
+                    <a href="/team-details">Coin</a>
                   </h4>
-                  <span className="designation">Blockchain Expert</span>
+                  <span className="designation">Crypto Advisor</span>
                 </div>
               </div>
             </div>
@@ -460,8 +474,8 @@ const About = () => {
                       <a href="/service-details">Social Responsibility</a>
                     </h4>
                     <p>
-                      Lorem ipsum dolor sitamet const adipiscng Duis eletum
-                      sollicitudin is yaugue euismods
+                      Embracing a Better Tomorrow: Our Commitment to Social
+                      Responsibility
                     </p>
                   </div>
                 </div>
@@ -474,8 +488,8 @@ const About = () => {
                       <a href="/service-details">Gambling Aware</a>
                     </h4>
                     <p>
-                      Lorem ipsum dolor sitamet const adipiscng Duis eletum
-                      sollicitudin is yaugue euismods
+                      Promoting Responsible Play: Our Commitment to Gambling
+                      Awareness
                     </p>
                   </div>
                 </div>
@@ -488,8 +502,8 @@ const About = () => {
                       <a href="/service-details">Licences & Certifications</a>
                     </h4>
                     <p>
-                      Lorem ipsum dolor sitamet const adipiscng Duis eletum
-                      sollicitudin is yaugue euismods
+                      Ensuring Compliance and Trust: Our Licences &
+                      Certifications
                     </p>
                   </div>
                 </div>
@@ -502,8 +516,8 @@ const About = () => {
                       <a href="/service-details">Comprehensive Backoffice</a>
                     </h4>
                     <p>
-                      Lorem ipsum dolor sitamet const adipiscng Duis eletum
-                      sollicitudin is yaugue euismods
+                      Efficiency Unleashed: The Backbone of Our Comprehensive
+                      Backoffice
                     </p>
                   </div>
                 </div>
@@ -528,106 +542,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="our-partners pt-120 pb-120">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-6">
-              <div className="section-header text-center">
-                <h4 className="sub-title">
-                  <span>Trusted</span> By
-                </h4>
-                <span className="fs-two heading mb-6">
-                  We are happy to work with <span>global largest brands</span>
-                </span>
-                <p>
-                  We are proud to support industry leaders around the world.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="all-items mb-7 d-flex gap-3 justify-content-between flex-wrap">
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-              </div>
-              <div className="all-items d-flex gap-3 justify-content-between flex-wrap">
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-                <div className="thumb">
-                  <img
-                    alt="Image"
-                    loading="lazy"
-                    width="207"
-                    height="46"
-                    src={brandLogo}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Brands />
       <Subscribe />
     </>
   );

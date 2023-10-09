@@ -42680,7 +42680,7 @@ li {
   background-color: var(--p300);
 }
 
-.how-it-works .single-box:hover .icon-box i {
+.how-it-works .single-box:hover .icon-box svg path {
   color: var(--n900);
 }
 
@@ -44143,10 +44143,21 @@ li {
 .services h3 {
   opacity: 1;
   transition: 1.1s;
+  z-index: 3;
+}
+
+
+.services p {
+  padding: 0 20px;
+  z-index: 1;
+  color: #fff;
+  font-weight: 700;
 }
 
 .services .single-box img {
   width: 100%;
+  opacity: 0.25;
+  height: 100%;
 }
 
 .services .single-box:before {
@@ -44156,12 +44167,14 @@ li {
   height: 100%;
   left: 0;
   background: var(--n800);
-  transition: all 1s;
+  transition: all 1.3s;
+  z-index: 2;
 }
 
 .services .single-box:hover:before {
   height: 0;
   transform: rotateY(180deg);
+  z-index: 0;
 }
 
 .services .single-box:hover .abs-area {
@@ -44172,6 +44185,7 @@ li {
 .services .single-box:hover h3 {
   opacity: 0;
 }
+
 
 .testimonial-customers .single-slider {
   margin: 0 10px;

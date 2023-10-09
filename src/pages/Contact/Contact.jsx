@@ -121,8 +121,7 @@ const Contact = () => {
                       <h4>Have any Questions</h4>
                     </div>
                     <p className="d-flex gap-5">
-                      <span>(302) 555-0107</span>
-                      <span>(704) 555-0127</span>
+                      <span>(374) 0010133</span>
                     </p>
                   </div>
                   <div className="single-content d-grid py-5 py-sm-8 gap-2">
@@ -132,7 +131,9 @@ const Contact = () => {
                       <h4>Contact Address</h4>
                     </div>
                     <p className="d-flex">
-                      <span>(302) 555-0107</span>
+                      <span>
+                        London: Al. Brucknera Aleksandra 63, Wrocław 51-410
+                      </span>
                     </p>
                   </div>
                   <div className="single-content d-grid py-5 py-sm-8 gap-2">
@@ -141,41 +142,60 @@ const Contact = () => {
                       <h4>Opening Hours</h4>
                     </div>
                     <p className="d-flex">
-                      <span>(302) 555-0107</span>
+                      <span>Mon-Fri: 09: 00-18: 00 Sat-Sun: Weekend</span>
                     </p>
                   </div>
                 </div>
                 <ul className="d-flex justify-content-center gap-4 social-area py-4 py-sm-8 mt-5 mt-sm-10">
                   <li>
                     <a
-                      href="https://www.facebook.com"
                       aria-label="Facebook"
-                      className="d-center">
-                      <i className="fab fa-facebook-f"></i>
+                      className="d-center"
+                      href="https://www.facebook.com">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        strokeWidth={0}
+                        viewBox="0 0 320 512"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                      </svg>
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://www.instagram.com"
                       aria-label="Instagram"
-                      className="d-center">
-                      <i className="fab fa-instagram"></i>
+                      className="d-center"
+                      href="https://www.instagram.com">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        strokeWidth={0}
+                        viewBox="0 0 448 512"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                      </svg>
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://www.linkedin.com"
                       aria-label="Linkedin"
-                      className="d-center">
-                      <i className="fab fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://twitter.com"
-                      aria-label="Twitter"
-                      className="d-center">
-                      <i className="fab fa-twitter"></i>
+                      className="d-center"
+                      href="https://www.linkedin.com">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        strokeWidth={0}
+                        viewBox="0 0 448 512"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                      </svg>
                     </a>
                   </li>
                 </ul>
@@ -218,52 +238,67 @@ const Contact = () => {
               <div className="col-xl-7 col-lg-7">
                 <div className="accordion" id="accordionFaqs">
                   <AccordionBox
-                    title={
-                      " What services does GameStorm offer for game development?"
-                    }>
-                    GameStorm offers a full range of services for game
-                    development, including game art, design, programming, and
-                    project management.
+                    title={"What services does Our Gaming Studio offer?"}>
+                    Our Gaming Studio provides a wide range of services,
+                    including game development, graphic design, sound
+                    production, and more. We specialize in creating captivating
+                    and immersive gaming experiences.
                   </AccordionBox>
                   <AccordionBox
                     title={
-                      " What services does GameStorm offer for game development?"
+                      " What sets Our Gaming Studio apart from other game development companies?"
                     }>
-                    GameStorm offers a full range of services for game
-                    development, including game art, design, programming, and
-                    project management.
+                    At Our Gaming Studio, we combine creativity, technical
+                    expertise, and a passion for gaming to deliver exceptional
+                    results. Our commitment to quality, innovation, and client
+                    satisfaction sets us apart in the industry.
                   </AccordionBox>
                   <AccordionBox
                     title={
-                      " What services does GameStorm offer for game development?"
+                      " How can I stay updated on the latest projects and news from Our Gaming Studio?"
                     }>
-                    GameStorm offers a full range of services for game
-                    development, including game art, design, programming, and
-                    project management.
+                    You can stay informed about our latest projects, news, and
+                    updates by visiting our website's "News" or "Blog" section.
+                    Additionally, follow us on our social media channels,
+                    including Facebook, Twitter, and Instagram, to get real-time
+                    updates.
                   </AccordionBox>
                   <AccordionBox
                     title={
-                      " What services does GameStorm offer for game development?"
+                      "Does Our Gaming Studio support responsible gaming practices?"
                     }>
-                    GameStorm offers a full range of services for game
-                    development, including game art, design, programming, and
-                    project management.
+                    Yes, we are committed to promoting responsible gaming. We
+                    design our games with player well-being in mind and
+                    encourage responsible gaming behavior. If you or someone you
+                    know needs assistance with responsible gaming, please refer
+                    to our dedicated resources and support.
                   </AccordionBox>
                   <AccordionBox
                     title={
-                      " What services does GameStorm offer for game development?"
+                      "How can I contact Our Gaming Studio for collaboration or inquiries?"
                     }>
-                    GameStorm offers a full range of services for game
-                    development, including game art, design, programming, and
-                    project management.
+                    Contacting Our Gaming Studio is easy! You can reach out to
+                    us through the "Contact" section on our website. Simply fill
+                    out the provided form with your details and message, and our
+                    team will promptly get in touch with you. Additionally, you
+                    can find our contact information, including email and phone
+                    number, in the footer of our website for direct
+                    communication. We look forward to hearing from you!
                   </AccordionBox>
                   <AccordionBox
                     title={
-                      " What services does GameStorm offer for game development?"
+                      "What is the typical timeline for game development projects at Our Gaming Studio?"
                     }>
-                    GameStorm offers a full range of services for game
-                    development, including game art, design, programming, and
-                    project management.
+                    The timeline for game development projects at Our Gaming
+                    Studio can vary depending on the complexity and scope of the
+                    project. We work closely with our clients to establish
+                    project milestones and timelines during the initial planning
+                    phase. Smaller projects may take a few months, while larger,
+                    more intricate games can take a year or longer. Rest
+                    assured, we are dedicated to delivering high-quality games
+                    efficiently, and we keep our clients updated throughout the
+                    development process to ensure transparency and meet project
+                    deadlines.
                   </AccordionBox>
                 </div>
               </div>

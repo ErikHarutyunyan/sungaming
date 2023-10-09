@@ -22,3 +22,12 @@
 .our-focus.index-two:before {
   content: none;
 }
+
+.key svg {
+  width: 32px;
+  height: 32px;
+}
+
+.key svg path {
+  fill: #fff;
+}
