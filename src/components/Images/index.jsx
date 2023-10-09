@@ -36,7 +36,7 @@ import news9 from "../../assets/img/news/news9.png";
 import news10 from "../../assets/img/news/news10.jpg";
 
 // Games
-import njGambitBg from "../../assets/img/games/njGambitBg.gif"
+import njGambitBg from "../../assets/img/games/njGambitBg.gif";
 import njGambitSmall from "../../assets/img/games/nftIcon2.jpg";
 import njGambitImg1 from "../../assets/img/games/njGambit.gif";
 import njGambitImg2 from "../../assets/img/games/njGambit1.gif";
@@ -143,7 +143,7 @@ import rrImg from "../../assets/img/games/rrImg1.jpg";
 import rrImg2 from "../../assets/img/games/rrImg2.jpg";
 
 import royalSlotSmall from "../../assets/img/games/rsIcon.png";
-import rsBig from "../../assets/img/games/rsbg.png";
+import rsBig from "../../assets/img/games/rsBig.png";
 import rsImg from "../../assets/img/games/rsImg1.png";
 
 import spaceSmall from "../../assets/img/games/saIcon.jpg";
