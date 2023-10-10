@@ -185,7 +185,7 @@ const GamesThumb = () => {
                           },
                         }}
                         key={id}
-                        className={`col-xl-4 col-sm-6 col-8`}>
+                        className={`col-xl-4 col-sm-6 col-8  d-center`}>
                         <div className="single-box">
                           <div className="img-area">
                             <img alt="img" loading="lazy" src={imgMain} />

@@ -46118,10 +46118,10 @@ li {
   .banner-section .shape-area .shape-2 {
     bottom: 15%;
   }
-  .our-games .nav button {
+  /* .our-games .nav button {
     width: 45px;
     height: 45px;
-  }
+  } */
   .our-games .tab-content li::before {
     right: -10px;
   }
