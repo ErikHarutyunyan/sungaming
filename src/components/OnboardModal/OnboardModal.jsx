@@ -52,7 +52,6 @@ const OnboardModal = ({
   children,
   iframePath = "",
   videoPath = "",
-  poster,
 }) => {
   if (!open) return null;
 
@@ -94,8 +93,7 @@ const OnboardModal = ({
             type="button"
             className="close"
             data-dismiss="modal"
-            aria-label="Close"
-            >
+            aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
           {children}

@@ -319,6 +319,359 @@ const dataNews = [
   },
   {
     id: uuidv4(), // Generate a unique ID
+    imgMain: news7,
+    title: "J3ster.gg Introduces Two New Bet Types in Lead-up to Launch",
+    category: ["Sports"],
+    shortInfo:
+      "Currently in its beta phase, J3ster.gg continues to evolve with the introduction of a roulette-type bet alongside bets on predetermined ranges of kills in a game, with a growing number of streamers utilising the platform.",
+    desc: `
+     <div class="postContent">
+      <div class="contentBox mb-8">
+        <img
+          src="https://igaming.news/img/articles/J3ster_gg_Introduces_Two_New_Bet_Types_in_Lead-up_to_Launch.png"
+          alt="J3ster.gg Introduces Two New Bet Types in Lead-up to Launch"
+          class="mb-5" />
+        <p class="newsText mb-5">
+          J3ster.gg, the innovative live-streaming betting company, is
+          introducing two new bet types as it gears up for its imminent full
+          launch.
+        </p>
+        <p class="newsText mb-5">
+          Currently in its beta phase, J3ster.gg continues to evolve with the
+          introduction of a roulette-type bet alongside bets on predetermined
+          ranges of kills in a game, with a growing number of streamers
+          utilising the platform.
+        </p>
+        <p class="newsText mb-5">
+          The new roulette-type bet sees players choose an even or odd number of
+          kills for their chosen streamer to achieve on Valorant or Call of
+          Duty: Warzone, winning money if they predict correctly.
+        </p>
+      </div>
+      <div class="contentBox mb-8">
+        <p class="newsText mb-5">
+          Players can now also bet on streamers to reach a number of kills in a
+          predetermined range, with viewers being able to withdraw the full
+          amount of winnings if successful, gift part of their prize to the
+          streamer or gift the full amount.
+        </p>
+        <p class="newsText mb-5">
+          These new bet types join the currently existing categories, meaning
+          players can also continue to bet on a number of kills or whether their
+          chosen streamer will win their next match.
+        </p>
+        <p class="newsText mb-5">
+          J3ster.gg continues to innovate and expand in the lead-up to its full
+          launch, with top Twitch creators such as Forbidden.gg and ASMRPunk
+          opting to join the platform for a new and exciting way to monetise
+          their streams.
+        </p>
+      </div>
+      <div class="contentBox mb-8">
+        <p class="newsText mb-5">Kevin Des Lauriers, CEO at J3ster.gg, said:</p>
+        <blockquote>
+          <p class="newsText mb-5">
+            “We’re thrilled to be introducing even more bet types and advance
+            J3ster.gg. These new options add an extra element of fun, giving
+            both bettors and streamers more dynamic ways to play.
+          </p>
+          <p class="newsText mb-5">
+            “We continue to innovate as we progress towards the full launch, and
+            we look forward to seeing more content creators discover the
+            groundbreaking ways we enable them to further monetise their
+            streams.”
+          </p>
+        </blockquote>
+      </div>
+    </div>
+    `,
+    data: "27/09/2023",
+  },
+  {
+    id: uuidv4(), // Generate a unique ID
+    imgMain: news10,
+    title: "Indian Gambling Subject To 28% Goods And Services Tax.",
+    category: ["Financial", "Gambling Law"],
+    shortInfo:
+      "Casinos, horse racing, and online gaming will be impacted by the tax.",
+    desc: `
+    <div class="postContent">
+      <div class="contentBox mb-8">
+        <p class="newsText mb-5 firstLetter">
+          The Indian Goods and Service Tax Council has decided to introduce a
+          28% goods and service tax on internet gambling, horse racing, and
+          casinos. The tax will be applied to both the stake's total value and
+          the chips' cost. There won't be a distinction made between
+          chance-based games and skill-based games.
+        </p>
+        <img
+          src="https://igaming.news/img/articles/india.jpg"
+          alt="Indian Gambling Subject To 28% Goods And Services Tax."
+          class="mb-5" />
+      </div>
+      <div class="contentBox mb-8">
+        <p class="newsText mb-5">
+          At the council's 50th meeting, the committee also decided to lower the
+          tax on food and beverages served in movie theatres from 18% to 5% and
+          to provide exemptions for several medicinal products.
+        </p>
+        <blockquote>
+          <p class="newsText mb-5">
+            Finance Minister Nirmala Sitharaman commented: "The GST Act will be
+            amended to include online gaming and horse racing. Very substantive
+            discussions have taken place on the matter of online gaming. All the
+            states presented their views today, including Sikkim and Goa, which
+            see a lot of tourism for casinos."
+          </p>
+        </blockquote>
+        <p class="newsText mb-5">
+          Not everyone has reacted favourably to the news. Indirect Tax Practise
+          Leader at SW India, Ankur Gupta, stated:
+        </p>
+        <blockquote>
+          <p class="newsText mb-5">
+            "Ignoring the long-time demand of the gaming industry, levying a 28%
+            tax rate on the gaming industry will be a big setback for Indian
+            players. We might immediately see notices being issued to the gaming
+            players for differential tax and with this new series of
+            litigation."
+          </p>
+        </blockquote>
+        <blockquote>
+          <p class="newsText mb-5">
+            Roland Landers, CEO, The All India Gaming Federation, added: "We
+            believe this decision by the GST Council is unconstitutional,
+            irrational and egregious. The decision ignores over 60 years of
+            settled legal jurisprudence and lumps online skill gaming with
+            gambling activities. This decision will wipe out the entire Indian
+            gaming industry, lead to job losses, and the only people benefitting
+            from this will be anti-national illegal offshore platforms."
+          </p>
+        </blockquote>
+      </div>
+    </div>
+    `,
+    data: "19/07/2023",
+  },
+  {
+    id: uuidv4(), // Generate a unique ID
+    imgMain: news9,
+    title:
+      "NFT Stadium Partners with PokerGO® to Launch a Groundbreaking NFT Collection",
+    category: ["NFT", "Poker"],
+    shortInfo:
+      "NFT holders will have exclusive access to PokerGO rewards, including VIP event access, free subscriptions, and chances to win pieces of live poker action when their hand appears in winning moments of tournament play.",
+    desc: `
+     <div class="postContent">
+      <div class="contentBox mb-8">
+        <p class="newsText mb-5 firstLetter">
+          NFT Stadium, a fan-first full-service NFT development agency and
+          marketplace, announced today that the company is teaming up with
+          PokerGO®, the world's largest poker content company, to launch the
+          brand's genesis NFT collection. This collection will include 1,326
+          unique, stylized NFTs represented by the number of possible starting
+          hand combinations in the popular Texas hold'em poker game. NFT holders
+          will have exclusive access to PokerGO rewards, including VIP event
+          access, free subscriptions, and chances to win pieces of live poker
+          action when their hand appears in winning moments of tournament play.
+        </p>
+        <img
+          src="https://igaming.news/img/articles/nft-stadium.png"
+          alt="NFT Stadium Partners with PokerGO® to Launch a Groundbreaking NFT Collection"
+          class="mb-5" />
+        <p class="newsText mb-5">
+          NFT Stadium offers a 360-degree fandom experience, connecting the most
+          engaged and passionate fans to their favorite teams, athletes, gamers,
+          musicians, personalities, and brands with exclusive access. NFT
+          Stadium Genesis token holders, PokerGO subscribers, and select poker
+          gaming and Web3 communities will have whitelist access to the PokerGO
+          NFT launch and minting, followed by public sales. Buyers will receive
+          an unrevealed NFT and have the opportunity to "sweat their hand" for a
+          week before seeing their cards. Follow NFT Stadium on Twitter and
+          Discord to stay up to date on the collection drop happening May 2022
+          or visit www.nftstadium.io.
+        </p>
+        <blockquote>
+          <p class="newsText mb-5">
+            "Partnering with PokerGO for NFT Stadium's debut partner collection
+            launch was an easy decision as PokerGO fans and subscribers have
+            proven to be the most engaged and passionate of any gaming content
+            enterprise," said Sam Simmons, Consulting Chief Strategy Officer of
+            NFT Stadium, former President of PokerGO.
+          </p>
+          <p class="newsText mb-5">
+            "This collection offers poker fans a chance to connect with a fandom
+            community and have a shared interest in winning moments past and
+            present including legendary players and the most exciting
+            personalities in the game. They'll receive exclusive digital and
+            tangible rewards connected to the game they love."
+          </p>
+        </blockquote>
+        <p class="newsText mb-5">
+          With PokerGO's unmatched historical archive and more than 100 days of
+          live event streaming each year, including popular tournaments such as
+          the Super High Roller Bowl, Poker Masters, U.S. Poker Open, PokerGO
+          Cup, Stairway to Millions, and many more, the PokerGO-NFT Stadium
+          partnership offers opportunities for fan connection via Non-Fungible
+          Tokens. Token holder rewards will include chances to win signed cards,
+          tournament felts, and other exclusive digital and physical items
+          related to their PokerGO NFT hand when it appears in winning moments
+          of the broadcasts, along with participation in live or community-based
+          events.
+        </p>
+        <blockquote>
+          <p class="newsText mb-5">
+            "We're thrilled to partner with NFT Stadium to offer poker fans an
+            authentic and immersive experience in a truly new and unique way,"
+            said Mori Eskandani, President of PokerGO and Poker Hall of Famer.
+          </p>
+          <p class="newsText mb-5">
+            "As PokerGO showcases the game's elite players in the world's most
+            competitive tournaments, our intent is to leverage NFT technology,
+            PokerGO's unmatched collection of poker content, and NFT Stadium's
+            development skills and Web3 strategy to create a fan-driven
+            community that gives PokerGO's most engaged followers a stake in the
+            games and access to exclusive spaces and perks that deliver real
+            value and a fandom experience unavailable anywhere else."
+          </p>
+        </blockquote>
+        <p>
+          PokerGO is the world's #1 poker streaming platform, offering exclusive
+          coverage of the PokerGO Tour, &nbsp;including the Super High Roller
+          Bowl, Poker Masters, U.S. Poker Open, and PokerGO Cup, plus additional
+          on-demand poker content and access to legendary past tournaments. Find
+          out more at www.pokergo.com. NFT Stadium leverages blockchain
+          technology to engage the most loyal fans, using NFTs as a starting
+          point to build fandom communities and offer exclusive perks and
+          rewards to nurture passionate followers. Learn more at
+          www.nftstadium.io.
+        </p>
+      </div>
+    </div>
+    `,
+    data: "29/04/2022",
+  },
+  {
+    id: uuidv4(), // Generate a unique ID
+    imgMain: news8,
+    title: "World Series of Poker®",
+    category: ["Poker", "Tech"],
+    shortInfo:
+      "This brand-new campaign will launch the first of its many phases across the US this week, in which the influencers, split into five teams, will be paired with real life WSOP® mentors to master the game and become poker legends!",
+    desc: `
+    <div class="postContent">
+      <div class="contentBox mb-8">
+        <p class="newsText mb-5 firstLetter">
+          World Series of Poker®1 (WSOP®), a Playtika® studio and the world's
+          no. 1 play-for-fun poker game2, is launching a pioneering new
+          initiative that will see 14 social media influencers compete to be
+          crowned WSOP® legend. This brand-new campaign will launch the first of
+          its many phases across the US this week, in which the influencers,
+          split into five teams, will be paired with real life WSOP® mentors to
+          master the game and become poker legends!
+        </p>
+        <img
+          src="https://igaming.news/img/articles/WSOP.jpeg"
+          alt="World Series of Poker® Launches #RoadToTheTable Tournament with 14 Influencers Battling to Become Poker Legends"
+          class="mb-5" />
+      </div>
+      <div class="contentBox mb-8">
+        <h4 class="mb-5">The path to becoming a WSOP® legend</h4>
+        <p class="newsText mb-5">
+          In a special one-off event, WSOP® will unveil the identities of the
+          mystery influencers live on Instagram from this week. Viewers will
+          have the unique opportunity to watch as the invited influencers open
+          their secret WSOP® boxes to reveal their competitors, react live to
+          their competition and rate their own poker skills.
+        </p>
+        <p class="newsText mb-5">
+          The influencers – from a range of content realms including
+          automotives, comedy, gaming, filmmaking, sports and fitness – will be
+          coached by some of the best WSOP® players in the world and strive to
+          learn all the tricks and techniques behind the game. In December, the
+          influencer teams will compete against each other face-to-face at an
+          undisclosed location in the US.
+        </p>
+        <p class="newsText mb-5">
+          WSOP® will also take poker fans on an amazing #RoadToTheTable with
+          live videos and exciting opportunities to interact with their
+          favourite WSOP® legends and influencers alike. The free-to-play poker
+          game is already loved by millions of players around the world,
+          featuring countless exciting game modes, tournaments and special
+          events.
+        </p>
+        <p class="newsText mb-5">
+          Commenting on the campaign, General Manager of WSOP® Guy Ceder said:
+        </p>
+        <blockquote>
+          <p class="newsText mb-5">
+            "We are thrilled to be launching this unique 8-month long campaign
+            with 14 popular influencers from a wide range of backgrounds. We
+            really want to bring the love for poker and WSOP® to a wider
+            audience and show people just how much fun playing poker can be. We
+            hope that our loyal WSOP® players are excited for this new adventure
+            and that they will pick up a few new poker skills and tricks from
+            our soon-to-be poker legends".
+          </p>
+        </blockquote>
+      </div>
+    </div>
+    `,
+    data: "29/04/2022",
+  },
+  {
+    id: uuidv4(), // Generate a unique ID
+    imgMain: news6,
+    title: "GamCare Research Suggests Rise in Problematic Slot Players",
+    category: ["Slots", "Gambling Law"],
+    shortInfo:
+      "According to Colin Walsh, Lived Experience Manager at GamCare, a significant obstacle for many people seeking assistance these days is playing online slots.",
+    desc: `
+     <div class="postContent">
+      <div class="contentBox mb-8">
+        <p class="newsText mb-5 firstLetter">
+          Three out of five (60%) of individuals who reported having trouble
+          with online gambling in 2022–2023 mentioned playing online slots as
+          one of their biggest obstacles. In comparison to the 34% recorded
+          between 2018 and 2019, this represents a notable rise. The data also
+          shows that in the previous year, 73% of all callers to the National
+          gaming Helpline reported having problems related to internet gaming.
+        </p>
+        <img
+          src="https://igaming.news/img/articles/slots_news1.png"
+          alt="GamCare Research Suggests Rise in Problematic Slot Players"
+          class="mb-5" />
+      </div>
+      <div class="contentBox mb-8">
+        <p class="newsText mb-5">
+          This report is based on 5,660 callers to the National gaming Helpline
+          who identified the kind of gaming that caused them problems; of these,
+          4,154 mentioned problems with internet gambling.
+        </p>
+        <p class="newsText mb-5">
+          This report is based on 5,660 callers to the National gaming Helpline
+          who identified the kind of gaming that caused them problems; of these,
+          4,154 mentioned problems with internet gambling.
+        </p>
+        <p class="newsText mb-5">
+          According to Colin Walsh, Lived Experience Manager at GamCare, a
+          significant obstacle for many people seeking assistance these days is
+          playing online slots.
+        </p>
+        <p class="newsText mb-5">
+          GamCare offers assistance to people who have been impacted by gaming.
+          Over 44,000 contacts are made to the National Gambling Helpline
+          through phone, live chat, and WhatsApp each year by the charity, which
+          runs the service around-the-clock.
+        </p>
+      </div>
+    </div>
+    `,
+    data: "21/09/2023",
+  },
+
+  {
+    id: uuidv4(), // Generate a unique ID
     imgMain: news5,
     title:
       "TRUE Ecosystem Introduced NFT Drop in Victoria Wild West Game at 25+ Casino Operators",
@@ -431,358 +784,6 @@ const dataNews = [
     </div>
     `,
     data: "15/06/2023",
-  },
-  {
-    id: uuidv4(), // Generate a unique ID
-    imgMain: news6,
-    title: "GamCare Research Suggests Rise in Problematic Slot Players",
-    category: ["Slots", "Gambling Law"],
-    shortInfo:
-      "According to Colin Walsh, Lived Experience Manager at GamCare, a significant obstacle for many people seeking assistance these days is playing online slots.",
-    desc: `
-     <div class="postContent">
-      <div class="contentBox mb-8">
-        <p class="newsText mb-5 firstLetter">
-          Three out of five (60%) of individuals who reported having trouble
-          with online gambling in 2022–2023 mentioned playing online slots as
-          one of their biggest obstacles. In comparison to the 34% recorded
-          between 2018 and 2019, this represents a notable rise. The data also
-          shows that in the previous year, 73% of all callers to the National
-          gaming Helpline reported having problems related to internet gaming.
-        </p>
-        <img
-          src="https://igaming.news/img/articles/slots_news1.png"
-          alt="GamCare Research Suggests Rise in Problematic Slot Players"
-          class="mb-5" />
-      </div>
-      <div class="contentBox mb-8">
-        <p class="newsText mb-5">
-          This report is based on 5,660 callers to the National gaming Helpline
-          who identified the kind of gaming that caused them problems; of these,
-          4,154 mentioned problems with internet gambling.
-        </p>
-        <p class="newsText mb-5">
-          This report is based on 5,660 callers to the National gaming Helpline
-          who identified the kind of gaming that caused them problems; of these,
-          4,154 mentioned problems with internet gambling.
-        </p>
-        <p class="newsText mb-5">
-          According to Colin Walsh, Lived Experience Manager at GamCare, a
-          significant obstacle for many people seeking assistance these days is
-          playing online slots.
-        </p>
-        <p class="newsText mb-5">
-          GamCare offers assistance to people who have been impacted by gaming.
-          Over 44,000 contacts are made to the National Gambling Helpline
-          through phone, live chat, and WhatsApp each year by the charity, which
-          runs the service around-the-clock.
-        </p>
-      </div>
-    </div>
-    `,
-    data: "21/09/2023",
-  },
-  {
-    id: uuidv4(), // Generate a unique ID
-    imgMain: news7,
-    title: "J3ster.gg Introduces Two New Bet Types in Lead-up to Launch",
-    category: ["Sports"],
-    shortInfo:
-      "Currently in its beta phase, J3ster.gg continues to evolve with the introduction of a roulette-type bet alongside bets on predetermined ranges of kills in a game, with a growing number of streamers utilising the platform.",
-    desc: `
-     <div class="postContent">
-      <div class="contentBox mb-8">
-        <img
-          src="https://igaming.news/img/articles/J3ster_gg_Introduces_Two_New_Bet_Types_in_Lead-up_to_Launch.png"
-          alt="J3ster.gg Introduces Two New Bet Types in Lead-up to Launch"
-          class="mb-5" />
-        <p class="newsText mb-5">
-          J3ster.gg, the innovative live-streaming betting company, is
-          introducing two new bet types as it gears up for its imminent full
-          launch.
-        </p>
-        <p class="newsText mb-5">
-          Currently in its beta phase, J3ster.gg continues to evolve with the
-          introduction of a roulette-type bet alongside bets on predetermined
-          ranges of kills in a game, with a growing number of streamers
-          utilising the platform.
-        </p>
-        <p class="newsText mb-5">
-          The new roulette-type bet sees players choose an even or odd number of
-          kills for their chosen streamer to achieve on Valorant or Call of
-          Duty: Warzone, winning money if they predict correctly.
-        </p>
-      </div>
-      <div class="contentBox mb-8">
-        <p class="newsText mb-5">
-          Players can now also bet on streamers to reach a number of kills in a
-          predetermined range, with viewers being able to withdraw the full
-          amount of winnings if successful, gift part of their prize to the
-          streamer or gift the full amount.
-        </p>
-        <p class="newsText mb-5">
-          These new bet types join the currently existing categories, meaning
-          players can also continue to bet on a number of kills or whether their
-          chosen streamer will win their next match.
-        </p>
-        <p class="newsText mb-5">
-          J3ster.gg continues to innovate and expand in the lead-up to its full
-          launch, with top Twitch creators such as Forbidden.gg and ASMRPunk
-          opting to join the platform for a new and exciting way to monetise
-          their streams.
-        </p>
-      </div>
-      <div class="contentBox mb-8">
-        <p class="newsText mb-5">Kevin Des Lauriers, CEO at J3ster.gg, said:</p>
-        <blockquote>
-          <p class="newsText mb-5">
-            “We’re thrilled to be introducing even more bet types and advance
-            J3ster.gg. These new options add an extra element of fun, giving
-            both bettors and streamers more dynamic ways to play.
-          </p>
-          <p class="newsText mb-5">
-            “We continue to innovate as we progress towards the full launch, and
-            we look forward to seeing more content creators discover the
-            groundbreaking ways we enable them to further monetise their
-            streams.”
-          </p>
-        </blockquote>
-      </div>
-    </div>
-    `,
-    data: "27/09/2023",
-  },
-  {
-    id: uuidv4(), // Generate a unique ID
-    imgMain: news8,
-    title: "World Series of Poker®",
-    category: ["Poker", "Tech"],
-    shortInfo:
-      "This brand-new campaign will launch the first of its many phases across the US this week, in which the influencers, split into five teams, will be paired with real life WSOP® mentors to master the game and become poker legends!",
-    desc: `
-    <div class="postContent">
-      <div class="contentBox mb-8">
-        <p class="newsText mb-5 firstLetter">
-          World Series of Poker®1 (WSOP®), a Playtika® studio and the world's
-          no. 1 play-for-fun poker game2, is launching a pioneering new
-          initiative that will see 14 social media influencers compete to be
-          crowned WSOP® legend. This brand-new campaign will launch the first of
-          its many phases across the US this week, in which the influencers,
-          split into five teams, will be paired with real life WSOP® mentors to
-          master the game and become poker legends!
-        </p>
-        <img
-          src="https://igaming.news/img/articles/WSOP.jpeg"
-          alt="World Series of Poker® Launches #RoadToTheTable Tournament with 14 Influencers Battling to Become Poker Legends"
-          class="mb-5" />
-      </div>
-      <div class="contentBox mb-8">
-        <h4 class="mb-5">The path to becoming a WSOP® legend</h4>
-        <p class="newsText mb-5">
-          In a special one-off event, WSOP® will unveil the identities of the
-          mystery influencers live on Instagram from this week. Viewers will
-          have the unique opportunity to watch as the invited influencers open
-          their secret WSOP® boxes to reveal their competitors, react live to
-          their competition and rate their own poker skills.
-        </p>
-        <p class="newsText mb-5">
-          The influencers – from a range of content realms including
-          automotives, comedy, gaming, filmmaking, sports and fitness – will be
-          coached by some of the best WSOP® players in the world and strive to
-          learn all the tricks and techniques behind the game. In December, the
-          influencer teams will compete against each other face-to-face at an
-          undisclosed location in the US.
-        </p>
-        <p class="newsText mb-5">
-          WSOP® will also take poker fans on an amazing #RoadToTheTable with
-          live videos and exciting opportunities to interact with their
-          favourite WSOP® legends and influencers alike. The free-to-play poker
-          game is already loved by millions of players around the world,
-          featuring countless exciting game modes, tournaments and special
-          events.
-        </p>
-        <p class="newsText mb-5">
-          Commenting on the campaign, General Manager of WSOP® Guy Ceder said:
-        </p>
-        <blockquote>
-          <p class="newsText mb-5">
-            "We are thrilled to be launching this unique 8-month long campaign
-            with 14 popular influencers from a wide range of backgrounds. We
-            really want to bring the love for poker and WSOP® to a wider
-            audience and show people just how much fun playing poker can be. We
-            hope that our loyal WSOP® players are excited for this new adventure
-            and that they will pick up a few new poker skills and tricks from
-            our soon-to-be poker legends".
-          </p>
-        </blockquote>
-      </div>
-    </div>
-    `,
-    data: "29/04/2022",
-  },
-  {
-    id: uuidv4(), // Generate a unique ID
-    imgMain: news9,
-    title:
-      "NFT Stadium Partners with PokerGO® to Launch a Groundbreaking NFT Collection",
-    category: ["NFT", "Poker"],
-    shortInfo:
-      "NFT holders will have exclusive access to PokerGO rewards, including VIP event access, free subscriptions, and chances to win pieces of live poker action when their hand appears in winning moments of tournament play.",
-    desc: `
-     <div class="postContent">
-      <div class="contentBox mb-8">
-        <p class="newsText mb-5 firstLetter">
-          NFT Stadium, a fan-first full-service NFT development agency and
-          marketplace, announced today that the company is teaming up with
-          PokerGO®, the world's largest poker content company, to launch the
-          brand's genesis NFT collection. This collection will include 1,326
-          unique, stylized NFTs represented by the number of possible starting
-          hand combinations in the popular Texas hold'em poker game. NFT holders
-          will have exclusive access to PokerGO rewards, including VIP event
-          access, free subscriptions, and chances to win pieces of live poker
-          action when their hand appears in winning moments of tournament play.
-        </p>
-        <img
-          src="https://igaming.news/img/articles/nft-stadium.png"
-          alt="NFT Stadium Partners with PokerGO® to Launch a Groundbreaking NFT Collection"
-          class="mb-5" />
-        <p class="newsText mb-5">
-          NFT Stadium offers a 360-degree fandom experience, connecting the most
-          engaged and passionate fans to their favorite teams, athletes, gamers,
-          musicians, personalities, and brands with exclusive access. NFT
-          Stadium Genesis token holders, PokerGO subscribers, and select poker
-          gaming and Web3 communities will have whitelist access to the PokerGO
-          NFT launch and minting, followed by public sales. Buyers will receive
-          an unrevealed NFT and have the opportunity to "sweat their hand" for a
-          week before seeing their cards. Follow NFT Stadium on Twitter and
-          Discord to stay up to date on the collection drop happening May 2022
-          or visit www.nftstadium.io.
-        </p>
-        <blockquote>
-          <p class="newsText mb-5">
-            "Partnering with PokerGO for NFT Stadium's debut partner collection
-            launch was an easy decision as PokerGO fans and subscribers have
-            proven to be the most engaged and passionate of any gaming content
-            enterprise," said Sam Simmons, Consulting Chief Strategy Officer of
-            NFT Stadium, former President of PokerGO.
-          </p>
-          <p class="newsText mb-5">
-            "This collection offers poker fans a chance to connect with a fandom
-            community and have a shared interest in winning moments past and
-            present including legendary players and the most exciting
-            personalities in the game. They'll receive exclusive digital and
-            tangible rewards connected to the game they love."
-          </p>
-        </blockquote>
-        <p class="newsText mb-5">
-          With PokerGO's unmatched historical archive and more than 100 days of
-          live event streaming each year, including popular tournaments such as
-          the Super High Roller Bowl, Poker Masters, U.S. Poker Open, PokerGO
-          Cup, Stairway to Millions, and many more, the PokerGO-NFT Stadium
-          partnership offers opportunities for fan connection via Non-Fungible
-          Tokens. Token holder rewards will include chances to win signed cards,
-          tournament felts, and other exclusive digital and physical items
-          related to their PokerGO NFT hand when it appears in winning moments
-          of the broadcasts, along with participation in live or community-based
-          events.
-        </p>
-        <blockquote>
-          <p class="newsText mb-5">
-            "We're thrilled to partner with NFT Stadium to offer poker fans an
-            authentic and immersive experience in a truly new and unique way,"
-            said Mori Eskandani, President of PokerGO and Poker Hall of Famer.
-          </p>
-          <p class="newsText mb-5">
-            "As PokerGO showcases the game's elite players in the world's most
-            competitive tournaments, our intent is to leverage NFT technology,
-            PokerGO's unmatched collection of poker content, and NFT Stadium's
-            development skills and Web3 strategy to create a fan-driven
-            community that gives PokerGO's most engaged followers a stake in the
-            games and access to exclusive spaces and perks that deliver real
-            value and a fandom experience unavailable anywhere else."
-          </p>
-        </blockquote>
-        <p>
-          PokerGO is the world's #1 poker streaming platform, offering exclusive
-          coverage of the PokerGO Tour, &nbsp;including the Super High Roller
-          Bowl, Poker Masters, U.S. Poker Open, and PokerGO Cup, plus additional
-          on-demand poker content and access to legendary past tournaments. Find
-          out more at www.pokergo.com. NFT Stadium leverages blockchain
-          technology to engage the most loyal fans, using NFTs as a starting
-          point to build fandom communities and offer exclusive perks and
-          rewards to nurture passionate followers. Learn more at
-          www.nftstadium.io.
-        </p>
-      </div>
-    </div>
-    `,
-    data: "29/04/2022",
-  },
-  {
-    id: uuidv4(), // Generate a unique ID
-    imgMain: news10,
-    title: "Indian Gambling Subject To 28% Goods And Services Tax.",
-    category: ["Financial", "Gambling Law"],
-    shortInfo:
-      "Casinos, horse racing, and online gaming will be impacted by the tax.",
-    desc: `
-    <div class="postContent">
-      <div class="contentBox mb-8">
-        <p class="newsText mb-5 firstLetter">
-          The Indian Goods and Service Tax Council has decided to introduce a
-          28% goods and service tax on internet gambling, horse racing, and
-          casinos. The tax will be applied to both the stake's total value and
-          the chips' cost. There won't be a distinction made between
-          chance-based games and skill-based games.
-        </p>
-        <img
-          src="https://igaming.news/img/articles/india.jpg"
-          alt="Indian Gambling Subject To 28% Goods And Services Tax."
-          class="mb-5" />
-      </div>
-      <div class="contentBox mb-8">
-        <p class="newsText mb-5">
-          At the council's 50th meeting, the committee also decided to lower the
-          tax on food and beverages served in movie theatres from 18% to 5% and
-          to provide exemptions for several medicinal products.
-        </p>
-        <blockquote>
-          <p class="newsText mb-5">
-            Finance Minister Nirmala Sitharaman commented: "The GST Act will be
-            amended to include online gaming and horse racing. Very substantive
-            discussions have taken place on the matter of online gaming. All the
-            states presented their views today, including Sikkim and Goa, which
-            see a lot of tourism for casinos."
-          </p>
-        </blockquote>
-        <p class="newsText mb-5">
-          Not everyone has reacted favourably to the news. Indirect Tax Practise
-          Leader at SW India, Ankur Gupta, stated:
-        </p>
-        <blockquote>
-          <p class="newsText mb-5">
-            "Ignoring the long-time demand of the gaming industry, levying a 28%
-            tax rate on the gaming industry will be a big setback for Indian
-            players. We might immediately see notices being issued to the gaming
-            players for differential tax and with this new series of
-            litigation."
-          </p>
-        </blockquote>
-        <blockquote>
-          <p class="newsText mb-5">
-            Roland Landers, CEO, The All India Gaming Federation, added: "We
-            believe this decision by the GST Council is unconstitutional,
-            irrational and egregious. The decision ignores over 60 years of
-            settled legal jurisprudence and lumps online skill gaming with
-            gambling activities. This decision will wipe out the entire Indian
-            gaming industry, lead to job losses, and the only people benefitting
-            from this will be anti-national illegal offshore platforms."
-          </p>
-        </blockquote>
-      </div>
-    </div>
-    `,
-    data: "19/07/2023",
   },
 ];
 dataNews.forEach((newsItem) => {

@@ -1,10 +1,10 @@
-import React from "react";
-import { Outlet, ScrollRestoration } from "react-router-dom";
-import { Footer } from "./../components/Footer";
-import { Header } from "./../components/Header";
+import {Outlet, ScrollRestoration} from "react-router-dom";
+import {Footer} from "./../components/Footer";
+import {Header} from "./../components/Header";
+import {useCallback} from "react";
 
 const Layout = () => {
-  let getKey = React.useCallback((location, matches) => {
+  let getKey = useCallback((location, matches) => {
     let match = matches.find((m) => m.handle?.scrollMode);
     if (match?.handle?.scrollMode === "pathname") {
       return location.pathname;
@@ -14,12 +14,12 @@ const Layout = () => {
 
   return (
     <>
-      <Header />
+      <Header/>
       <main>
-        <Outlet />
+        <Outlet/>
       </main>
-      <Footer />
-      <ScrollRestoration getKey={getKey} />
+      <Footer/>
+      <ScrollRestoration getKey={getKey}/>
     </>
   );
 };

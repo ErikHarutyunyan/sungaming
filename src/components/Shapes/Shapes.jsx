@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { motion } from "framer-motion-3d";
 import { MotionConfig } from "framer-motion";
 import { useRef, useLayoutEffect } from "react";

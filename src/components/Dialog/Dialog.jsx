@@ -19,7 +19,7 @@ const Dialog = ({ setDialog }) => {
             setDialog(true);
             localStorage.setItem("isDialog", true);
           }}>
-          I'm 18 or older
+          I`&apos;m 18 or older
         </button>
         <button
           className="rejectAge"

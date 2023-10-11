@@ -4,7 +4,7 @@ import { HiOutlineCode } from "react-icons/hi";
 
 const dataCareers = [
   {
-    id: "senior-react-js-developer",
+    id: uuidv4(),
     title: "Senior React JS Developer",
     area: "React",
     role: "developer",
@@ -33,7 +33,7 @@ const dataCareers = [
     ],
   },
   {
-    id: "senior-designer",
+    id: uuidv4(),
     title: "Senior UI/UX designer",
     area: "UI/UX",
     role: "designer",
@@ -63,4 +63,9 @@ const dataCareers = [
     ],
   },
 ];
+
+dataCareers.forEach((careers) => {
+  careers.path = careers.title.toLowerCase().replace(/\s+/g, "-");
+});
+
 export { dataCareers };

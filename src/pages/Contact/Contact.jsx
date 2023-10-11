@@ -258,10 +258,10 @@ const Contact = () => {
                       " How can I stay updated on the latest projects and news from Our Gaming Studio?"
                     }>
                     You can stay informed about our latest projects, news, and
-                    updates by visiting our website's "News" or "Blog" section.
-                    Additionally, follow us on our social media channels,
-                    including Facebook, Twitter, and Instagram, to get real-time
-                    updates.
+                    updates by visiting our website&apos;s &quot;News&apos; or
+                    &quot;Blog&quot; section. Additionally, follow us on our
+                    social media channels, including Facebook, Twitter, and
+                    Instagram, to get real-time updates.
                   </AccordionBox>
                   <AccordionBox
                     title={
@@ -278,12 +278,13 @@ const Contact = () => {
                       "How can I contact Our Gaming Studio for collaboration or inquiries?"
                     }>
                     Contacting Our Gaming Studio is easy! You can reach out to
-                    us through the "Contact" section on our website. Simply fill
-                    out the provided form with your details and message, and our
-                    team will promptly get in touch with you. Additionally, you
-                    can find our contact information, including email and phone
-                    number, in the footer of our website for direct
-                    communication. We look forward to hearing from you!
+                    us through the &apos;Contact&apos; section on our website.
+                    Simply fill out the provided form with your details and
+                    message, and our team will promptly get in touch with you.
+                    Additionally, you can find our contact information,
+                    including email and phone number, in the footer of our
+                    website for direct communication. We look forward to hearing
+                    from you!
                   </AccordionBox>
                   <AccordionBox
                     title={

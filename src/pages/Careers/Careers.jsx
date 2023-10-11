@@ -158,10 +158,11 @@ const Careers = () => {
             <div className="col-lg-7">
               <div className="section-text text-center">
                 <h4 className="sub-title">
-                  We're Looking for <span>Talented Professionals</span>
+                  We&apos;re Looking for <span>Talented Professionals</span>
                 </h4>
                 <span className="fs-two heading mb-6 w-75 m-auto">
-                  <span>Let's Build the Future</span> of Video Games Together!
+                  <span>Let&apos;s Build the Future</span> of Video Games
+                  Together!
                 </span>
                 <p>
                   Our belief is that being simple, honest, self-driven and
@@ -173,7 +174,8 @@ const Careers = () => {
           </div>
           <div className="row cus-mar">
             {dataCareers?.map((data) => {
-              const { id, title, area, term, types, location, icon } = data;
+              const { id, path, title, area, term, types, location, icon } =
+                data;
               return (
                 <div className="col-md-6" key={id}>
                   <div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
@@ -185,7 +187,7 @@ const Careers = () => {
                       )}
 
                       <div className="info-box">
-                        <Link to={`${CAREERS}/${id}`} params={{ asd: data }}>
+                        <Link to={`${CAREERS}/${path}`} params={{ data }}>
                           <h5>{title}</h5>
                         </Link>
                         <a href="career-details.html"></a>

@@ -41913,10 +41913,10 @@ li {
   background-color: #161829;
   position: absolute;
   width: 35%;
-  height: 180%;
-  top: -70px;
+  height: 200%;
+  top: -510px;
   right: 43%;
-  transform: rotate(8deg);
+  transform: rotate(15deg);
 }
 
 .banner-section.services {
@@ -46118,10 +46118,10 @@ li {
   .banner-section .shape-area .shape-2 {
     bottom: 15%;
   }
-  /* .our-games .nav button {
+  .our-games .nav button {
     width: 45px;
     height: 45px;
-  } */
+  }
   .our-games .tab-content li::before {
     right: -10px;
   }

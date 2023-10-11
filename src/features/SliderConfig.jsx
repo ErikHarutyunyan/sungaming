@@ -1,6 +1,8 @@
+/* eslint-disable react-refresh/only-export-components */
 import {MdOutlineArrowBack, MdOutlineArrowForward} from "react-icons/md";
+import {memo} from "react";
 
-function PrevArrow(props) {
+const PrevArrow = memo(function PrevArrow(props) {
   const {onClick} = props;
   return (
     <button
@@ -11,9 +13,9 @@ function PrevArrow(props) {
       <MdOutlineArrowBack/>
     </button>
   );
-}
+})
 
-function NextArrow(props) {
+const NextArrow = memo(function NextArrow(props) {
   const {onClick} = props;
   return (
     <button
@@ -24,9 +26,9 @@ function NextArrow(props) {
       <MdOutlineArrowForward/>
     </button>
   );
-}
+})
 
-function ServicePrevArrow(props) {
+const ServicePrevArrow = memo(function ServicePrevArrow(props) {
   const {onClick} = props;
   return (
     <button
@@ -37,9 +39,9 @@ function ServicePrevArrow(props) {
       <MdOutlineArrowBack/>
     </button>
   );
-}
+})
 
-function ServiceNextArrow(props) {
+const ServiceNextArrow = memo(function ServiceNextArrow(props) {
   const {onClick} = props;
   return (
     <button
@@ -50,9 +52,9 @@ function ServiceNextArrow(props) {
       <MdOutlineArrowForward/>
     </button>
   );
-}
+})
 
-function BlogPrevArrow(props) {
+const BlogPrevArrow = memo(function BlogPrevArrow(props) {
   const {onClick} = props;
 
   return (
@@ -63,9 +65,9 @@ function BlogPrevArrow(props) {
       <MdOutlineArrowBack/>
     </button>
   );
-}
+})
 
-function BlogNextArrow(props) {
+const BlogNextArrow = memo(function BlogNextArrow(props) {
   const {onClick} = props;
 
   return (
@@ -76,7 +78,7 @@ function BlogNextArrow(props) {
       <MdOutlineArrowForward/>
     </button>
   );
-}
+})
 
 export const settingsFeatured = {
   // dots: true,
@@ -146,14 +148,14 @@ export const settingsGameSingle = {
   slidesToScroll: 1,
   adaptiveHeight: false,
   dotsClass: "section-dots",
-  appendDots: (dots) => <ul style={{ display: "block" }}>{dots}</ul>,
+  appendDots: (dots) => <ul style={{display: "block"}}>{dots}</ul>,
   customPaging: (i) => (
     <span className="dot" role="button" title={`${i}`}>
       <span className="string">{i} </span>
     </span>
   ),
-  nextArrow: <BlogNextArrow />,
-  prevArrow: <BlogPrevArrow />,
+  nextArrow: <BlogNextArrow/>,
+  prevArrow: <BlogPrevArrow/>,
 };
 
 export const settingsAbout = {

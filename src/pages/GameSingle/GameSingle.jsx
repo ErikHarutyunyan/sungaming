@@ -184,7 +184,7 @@ const GameSingle = () => {
                           press: { scale: 0.85 },
                         }}
                         className="labelPlay">
-                        Play Game
+                        Play Demo
                       </motion.div>
                     </motion.a>
                   </MotionConfig>

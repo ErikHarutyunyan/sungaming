@@ -22,10 +22,10 @@ const CareersSingle = () => {
   const [fileName, setFileName] = useState("");
   // Programatically click the hidden file input element
   // when the Button component is clicked
-  const handleClick = (event) => {
+  const handleClick = () => {
     hiddenFileInput.current.click();
   };
-  const reset = (event) => {
+  const reset = () => {
     hiddenFileInput.current.value = null;
     setFileName("");
   };

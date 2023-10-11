@@ -1,14 +1,4 @@
-import {
-  brand1,
-  brand2,
-  brand3,
-  brand4,
-  brand5,
-  brand6,
-  brand7,
-  brand8,
-  brand9,
-} from "../Images";
+import {brand2, brand3, brand4, brand5, brand6, brand7, brand8, brand9,} from "../Images";
 import "./Brands.css";
 
 const Brands = () => {
@@ -22,8 +12,8 @@ const Brands = () => {
                 <span>Endorsed </span> By
               </h4>
               <span className="fs-two heading mb-6">
-                We're Delighted to Collaborate with the{" "}
-                <span>World's Top Brands</span>
+                We&apos;re Delighted to Collaborate with the{" "}
+                <span>World&apos;s Top Brands</span>
               </span>
               <p>We take pride in assisting global industry frontrunners.</p>
               <p>Feel free to explore our accolades!</p>

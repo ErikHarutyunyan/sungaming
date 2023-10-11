@@ -16,6 +16,8 @@ import { useDimensions } from "../../hooks/use-dimensions";
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    width: "100%",
+    height: "100%",
     transition: {
       type: "spring",
       stiffness: 20,
@@ -43,6 +45,8 @@ const Path = (props) => (
 );
 const variants = {
   open: {
+    with: "100%",
+    height: "100%",
     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
   },
   closed: {
@@ -64,6 +68,17 @@ const variantsLi = {
     transition: {
       y: { stiffness: 1000 },
     },
+  },
+};
+
+
+const variantsNav = {
+  open: {
+    with: "100%",
+    height: "100%",
+  },
+  closed: {
+    with: "300px",
   },
 };
 
@@ -93,6 +108,7 @@ export const Header = () => {
         className={`header-section header-menu ${isSticky ? "sticky" : ""}`}>
         <motion.nav
           initial={false}
+          variants={variantsNav}
           animate={isOpen ? "open" : "closed"}
           custom={height}
           ref={containerRef}

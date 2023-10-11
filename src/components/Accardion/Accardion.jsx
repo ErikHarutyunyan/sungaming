@@ -1,12 +1,12 @@
-import { Children, createContext, useContext, useState } from "react";
+import {Children, createContext, useContext, useState} from "react";
 
-import { AnimatePresence, motion } from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 import "./Accardion.css";
 
 const AccordionContext = createContext({});
 const useAccordion = () => useContext(AccordionContext);
 
-function Accordion({ children, multiple, defaultIndex }) {
+function Accordion({children, multiple, defaultIndex}) {
   const [activeIndex, setActiveIndex] = useState(
     multiple ? [defaultIndex] : defaultIndex
   );
@@ -32,19 +32,19 @@ function Accordion({ children, multiple, defaultIndex }) {
         : activeIndex === index;
 
     return (
-      <AccordionContext.Provider value={{ isActive, index, onChangeIndex }}>
+      <AccordionContext.Provider value={{isActive, index, onChangeIndex}}>
         {child}
       </AccordionContext.Provider>
     );
   });
 }
 
-function AccordionItem({ children }) {
+function AccordionItem({children}) {
   return <div className="accordion-item">{children}</div>;
 }
 
-function AccordionHeader({ children }) {
-  const { isActive, index, onChangeIndex } = useAccordion();
+function AccordionHeader({children}) {
+  const {isActive, index, onChangeIndex} = useAccordion();
 
   return (
     <motion.h5
@@ -59,17 +59,17 @@ function AccordionHeader({ children }) {
   );
 }
 
-function AccordionPanel({ children }) {
-  const { isActive } = useAccordion();
+function AccordionPanel({children}) {
+  const {isActive} = useAccordion();
 
   return (
     <AnimatePresence initial={false}>
       {isActive && (
         <motion.div
-          initial={{ height: 0, overflow: "hidden" }}
-          animate={{ height: "auto" }}
-          exit={{ height: 0, overflow: "hidden" }}
-          transition={{ type: "spring", duration: 0.4, bounce: 0 }}>
+          initial={{height: 0, overflow: "hidden"}}
+          animate={{height: "auto"}}
+          exit={{height: 0, overflow: "hidden"}}
+          transition={{type: "spring", duration: 0.4, bounce: 0}}>
           <div className={`accordion-collapse `}>
             <div className="accordion-body">
               <p>{children}</p>
@@ -81,7 +81,7 @@ function AccordionPanel({ children }) {
   );
 }
 
-const AccordionBox = ({ title = "", children, className = "" }) => {
+const AccordionBox = ({title = "", children}) => {
   return (
     <Accordion>
       <AccordionItem>

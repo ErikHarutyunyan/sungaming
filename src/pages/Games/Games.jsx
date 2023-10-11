@@ -1,28 +1,20 @@
 // Styles
 import "./Games.css";
-import { bubble, ellipse7 } from "../../components/Images/index.jsx";
-import { FiChevronRight } from "react-icons/fi";
-import { GrShieldSecurity } from "react-icons/gr";
-import { FaStudiovinari } from "react-icons/fa";
-import { PiLightbulbLight } from "react-icons/pi";
-import { MdSecurity } from "react-icons/md";
-import gameimg6 from "../../assets/img/game-image-6.png";
-import money from "../../assets/img/money-drive.jpg";
+
+import {FaStudiovinari} from "react-icons/fa";
+import {PiLightbulbLight} from "react-icons/pi";
+import {MdSecurity} from "react-icons/md";
 import gameShape1 from "../../assets/img/gameShape5.gif";
 import gameShape2 from "../../assets/img/gameShape3.gif";
-import { Suspense, useReducer, useState } from "react";
-import { motion, MotionConfig, useMotionValue } from "framer-motion";
-import { Shapes } from "../../components/Shapes/Shapes.jsx";
-import { transition } from "../../settings/gameButtonSetings.js";
+import {Suspense, useReducer, useState} from "react";
+import {motion, MotionConfig, useMotionValue} from "framer-motion";
+import {Shapes} from "../../components/Shapes/Shapes.jsx";
+import {transition} from "../../settings/gameButtonSetings.js";
 import useMeasure from "react-use-measure";
 import bannerGameCut from "../../assets/img/bannerGameCut.gif";
-import {
-  allCategoriesGames,
-  categoryIcons,
-  dataGames,
-} from "../../data/dataGames";
-import { GAMES } from "../../router/route-path";
-import { Link } from "react-router-dom";
+import {allCategoriesGames, categoryIcons, dataGames,} from "../../data/dataGames";
+import {GAMES} from "../../router/route-path";
+import {Link} from "react-router-dom";
 import Subscribe from "../../components/Subscribe/index.jsx";
 import CounterActive from "../../components/CounterActive/CounterActive.jsx";
 import BannerPages from "../../components/BannerPages/BannerPages.jsx";
@@ -33,7 +25,7 @@ const Games = () => {
   const [next, setNext] = useState(gamesPerRow);
 
   const [menuItems, setMenuItems] = useState(dataGames);
-  const [ref, bounds] = useMeasure({ scroll: false });
+  const [ref, bounds] = useMeasure({scroll: false});
   const [isHover, setIsHover] = useState(false);
   const [isPress, setIsPress] = useState(false);
   const mouseX = useMotionValue(0);
@@ -70,6 +62,7 @@ const Games = () => {
     setMenuItems(newItems);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const [toggled, toggle] = useReducer((state) => !state, true);
 
   return (
@@ -98,7 +91,8 @@ const Games = () => {
           </div>
           <div className="row cus-mar">
             <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
+              <div
+                className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
                 <div className="content-box d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
                     <svg
@@ -142,19 +136,20 @@ const Games = () => {
                       Welcome to our online gaming site! Enjoy the best games on
                       any device: mobile, tablet, or desktop. Our site is fully
                       responsive, providing a smooth gaming experience. With a
-                      wide selection of games, you're sure to find something
-                      exhilarating. Get ready to dive into the exciting world of
-                      online gaming!
+                      wide selection of games, you&apos;re sure to find
+                      something exhilarating. Get ready to dive into the
+                      exciting world of online gaming!
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
+              <div
+                className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
                 <div className="content-box d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
-                    <MdSecurity size={45} color={"#0ef0ad"} />
+                    <MdSecurity size={45} color={"#0ef0ad"}/>
                   </div>
                   <div className="info-box">
                     <h5 className="mb-2">For Everyone</h5>
@@ -171,29 +166,31 @@ const Games = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
+              <div
+                className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
                 <div className="content-box d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
-                    <FaStudiovinari size={45} color={"#0ef0ad"} />
+                    <FaStudiovinari size={45} color={"#0ef0ad"}/>
                   </div>
                   <div className="info-box">
                     <h5 className="mb-2">Fast Gaming</h5>
                     <p>
                       Gambling games are exciting and fast-paced! Get your heart
                       racing with high stakes and lightning-fast gameplay.
-                      You'll be sure to get your heart pounding with every spin
-                      or roll of the dice! Experience the thrill of fast-paced
-                      gambling entertainment today!{" "}
+                      You&apos;ll be sure to get your heart pounding with every
+                      spin or roll of the dice! Experience the thrill of
+                      fast-paced gambling entertainment today!{" "}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
+              <div
+                className="single-box flex-wrap box-style box-second px-5 py-5 py-10 px-9 d-center justify-content-between">
                 <div className="content-box d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
-                    <PiLightbulbLight size={45} color={"#0ef0ad"} />
+                    <PiLightbulbLight size={45} color={"#0ef0ad"}/>
                   </div>
                   <div className="info-box">
                     <h5 className="mb-2">Unique Twist</h5>
@@ -271,10 +268,10 @@ const Games = () => {
                         }>
                         {categoryIcons[category.toLowerCase()] !==
                           undefined && (
-                          <span className="icon-area pe-none">
+                            <span className="icon-area pe-none">
                             {categoryIcons[category.toLowerCase()]}
                           </span>
-                        )}
+                          )}
                         {category}
                       </button>
                     </li>
@@ -370,8 +367,7 @@ const Games = () => {
                       </div>
                     </div> */}
                     {menuItems?.slice(0, next)?.map((item) => {
-                      const { id, title, imgMain, path, } =
-                        item;
+                      const {id, title, imgMain, path, url} = item;
                       return (
                         <motion.div
                           animate={{
@@ -431,16 +427,17 @@ const Games = () => {
                               <Link
                                 className=" px-5 text-decoration-underline"
                                 to={`${GAMES}/${path}`}
-                                state={{ data: item }}>
+                                state={{data: item}}>
                                 More Details
                               </Link>
                             </div>
                           </div>
                           <MotionConfig transition={transition}>
                             <motion.a
-                              href="/google.com"
+                              href={url}
+                              target="_blank"
                               className="buttonPlay"
-                              style={{ position: "absolute" }}
+                              style={{position: "absolute"}}
                               ref={ref}
                               initial={false}
                               animate={isHover ? "hover" : "rest"}
@@ -478,11 +475,11 @@ const Games = () => {
                               <motion.div
                                 className="shapesPlay"
                                 variants={{
-                                  rest: { opacity: 0 },
-                                  hover: { opacity: 1 },
+                                  rest: {opacity: 0},
+                                  hover: {opacity: 1},
                                 }}>
-                                <div className="pink blush" />
-                                <div className="blue blush" />
+                                <div className="pink blush"/>
+                                <div className="blue blush"/>
                                 <div className="containerr">
                                   <Suspense fallback={null}>
                                     <Shapes
@@ -496,8 +493,8 @@ const Games = () => {
                               </motion.div>
                               <motion.div
                                 variants={{
-                                  hover: { scale: 1.1 },
-                                  press: { scale: 0.85 },
+                                  hover: {scale: 1.1},
+                                  press: {scale: 0.85},
                                 }}
                                 className="labelPlay">
                                 Play Demo
@@ -508,26 +505,25 @@ const Games = () => {
                       );
                     })}
                   </div>
-                  <div className="text-center mt-10 mt-sm-15">
-                    <div className="loading py-3 px-8 d-inline-flex align-items-center gap-2">
-                      <div className="icon-box d-center">
-                        {next < menuItems?.length && (
-                          <button className="" onClick={handleMoreGames}>
-                            Load more
-                          </button>
-                        )}
+                  {next < menuItems?.length && (
+                    <div className="text-center mt-10 mt-sm-15">
+                      <div
+                        className="loading py-3 px-8 d-inline-flex align-items-center gap-2"
+                        onClick={handleMoreGames}>
+                        <div className="icon-box d-center">
+                          <button className="">Load more</button>
+                        </div>
                       </div>
-                      {/*<span>Loading</span>*/}
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <CounterActive />
-      <Subscribe />
+      <CounterActive/>
+      <Subscribe/>
     </>
   );
 };

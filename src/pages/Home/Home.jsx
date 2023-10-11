@@ -10,18 +10,12 @@ import {
   ellipse4,
   ellipse5,
   topBottom,
-  brandLogo,
-  blogsImg1,
   ellipse7,
   ellipse8,
 } from "../../components/Images";
-import { MdOutlineArrowForward, MdOutlineNorthEast } from "react-icons/md";
+import { MdOutlineNorthEast } from "react-icons/md";
 import Subscribe from "../../components/Subscribe";
-import {
-  settingsBlog,
-  settingsFeatured,
-  settingsServices,
-} from "../../features/SliderConfig";
+import { settingsBlog, settingsFeatured } from "../../features/SliderConfig";
 import SimpleSlider from "../../components/SimpleSlider";
 import Service from "../../components/Service/index.jsx";
 import { GAMES } from "../../router/route-path";
@@ -30,6 +24,7 @@ import { featuredGames } from "../../data/dataGames";
 import GamesThumb from "../../components/GamesThumb/GamesThumb";
 import CounterActive from "../../components/CounterActive/CounterActive.jsx";
 import Brands from "../../components/Brands";
+import { dataNews } from "../../data/dataNews";
 
 function Home() {
   return (
@@ -552,146 +547,45 @@ function Home() {
           </div>
           <div className="row cus-mar">
             <SimpleSlider setting={settingsBlog}>
-              <div
-                className="slide-area"
-                style="width:100%;display:inline-block">
-                <div className="single-box">
-                  <div className="position-relative d-grid align-items-center">
-                    <div className="img-box">
-                      <img
-                        alt="Image"
-                        loading="lazy"
-                        width="636"
-                        height="400"
-                        src={blogsImg1}
-                      />
-                    </div>
-                    <div className="position-absolute cus-position bottom-0 start-0">
-                      <div className="content-box p-3 p-sm-6">
-                        <div className="top-bar d-flex align-items-center gap-3">
-                          <h5>News</h5>
-                          <span>25 January,2023</span>
+              {dataNews?.slice(1, 5).map((newsItem) => {
+                const { id, title, data, imgMain } = newsItem;
+                return (
+                  <div
+                    key={id}
+                    className="slide-area"
+                    style="width:100%;display:inline-block">
+                    <div className="single-box">
+                      <div className="position-relative d-grid align-items-center">
+                        <div className="img-box">
+                          <img
+                            alt="Image"
+                            loading="lazy"
+                            width="636"
+                            height="400"
+                            src={imgMain}
+                          />
                         </div>
-                        <a href="/blog-single">
-                          <h4 className="mt-3">
-                            Crafting Digital Worlds with Expertise
-                          </h4>
-                        </a>
-                        <a
-                          className="end-area mt-8 d-center"
-                          href="/blog-single">
-                          <MdOutlineNorthEast />
-                        </a>
+                        <div className="position-absolute cus-position bottom-0 start-0">
+                          <div className="content-box p-3 p-sm-6">
+                            <div className="top-bar d-flex align-items-center gap-3">
+                              <h5>News</h5>
+                              <span>{data}</span>
+                            </div>
+                            <a href="/blog-single">
+                              <h4 className="mt-3">{title}</h4>
+                            </a>
+                            <a
+                              className="end-area mt-8 d-center"
+                              href="/blog-single">
+                              <MdOutlineNorthEast />
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div
-                className="slide-area"
-                style="width:100%;display:inline-block">
-                <div className="single-box">
-                  <div className="position-relative d-grid align-items-center">
-                    <div className="img-box">
-                      <img
-                        alt="Image"
-                        loading="lazy"
-                        width="636"
-                        height="400"
-                        src={blogsImg1}
-                      />
-                    </div>
-                    <div className="position-absolute cus-position bottom-0 start-0">
-                      <div className="content-box p-3 p-sm-6">
-                        <div className="top-bar d-flex align-items-center gap-3">
-                          <h5>News</h5>
-                          <span>25 January,2023</span>
-                        </div>
-                        <a href="/blog-single">
-                          <h4 className="mt-3">
-                            Crafting Digital Worlds with Expertise
-                          </h4>
-                        </a>
-                        <a
-                          className="end-area mt-8 d-center"
-                          href="/blog-single">
-                          <MdOutlineNorthEast />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="slide-area"
-                style="width:100%;display:inline-block">
-                <div className="single-box">
-                  <div className="position-relative d-grid align-items-center">
-                    <div className="img-box">
-                      <img
-                        alt="Image"
-                        loading="lazy"
-                        width="636"
-                        height="400"
-                        src={blogsImg1}
-                      />
-                    </div>
-                    <div className="position-absolute cus-position bottom-0 start-0">
-                      <div className="content-box p-3 p-sm-6">
-                        <div className="top-bar d-flex align-items-center gap-3">
-                          <h5>News</h5>
-                          <span>25 January,2023</span>
-                        </div>
-                        <a href="/blog-single">
-                          <h4 className="mt-3">
-                            Crafting Digital Worlds with Expertise
-                          </h4>
-                        </a>
-                        <a
-                          className="end-area mt-8 d-center"
-                          href="/blog-single">
-                          <MdOutlineNorthEast />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="slide-area"
-                style="width:100%;display:inline-block">
-                <div className="single-box">
-                  <div className="position-relative d-grid align-items-center">
-                    <div className="img-box">
-                      <img
-                        alt="Image"
-                        loading="lazy"
-                        width="636"
-                        height="400"
-                        src={blogsImg1}
-                      />
-                    </div>
-                    <div className="position-absolute cus-position bottom-0 start-0">
-                      <div className="content-box p-3 p-sm-6">
-                        <div className="top-bar d-flex align-items-center gap-3">
-                          <h5>News</h5>
-                          <span>25 January,2023</span>
-                        </div>
-                        <a href="/blog-single">
-                          <h4 className="mt-3">
-                            Crafting Digital Worlds with Expertise
-                          </h4>
-                        </a>
-                        <a
-                          className="end-area mt-8 d-center"
-                          href="/blog-single">
-                          <MdOutlineNorthEast />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </SimpleSlider>
           </div>
         </div>

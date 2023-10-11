@@ -46,6 +46,7 @@ const GamesThumb = () => {
     setMenuItems(newItems);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const [toggled, toggle] = useReducer((state) => !state, true);
 
   return (
@@ -185,7 +186,7 @@ const GamesThumb = () => {
                           },
                         }}
                         key={id}
-                        className={`col-xl-4 col-sm-6 col-8  d-center`}>
+                        className={`col-xl-4 col-sm-6 col-8`}>
                         <div className="single-box">
                           <div className="img-area">
                             <img alt="img" loading="lazy" src={imgMain} />

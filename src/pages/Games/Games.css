@@ -30,8 +30,9 @@
     transform: translateZ(0px);
     z-index: 99;
     align-self: center;
-    top: 25%;
-    left: 27%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
 }
 
 .buttonPlay:hover {

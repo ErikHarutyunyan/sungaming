@@ -3,22 +3,19 @@ import "./About.css";
 import BannerPages from "../../components/BannerPages/BannerPages.jsx";
 import aboutBanner from "../../assets/img/aboutBanner.jpg";
 import ab from "../../assets/img/ab.webp";
-import { BiFlag } from "react-icons/bi";
 import {
   IoAccessibilityOutline,
   IoDiamondOutline,
   IoShareSocialOutline,
 } from "react-icons/io5";
-import { settingsAbout, settingsBlog } from "../../features/SliderConfig.jsx";
+import { settingsAbout } from "../../features/SliderConfig.jsx";
 import SimpleSlider from "../../components/SimpleSlider/index.jsx";
 import aboutNftImg1 from "../../assets/img/aboutNftImg1.webp";
 import aboutNftImg2 from "../../assets/img/aboutNftImg2.webp";
 import cricleNft from "../../assets/img/cricleNft.svg";
-import teamImg from "../../assets/img/team01.webp";
 import {
   MdOutlineDiversity1,
   MdOutlineGames,
-  MdOutlineNorthEast,
 } from "react-icons/md";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { LuLayoutPanelLeft } from "react-icons/lu";
@@ -28,7 +25,7 @@ import services_img02 from "../../assets/img/services_img02.webp";
 import services_img03 from "../../assets/img/services_img03.webp";
 import services_img01 from "../../assets/img/services_img01.webp";
 import { useState } from "react";
-import { brandLogo, team2, team3, team4, team5 } from "../../components/Images";
+import { team2, team3, team4, team5 } from "../../components/Images";
 import Subscribe from "../../components/Subscribe";
 import Brands from "../../components/Brands";
 import {
@@ -37,9 +34,7 @@ import {
   FaGavel,
   FaLightbulb,
   FaMagic,
-  FaShieldAlt,
   FaSmile,
-  FaStar,
   FaUsers,
 } from "react-icons/fa";
 
@@ -74,6 +69,7 @@ const About = () => {
   // Call the updateActiveSlide function when the component mounts and whenever activeSlide changes
   useEffect(() => {
     updateActiveSlide();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSlide]);
 
   // Call the nextSlide function to change the slide

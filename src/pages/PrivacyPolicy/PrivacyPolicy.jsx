@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
               <div className="col-lg-10">
                 <div className="top-wrapper">
                   <h4>
-                    We're always looking for new ways to provide privacy for our
+                    We&apos;re always looking for new ways to provide privacy for our
                     customers.
                   </h4>
                   <p>
@@ -46,7 +46,7 @@ const PrivacyPolicy = () => {
                       Third-party ad servers or ad networks uses technologies
                       like cookies, JavaScript, or Web Beacons that are used in
                       their respective advertisements and links that appear on
-                      sungamecasino, which are sent directly to users' browser.
+                      sungamecasino, which are sent directly to users&apos; browser.
                       They automatically receive your IP address when this
                       occurs. These technologies are used to measure the
                       effectiveness of their advertising campaigns and/or to
@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
                   <div className="safe-data">
                     <h4>Third Party Privacy Policies</h4>
                     <p>
-                      sungamecasino's Privacy Policy does not apply to other
+                      sungamecasino&apos;s Privacy Policy does not apply to other
                       advertisers or websites. Thus, we are advising you to
                       consult the respective Privacy Policies of these
                       third-party ad servers for more detailed information. It
@@ -67,7 +67,7 @@ const PrivacyPolicy = () => {
                       opt-out of certain options. You can choose to disable
                       cookies through your individual browser options. To know
                       more detailed information about cookie management with
-                      specific web browsers, it can be found at the browsers'
+                      specific web browsers, it can be found at the browsers&apos;
                       respective websites. What Are Cookies?
                     </p>
                   </div>
@@ -77,14 +77,14 @@ const PrivacyPolicy = () => {
                       sungamecasino follows a standard procedure of using log
                       files. These files log visitors when they visit websites.
                       All hosting companies do this and a part of hosting
-                      services' analytics. The information collected by log
+                      services&apos; analytics. The information collected by log
                       files include internet protocol (IP) addresses, browser
                       type, Internet Service Provider (ISP), date and time
                       stamp, referring/exit pages, and possibly the number of
                       clicks. These are not linked to any information that is
                       personally identifiable. The purpose of the information is
                       for analyzing trends, administering the site, tracking
-                      users' movement on the website, and gathering demographic
+                      users&apos; movement on the website, and gathering demographic
                       information.
                     </p>
                   </div>
@@ -136,7 +136,7 @@ const PrivacyPolicy = () => {
                   Have <span>Questions?</span>
                 </h4>
                 <span className="fs-two heading mb-6">
-                  We'd Love To <span>Hear From You</span>
+                  We&apos;d Love To <span>Hear From You</span>
                 </span>
                 <p>
                   Please fill out the form and let us know about your

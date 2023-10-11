@@ -3,30 +3,18 @@ import "./Services.css";
 
 import serviceBanner from "../../assets/img/services-banner.png";
 import BannerPages from "../../components/BannerPages/BannerPages";
-import serviceGames1 from "../../assets/img/services-img-1.png";
-import { useState } from "react";
-import CountUp from "react-countup";
-import ReactVisibilitySensor from "react-visibility-sensor";
-import objectImg from "../../assets/img/object-1.png";
-import lineImg from "../../assets/img/line-1.png";
-import { FaRegLightbulb } from "react-icons/fa";
-import { SiBlueprint } from "react-icons/si";
-import { BsCodeSlash } from "react-icons/bs";
-import { HiMagnifyingGlassPlus } from "react-icons/hi2";
+import {FaRegLightbulb} from "react-icons/fa";
+import {SiBlueprint} from "react-icons/si";
+import {BsCodeSlash} from "react-icons/bs";
+import {HiMagnifyingGlassPlus} from "react-icons/hi2";
 
 import Subscribe from "../../components/Subscribe/index";
-import {
-  sevice1,
-  sevice2,
-  sevice3,
-  sevice4,
-  sevice5,
-  sevice6,
-} from "../../components/Images";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import {services1, services2, services3, services4, services5, services6,} from "../../components/Images";
+import {MdKeyboardDoubleArrowRight} from "react-icons/md";
 import Brands from "../../components/Brands";
+import CounterShare from "../../components/CounterShare/CounterShare";
+
 const Services = () => {
-  const [viewPortEntered, setViewPortEntered] = useState(false);
   return (
     <>
       <BannerPages
@@ -62,7 +50,7 @@ const Services = () => {
           <div className="row cus-mar">
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <img src={sevice3} alt="Image" />
+                <img src={services3} alt="Image" />
                 <p className="position-absolute">
                   Professional web development companies specialize in creating
                   custom websites for online casinos, sports betting platforms,
@@ -78,7 +66,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <img src={sevice1} alt="Image" />
+                <img src={services1} alt="Image" />
                 <p className="visible-slowly-bottom position-absolute">
                   High-quality content is essential for iGaming websites.
                   Content creators can produce engaging articles, blog posts,
@@ -93,7 +81,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <img src={sevice2} alt="Image" />
+                <img src={services2} alt="Image" />
                 <p className="visible-slowly-bottom position-absolute">
                   Reliable payment processing services are critical for iGaming
                   websites. Service providers assist in integrating secure
@@ -108,7 +96,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <img src={sevice4} alt="Image" />
+                <img src={services4} alt="Image" />
                 <p className="visible-slowly-bottom position-absolute">
                   Navigating the complex regulatory landscape is a crucial
                   aspect of iGaming. Service providers specialize in obtaining
@@ -123,7 +111,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <img src={sevice5} alt="Image" />
+                <img src={services5} alt="Image" />
                 <p className="visible-slowly-bottom position-absolute">
                   Effective marketing is vital to attract players to iGaming
                   websites. Digital marketing agencies can provide services like
@@ -138,7 +126,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <img src={sevice6} alt="Image" />
+                <img src={services6} alt="Image" />
 
                 <h3 className="visible-slowly-bottom position-absolute">
                   Customer Support Solutions
@@ -154,134 +142,7 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section className="services-area our-focus index-two position-relative pt-120 pb-120">
-        <div className="shape-area">
-          <img src={lineImg} className="shape-1" alt="icon" />
-          <img src={objectImg} className="shape-2" alt="icon" />
-        </div>
-        <div className="container">
-          <h2 className="d-center my-5">OUR SHARE</h2>
-
-          <div className="row cus-mar d-inline-flex d-center">
-            <div className="col-sm-6 col-xl-3">
-              <div className="single-box d-grid justify-content-center">
-                <div className="counters d-center">
-                  <CountUp
-                    className="counter"
-                    start={viewPortEntered ? null : 0}
-                    end={5052}
-                    duration={5}
-                    useEasing={true}>
-                    {({ countUpRef }) => {
-                      return (
-                        <ReactVisibilitySensor
-                          active={!viewPortEntered}
-                          onChange={(isVisible) => {
-                            if (isVisible) {
-                              setViewPortEntered(true);
-                            }
-                          }}
-                          delayedCall>
-                          <span className="number" ref={countUpRef} />
-                        </ReactVisibilitySensor>
-                      );
-                    }}
-                  </CountUp>
-                  <span className="display-one symbol">+</span>
-                </div>
-                <p className="name-area fs-seven">VOLUME</p>
-              </div>
-            </div>
-            <div className="col-sm-6 col-xl-3">
-              <div className="single-box d-grid justify-content-center">
-                <div className="counters d-center">
-                  <CountUp
-                    className="counter"
-                    start={viewPortEntered ? null : 0}
-                    end={600}
-                    duration={5}
-                    useEasing={true}>
-                    {({ countUpRef }) => {
-                      return (
-                        <ReactVisibilitySensor
-                          active={!viewPortEntered}
-                          onChange={(isVisible) => {
-                            if (isVisible) {
-                              setViewPortEntered(true);
-                            }
-                          }}
-                          delayedCall>
-                          <span className="number" ref={countUpRef} />
-                        </ReactVisibilitySensor>
-                      );
-                    }}
-                  </CountUp>
-                  <span className="display-one symbol">+</span>
-                </div>
-                <p className="name-area fs-seven">HIGH</p>
-              </div>
-            </div>
-            <div className="col-sm-6 col-xl-3">
-              <div className="single-box d-grid justify-content-center">
-                <div className="counters d-center">
-                  <CountUp
-                    className="counter"
-                    start={viewPortEntered ? null : 0}
-                    end={1000}
-                    duration={5}
-                    useEasing={true}>
-                    {({ countUpRef }) => {
-                      return (
-                        <ReactVisibilitySensor
-                          active={!viewPortEntered}
-                          onChange={(isVisible) => {
-                            if (isVisible) {
-                              setViewPortEntered(true);
-                            }
-                          }}
-                          delayedCall>
-                          <span className="number" ref={countUpRef} />
-                        </ReactVisibilitySensor>
-                      );
-                    }}
-                  </CountUp>
-                  <span className="display-one symbol">+</span>
-                </div>
-                <p className="name-area fs-seven">LOW</p>
-              </div>
-            </div>
-            <div className="col-sm-6 col-xl-3">
-              <div className="single-box d-grid justify-content-center">
-                <div className="counters d-center">
-                  <CountUp
-                    className="counter"
-                    start={viewPortEntered ? null : 0}
-                    end={1106}
-                    duration={5}
-                    useEasing={true}>
-                    {({ countUpRef }) => {
-                      return (
-                        <ReactVisibilitySensor
-                          active={!viewPortEntered}
-                          onChange={(isVisible) => {
-                            if (isVisible) {
-                              setViewPortEntered(true);
-                            }
-                          }}
-                          delayedCall>
-                          <span className="number" ref={countUpRef} />
-                        </ReactVisibilitySensor>
-                      );
-                    }}
-                  </CountUp>
-                  <span className="display-one symbol">+</span>
-                </div>
-                <p className="name-area fs-seven">OPEN</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CounterShare />
       <section className="how-it-works pt-120 pb-120">
         <div className="container">
           <div className="row justify-content-center section-text">
@@ -315,7 +176,7 @@ const Services = () => {
                     This initial stage involves brainstorming and
                     conceptualizing innovative game ideas. We explore various
                     concepts, themes, and gameplay elements to lay the
-                    foundation for your game's unique identity.
+                    foundation for your game&apos;s unique identity.
                   </p>
                 </div>
               </div>
@@ -332,7 +193,7 @@ const Services = () => {
                   <h4 className="mt-6 mb-3">Design and Planning</h4>
                   <p>
                     In this phase, we delve into the meticulous planning of your
-                    game. We define the game's mechanics, characters,
+                    game. We define the game&apos;s mechanics, characters,
                     storylines, and visual aesthetics. Detailed blueprints and
                     design documents are created to guide the development
                     process.
@@ -534,7 +395,7 @@ const Services = () => {
                   <div className="info-box">
                     <h5 className="mb-2">Provable Fairness System</h5>
                     <p>
-                      Sun Gaming integrates "provable fairness" for
+                      Sun Gaming integrates &quot;provable fairness&quot; for
                       pre-determined game outcomes delivered in coded form to
                       players.
                     </p>

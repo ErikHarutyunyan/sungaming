@@ -33,12 +33,12 @@ import team4 from "../../assets/img/team5.jpg";
 import team5 from "../../assets/img/team2.jpg";
 
 // service
-import sevice1 from "../../assets/img/services1.jpg";
-import sevice2 from "../../assets/img/services2.jpg";
-import sevice3 from "../../assets/img/services3.jpg";
-import sevice4 from "../../assets/img/services4.jpg";
-import sevice5 from "../../assets/img/services5.jpg";
-import sevice6 from "../../assets/img/services6.jpg";
+import services1 from "../../assets/img/services1.jpg";
+import services2 from "../../assets/img/services2.jpg";
+import services3 from "../../assets/img/services3.jpg";
+import services4 from "../../assets/img/services4.jpg";
+import services5 from "../../assets/img/services5.jpg";
+import services6 from "../../assets/img/services6.jpg";
 
 // News
 import news1 from "../../assets/img/news/news1.png";
@@ -244,12 +244,12 @@ export {
   team4,
   team5,
   // services
-  sevice1,
-  sevice2,
-  sevice3,
-  sevice4,
-  sevice5,
-  sevice6,
+  services1 as services1,
+  services2,
+  services3,
+  services4,
+  services5,
+  services6,
   // brands
   brand1,
   brand2,
