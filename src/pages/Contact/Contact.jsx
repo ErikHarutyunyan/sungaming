@@ -14,6 +14,8 @@ import { Link } from "react-router-dom";
 
 import AccordionBox from "../../components/Accardion/index.jsx";
 
+import { contactUs } from "../../components/Images";
+
 const Contact = () => {
   // const [isOpen, setIsOpen] = useState(false);
 

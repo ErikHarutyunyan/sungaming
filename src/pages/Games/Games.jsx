@@ -23,7 +23,6 @@ const gamesPerRow = 4;
 
 const Games = () => {
   const [next, setNext] = useState(gamesPerRow);
-
   const [menuItems, setMenuItems] = useState(dataGames);
   const [ref, bounds] = useMeasure({scroll: false});
   const [isHover, setIsHover] = useState(false);
@@ -51,7 +50,6 @@ const Games = () => {
       setMenuItems(dataGames);
       return;
     }
-    console.log("<category></category> :", category);
     const newItems = dataGames.filter((item) => {
       if (item.category.length > 1 && item.category.includes(category))
         return item.category.filter(

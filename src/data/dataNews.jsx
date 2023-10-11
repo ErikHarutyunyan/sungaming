@@ -799,6 +799,4 @@ const allCategoriesNews = Array.from(
   }, new Map())
 );
 
-console.log("allCategoriesNews :", allCategoriesNews);
-
 export { dataNews, allCategoriesNews };

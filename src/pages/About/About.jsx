@@ -1,33 +1,12 @@
 // Styles
 import "./About.css";
 import BannerPages from "../../components/BannerPages/BannerPages.jsx";
-import aboutBanner from "../../assets/img/aboutBanner.jpg";
-import ab from "../../assets/img/ab.webp";
+
 import {
   IoAccessibilityOutline,
   IoDiamondOutline,
   IoShareSocialOutline,
 } from "react-icons/io5";
-import { settingsAbout } from "../../features/SliderConfig.jsx";
-import SimpleSlider from "../../components/SimpleSlider/index.jsx";
-import aboutNftImg1 from "../../assets/img/aboutNftImg1.webp";
-import aboutNftImg2 from "../../assets/img/aboutNftImg2.webp";
-import cricleNft from "../../assets/img/cricleNft.svg";
-import {
-  MdOutlineDiversity1,
-  MdOutlineGames,
-} from "react-icons/md";
-import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { LuLayoutPanelLeft } from "react-icons/lu";
-import { useEffect, useRef } from "react";
-import services_img04 from "../../assets/img/services_img04.webp";
-import services_img02 from "../../assets/img/services_img02.webp";
-import services_img03 from "../../assets/img/services_img03.webp";
-import services_img01 from "../../assets/img/services_img01.webp";
-import { useState } from "react";
-import { team2, team3, team4, team5 } from "../../components/Images";
-import Subscribe from "../../components/Subscribe";
-import Brands from "../../components/Brands";
 import {
   FaBalanceScale,
   FaCertificate,
@@ -37,6 +16,36 @@ import {
   FaSmile,
   FaUsers,
 } from "react-icons/fa";
+import { settingsAbout } from "../../features/SliderConfig.jsx";
+import SimpleSlider from "../../components/SimpleSlider/index.jsx";
+
+import {
+  MdOutlineDiversity1,
+  MdOutlineGames,
+} from "react-icons/md";
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import { LuLayoutPanelLeft } from "react-icons/lu";
+import { useEffect, useRef } from "react";
+
+import { useState } from "react";
+import {
+  team2,
+  team3,
+  team4,
+  team5,
+  services_img04,
+  services_img02,
+  services_img03,
+  services_img01,
+  aboutBanner,
+  ab,
+  aboutNftImg1,
+  aboutNftImg2,
+  cricleNft,
+} from "../../components/Images";
+
+import Subscribe from "../../components/Subscribe";
+import Brands from "../../components/Brands";
 
 const About = () => {
   const serviceImgs = useRef(null);

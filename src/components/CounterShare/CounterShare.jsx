@@ -1,9 +1,9 @@
-import ReactVisibilitySensor from "react-visibility-sensor";
 import "./CounterShare.css";
-import CountUp from "react-countup";
-import objectImg from "../../assets/img/object-1.png";
-import lineImg from "../../assets/img/line-1.png";
 import { useState } from "react";
+import ReactVisibilitySensor from "react-visibility-sensor";
+import CountUp from "react-countup";
+import { lineImg, objectImg } from "../Images";
+
 const CounterShare = () => {
   const [viewPortEntered, setViewPortEntered] = useState(false);
   return (

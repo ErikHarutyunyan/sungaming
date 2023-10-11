@@ -6,6 +6,8 @@ import ellipse3 from "../../assets/img/ellipse-3.png";
 import ellipse6 from "../../assets/img/ellipse-6.webp";
 import ellipse4 from "../../assets/img/ellipse-4.webp";
 import ellipse5 from "../../assets/img/ellipse-5.webp";
+import ellipse7 from "../../assets/img/ellipse-7.webp";
+import ellipse8 from "../../assets/img/ellipse-8.webp";
 import topBottom from "../../assets/img/top-bottom.png";
 import gameSlide from "../../assets/img/gameSlide.webp";
 import brandLogo from "../../assets/img/brand-logo-1.webp";
@@ -13,8 +15,6 @@ import allGames1 from "../../assets/img/all-games-1.webp";
 import allGamesProfile1 from "../../assets/img/all-games-profile-1.webp";
 import allGameBg from "../../assets/img/all-games-bg.png";
 import blogsImg1 from "../../assets/img/blogs-img-2.webp";
-import ellipse7 from "../../assets/img/ellipse-7.webp";
-import ellipse8 from "../../assets/img/ellipse-8.webp";
 import ourGamesShape1 from "../../assets/img/our-games-shape-1.webp";
 import ourGamesShape2 from "../../assets/img/our-games-shape-2.webp";
 import ourGamesShape3 from "../../assets/img/our-games-shape-3.webp";
@@ -22,9 +22,25 @@ import star from "../../assets/img/star.webp";
 import serviceThumb from "../../assets/img/services-thumb.webp";
 import bubble from "../../assets/img/bubble.png";
 import bannerGame from "../../assets/img/bannerGame.png";
+import aboutBanner from "../../assets/img/aboutBanner.jpg";
+import ab from "../../assets/img/ab.webp";
+
+// shapes
+import objectImg from "../../assets/img/object-1.png";
+import lineImg from "../../assets/img/line-1.png";
+
+import services_img04 from "../../assets/img/services_img04.webp";
+import services_img02 from "../../assets/img/services_img02.webp";
+import services_img03 from "../../assets/img/services_img03.webp";
+import services_img01 from "../../assets/img/services_img01.webp";
+import aboutNftImg1 from "../../assets/img/aboutNftImg1.webp";
+import aboutNftImg2 from "../../assets/img/aboutNftImg2.webp";
+import cricleNft   from "../../assets/img/cricleNft.svg";
 
 // logo
 import logo from "../../assets/img/logo.png";
+
+
 // team
 import team1 from "../../assets/img/team01.webp";
 import team2 from "../../assets/img/team3.jpg";
@@ -211,7 +227,12 @@ import wfBig from "../../assets/img/games/wfBg.jpg";
 import wfImg1 from "../../assets/img/games/wfImg1.jpg";
 import wfImg2 from "../../assets/img/games/wfImg2.jpg";
 
+
+
+
+import contactUs from "../../assets/img/contactUs.jpg";
 export {
+  contactUs,
   planet,
   console1,
   console2,
@@ -237,6 +258,17 @@ export {
   bubble,
   bannerGame,
   logo,
+  lineImg,
+  objectImg,
+  aboutBanner,
+  ab,
+  services_img04,
+  services_img02,
+  services_img03,
+  services_img01,
+  aboutNftImg1,
+  aboutNftImg2,
+  cricleNft,
   // team
   team1,
   team2,

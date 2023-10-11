@@ -35,7 +35,6 @@ const GamesThumb = () => {
       setMenuItems(dataGames);
       return;
     }
-    console.log("category", category);
     const newItems = dataGames.filter((item) => {
       if (Array.isArray(category)) {
         return category.some((cat) => item.category.includes(cat));

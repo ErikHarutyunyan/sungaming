@@ -5,8 +5,6 @@ import { bubble, ellipse7 } from "../../components/Images";
 import circle from "../../assets/img/circle.png";
 import objectImg from "../../assets/img/object-1.png";
 import lineImg from "../../assets/img/line-1.png";
-
-console.log("circle :", circle);
 import gameDetails from "../../assets/img/gameDtalisBig.png";
 import { IoCheckmark, IoPlay } from "react-icons/io5";
 import { Suspense, useState } from "react";
