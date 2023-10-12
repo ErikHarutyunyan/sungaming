@@ -1,11 +1,9 @@
 // Styles
 import { useLocation, useParams } from "react-router-dom";
 import "./GameSingle.css";
-import { bubble, ellipse7 } from "../../components/Images";
-import circle from "../../assets/img/circle.png";
-import objectImg from "../../assets/img/object-1.png";
-import lineImg from "../../assets/img/line-1.png";
-import gameDetails from "../../assets/img/gameDtalisBig.png";
+import { bubble, circle, ellipse7, gameDetails, lineImg, objectImg } from "../../components/Images";
+
+
 import { IoCheckmark, IoPlay } from "react-icons/io5";
 import { Suspense, useState } from "react";
 import OnboardModal from "../../components/OnboardModal/OnboardModal";

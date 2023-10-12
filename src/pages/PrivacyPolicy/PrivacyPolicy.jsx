@@ -1,6 +1,7 @@
 // Styles
 import BannerPages from "../../components/BannerPages/BannerPages";
-import privacyBanner from "../../assets/img/about-banner-illus.png";
+import { privacyBanner } from "../../components/Images";
+
 import "./PrivacyPolicy.css";
 
 const PrivacyPolicy = () => {

@@ -24,6 +24,8 @@ import bubble from "../../assets/img/bubble.png";
 import bannerGame from "../../assets/img/bannerGame.png";
 import aboutBanner from "../../assets/img/aboutBanner.jpg";
 import ab from "../../assets/img/ab.webp";
+import faqIcon from "../../assets/img/faq.png";
+import faqFramer from "../../assets/img/faq-frame.png";
 
 // shapes
 import objectImg from "../../assets/img/object-1.png";
@@ -35,11 +37,10 @@ import services_img03 from "../../assets/img/services_img03.webp";
 import services_img01 from "../../assets/img/services_img01.webp";
 import aboutNftImg1 from "../../assets/img/aboutNftImg1.webp";
 import aboutNftImg2 from "../../assets/img/aboutNftImg2.webp";
-import cricleNft   from "../../assets/img/cricleNft.svg";
+import cricleNft from "../../assets/img/cricleNft.svg";
 
 // logo
 import logo from "../../assets/img/logo.png";
-
 
 // team
 import team1 from "../../assets/img/team01.webp";
@@ -227,11 +228,26 @@ import wfBig from "../../assets/img/games/wfBg.jpg";
 import wfImg1 from "../../assets/img/games/wfImg1.jpg";
 import wfImg2 from "../../assets/img/games/wfImg2.jpg";
 
-
-
-
 import contactUs from "../../assets/img/contactUs.jpg";
+import gameShape1 from "../../assets/img/gameShape5.gif";
+import gameShape2 from "../../assets/img/gameShape3.gif";
+import bannerGameCut from "../../assets/img/bannerGameCut.gif";
+import circle from "../../assets/img/circle.png";
+import gameDetails from "../../assets/img/gameDtalisBig.png";
+import newsBg from "../../assets/img/bg2.jpg";
+import privacyBanner from "../../assets/img/about-banner-illus.png";
+import serviceBanner from "../../assets/img/services-banner.png";
 export {
+  serviceBanner,
+  privacyBanner,
+  newsBg,
+  gameDetails,
+  circle,
+  bannerGameCut,
+  gameShape1,
+  gameShape2,
+  faqIcon,
+  faqFramer,
   contactUs,
   planet,
   console1,

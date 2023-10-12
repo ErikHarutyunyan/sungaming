@@ -1,7 +1,7 @@
 // Styles
 import "./News.css";
 import BannerPages from "../../components/BannerPages/BannerPages";
-import newsBg from "../../assets/img/bg2.jpg";
+
 import {Link} from "react-router-dom";
 import {CONTACT, NEWS} from "../../router/route-path";
 import {allCategoriesNews, dataNews} from "../../data/dataNews";
@@ -10,6 +10,7 @@ import {AiOutlinePhone, AiOutlineRight, AiOutlineSearch,} from "react-icons/ai";
 import {motion} from "framer-motion";
 import {useState} from "react";
 import Subscribe from "../../components/Subscribe";
+import { newsBg } from "../../components/Images";
 
 const News = () => {
   const newsCount = dataNews.length;

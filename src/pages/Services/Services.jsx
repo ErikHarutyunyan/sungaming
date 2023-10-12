@@ -1,16 +1,23 @@
 // Styles
 import "./Services.css";
 
-import serviceBanner from "../../assets/img/services-banner.png";
 import BannerPages from "../../components/BannerPages/BannerPages";
-import {FaRegLightbulb} from "react-icons/fa";
-import {SiBlueprint} from "react-icons/si";
-import {BsCodeSlash} from "react-icons/bs";
-import {HiMagnifyingGlassPlus} from "react-icons/hi2";
+import { FaRegLightbulb } from "react-icons/fa";
+import { SiBlueprint } from "react-icons/si";
+import { BsCodeSlash } from "react-icons/bs";
+import { HiMagnifyingGlassPlus } from "react-icons/hi2";
 
 import Subscribe from "../../components/Subscribe/index";
-import {services1, services2, services3, services4, services5, services6,} from "../../components/Images";
-import {MdKeyboardDoubleArrowRight} from "react-icons/md";
+import {
+  serviceBanner,
+  services1,
+  services2,
+  services3,
+  services4,
+  services5,
+  services6,
+} from "../../components/Images";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Brands from "../../components/Brands";
 import CounterShare from "../../components/CounterShare/CounterShare";
 

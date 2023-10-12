@@ -1,19 +1,19 @@
 import "./Home.css";
-import { Link } from "react-router-dom";
-import { MdOutlineNorthEast } from "react-icons/md";
+import {Link} from "react-router-dom";
+import {MdOutlineNorthEast} from "react-icons/md";
 
 import {
-  planet,
   console1,
   console2,
   ellipse1,
   ellipse3,
-  ellipse6,
   ellipse4,
   ellipse5,
-  topBottom,
+  ellipse6,
   ellipse7,
   ellipse8,
+  planet,
+  topBottom,
 } from "../../components/Images";
 
 
@@ -23,10 +23,10 @@ import Service from "../../components/Service/index.jsx";
 import GamesThumb from "../../components/GamesThumb/GamesThumb";
 import CounterActive from "../../components/CounterActive/CounterActive.jsx";
 import Brands from "../../components/Brands";
-import { settingsBlog, settingsFeatured } from "../../features/SliderConfig";
-import { featuredGames } from "../../data/dataGames";
-import { dataNews } from "../../data/dataNews";
-import { GAMES } from "../../router/route-path";
+import {settingsBlog, settingsFeatured} from "../../features/SliderConfig";
+import {featuredGames} from "../../data/dataGames";
+import {dataNews} from "../../data/dataNews";
+import {GAMES} from "../../router/route-path";
 
 const IFRAME_STYLES = {
   position: "fixed",
@@ -42,13 +42,13 @@ function Home() {
   return (
     <>
       <section className="banner-section homeBanner index-one overflow-hidden">
-        {/* <iframe
+        {<iframe
           seamless
           loading="eager"
           src={"https://sunhorse.netlify.app/"}
           allowFullScreen
           style={IFRAME_STYLES}
-        /> */}
+        />}
         <div className="shape-area">
           <img
             src={planet}
@@ -194,7 +194,7 @@ function Home() {
                       </h3>
                       <span className="display-one">
                         Modern iGaming
-                        <br />
+                        <br/>
                         <span className="index-module_type__E-SaG typed d-inline-block">
                           content
                         </span>
@@ -228,7 +228,7 @@ function Home() {
                     setting={settingsFeatured}
                     className={"game-carousel pb-20 slick-initialized"}>
                     {featuredGames.map((featuredItem) => {
-                      const { id, title, imgMain, path } = featuredItem;
+                      const {id, title, imgMain, path} = featuredItem;
                       return (
                         <div
                           key={id}
@@ -268,10 +268,10 @@ function Home() {
         </div>
       </section>
 
-      <Service />
-      <CounterActive />
+      <Service/>
+      <CounterActive/>
 
-      <GamesThumb />
+      <GamesThumb/>
 
       <section className=" about-block  recently-completed blogs gaming-character">
         <div className="shape-area">
@@ -311,7 +311,7 @@ function Home() {
           <div className="row cus-mar">
             <SimpleSlider setting={settingsBlog}>
               {dataNews?.slice(1, 5).map((newsItem) => {
-                const { id, title, data, imgMain } = newsItem;
+                const {id, title, data, imgMain} = newsItem;
                 return (
                   <div
                     key={id}
@@ -340,7 +340,7 @@ function Home() {
                             <a
                               className="end-area mt-8 d-center"
                               href="/blog-single">
-                              <MdOutlineNorthEast />
+                              <MdOutlineNorthEast/>
                             </a>
                           </div>
                         </div>
@@ -353,8 +353,8 @@ function Home() {
           </div>
         </div>
       </section>
-      <Brands />
-      <Subscribe />
+      <Brands/>
+      <Subscribe/>
     </>
   );
 }

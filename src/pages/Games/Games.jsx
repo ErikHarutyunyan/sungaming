@@ -4,20 +4,19 @@ import "./Games.css";
 import {FaStudiovinari} from "react-icons/fa";
 import {PiLightbulbLight} from "react-icons/pi";
 import {MdSecurity} from "react-icons/md";
-import gameShape1 from "../../assets/img/gameShape5.gif";
-import gameShape2 from "../../assets/img/gameShape3.gif";
+
 import {Suspense, useReducer, useState} from "react";
 import {motion, MotionConfig, useMotionValue} from "framer-motion";
 import {Shapes} from "../../components/Shapes/Shapes.jsx";
 import {transition} from "../../settings/gameButtonSetings.js";
 import useMeasure from "react-use-measure";
-import bannerGameCut from "../../assets/img/bannerGameCut.gif";
 import {allCategoriesGames, categoryIcons, dataGames,} from "../../data/dataGames";
 import {GAMES} from "../../router/route-path";
 import {Link} from "react-router-dom";
 import Subscribe from "../../components/Subscribe/index.jsx";
 import CounterActive from "../../components/CounterActive/CounterActive.jsx";
 import BannerPages from "../../components/BannerPages/BannerPages.jsx";
+import { bannerGameCut, gameShape1, gameShape2 } from "../../components/Images";
 
 const gamesPerRow = 4;
 
