@@ -1,9 +1,10 @@
-import {lazy, Suspense} from "react";
+import { lazy, Suspense } from "react";
+import LoadRoute from "../../components/LoadRoute/LoadRoute";
 
 const LazyContact = lazy(() => import("./Contact"));
 
 const Contact = (props) => (
-  <Suspense fallback={null}>
+  <Suspense fallback={<LoadRoute />}>
     <LazyContact {...props} />
   </Suspense>
 );

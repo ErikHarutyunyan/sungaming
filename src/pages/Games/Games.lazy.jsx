@@ -1,9 +1,10 @@
-import {lazy, Suspense} from "react";
+import { lazy, Suspense } from "react";
+import LoadRoute from "../../components/LoadRoute/LoadRoute";
 
 const LazyGames = lazy(() => import("./Games"));
 
 const Games = (props) => (
-  <Suspense fallback={null}>
+  <Suspense fallback={<LoadRoute />}>
     <LazyGames {...props} />
   </Suspense>
 );

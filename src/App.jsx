@@ -2,21 +2,23 @@ import { RouterProvider } from "react-router-dom";
 import router from "./router";
 import { useState } from "react";
 import OnboardModal from "./components/OnboardModal/OnboardModal";
-import Dialog from "./components/Dialog/Dialog";
 
 const dialogStatus = localStorage.getItem("isDialog");
 
 function App() {
   const [isDialog, setDialog] = useState(dialogStatus);
-
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <>
       {isDialog !== null && isDialog ? (
         <RouterProvider router={router} />
       ) : (
-        <OnboardModal open={true} iframePath="https://sunhorse.netlify.app/">
-          <Dialog setDialog={setDialog} />
-        </OnboardModal>
+        <OnboardModal
+          open={isOpen}
+          iframe={true}
+          setDialog={setDialog}
+          onClose={() => setIsOpen(false)}
+        />
       )}
     </>
   );

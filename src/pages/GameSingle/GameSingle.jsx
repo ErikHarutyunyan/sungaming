@@ -1,8 +1,14 @@
 // Styles
 import { useLocation, useParams } from "react-router-dom";
 import "./GameSingle.css";
-import { bubble, circle, ellipse7, gameDetails, lineImg, objectImg } from "../../components/Images";
-
+import {
+  bubble,
+  circle,
+  ellipse7,
+  gameDetails,
+  lineImg,
+  objectImg,
+} from "../../components/Images";
 
 import { IoCheckmark, IoPlay } from "react-icons/io5";
 import { Suspense, useState } from "react";
@@ -264,7 +270,7 @@ const GameSingle = () => {
                       <IoPlay size={40} color="#0ef0ad" />
                     </button>
                     <OnboardModal
-                      videoPath={data.video}
+                      video={data.video}
                       open={isOpen}
                       onClose={() => setIsOpen(false)}
                     />

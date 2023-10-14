@@ -1,9 +1,10 @@
-import {lazy, Suspense} from "react";
+import { lazy, Suspense } from "react";
+import LoadRoute from "../../components/LoadRoute/LoadRoute";
 
 const LazyNews = lazy(() => import("./News"));
 
 const News = (props) => (
-  <Suspense fallback={null}>
+  <Suspense fallback={<LoadRoute />}>
     <LazyNews {...props} />
   </Suspense>
 );

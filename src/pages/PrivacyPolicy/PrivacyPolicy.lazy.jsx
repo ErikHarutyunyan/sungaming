@@ -1,9 +1,10 @@
-import {lazy, Suspense} from "react";
+import { lazy, Suspense } from "react";
+import LoadRoute from "../../components/LoadRoute/LoadRoute";
 
 const LazyPrivacyPolicy = lazy(() => import("./PrivacyPolicy"));
 
 const PrivacyPolicy = (props) => (
-  <Suspense fallback={null}>
+  <Suspense fallback={<LoadRoute />}>
     <LazyPrivacyPolicy {...props} />
   </Suspense>
 );
