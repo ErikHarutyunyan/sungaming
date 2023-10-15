@@ -54,8 +54,8 @@ const Services = () => {
           </div>
         </div>
         <div className="container">
-          <div className="row cus-mar">
-            <div className="col-xl-4 col-sm-6">
+          <div className="row cus-mar services-solution">
+            <div className="col-xl-4 col-sm-6 col-xs-12">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
                 <img src={services3} alt="Image" />
                 <p className="position-absolute">

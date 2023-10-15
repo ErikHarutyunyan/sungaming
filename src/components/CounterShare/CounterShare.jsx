@@ -35,7 +35,7 @@ const CounterShare = () => {
                           }
                         }}
                         delayedCall>
-                        <span className="number" ref={countUpRef} />
+                        <span className="display-one number" ref={countUpRef} />
                       </ReactVisibilitySensor>
                     );
                   }}
@@ -64,7 +64,7 @@ const CounterShare = () => {
                           }
                         }}
                         delayedCall>
-                        <span className="number" ref={countUpRef} />
+                        <span className="display-one number" ref={countUpRef} />
                       </ReactVisibilitySensor>
                     );
                   }}
@@ -93,7 +93,7 @@ const CounterShare = () => {
                           }
                         }}
                         delayedCall>
-                        <span className="number" ref={countUpRef} />
+                        <span className="display-one number" ref={countUpRef} />
                       </ReactVisibilitySensor>
                     );
                   }}
@@ -122,7 +122,7 @@ const CounterShare = () => {
                           }
                         }}
                         delayedCall>
-                        <span className="number" ref={countUpRef} />
+                        <span className="display-one number" ref={countUpRef} />
                       </ReactVisibilitySensor>
                     );
                   }}

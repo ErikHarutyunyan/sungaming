@@ -65,7 +65,11 @@ const dataCareers = [
 ];
 
 dataCareers.forEach((careers) => {
-  careers.path = careers.title.toLowerCase().replace(/\s+/g, "-");
+  careers.path = careers.title
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "")
+    .replace(/-+/g, "-");
 });
 
 export { dataCareers };

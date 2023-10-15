@@ -34,7 +34,6 @@ import {
   PrivacyPolicy,
   Services,
 } from "../pages";
-import { Suspense } from "react";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

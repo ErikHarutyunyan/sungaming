@@ -144,30 +144,9 @@ const PrivacyPolicy = () => {
                   concerns.We will try our best to provide optimized solutions.
                 </p>
               </div>
-              <div className="contact-area">
-                <div className="btn-area mt-10 d-grid gap-6 align-items-center">
-                  <div className="d-flex gap-3 align-items-center">
-                    <div className="icon-box d-center">
-                      <i className="material-symbols-outlined mat-icon fs-five">
-                        {" "}
-                        call{" "}
-                      </i>
-                    </div>
-                    <span>+(2) 578 - 365 - 379</span>
-                  </div>
-                  <div className="d-flex gap-3 align-items-center">
-                    <div className="icon-box d-center">
-                      <i className="material-symbols-outlined mat-icon fs-five">
-                        {" "}
-                        mail{" "}
-                      </i>
-                    </div>
-                    <span>Hello@example.com</span>
-                  </div>
-                </div>
-              </div>
+          
             </div>
-            <div className="col-lg-5 me-20 mt-7 mt-lg-0">
+            <div className="col-lg-5 me-20  mt-lg-0">
               <form action="#" className="p-4">
                 <div className="form-inside p-4">
                   <div className="row">

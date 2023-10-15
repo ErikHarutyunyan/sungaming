@@ -1,3 +1,8 @@
+.checkAge-form {
+  min-width: 300px;
+  max-width: 500px;
+  width: 100%;
+}
 .checkAge-form button {
   padding: 0.8rem 1.1rem;
   color: #00ff69;
@@ -30,4 +35,23 @@
   color: #fff;
   margin: 1rem 0;
   text-transform: none;
+}
+.modal-age-styles {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(6, 6, 6, 0.4);
+  padding: 50px;
+  max-width: 500px;
+  font-weight: 700;
+  border-radius: 25px;
+}
+@media (max-width: 520px) {
+  .checkAge-form h3 {
+    font-size: 1.3rem;
+  }
+  .modal-age-styles{
+    padding: 30px;
+  }
 }

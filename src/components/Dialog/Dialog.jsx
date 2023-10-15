@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import "./Dialog.css";
 import LoadingOpen from "../LoadingOpen";
 
@@ -13,38 +13,12 @@ const IFRAME_STYLES = {
   display: "none",
 };
 
-const MODAL_AGE_STYLES = {
-  position: "fixed",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  backgroundColor: "rgba(6, 6, 6, 0.4)",
-  padding: "50px",
-  zIndex: 1000,
-  borderRadius: "16px",
-  maxWidth: "500px",
-  fontWeight: "700",
-};
-
 const iframePath = "https://sunhorse.netlify.app/";
 
 const Dialog = ({ setDialog, onClose }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const refIframe = useRef(null);
-
-  // useEffect(() => {
-  //   const handleLoad = () => {
-  //     refIframe.current.style.display = "block";
-  //     setIsLoading(false);
-  //   };
-
-  //   refIframe.current.addEventListener("load", handleLoad);
-
-  //   return () => {
-  //     refIframe.current.removeEventListener("load", handleLoad);
-  //   };
-  // }, []);
 
   const handleLoad = () => {
     refIframe.current.style.display = "block";
@@ -65,7 +39,7 @@ const Dialog = ({ setDialog, onClose }) => {
       {isLoading ? (
         <LoadingOpen />
       ) : (
-        <div style={MODAL_AGE_STYLES}>
+        <div className="modal-age-styles">
           <button
             onClick={onClose}
             type="button"

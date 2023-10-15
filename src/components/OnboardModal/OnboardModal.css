@@ -22,8 +22,13 @@
   z-index: 1000;
 }
 
-.checkAge-form{
+.checkAge-form {
   text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
 }
 
 @media (max-width: 800px) {

@@ -12,17 +12,17 @@ const BannerPages = ({
   titleSecond,
   classNames,
   rightImg,
+  children,
 }) => {
   return (
     <section
       className={`banner-section inner-banner position-relative banner-page ${classNames}`}
-      style={{ backgroundImage: `url(${bg})` }}
-    >
+      style={{ backgroundImage: `url(${bg})` }}>
       <div className="shape-area">
         <img src={bubble} className="shape-1" alt="icon" />
         <img src={ellipse7} className="shape-2" alt="icon" />
       </div>
-      <div className="container position-relative">
+      <div className="container position-relative z-2">
         <div className="banner-content row justify-content-between">
           <div className="col-lg-6 col-md-10">
             <div className="main-content">
@@ -61,6 +61,7 @@ const BannerPages = ({
           </div>
         </div>
       </div>
+      {children}
     </section>
   );
 };

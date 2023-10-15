@@ -1,0 +1,11 @@
+@media (max-width: 1200px) {
+.info-office{
+    justify-content: space-between;
+    gap:1.5rem;
+}
+}
+@media (max-width: 767px) {
+.info-office{
+    gap:0.8rem;
+}
+}

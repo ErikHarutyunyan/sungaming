@@ -25,7 +25,7 @@ const Subscribe = () => {
               For further info &amp; support, <a href="contact">Contact us</a>
             </p>
           </div>
-          <div className="col-xl-5 col-lg-6 col-md-8">
+          <div className="col-xl-7 col-lg-6 col-md-12">
             <form
               className="form-contact mt-8 mt-lg-0 py-8 px-4 px-sm-8"
               onSubmit={handleSubmit(onSubmit)}>

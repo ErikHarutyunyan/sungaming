@@ -1,8 +1,6 @@
 // Styles
-import { BiFlag } from "react-icons/bi";
 import "./Careers.css";
-import SimpleSlider from "../../components/SimpleSlider";
-import { settingsAbout } from "../../features/SliderConfig";
+
 import Subscribe from "../../components/Subscribe";
 import { dataCareers } from "../../data/dataCareers";
 import { MdWorkOutline } from "react-icons/md";
@@ -11,6 +9,8 @@ import { Link } from "react-router-dom";
 import { CAREERS, HOME } from "../../router/route-path";
 import { FiChevronRight } from "react-icons/fi";
 import { bubble, ellipse7 } from "../../components/Images";
+
+import AboutValues from "../../components/AboutValues/AboutValues";
 const Careers = () => {
   return (
     <>
@@ -51,107 +51,7 @@ const Careers = () => {
           </div>
         </div>
       </section>
-      <section className="gaming-character overflow-hidden ongoing-values what-we-offer bg-transparent pt-120 pb-120">
-        <div className="container">
-          <div className="row section-header justify-content-center">
-            <div className="col-lg-7 text-center">
-              <h4 className="sub-title">
-                What We <span>Offer</span>
-              </h4>
-              <span className="fs-two heading mb-6">
-                Why People Love Working at Gamestorm Studio?
-              </span>
-              <p>
-                We have at heart to foster, encourage, and invest in
-                professional growth
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="container-fluid">
-          <div className="row justify-content-end">
-            <div className="col-lg-12">
-              <div
-                className={
-                  "ongoing-values-carousel slick-initialized slick-slider slick-dotted"
-                }>
-                <SimpleSlider setting={settingsAbout}>
-                  <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
-                    <div className="icon-box d-center">
-                      <BiFlag />
-                    </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
-                    <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
-                    </p>
-                  </div>
-                  <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
-                    <div className="icon-box d-center">
-                      <BiFlag />
-                    </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
-                    <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
-                    </p>
-                  </div>
-                  <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
-                    <div className="icon-box d-center">
-                      <BiFlag />
-                    </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
-                    <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
-                    </p>
-                  </div>
-                  <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
-                    <div className="icon-box d-center">
-                      <BiFlag />
-                    </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
-                    <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
-                    </p>
-                  </div>
-                  <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
-                    <div className="icon-box d-center">
-                      <BiFlag />
-                    </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
-                    <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
-                    </p>
-                  </div>
-                  <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
-                    <div className="icon-box d-center">
-                      <BiFlag />
-                    </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
-                    <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
-                    </p>
-                  </div>
-                  <div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
-                    <div className="icon-box d-center">
-                      <BiFlag />
-                    </div>
-                    <h3 className="mt-6 pb-2">Creativity</h3>
-                    <p>
-                      Striving to bring imagination, original ideas, and
-                      excitement to everything we do.
-                    </p>
-                  </div>
-                </SimpleSlider>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AboutValues />
       <section className="job-opens pt-120 pb-120">
         <div className="container">
           <div className="row justify-content-center">
@@ -173,9 +73,9 @@ const Careers = () => {
             </div>
           </div>
           <div className="row cus-mar">
-            {dataCareers?.map((data) => {
+            {dataCareers?.map((item) => {
               const { id, path, title, area, term, types, location, icon } =
-                data;
+                item;
               return (
                 <div className="col-md-6" key={id}>
                   <div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
@@ -187,7 +87,7 @@ const Careers = () => {
                       )}
 
                       <div className="info-box">
-                        <Link to={`${CAREERS}/${path}`} params={{ data }}>
+                        <Link to={`${CAREERS}/${path}`} params={{ item }}>
                           <h5>{title}</h5>
                         </Link>
                         <a href="career-details.html"></a>

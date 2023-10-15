@@ -1,0 +1,8 @@
+@media (max-width: 767px) {
+   .gaming-character.ongoing-values .about-values .slick-arrow {
+    display: flex !important;
+  }
+  .gaming-character.ongoing-values .about-values .slick-arrow.bottom-right.arafat-next {
+    left: 27%;
+  }
+}

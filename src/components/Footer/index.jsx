@@ -6,12 +6,12 @@ import {
 } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { CAREERS, PRIVACY } from "../../router/route-path";
-
+import "./footer.css"
 export const Footer = () => {
   return (
     <footer className="footer-section">
       <div className="container">
-        <div className="row cus-mar pb-120 pt-120">
+        <div className="row cus-mar info-office pb-120 pt-120">
           <div className="col-xl-3 col-md-5 col-sm-8 visible-from-bottom">
             <div className="single-box">
               <h4 className="mb-4">Office</h4>

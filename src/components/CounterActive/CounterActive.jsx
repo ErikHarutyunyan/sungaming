@@ -6,9 +6,10 @@ import ReactVisibilitySensor from "react-visibility-sensor";
 const CounterActive = ({ className }) => {
   const [viewPortEntered, setViewPortEntered] = useState(false);
   return (
-    <section className={`counter-section counter-head my-20 ${className}`}>
+    <section
+      className={`counter-section counter-head pt-120 pb-120 ${className}`}>
       <div className="container">
-        <div className="row cus-mar ">
+        <div className="row cus-mar  d-center">
           <div className="col-sm-6 col-xl-4">
             <div className="single-box py-6 box-style box-first d-center position-relative">
               <div className="counters d-flex align-items-center">

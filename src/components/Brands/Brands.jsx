@@ -20,10 +20,9 @@ const Brands = () => {
             </div>
           </div>
         </div>
-
-        <div className="row justify-content-center">
-          <div className="col-lg-10">
-            <div className="all-items mb-7 d-flex gap-3 justify-content-between flex-wrap">
+        <div className="row pt-10 justify-content-center">
+          <div className="col-lg-12">
+            <div className="all-items brand-wrap mb-7 d-flex gap-4 justify-content-between flex-wrap">
               <div className="thumb">
                 {" "}
                 <img
@@ -62,8 +61,6 @@ const Brands = () => {
                   src={brand4}
                 />
               </div>
-            </div>
-            <div className="all-items d-flex gap-3 justify-content-between flex-wrap">
               <div className="thumb">
                 <img
                   alt="Image"

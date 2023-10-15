@@ -115,16 +115,6 @@
   border: 1px solid transparent;
 }
 
-@font-face {
-  font-family: remixicon;
-  src: url(/_next/static/media/remixicon.f12fd1a0.eot);
-  src: url(/_next/static/media/remixicon.f12fd1a0.eot)
-      format("embedded-opentype"),
-    url(/_next/static/media/remixicon.5400338c.woff2) format("woff2"),
-    url(/_next/static/media/remixicon.1e0fb76b.woff) format("woff"),
-    url(/_next/static/media/remixicon.e313410c.ttf) format("truetype");
-  font-display: swap;
-}
 
 [class*=" ri-"],
 [class^="ri-"] {
@@ -18669,7 +18659,7 @@ progress {
 .container-sm,
 .container-xl,
 .container-xxl {
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 2rem;
   --bs-gutter-y: 0;
   width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
@@ -30278,6 +30268,19 @@ fieldset:disabled .btn {
   z-index: 3;
 }
 
+.z-4 {
+  z-index: 4;
+}
+
+.z-5 {
+  z-index: 5;
+}
+.z-6 {
+  z-index: 6;
+}.z-10 {
+  z-index:10;
+}
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left;
@@ -40993,7 +40996,7 @@ li {
 
 .header-section .navbar:before {
   position: absolute;
-  content: "";
+  content: ""  !important;
   background: #161829;
   width: 100%;
   height: 100%;
@@ -41155,6 +41158,7 @@ li {
 .header-section .navbar .sub-dropdown .sub-menu a {
   font-weight: 500;
 }
+
 
 @media (max-width: 1199px) {
   .header-section .navbar .navbar-toggler {
@@ -41903,21 +41907,21 @@ li {
 .banner-section.game {
   position: relative;
   background-color: #161829;
-  background-size: 60% 100% !important;
+  background-size: 55% 100% !important;
   background-position: bottom right;
   overflow: hidden;
   background-repeat: no-repeat;
 }
-.banner-section.game::before {
-  content: "";
-  background-color: #161829;
-  position: absolute;
-  width: 35%;
-  height: 200%;
-  top: -510px;
-  right: 43%;
-  transform: rotate(15deg);
-}
+/* .banner-section.game::before {
+    content: "";
+    background-color: #161829;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    clip-path: polygon(0% 0, 60% 0, 48% 100%, 0% 100%);
+} */
 
 .banner-section.services {
   background-image: url(/images/services-banner-illus.png);
@@ -44147,20 +44151,13 @@ li {
 }
 
 
-.services p {
-  padding: 0 20px;
-  z-index: 1;
-  color: #fff;
-  font-weight: 700;
-}
-
-.services .single-box img {
+.services-solution .single-box img {
   width: 100%;
   opacity: 0.25;
   height: 100%;
 }
 
-.services .single-box:before {
+.services-solution .single-box:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -44171,18 +44168,18 @@ li {
   z-index: 2;
 }
 
-.services .single-box:hover:before {
+.services-solution .single-box:hover:before {
   height: 0;
   transform: rotateY(180deg);
   z-index: 0;
 }
 
-.services .single-box:hover .abs-area {
+.services-solution .single-box:hover .abs-area {
   opacity: 1;
 }
 
-.services .single-box:hover .h3,
-.services .single-box:hover h3 {
+.services-solution .single-box:hover .h3,
+.services-solution .single-box:hover h3 {
   opacity: 0;
 }
 
@@ -44924,9 +44921,9 @@ li {
     display: flex;
   }
 
-  .header-section .navbar {
+  /* .header-section .navbar {
     width: 80%;
-  }
+  } */
 
   .header-section .navbar .navbar-nav {
     overflow: auto;
@@ -45319,7 +45316,7 @@ li {
     transform: translate(50%);
   }
 
-  .services .single-box:hover .abs-area {
+  .services-solution .single-box:hover .abs-area {
     width: 80px;
     height: 80px;
   }
@@ -45766,7 +45763,7 @@ li {
   .sidebar-wrapper #navbar-clone .navbar-nav {
     display: flex !important;
   }
-  .header-section .navbar {
+  /* .header-section .navbar {
     width: 80%;
     .navbar-nav {
       overflow: auto;
@@ -45776,7 +45773,7 @@ li {
       max-height: 40vh;
       width: 80%;
     }
-  }
+  } */
   .header-section .navbar .navbar-nav li {
     button {
       justify-content: center !important;
@@ -45933,6 +45930,8 @@ li {
     font-size: 20px;
     line-height: 26px;
   }
+
+
 
   .fs-five,
   h5,
@@ -46102,7 +46101,7 @@ li {
       }
     }
   }
-  .services .single-box:hover .abs-area {
+  .services-solution .single-box:hover .abs-area {
     width: 80px;
     height: 80px;
   }
@@ -46119,7 +46118,7 @@ li {
     bottom: 15%;
   }
   .our-games .nav button {
-    width: 45px;
+    /* width: 45px; */
     height: 45px;
   }
   .our-games .tab-content li::before {

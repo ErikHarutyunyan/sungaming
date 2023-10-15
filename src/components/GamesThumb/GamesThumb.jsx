@@ -139,7 +139,7 @@ const GamesThumb = () => {
           <div className="col-lg-10">
             <div className="tabcontents tab-content">
               <div className={`tabitem active`}>
-                <div className="row cus-mar justify-content-center">
+                <div className="row  cus-mar justify-content-center">
                   {menuItems?.slice(0, next)?.map((item) => {
                     const { id, title, imgMain, imgSmall, desc, path } = item;
                     return (
@@ -185,7 +185,7 @@ const GamesThumb = () => {
                           },
                         }}
                         key={id}
-                        className={`col-xl-4 col-sm-6 col-8`}>
+                        className={`col-xl-4 col-sm-6 col-8 d-center`}>
                         <div className="single-box">
                           <div className="img-area">
                             <img alt="img" loading="lazy" src={imgMain} />

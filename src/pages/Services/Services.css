@@ -1,6 +1,5 @@
 .counter-section .display-one,
 .counters span {
-  font-size: 80px;
   font-family: "Chakra Petch", sans-serif;
   color: var(--p300);
   font-weight: inherit;
@@ -30,4 +29,43 @@
 
 .key svg path {
   fill: #fff;
+}
+
+.services-solution .single-box p {
+  padding: 0 20px;
+  z-index: 1;
+  color: #fff;
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .services-solution {
+    row-gap: 2rem;
+  }
+  .services-solution .single-box {
+    height: 100%;
+  }
+  .services-solution .col-sm-6 {
+    max-height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-solution {
+    row-gap: 2rem;
+  }
+  .services-solution .single-box {
+    height: 100%;
+  }
+  .services-solution p {
+    font-size: 14px;
+  }
+  .how-it-works .icon-box {
+    width: 60px;
+    height: 60px;
+  }
+  .key svg {
+    width: 22px;
+    height: 22px;
+  }
 }

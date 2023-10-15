@@ -1,84 +1,84 @@
 /* eslint-disable react-refresh/only-export-components */
-import {MdOutlineArrowBack, MdOutlineArrowForward} from "react-icons/md";
-import {memo} from "react";
+import { MdOutlineArrowBack, MdOutlineArrowForward } from "react-icons/md";
+import { memo } from "react";
 
 const PrevArrow = memo(function PrevArrow(props) {
-  const {onClick} = props;
+  const { onClick } = props;
   return (
     <button
       onClick={onClick}
       type="button"
       aria-label="Slide Prev"
       className="arafat-prev slick-arrow box-style">
-      <MdOutlineArrowBack/>
+      <MdOutlineArrowBack />
     </button>
   );
-})
+});
 
 const NextArrow = memo(function NextArrow(props) {
-  const {onClick} = props;
+  const { onClick } = props;
   return (
     <button
       onClick={onClick}
       type="button"
       aria-label="Slide Next"
       className="arafat-next slick-arrow box-style">
-      <MdOutlineArrowForward/>
+      <MdOutlineArrowForward />
     </button>
   );
-})
+});
 
 const ServicePrevArrow = memo(function ServicePrevArrow(props) {
-  const {onClick} = props;
+  const { onClick } = props;
   return (
     <button
       onClick={onClick}
       type="button"
       aria-label="Slide Prev"
       className="arafat-prev slick-arrow box-style top-right">
-      <MdOutlineArrowBack/>
+      <MdOutlineArrowBack />
     </button>
   );
-})
+});
 
 const ServiceNextArrow = memo(function ServiceNextArrow(props) {
-  const {onClick} = props;
+  const { onClick } = props;
   return (
     <button
       onClick={onClick}
       type="button"
       aria-label="Slide Next"
       className="arafat-next slick-arrow box-style top-right">
-      <MdOutlineArrowForward/>
+      <MdOutlineArrowForward />
     </button>
   );
-})
+});
 
 const BlogPrevArrow = memo(function BlogPrevArrow(props) {
-  const {onClick} = props;
+  const { onClick } = props;
 
   return (
     <button
       onClick={onClick}
       type="button"
       className="arafat-prev slick-arrow box-style bottom-right">
-      <MdOutlineArrowBack/>
+      <MdOutlineArrowBack />
     </button>
   );
-})
+});
 
 const BlogNextArrow = memo(function BlogNextArrow(props) {
-  const {onClick} = props;
+  const { onClick } = props;
 
   return (
     <button
       onClick={onClick}
       type="button"
       className="arafat-next slick-arrow box-style bottom-right">
-      <MdOutlineArrowForward/>
+      <MdOutlineArrowForward />
     </button>
   );
-})
+});
 
 export const settingsFeatured = {
   // dots: true,
@@ -86,8 +86,8 @@ export const settingsFeatured = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  nextArrow: <NextArrow/>,
-  prevArrow: <PrevArrow/>,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
 };
 export const settingsServices = {
   // dots: true,
@@ -97,8 +97,8 @@ export const settingsServices = {
   slidesToShow: 4,
   slidesToScroll: 1,
   adaptiveHeight: false,
-  nextArrow: <ServiceNextArrow/>,
-  prevArrow: <ServicePrevArrow/>,
+  nextArrow: <ServiceNextArrow />,
+  prevArrow: <ServicePrevArrow />,
   responsive: [
     {
       breakpoint: 992,
@@ -119,22 +119,35 @@ export const settingsServices = {
 export const settingsBlog = {
   dots: true,
   infinite: true,
-  // autoplay: true,
-  // speed: 600,
   slidesToShow: 2,
   slidesToScroll: 1,
   adaptiveHeight: false,
   dotsClass: "section-dots",
-  appendDots: (dots) => <ul style={{display: "block"}}>{dots}</ul>,
+  appendDots: (dots) => <ul style={{ display: "block" }}>{dots}</ul>,
   customPaging: (i) => (
     <span className="dot" role="button" title={`${i}`}>
       <span className="string">{i} </span>
     </span>
   ),
-  nextArrow: <BlogNextArrow/>,
-  prevArrow: <BlogPrevArrow/>,
+  nextArrow: <BlogNextArrow />,
+  prevArrow: <BlogPrevArrow />,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
-
 
 export const settingsGameSingle = {
   dots: true,
@@ -148,14 +161,30 @@ export const settingsGameSingle = {
   slidesToScroll: 1,
   adaptiveHeight: false,
   dotsClass: "section-dots",
-  appendDots: (dots) => <ul style={{display: "block"}}>{dots}</ul>,
+  appendDots: (dots) => <ul style={{ display: "block" }}>{dots}</ul>,
   customPaging: (i) => (
     <span className="dot" role="button" title={`${i}`}>
       <span className="string">{i} </span>
     </span>
   ),
-  nextArrow: <BlogNextArrow/>,
-  prevArrow: <BlogPrevArrow/>,
+  nextArrow: <BlogNextArrow />,
+  prevArrow: <BlogPrevArrow />,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 
 export const settingsAbout = {
@@ -165,6 +194,29 @@ export const settingsAbout = {
   slidesToShow: 6,
   slidesToScroll: 1,
   adaptiveHeight: false,
-  nextArrow: <BlogNextArrow/>,
-  prevArrow: <BlogPrevArrow/>,
+  nextArrow: <BlogNextArrow />,
+  prevArrow: <BlogPrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };

@@ -2,7 +2,7 @@
 import { MdWorkOutline } from "react-icons/md";
 import { dataCareers } from "../../data/dataCareers";
 import "./CareersSingle.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { IoTimeOutline } from "react-icons/io5";
 import Subscribe from "../../components/Subscribe";
 import { bubble, ellipse7 } from "../../components/Images";
@@ -15,11 +15,18 @@ import { ImAttachment } from "react-icons/im";
 import { PiUserFocusLight } from "react-icons/pi";
 
 const CareersSingle = () => {
-  const { id: idCareers } = useParams();
-  const filteredCareer = dataCareers.find((career) => career.id === idCareers);
   const [isOpen, setIsOpen] = useState(false);
   const hiddenFileInput = useRef(null);
   const [fileName, setFileName] = useState("");
+  const { id: title } = useParams();
+  const location = useLocation();
+  let data = location.state?.data;
+  if (!data) {
+    const singleCareer = dataCareers.find((career) => {
+      return career.path === title;
+    });
+    data = singleCareer;
+  }
   // Programatically click the hidden file input element
   // when the Button component is clicked
   const handleClick = () => {
@@ -77,30 +84,28 @@ const CareersSingle = () => {
       <section className="job-opens details pt-120 pb-120">
         <div className="container">
           <div className="row justify-content-between">
-            <div className="col-xl-7 col-lg-7">
+            <div className="col-xl-7 col-lg-5 mb-5">
               <div className="content-wrapper d-grid gap-4 gap-sm-8">
                 <div className="d-flex gap-6 align-items-center">
                   <div className="end-area">
-                    <span className="fs-seven p-1 px-2">
-                      {filteredCareer.area}
-                    </span>
+                    <span className="fs-seven p-1 px-2">{data.area}</span>
                   </div>
                   <ul className="d-flex gap-6">
                     <li className="d-flex align-items-center gap-2">
                       <li className="d-flex align-items-center gap-2">
                         <MdWorkOutline size={24} />
                       </li>
-                      <span className="fs-seven">{filteredCareer.term}</span>
+                      <span className="fs-seven">{data.term}</span>
                     </li>
                     <li className="d-flex align-items-center gap-2">
                       <IoTimeOutline size={24} />
-                      <span className="fs-seven">{filteredCareer.types}</span>
+                      <span className="fs-seven">{data.types}</span>
                     </li>
                   </ul>
                 </div>
                 <div className="single-content mb-8">
                   <h2 className="visible-slowly-bottom display-four mb-2">
-                    {filteredCareer.title}
+                    {data.title}
                   </h2>
                 </div>
 
@@ -109,8 +114,10 @@ const CareersSingle = () => {
                     Job responsibilities
                   </h3>
                   <ul className="ms-4 d-grid gap-1">
-                    {filteredCareer.respons.map((item, index) => {
-                      return <li key={index}>{item}</li>;
+                    {data.respons.map((item, index) => {
+                      return <li key={`${item}_${index}`}>
+                        {item}
+                      </li>;
                     })}
                   </ul>
                 </div>
@@ -119,8 +126,8 @@ const CareersSingle = () => {
                     Required qualifications
                   </h3>
                   <ul className="ms-4 d-grid gap-1">
-                    {filteredCareer.qual.map((item, index) => {
-                      return <li key={index}>{item}</li>;
+                    {data.qual.map((item, index) => {
+                      return <li key={`${item}_${index}`}>{item}</li>;
                     })}
                   </ul>
                 </div>
@@ -129,7 +136,7 @@ const CareersSingle = () => {
             <div className="col-xl-4 col-lg-5 col-md-7 mt-8 mt-lg-0 alt-bg">
               <div className="apply-area cus-scrollbar text-center py-15 px-8">
                 <div className="careers-icon icon-box mb-6 mb-sm-10 d-inline-flex d-center">
-                  {filteredCareer.icon}
+                  {data.icon}
                 </div>
                 <div className="section-text">
                   <h2 className="visible-slowly-bottom mb-3">
@@ -147,70 +154,62 @@ const CareersSingle = () => {
                     <OnboardModal
                       open={isOpen}
                       onClose={() => setIsOpen(false)}>
-                      <div className="modal-content">
+                      <div className="modal-content modal-career">
                         <div className="modal-header text-center">
                           <h4 className="modal-title w-100 font-weight-bold">
                             Apply For The Position Now!
                           </h4>
                         </div>
-                        <div className="modal-body d-center row mx-3">
-                          <div className="md-form col-xl-7 col-lg-7 mt-8 mb-5">
-                            <AiOutlineUser size={24} color="#0ef0ad" />
-                            <label
-                              htmlFor="modalContactInput1"
-                              className="ms-2">
-                              Full Name
-                            </label>
+                        <div className="modal-body d-center row mt-5">
+                          <div className="md-form mb-3">
+                            <div className="form-info">
+                              <AiOutlineUser size={24} color="#09926a" />
+                            </div>
                             <input
                               type="text"
                               id="modalContactInput1"
                               className="form-control validate mt-3"
+                              placeholder="Full Name"
                             />
                           </div>
+                          <div className="md-form mb-3">
+                            <div className="form-info">
+                              <AiOutlineMail size={24} color="#09926a" />
+                            </div>
 
-                          <div className="md-form col-xl-7 col-lg-7 mb-5">
-                            <AiOutlineMail size={24} color="#0ef0ad" />
-                            <label
-                              className="ms-2"
-                              htmlFor="modalContactInput2">
-                              Your email
-                            </label>
                             <input
                               type="email"
                               id="modalContactInput2"
                               className="form-control validate mt-3"
+                              placeholder="Email"
                             />
                           </div>
+                          <div className="md-form mb-3">
+                            <div className="form-info">
+                              <PiUserFocusLight size={29} color="#09926a" />
+                            </div>
 
-                          <div className="md-form col-xl-7 col-lg-7 mb-5">
-                            <PiUserFocusLight size={30} color="#0ef0ad" />
-                            <label
-                              className="ms-2"
-                              htmlFor="modalContactInput3">
-                              Vacancy
-                            </label>
                             <input
                               type="text"
                               id="modalContactInput3"
                               className="form-control validate mt-3"
+                              placeholder="Vacancy"
                             />
                           </div>
+                          <div className="md-form mb-3">
+                            <div className="form-info">
+                              <FiMessageSquare size={28} color="#09926a" />
+                            </div>
 
-                          <div className="md-form col-xl-7 col-lg-7 mb-5">
-                            <FiMessageSquare size={28} color="#0ef0ad" />
-                            <label
-                              className="ms-2"
-                              htmlFor="modalContactTextarea">
-                              Your message
-                            </label>
                             <textarea
                               type="text"
                               id="modalContactTextarea"
                               className="md-textarea form-control mt-3"
-                              rows="4"></textarea>
+                              rows="4"
+                              placeholder="Message"></textarea>
                           </div>
-                          <div className="md-form col-xl-7 col-lg-7">
-                            <ImAttachment size={24} color="#0ef0ad" />
+                          <div className="md-form ">
+                            <ImAttachment size={24} color="#09926a" />
                             <label
                               className="ms-2 pointer d-inline-flex align-items-center"
                               onClick={handleClick}>

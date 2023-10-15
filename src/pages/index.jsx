@@ -3,7 +3,7 @@ import About from "./About";
 import News from "./News";
 import NotFoundPage from "./NotFoundPage/NotFoundPage";
 import Careers from "./Careers";
-import CareersSingle from "./CareersSingle/CareersSingle";
+import CareersSingle from "./CareersSingle";
 import Contact from "./Contact";
 import Games from "./Games";
 import GameSingle from "./GameSingle";

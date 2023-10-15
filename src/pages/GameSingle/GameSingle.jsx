@@ -83,7 +83,7 @@ const GameSingle = () => {
                   <ul className="ms-10 d-grid gap-4">
                     {data.features?.map((feature, i) => {
                       return (
-                        <li key={i}>
+                        <li key={`${feature}_${i}`}>
                           <IoCheckmark
                             size={20}
                             color={"#0ef0ad"}
@@ -98,7 +98,7 @@ const GameSingle = () => {
               </div>
             </div>
             <div className="col-xl-5 col-lg-6 col-md-10 mt-8 mt-lg-0">
-              <div className="single-box cus-scrollbar gameSingleCart tab-content position-relative text-center p-3 p-md-15">
+              <div className="single-box cus-scrollbar gameSingleCart tab-content position-relative text-center p-3 p-md-10">
                 <span className="feature-tag d-none d-sm-flex d-center categoryTag">
                   {data.category[0]}
                 </span>
@@ -109,14 +109,14 @@ const GameSingle = () => {
                   <h3 className="visible-slowly-bottom mb-4">{data.title}</h3>
                   <ul className="d-flex flex-wrap gameCategory mt-8 fs-seven align-items-center gap-5 gap-md-10">
                     {data.platforms?.map((platform, index) => {
-                      return <li key={index}>{platform} </li>;
+                      return <li key={`${platform}_${index}`}>{platform} </li>;
                     })}
                   </ul>
 
                   {data.info && (
                     <div className="review-box infoData mt-4 mt-md-8 mb-5 mb-md-8 w-100 p-2 p-sm-4 d-center gap-3 justify-content-evenly">
                       {data?.info?.map((item, index) => (
-                        <div className="single-area" key={index}>
+                        <div className="single-area" key={`${item}_${index}`}>
                           {Object.keys(item).map((key) => (
                             <>
                               <div
@@ -300,7 +300,7 @@ const GameSingle = () => {
                   {data.imgMore?.map((imgMore, index) => {
                     return (
                       <div
-                        key={index}
+                        key={`img_${index}`}
                         className="slide-area slick-slide slick-cloned">
                         <div className="single-slider">
                           <img src={imgMore} alt="gallery" />
