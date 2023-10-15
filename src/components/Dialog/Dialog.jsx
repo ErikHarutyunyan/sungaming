@@ -15,7 +15,7 @@ const IFRAME_STYLES = {
 
 const iframePath = "https://sunhorse.netlify.app/";
 
-const Dialog = ({ setDialog, onClose }) => {
+const Dialog = ({ setDialog }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const refIframe = useRef(null);
@@ -40,13 +40,6 @@ const Dialog = ({ setDialog, onClose }) => {
         <LoadingOpen />
       ) : (
         <div className="modal-age-styles">
-          <button
-            onClick={onClose}
-            type="button"
-            className="close"
-            aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
           <div className="checkAge-form">
             <h3>
               The SunGaming content is designed for individuals aged 18 years or

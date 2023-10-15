@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 import Subscribe from "../../components/Subscribe/index.jsx";
 import CounterActive from "../../components/CounterActive/CounterActive.jsx";
 import BannerPages from "../../components/BannerPages/BannerPages.jsx";
-import { gameShape1, gameShape2 } from "../../components/Images";
+import { bannerGameCut, gameShape1, gameShape2 } from "../../components/Images";
 import { IconResponse } from "../../components/Icons/Icons";
 
 const gamesPerRow = 4;
@@ -71,7 +71,6 @@ const Games = () => {
     <>
       <BannerPages
         classNames={"game"}
-        // bg={bannerGameCut}
         page={"Games"}
         title={"Our"}
         titleSecond={"Games"}
@@ -79,10 +78,7 @@ const Games = () => {
           "Our projects feature unique mechanics, fine-tuned gameplay, and eye-catching visual style."
         }>
         <div className="gameBannerWrapImg">
-          <img
-            src="http://localhost:5173/src/assets/img/bannerGameCut.gif"
-            alt=""
-          />
+          <img src={bannerGameCut} alt="bannerGame" />
         </div>
       </BannerPages>
 
