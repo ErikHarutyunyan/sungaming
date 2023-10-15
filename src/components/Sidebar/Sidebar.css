@@ -68,8 +68,8 @@
   transition: 0.3s;
   opacity: 0;
   background-color: var(--p300);
-  width: 30px;
-  height: 1px;
+  width: 60px;
+  height: 2px;
 }
 
 .bg-blur {

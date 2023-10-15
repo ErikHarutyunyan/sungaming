@@ -95,9 +95,9 @@ const About = () => {
           <div className="row justify-content-center">
             <div className="col-lg-8 col-md-10">
               <div className="section-heading">
-                <h5 className="subtitle">Take a look</h5>
-                <h2 className="title">Our vision & Mission</h2>
-                <p className="text">
+                <h5 className="subtitle fs-five">Take a look</h5>
+                <h2 className="fs-one">Our vision & Mission</h2>
+                <p className="text fs-four">
                   We create long term value for our partners by putting
                   innovations, data and sustainability at the very heart of our
                   business.
@@ -156,9 +156,9 @@ const About = () => {
                 <h2 className="title">
                   <i>WE ARE</i>
                   <span>developer</span>
-                  <i>ern nft</i>
+                  <i>NFT </i>
                   <i>
-                    gam<b>ing</b>
+                    <span>gaming</span>
                   </i>
                 </h2>
                 <div className="about__content-circle">

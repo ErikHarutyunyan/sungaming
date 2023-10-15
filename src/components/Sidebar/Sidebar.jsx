@@ -8,6 +8,7 @@ import {
   SERVICES,
   NEWS,
   CONTACT,
+  CAREERS,
 } from "../../router/route-path";
 
 const Sidebar = ({ sideBar = false, showHideSidebar = () => {} }) => {
@@ -57,7 +58,7 @@ const Sidebar = ({ sideBar = false, showHideSidebar = () => {} }) => {
                   }}>
                   <NavLink
                     className={({ isActive }) =>
-                      isActive ? "active" : "inactive"
+                      isActive ? "active fs-two" : "inactive fs-two"
                     }
                     to={HOME}>
                     Home
@@ -91,7 +92,7 @@ const Sidebar = ({ sideBar = false, showHideSidebar = () => {} }) => {
                   }}>
                   <NavLink
                     className={({ isActive }) =>
-                      isActive ? "active" : "inactive"
+                      isActive ? "active fs-two" : "inactive fs-two"
                     }
                     to={GAMES}>
                     Games
@@ -125,7 +126,7 @@ const Sidebar = ({ sideBar = false, showHideSidebar = () => {} }) => {
                   }}>
                   <NavLink
                     className={({ isActive }) =>
-                      isActive ? "active" : "inactive"
+                      isActive ? "active fs-two" : "inactive fs-two"
                     }
                     to={SERVICES}>
                     Services
@@ -159,7 +160,7 @@ const Sidebar = ({ sideBar = false, showHideSidebar = () => {} }) => {
                   }}>
                   <NavLink
                     className={({ isActive }) =>
-                      isActive ? "active" : "inactive"
+                      isActive ? "active fs-two" : "inactive fs-two"
                     }
                     to={ABOUT}>
                     About Us
@@ -193,7 +194,7 @@ const Sidebar = ({ sideBar = false, showHideSidebar = () => {} }) => {
                   }}>
                   <NavLink
                     className={({ isActive }) =>
-                      isActive ? "active" : "inactive"
+                      isActive ? "active fs-two" : "inactive fs-two"
                     }
                     to={NEWS}>
                     News
@@ -227,10 +228,44 @@ const Sidebar = ({ sideBar = false, showHideSidebar = () => {} }) => {
                   }}>
                   <NavLink
                     className={({ isActive }) =>
-                      isActive ? "active" : "inactive"
+                      isActive ? "active fs-two" : "inactive fs-two"
                     }
                     to={CONTACT}>
                     Contact
+                  </NavLink>
+                </motion.li>
+                <motion.li
+                  onClick={showHideSidebar}
+                  initial={{
+                    x: "100%",
+                    opacity: 0,
+                    transition: {
+                      delay: 0.2,
+                      x: { stiffness: 1000, velocity: -100 },
+                    },
+                  }}
+                  animate={{
+                    x: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 1.2,
+                      x: { stiffness: 5000, velocity: -100 },
+                    },
+                  }}
+                  exit={{
+                    x: "100%",
+                    opacity: 0,
+                    transition: {
+                      delay: 0.2,
+                      x: { stiffness: 1000, velocity: -100 },
+                    },
+                  }}>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "active fs-two" : "inactive fs-two"
+                    }
+                    to={CAREERS}>
+                    Careers
                   </NavLink>
                 </motion.li>
               </ul>
