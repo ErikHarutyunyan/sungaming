@@ -27,6 +27,7 @@ import ab from "../../assets/img/ab.webp";
 import faqIcon from "../../assets/img/faq.png";
 import faqFramer from "../../assets/img/faq-frame.png";
 import loadIcon from "../../assets/img/lodIcon.png";
+import card from "../../assets/img/card.png";
 
 // shapes
 import objectImg from "../../assets/img/object-1.png";
@@ -239,6 +240,7 @@ import newsBg from "../../assets/img/bg2.jpg";
 import privacyBanner from "../../assets/img/about-banner-illus.png";
 import serviceBanner from "../../assets/img/services-banner.png";
 export {
+  card,
   loadIcon,
   serviceBanner,
   privacyBanner,
