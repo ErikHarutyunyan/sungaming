@@ -10,7 +10,6 @@ import {
   ellipse6,
   planet,
   topBottom,
-  card,
 } from "../../components/Images";
 
 import SimpleSlider from "../../components/SimpleSlider";

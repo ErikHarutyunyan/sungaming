@@ -1,7 +1,7 @@
 import Home from "./Home";
 import About from "./About";
 import News from "./News";
-import NotFoundPage from "./NotFoundPage/NotFoundPage";
+import NotFoundPage from "./NotFoundPage";
 import Careers from "./Careers";
 import CareersSingle from "./CareersSingle";
 import Contact from "./Contact";
@@ -10,7 +10,7 @@ import GameSingle from "./GameSingle";
 import Integration from "./Integration";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Services from "./Services";
-import TermsConditions from "./TermsConditions/TermsConditions";
+import TermsConditions from "./TermsConditions";
 import NewsSingle from "./NewsSingle";
 
 export {
