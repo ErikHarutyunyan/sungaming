@@ -22,6 +22,7 @@ import { settingsFeatured } from "../../features/SliderConfig";
 import { featuredGames } from "../../data/dataGames";
 import { GAMES } from "../../router/route-path";
 import NewsPresent from "../../components/NewsPresent/NewsPresent";
+import LazyImage from "../../components/LazyImage/LazyImage";
 
 function Home() {
   return (
@@ -215,7 +216,7 @@ function Home() {
                           <div className="single-slider p-3 p-sm-5">
                             <div className="thumb-wrapper">
                               <div className="thumb ">
-                                <img
+                                <LazyImage
                                   alt="Image"
                                   loading="lazy"
                                   width="392"

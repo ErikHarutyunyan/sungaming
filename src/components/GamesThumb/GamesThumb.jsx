@@ -15,6 +15,7 @@ import "./GamesThumb.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { GAMES } from "../../router/route-path.jsx";
+import LazyImage from "../LazyImage/LazyImage";
 
 const gamesPerRow = 6;
 
@@ -25,7 +26,7 @@ const GamesThumb = () => {
 
   const handleClick = (e) => {
     setIsActive(e.target.id);
-    setNext(6)
+    setNext(6);
   };
   const handleMoreGames = () => {
     setNext(next + gamesPerRow);
@@ -188,7 +189,12 @@ const GamesThumb = () => {
                         className={`col-xl-4 col-sm-6 col-8 d-center`}>
                         <div className="single-box">
                           <div className="img-area">
-                            <img alt="img" loading="lazy" src={imgMain} />
+                            <LazyImage
+                              alt="img"
+                              loading="lazy"
+                              src={imgMain}
+                              wrapperClassName="img-area"
+                            />
                           </div>
                           <div className="footer-area mb-5 text-center">
                             <div className="logo-area logoGame">
@@ -222,9 +228,7 @@ const GamesThumb = () => {
                         className="loading py-3 px-8 d-inline-flex align-items-center gap-2"
                         onClick={handleMoreGames}>
                         <div className="icon-box d-center">
-                          <button className="">
-                            Load more
-                          </button>
+                          <button className="">Load more</button>
                         </div>
                       </div>
                     </div>

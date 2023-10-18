@@ -4,6 +4,7 @@ import SimpleSlider from "../SimpleSlider";
 import { settingsBlog } from "../../features/SliderConfig";
 import { dataNews } from "../../data/dataNews";
 import { ellipse7, ellipse8 } from "../Images";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const NewsPresent = () => {
   return (
@@ -54,9 +55,8 @@ const NewsPresent = () => {
                   <div className="single-box">
                     <div className="position-relative d-grid align-items-center">
                       <div className="img-box">
-                        <img
-                          alt="Image"
-                          loading="lazy"
+                        <LazyLoadImage
+                          alt={title}
                           width="636"
                           height="400"
                           src={imgMain}

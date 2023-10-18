@@ -22,6 +22,7 @@ import CounterActive from "../../components/CounterActive/CounterActive.jsx";
 import BannerPages from "../../components/BannerPages/BannerPages.jsx";
 import { bannerGameCut, gameShape1, gameShape2 } from "../../components/Images";
 import { IconResponse } from "../../components/Icons/Icons";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const gamesPerRow = 4;
 
@@ -300,15 +301,13 @@ const Games = () => {
                           className={` game-section-block`}>
                           <div className="single-box">
                             <div className="position-relative d-center head">
-                              <img
+                              <LazyLoadImage
+                                alt={title}
                                 src={imgMain}
                                 className="w-100 thumb-img"
-                                alt="sec-img"
                               />
-
                               <h3 className="gameTitle">{title}</h3>
                             </div>
-
                             <div className="link-item py-3">
                               <Link
                                 className=" px-5 text-decoration-underline"

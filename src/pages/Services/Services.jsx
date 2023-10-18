@@ -20,6 +20,7 @@ import {
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Brands from "../../components/Brands";
 import CounterShare from "../../components/CounterShare/CounterShare";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Services = () => {
   return (
@@ -57,7 +58,7 @@ const Services = () => {
           <div className="row cus-mar services-solution">
             <div className="col-xl-4 col-sm-6 col-xs-12">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <img src={services3} alt="Image" />
+                <LazyLoadImage src={services3} alt={"Website Development"} />
                 <p className="position-absolute">
                   Professional web development companies specialize in creating
                   custom websites for online casinos, sports betting platforms,
@@ -73,7 +74,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <img src={services1} alt="Image" />
+                <LazyLoadImage src={services1} alt="Content Creation" />
                 <p className="visible-slowly-bottom position-absolute">
                   High-quality content is essential for iGaming websites.
                   Content creators can produce engaging articles, blog posts,
@@ -88,7 +89,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <img src={services2} alt="Image" />
+                <LazyLoadImage src={services2} alt="Payment Processing" />
                 <p className="visible-slowly-bottom position-absolute">
                   Reliable payment processing services are critical for iGaming
                   websites. Service providers assist in integrating secure
@@ -103,7 +104,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <img src={services4} alt="Image" />
+                <LazyLoadImage src={services4} alt="Licensing and Compliance" />
                 <p className="visible-slowly-bottom position-absolute">
                   Navigating the complex regulatory landscape is a crucial
                   aspect of iGaming. Service providers specialize in obtaining
@@ -118,7 +119,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <img src={services5} alt="Image" />
+                <LazyLoadImage src={services5} alt="Marketing and SEO" />
                 <p className="visible-slowly-bottom position-absolute">
                   Effective marketing is vital to attract players to iGaming
                   websites. Digital marketing agencies can provide services like
@@ -133,8 +134,10 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <img src={services6} alt="Image" />
-
+                <LazyLoadImage
+                  src={services6}
+                  alt="Customer Support Solutions"
+                />
                 <h3 className="visible-slowly-bottom position-absolute">
                   Customer Support Solutions
                 </h3>

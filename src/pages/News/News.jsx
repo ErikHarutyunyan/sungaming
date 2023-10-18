@@ -16,6 +16,7 @@ import { useState } from "react";
 import Subscribe from "../../components/Subscribe";
 import { newsBg } from "../../components/Images";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const News = () => {
   const newsCount = dataNews.length;
@@ -121,7 +122,7 @@ const News = () => {
                         key={id}>
                         <div className="newsImg-a">
                           <Link to={`${NEWS}/${path}`} params={{ news }}>
-                            <img alt="Image" loading="lazy" src={imgMain} />
+                            <LazyLoadImage alt={title} src={imgMain} />
                           </Link>
                         </div>
                         <i>{data}</i>

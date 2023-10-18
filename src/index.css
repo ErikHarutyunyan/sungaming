@@ -115,7 +115,6 @@
   border: 1px solid transparent;
 }
 
-
 [class*=" ri-"],
 [class^="ri-"] {
   font-family: remixicon;
@@ -30277,8 +30276,9 @@ fieldset:disabled .btn {
 }
 .z-6 {
   z-index: 6;
-}.z-10 {
-  z-index:10;
+}
+.z-10 {
+  z-index: 10;
 }
 
 @media (min-width: 576px) {
@@ -40996,7 +40996,7 @@ li {
 
 .header-section .navbar:before {
   position: absolute;
-  content: ""  !important;
+  content: "" !important;
   background: #161829;
   width: 100%;
   height: 100%;
@@ -41158,7 +41158,6 @@ li {
 .header-section .navbar .sub-dropdown .sub-menu a {
   font-weight: 500;
 }
-
 
 @media (max-width: 1199px) {
   .header-section .navbar .navbar-toggler {
@@ -42426,6 +42425,7 @@ li {
   font-size: 26px;
 }
 .our-games.all-games .single-box .img-area {
+  width: 100%;
   height: 220px;
   overflow: hidden;
 }
@@ -44150,7 +44150,6 @@ li {
   z-index: 3;
 }
 
-
 .services-solution .single-box img {
   width: 100%;
   opacity: 0.25;
@@ -44182,7 +44181,6 @@ li {
 .services-solution .single-box:hover h3 {
   opacity: 0;
 }
-
 
 .testimonial-customers .single-slider {
   margin: 0 10px;
@@ -44693,7 +44691,6 @@ li {
   font-weight: 700;
 }
 
-
 .privacy-content.terms .safe-data {
   margin-bottom: -23px;
 }
@@ -44742,10 +44739,10 @@ li {
     background-size: 50%;
   }
 
- .banner-section.privacy {
+  .banner-section.privacy {
     background-size: 50%;
   }
-.banner-section.career {
+  .banner-section.career {
     background-size: 50%;
   }
 
@@ -45155,7 +45152,7 @@ li {
   .banner-section.career {
     background-image: none;
   }
- .banner-section.services {
+  .banner-section.services {
     background-image: none;
   }
   .section-header {
@@ -45931,8 +45928,6 @@ li {
     line-height: 26px;
   }
 
-
-
   .fs-five,
   h5,
   h5 > a {
@@ -45994,11 +45989,10 @@ li {
     text-align: center;
     margin-top: 30px;
     max-width: 65%;
-    
   }
   .sec-img img {
-      max-width: 100% !important;
-    }
+    max-width: 100% !important;
+  }
   .banner-section.index::after,
   .banner-section.index::before {
     display: none;

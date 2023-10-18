@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { SERVICES } from "./../../router/route-path";
 import { IconAPI, IconDb, IconSec } from "../Icons/Icons";
 import { BiSolidTimeFive } from "react-icons/bi";
+import LazyImage from "../LazyImage/LazyImage";
 const Service = () => {
   return (
     <section className="our-services index-two pt-120 pb-120">
@@ -30,10 +31,9 @@ const Service = () => {
             </div>
             <div className="services-thumb d-inline-block position-relative">
               <div className="thumb">
-                <img
+                <LazyImage
                   alt="Image"
                   src={serviceThumb}
-                  loading="lazy"
                   width="526"
                   height="366"
                 />
@@ -113,7 +113,7 @@ const Service = () => {
                   </p>
                 </div>
                 <button className="end-area d-center">
-                 <IconSec size={20} color={"#fff"}/>
+                  <IconSec size={20} color={"#fff"} />
                 </button>
               </div>
             </div>

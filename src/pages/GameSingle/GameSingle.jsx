@@ -23,6 +23,7 @@ import { Shapes } from "../../components/Shapes/Shapes";
 import CounterActive from "../../components/CounterActive/CounterActive";
 import Subscribe from "../../components/Subscribe";
 import Brands from "../../components/Brands";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const GameSingle = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -103,7 +104,7 @@ const GameSingle = () => {
                   {data.category[0]}
                 </span>
                 <div className="singleGameImg">
-                  <img src={data.imgMain} alt="" />
+                  <LazyLoadImage alt={data.title} src={data.imgMain} />
                 </div>
                 <div className="main-content gameSingleContent py-4">
                   <h3 className="visible-slowly-bottom mb-4">{data.title}</h3>
@@ -197,7 +198,7 @@ const GameSingle = () => {
         </div>
       </section>
       {data.video ? (
-        <section className="our-focus bg-transparent game-trailers position-relative overflow-hidden pt-120">
+        <section className="our-focus bg-transparent game-trailers position-relative overflow-hidden pt-120 pb-10">
           <div className="shape-area">
             <img src={lineImg} className="shape-1" alt="icon" />
             <img src={objectImg} className="shape-2" alt="icon" />
@@ -303,7 +304,7 @@ const GameSingle = () => {
                         key={`img_${index}`}
                         className="slide-area slick-slide slick-cloned">
                         <div className="single-slider">
-                          <img src={imgMore} alt="gallery" />
+                          <LazyLoadImage alt={"gallery"} src={imgMore} />
                         </div>
                       </div>
                     );

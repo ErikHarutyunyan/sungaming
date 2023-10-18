@@ -33,6 +33,7 @@ import {
 import Subscribe from "../../components/Subscribe";
 import Brands from "../../components/Brands";
 import AboutValues from "../../components/AboutValues/AboutValues";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const About = () => {
   const serviceImgs = useRef(null);
@@ -185,21 +186,19 @@ const About = () => {
             </div>
             <div className="col-xl-8">
               <div className="about__three-images">
-                <img
-                  alt="img"
-                  loading="lazy"
+                <LazyLoadImage
+                  src={aboutNftImg1}
+                  alt="aboutNftImg1"
                   width="363"
                   height="487"
                   className="left"
-                  src={aboutNftImg1}
                 />
-                <img
-                  alt="img"
-                  loading="lazy"
+                <LazyLoadImage
+                  src={aboutNftImg2}
+                  alt="aboutNftImg2"
                   width="519"
                   height="382"
                   className="right"
-                  src={aboutNftImg2}
                 />
                 <div className="about__dots">
                   <svg
@@ -269,7 +268,11 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <img alt="img" loading="lazy" width="224" src={team5} />
+                    <LazyLoadImage
+                      alt={"killer master"}
+                      width="224"
+                      src={team5}
+                    />
                   </a>
                 </div>
                 <div className="team__content">
@@ -284,7 +287,11 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <img alt="img" loading="lazy" width="224" src={team2} />
+                    <LazyLoadImage
+                      alt={"code expert"}
+                      width="224"
+                      src={team2}
+                    />
                   </a>
                 </div>
                 <div className="team__content">
@@ -299,7 +306,7 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <img alt="img" loading="lazy" width="224" src={team3} />
+                    <LazyLoadImage alt={"Diamond"} width="224" src={team3} />
                   </a>
                 </div>
                 <div className="team__content">
@@ -314,7 +321,7 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <img alt="img" loading="lazy" width="224" src={team4} />
+                    <LazyLoadImage alt={"Coin"} width="224" src={team4} />
                   </a>
                 </div>
                 <div className="team__content">
@@ -416,16 +423,16 @@ const About = () => {
             <div className="col-lg-6">
               <div className="services__images" ref={serviceImgs}>
                 <div className="services__images-item active">
-                  <img src={services_img04} />
+                  <LazyLoadImage alt={"services_img04"} src={services_img04} />
                 </div>
                 <div className="services__images-item ">
-                  <img src={services_img02} />
+                  <LazyLoadImage alt={"services_img02"} src={services_img02} />
                 </div>
                 <div className="services__images-item ">
-                  <img src={services_img03} />
+                  <LazyLoadImage alt={"services_img03"} src={services_img03} />
                 </div>
                 <div className="services__images-item ">
-                  <img src={services_img01} />
+                  <LazyLoadImage alt={"services_img01"} src={services_img01} />
                 </div>
               </div>
             </div>
