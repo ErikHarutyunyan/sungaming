@@ -28,6 +28,7 @@ const Dialog = ({ setDialog }) => {
   return (
     <>
       <iframe
+        title="hors load"
         ref={refIframe}
         seamless
         loading="eager"

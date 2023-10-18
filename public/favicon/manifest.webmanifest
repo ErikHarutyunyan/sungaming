@@ -1,0 +1,23 @@
+{
+  "name": "Sun Gaming",
+  "short_name": "Sun Gaming",
+  "display": "standalone",
+  "id": "/",
+  "scope": "/",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "display_override": ["window-controls-overlay"],
+  "lang": "en",
+  "dir": "auto",
+  "features": ["Cross Platform", "fast", "simple"],
+  "icons": [
+    {
+      "src": "favicon/android-chrome-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#222434",
+  "background_color": "#222434",
+  "start_url": "https://sungaming.netlify.app"
+}
