@@ -2,10 +2,10 @@
 import "./Services.css";
 
 import BannerPages from "../../components/BannerPages/BannerPages";
-import { FaRegLightbulb } from "react-icons/fa";
-import { SiBlueprint } from "react-icons/si";
-import { BsCodeSlash } from "react-icons/bs";
-import { HiMagnifyingGlassPlus } from "react-icons/hi2";
+import {FaRegLightbulb} from "react-icons/fa";
+import {SiBlueprint} from "react-icons/si";
+import {BsCodeSlash} from "react-icons/bs";
+import {HiMagnifyingGlassPlus} from "react-icons/hi2";
 
 import Subscribe from "../../components/Subscribe/index";
 import {
@@ -17,10 +17,10 @@ import {
   services5,
   services6,
 } from "../../components/Images";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import {MdKeyboardDoubleArrowRight} from "react-icons/md";
 import Brands from "../../components/Brands";
 import CounterShare from "../../components/CounterShare/CounterShare";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import LazyImage from "../../components/LazyImage";
 
 const Services = () => {
   return (
@@ -58,7 +58,7 @@ const Services = () => {
           <div className="row cus-mar services-solution">
             <div className="col-xl-4 col-sm-6 col-xs-12">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <LazyLoadImage src={services3} alt={"Website Development"} />
+                <LazyImage src={services3} alt={"Website Development"}/>
                 <p className="position-absolute">
                   Professional web development companies specialize in creating
                   custom websites for online casinos, sports betting platforms,
@@ -74,7 +74,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <LazyLoadImage src={services1} alt="Content Creation" />
+                <LazyImage src={services1} alt="Content Creation"/>
                 <p className="visible-slowly-bottom position-absolute">
                   High-quality content is essential for iGaming websites.
                   Content creators can produce engaging articles, blog posts,
@@ -89,7 +89,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <LazyLoadImage src={services2} alt="Payment Processing" />
+                <LazyImage src={services2} alt="Payment Processing"/>
                 <p className="visible-slowly-bottom position-absolute">
                   Reliable payment processing services are critical for iGaming
                   websites. Service providers assist in integrating secure
@@ -104,7 +104,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <LazyLoadImage src={services4} alt="Licensing and Compliance" />
+                <LazyImage src={services4} alt="Licensing and Compliance"/>
                 <p className="visible-slowly-bottom position-absolute">
                   Navigating the complex regulatory landscape is a crucial
                   aspect of iGaming. Service providers specialize in obtaining
@@ -119,7 +119,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <LazyLoadImage src={services5} alt="Marketing and SEO" />
+                <LazyImage src={services5} alt="Marketing and SEO"/>
                 <p className="visible-slowly-bottom position-absolute">
                   Effective marketing is vital to attract players to iGaming
                   websites. Digital marketing agencies can provide services like
@@ -134,7 +134,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4 col-sm-6">
               <div className="single-box d-inline-flex d-center text-center position-relative pointer">
-                <LazyLoadImage
+                <LazyImage
                   src={services6}
                   alt="Customer Support Solutions"
                 />
@@ -152,7 +152,7 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <CounterShare />
+      <CounterShare/>
       <section className="how-it-works pt-120 pb-120">
         <div className="container">
           <div className="row justify-content-center section-text">
@@ -174,11 +174,12 @@ const Services = () => {
           <div className="row cus-mar">
             <div className="col-sm-6 col-xl-3 position-relative d-center">
               <div className="abs-area d-center position-absolute">
-                <MdKeyboardDoubleArrowRight size={28} color="#0ef0ad" />
+                <MdKeyboardDoubleArrowRight size={28} color="#0ef0ad"/>
               </div>
-              <div className="single-box box-style box-first d-grid align-items-center text-center p-5 px-xl-8 py-xl-10">
+              <div
+                className="single-box box-style box-first d-grid align-items-center text-center p-5 px-xl-8 py-xl-10">
                 <div className="icon-box d-center m-auto">
-                  <FaRegLightbulb size={28} color="#0ef0ad" />
+                  <FaRegLightbulb size={28} color="#0ef0ad"/>
                 </div>
                 <div className="title-area">
                   <h4 className="mt-6 mb-3">Conceptualization and Ideation</h4>
@@ -193,11 +194,12 @@ const Services = () => {
             </div>
             <div className="col-sm-6 col-xl-3 position-relative d-center">
               <div className="abs-area d-center position-absolute">
-                <MdKeyboardDoubleArrowRight size={28} color="#0ef0ad" />
+                <MdKeyboardDoubleArrowRight size={28} color="#0ef0ad"/>
               </div>
-              <div className="single-box box-style box-first d-grid align-items-center text-center p-5 px-xl-8 py-xl-10">
+              <div
+                className="single-box box-style box-first d-grid align-items-center text-center p-5 px-xl-8 py-xl-10">
                 <div className="icon-box d-center m-auto">
-                  <SiBlueprint size={28} color="#0ef0ad" />
+                  <SiBlueprint size={28} color="#0ef0ad"/>
                 </div>
                 <div className="title-area">
                   <h4 className="mt-6 mb-3">Design and Planning</h4>
@@ -213,11 +215,12 @@ const Services = () => {
             </div>
             <div className="col-sm-6 col-xl-3 position-relative d-center">
               <div className="abs-area d-center position-absolute">
-                <MdKeyboardDoubleArrowRight size={28} color="#0ef0ad" />
+                <MdKeyboardDoubleArrowRight size={28} color="#0ef0ad"/>
               </div>
-              <div className="single-box box-style box-first d-grid align-items-center text-center p-5 px-xl-8 py-xl-10">
+              <div
+                className="single-box box-style box-first d-grid align-items-center text-center p-5 px-xl-8 py-xl-10">
                 <div className="icon-box d-center m-auto">
-                  <BsCodeSlash size={28} color="#0ef0ad" />
+                  <BsCodeSlash size={28} color="#0ef0ad"/>
                 </div>
                 <div className="title-area">
                   <h4 className="mt-6 mb-3">Development and Prototyping</h4>
@@ -232,11 +235,12 @@ const Services = () => {
             </div>
             <div className="col-sm-6 col-xl-3 position-relative d-center">
               <div className="abs-area d-center position-absolute">
-                <MdKeyboardDoubleArrowRight size={28} color="#0ef0ad" />
+                <MdKeyboardDoubleArrowRight size={28} color="#0ef0ad"/>
               </div>
-              <div className="single-box box-style box-first d-grid align-items-center text-center p-5 px-xl-8 py-xl-10">
+              <div
+                className="single-box box-style box-first d-grid align-items-center text-center p-5 px-xl-8 py-xl-10">
                 <div className="icon-box d-center m-auto">
-                  <HiMagnifyingGlassPlus size={28} color="#0ef0ad" />
+                  <HiMagnifyingGlassPlus size={28} color="#0ef0ad"/>
                 </div>
                 <div className="title-area">
                   <h4 className="mt-6 mb-3">Testing and Quality Assurance</h4>
@@ -269,7 +273,7 @@ const Services = () => {
                 boundaries, positions us as an ideal partner for enterprises
                 seeking to deliver a standout product. In alignment with this
                 ethos, our Platform Specifications encompass:
-                <br />
+                <br/>
                 Comprehensive gaming services designed to cover every aspect of
                 the integration process, ensuring the utmost quality in the
                 gaming experience.
@@ -278,7 +282,8 @@ const Services = () => {
           </div>
           <div className="row cus-mar">
             <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second py-5 px-4 py-sm-10 px-sm-9 d-center justify-content-between">
+              <div
+                className="single-box flex-wrap box-style box-second py-5 px-4 py-sm-10 px-sm-9 d-center justify-content-between">
                 <div className="content-box key d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
                     <svg
@@ -326,7 +331,8 @@ const Services = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second py-5 px-4 py-sm-10 px-sm-9 d-center justify-content-between">
+              <div
+                className="single-box flex-wrap box-style box-second py-5 px-4 py-sm-10 px-sm-9 d-center justify-content-between">
                 <div className="content-box key  d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
                     <svg
@@ -360,7 +366,8 @@ const Services = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second py-5 px-4 py-sm-10 px-sm-9 d-center justify-content-between">
+              <div
+                className="single-box flex-wrap box-style box-second py-5 px-4 py-sm-10 px-sm-9 d-center justify-content-between">
                 <div className="content-box key  d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
                     <svg
@@ -388,7 +395,8 @@ const Services = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="single-box flex-wrap box-style box-second py-5 px-4 py-sm-10 px-sm-9 d-center justify-content-between">
+              <div
+                className="single-box flex-wrap box-style box-second py-5 px-4 py-sm-10 px-sm-9 d-center justify-content-between">
                 <div className="content-box key  d-flex gap-4 gap-md-6">
                   <div className="icon-box d-inline-flex d-center">
                     <svg
@@ -416,8 +424,8 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <Brands />
-      <Subscribe />
+      <Brands/>
+      <Subscribe/>
     </>
   );
 };

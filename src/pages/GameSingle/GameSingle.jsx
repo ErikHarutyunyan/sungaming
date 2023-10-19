@@ -1,33 +1,26 @@
 // Styles
-import { useLocation, useParams } from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import "./GameSingle.css";
-import {
-  bubble,
-  circle,
-  ellipse7,
-  gameDetails,
-  lineImg,
-  objectImg,
-} from "../../components/Images";
+import {bubble, circle, ellipse7, gameDetails, lineImg, objectImg,} from "../../components/Images";
 
-import { IoCheckmark, IoPlay } from "react-icons/io5";
-import { Suspense, useState } from "react";
+import {IoCheckmark, IoPlay} from "react-icons/io5";
+import {Suspense, useState} from "react";
 import OnboardModal from "../../components/OnboardModal/OnboardModal";
-import { settingsGameSingle } from "../../features/SliderConfig";
+import {settingsGameSingle} from "../../features/SliderConfig";
 import SimpleSlider from "../../components/SimpleSlider";
-import { dataGames } from "../../data/dataGames";
-import { motion, MotionConfig, useMotionValue } from "framer-motion";
-import { transition } from "../../settings/gameButtonSetings";
+import {dataGames} from "../../data/dataGames";
+import {motion, MotionConfig, useMotionValue} from "framer-motion";
+import {transition} from "../../settings/gameButtonSetings";
 import useMeasure from "react-use-measure";
-import { Shapes } from "../../components/Shapes/Shapes";
+import {Shapes} from "../../components/Shapes/Shapes";
 import CounterActive from "../../components/CounterActive/CounterActive";
 import Subscribe from "../../components/Subscribe";
 import Brands from "../../components/Brands";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import LazyImage from "../../components/LazyImage";
 
 const GameSingle = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { id: title } = useParams();
+  const {id: title} = useParams();
   const location = useLocation();
   let data = location.state?.data;
   if (!data) {
@@ -37,7 +30,7 @@ const GameSingle = () => {
     data = singleGame;
   }
 
-  const [ref, bounds] = useMeasure({ scroll: false });
+  const [ref, bounds] = useMeasure({scroll: false});
   const [isHover, setIsHover] = useState(false);
   const [isPress, setIsPress] = useState(false);
   const mouseX = useMotionValue(0);
@@ -54,8 +47,8 @@ const GameSingle = () => {
           backgroundImage: `url(${circle}), url(${gameDetails}), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5))`,
         }}>
         <div className="shape-area">
-          <img src={bubble} className="shape-1" alt="icon" />
-          <img src={ellipse7} className="shape-2" alt="icon" />
+          <img src={bubble} className="shape-1" alt="icon"/>
+          <img src={ellipse7} className="shape-2" alt="icon"/>
         </div>
         <div className="container position-relative">
           <div className="banner-content row justify-content-start">
@@ -99,12 +92,13 @@ const GameSingle = () => {
               </div>
             </div>
             <div className="col-xl-5 col-lg-6 col-md-10 mt-8 mt-lg-0">
-              <div className="single-box cus-scrollbar gameSingleCart tab-content position-relative text-center p-3 p-md-10">
+              <div
+                className="single-box cus-scrollbar gameSingleCart tab-content position-relative text-center p-3 p-md-10">
                 <span className="feature-tag d-none d-sm-flex d-center categoryTag">
                   {data.category[0]}
                 </span>
                 <div className="singleGameImg">
-                  <LazyLoadImage alt={data.title} src={data.imgMain} />
+                  <LazyImage alt={data.title} src={data.imgMain}/>
                 </div>
                 <div className="main-content gameSingleContent py-4">
                   <h3 className="visible-slowly-bottom mb-4">{data.title}</h3>
@@ -115,7 +109,8 @@ const GameSingle = () => {
                   </ul>
 
                   {data.info && (
-                    <div className="review-box infoData mt-4 mt-md-8 mb-5 mb-md-8 w-100 p-2 p-sm-4 d-center gap-3 justify-content-evenly">
+                    <div
+                      className="review-box infoData mt-4 mt-md-8 mb-5 mb-md-8 w-100 p-2 p-sm-4 d-center gap-3 justify-content-evenly">
                       {data?.info?.map((item, index) => (
                         <div className="single-area" key={`${item}_${index}`}>
                           {Object.keys(item).map((key) => (
@@ -143,9 +138,9 @@ const GameSingle = () => {
                       animate={isHover ? "hover" : "rest"}
                       whileTap="press"
                       variants={{
-                        rest: { scale: 1 },
-                        hover: { scale: 1.1 },
-                        press: { scale: 1.05 },
+                        rest: {scale: 1},
+                        hover: {scale: 1.1},
+                        press: {scale: 1.05},
                       }}
                       onHoverStart={() => {
                         resetMousePosition();
@@ -165,11 +160,11 @@ const GameSingle = () => {
                       <motion.div
                         className="shapesPlay"
                         variants={{
-                          rest: { opacity: 0 },
-                          hover: { opacity: 1 },
+                          rest: {opacity: 0},
+                          hover: {opacity: 1},
                         }}>
-                        <div className="pink blush" />
-                        <div className="blue blush" />
+                        <div className="pink blush"/>
+                        <div className="blue blush"/>
                         <div className="containerr">
                           <Suspense fallback={null}>
                             <Shapes
@@ -183,8 +178,8 @@ const GameSingle = () => {
                       </motion.div>
                       <motion.div
                         variants={{
-                          hover: { scale: 1.1 },
-                          press: { scale: 0.85 },
+                          hover: {scale: 1.1},
+                          press: {scale: 0.85},
                         }}
                         className="labelPlay">
                         Play Demo
@@ -200,8 +195,8 @@ const GameSingle = () => {
       {data.video ? (
         <section className="our-focus bg-transparent game-trailers position-relative overflow-hidden pt-120 pb-10">
           <div className="shape-area">
-            <img src={lineImg} className="shape-1" alt="icon" />
-            <img src={objectImg} className="shape-2" alt="icon" />
+            <img src={lineImg} className="shape-1" alt="icon"/>
+            <img src={objectImg} className="shape-2" alt="icon"/>
           </div>
           <div className="container">
             <div className="row justify-content-center">
@@ -228,47 +223,47 @@ const GameSingle = () => {
                   <div className="circle-text video position-absolute">
                     <div className="text">
                       <p>
-                        <span style={{ transform: "rotate(0deg)" }}>W</span>
-                        <span style={{ transform: "rotate(10deg)" }}>a</span>
-                        <span style={{ transform: "rotate(20deg" }}>t</span>
-                        <span style={{ transform: "rotate(30deg" }}>c</span>
-                        <span style={{ transform: "rotate(40deg" }}>h</span>
-                        <span style={{ transform: "rotate(50deg" }}> </span>
-                        <span style={{ transform: "rotate(60deg" }}>t</span>
-                        <span style={{ transform: "rotate(70deg" }}>h</span>
-                        <span style={{ transform: "rotate(80deg" }}>e</span>
-                        <span style={{ transform: "rotate(90deg" }}> </span>
-                        <span style={{ transform: "rotate(100deg" }}>v</span>
-                        <span style={{ transform: "rotate(110deg" }}>i</span>
-                        <span style={{ transform: "rotate(120deg" }}>d</span>
-                        <span style={{ transform: "rotate(130deg" }}>e</span>
-                        <span style={{ transform: "rotate(140deg" }}>o</span>
-                        <span style={{ transform: "rotate(150deg" }}> </span>
-                        <span style={{ transform: "rotate(160deg" }}>*</span>
-                        <span style={{ transform: "rotate(170deg" }}> </span>
-                        <span style={{ transform: "rotate(180deg" }}>W</span>
-                        <span style={{ transform: "rotate(190deg" }}>a</span>
-                        <span style={{ transform: "rotate(200deg" }}>t</span>
-                        <span style={{ transform: "rotate(210deg" }}>c</span>
-                        <span style={{ transform: "rotate(220deg" }}>h</span>
-                        <span style={{ transform: "rotate(230deg" }}> </span>
-                        <span style={{ transform: "rotate(240deg" }}>t</span>
-                        <span style={{ transform: "rotate(250deg" }}>h</span>
-                        <span style={{ transform: "rotate(260deg" }}>e</span>
-                        <span style={{ transform: "rotate(270deg" }}> </span>
-                        <span style={{ transform: "rotate(280deg" }}>v</span>
-                        <span style={{ transform: "rotate(290deg" }}>i</span>
-                        <span style={{ transform: "rotate(300deg" }}>d</span>
-                        <span style={{ transform: "rotate(310deg" }}>e</span>
-                        <span style={{ transform: "rotate(320deg" }}>o</span>
-                        <span style={{ transform: "rotate(330deg" }}> </span>
-                        <span style={{ transform: "rotate(340deg" }}>*</span>
+                        <span style={{transform: "rotate(0deg)"}}>W</span>
+                        <span style={{transform: "rotate(10deg)"}}>a</span>
+                        <span style={{transform: "rotate(20deg"}}>t</span>
+                        <span style={{transform: "rotate(30deg"}}>c</span>
+                        <span style={{transform: "rotate(40deg"}}>h</span>
+                        <span style={{transform: "rotate(50deg"}}> </span>
+                        <span style={{transform: "rotate(60deg"}}>t</span>
+                        <span style={{transform: "rotate(70deg"}}>h</span>
+                        <span style={{transform: "rotate(80deg"}}>e</span>
+                        <span style={{transform: "rotate(90deg"}}> </span>
+                        <span style={{transform: "rotate(100deg"}}>v</span>
+                        <span style={{transform: "rotate(110deg"}}>i</span>
+                        <span style={{transform: "rotate(120deg"}}>d</span>
+                        <span style={{transform: "rotate(130deg"}}>e</span>
+                        <span style={{transform: "rotate(140deg"}}>o</span>
+                        <span style={{transform: "rotate(150deg"}}> </span>
+                        <span style={{transform: "rotate(160deg"}}>*</span>
+                        <span style={{transform: "rotate(170deg"}}> </span>
+                        <span style={{transform: "rotate(180deg"}}>W</span>
+                        <span style={{transform: "rotate(190deg"}}>a</span>
+                        <span style={{transform: "rotate(200deg"}}>t</span>
+                        <span style={{transform: "rotate(210deg"}}>c</span>
+                        <span style={{transform: "rotate(220deg"}}>h</span>
+                        <span style={{transform: "rotate(230deg"}}> </span>
+                        <span style={{transform: "rotate(240deg"}}>t</span>
+                        <span style={{transform: "rotate(250deg"}}>h</span>
+                        <span style={{transform: "rotate(260deg"}}>e</span>
+                        <span style={{transform: "rotate(270deg"}}> </span>
+                        <span style={{transform: "rotate(280deg"}}>v</span>
+                        <span style={{transform: "rotate(290deg"}}>i</span>
+                        <span style={{transform: "rotate(300deg"}}>d</span>
+                        <span style={{transform: "rotate(310deg"}}>e</span>
+                        <span style={{transform: "rotate(320deg"}}>o</span>
+                        <span style={{transform: "rotate(330deg"}}> </span>
+                        <span style={{transform: "rotate(340deg"}}>*</span>
                       </p>
                     </div>
                     <button
                       onClick={() => setIsOpen(true)}
                       className="box-style btn-box-second heading-five fs-five mfp-iframe popupvideo text-uppercase d-center position-absolute">
-                      <IoPlay size={40} color="#0ef0ad" />
+                      <IoPlay size={40} color="#0ef0ad"/>
                     </button>
                     <OnboardModal
                       video={data.video}
@@ -282,7 +277,7 @@ const GameSingle = () => {
           </div>
         </section>
       ) : null}
-      <CounterActive className={`bg-800`} />
+      <CounterActive className={`bg-800`}/>
       <section className="gaming-character ongoing-values bg-transparent gallery pt-20 pb-120">
         <div className="container">
           <div className="row section-text justify-content-center">
@@ -304,7 +299,7 @@ const GameSingle = () => {
                         key={`img_${index}`}
                         className="slide-area slick-slide slick-cloned">
                         <div className="single-slider">
-                          <LazyLoadImage alt={"gallery"} src={imgMore} />
+                          <LazyImage alt={"gallery"} src={imgMore}/>
                         </div>
                       </div>
                     );
@@ -315,8 +310,8 @@ const GameSingle = () => {
           </div>
         </div>
       </section>
-      <Brands />
-      <Subscribe />
+      <Brands/>
+      <Subscribe/>
     </>
   );
 };

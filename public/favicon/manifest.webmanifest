@@ -17,13 +17,13 @@
       "type": "image/png"
     },
     {
-      "src": "sungaming192.png",
+      "src": "sungamingBg192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "sungamin512.png",
+      "src": "sungamingBg512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

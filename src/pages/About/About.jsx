@@ -2,38 +2,32 @@
 import "./About.css";
 import BannerPages from "../../components/BannerPages/BannerPages.jsx";
 
-import {
-  IoAccessibilityOutline,
-  IoDiamondOutline,
-  IoShareSocialOutline,
-} from "react-icons/io5";
+import {IoAccessibilityOutline, IoDiamondOutline, IoShareSocialOutline,} from "react-icons/io5";
 
-import { MdOutlineDiversity1, MdOutlineGames } from "react-icons/md";
-import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { LuLayoutPanelLeft } from "react-icons/lu";
-import { useEffect, useRef } from "react";
-
-import { useState } from "react";
+import {MdOutlineDiversity1, MdOutlineGames} from "react-icons/md";
+import {AiOutlineSafetyCertificate} from "react-icons/ai";
+import {LuLayoutPanelLeft} from "react-icons/lu";
+import {useEffect, useRef, useState} from "react";
 import {
+  ab,
+  aboutBanner,
+  aboutNftImg1,
+  aboutNftImg2,
+  cricleNft,
+  services_img01,
+  services_img02,
+  services_img03,
+  services_img04,
   team2,
   team3,
   team4,
   team5,
-  services_img04,
-  services_img02,
-  services_img03,
-  services_img01,
-  aboutBanner,
-  ab,
-  aboutNftImg1,
-  aboutNftImg2,
-  cricleNft,
 } from "../../components/Images";
 
 import Subscribe from "../../components/Subscribe";
 import Brands from "../../components/Brands";
 import AboutValues from "../../components/AboutValues/AboutValues";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import LazyImage from "../../components/LazyImage";
 
 const About = () => {
   const serviceImgs = useRef(null);
@@ -90,7 +84,7 @@ const About = () => {
         }
         rightImg={ab}
       />
-      <AboutValues />
+      <AboutValues/>
       <section className="our-vision">
         <div className="container">
           <div className="row justify-content-center">
@@ -110,7 +104,7 @@ const About = () => {
             <div className="col-lg-4 col-md-6">
               <div className="single-vision">
                 <div className="icon one">
-                  <IoDiamondOutline size={35} color="white" />
+                  <IoDiamondOutline size={35} color="white"/>
                 </div>
                 <div className="content">
                   <h4 className="title">Uniqueness</h4>
@@ -123,7 +117,7 @@ const About = () => {
             <div className="col-lg-4 col-md-6">
               <div className="single-vision">
                 <div className="icon two">
-                  <MdOutlineDiversity1 size={35} color="white" />
+                  <MdOutlineDiversity1 size={35} color="white"/>
                 </div>
                 <div className="content">
                   <h4 className="title">Diversity</h4>
@@ -136,7 +130,7 @@ const About = () => {
             <div className="col-lg-4 col-md-6">
               <div className="single-vision">
                 <div className="icon three">
-                  <IoAccessibilityOutline size={35} color="white" />
+                  <IoAccessibilityOutline size={35} color="white"/>
                 </div>
                 <div className="content">
                   <h4 className="title">Accessibility</h4>
@@ -186,14 +180,14 @@ const About = () => {
             </div>
             <div className="col-xl-8">
               <div className="about__three-images">
-                <LazyLoadImage
+                <LazyImage
                   src={aboutNftImg1}
                   alt="aboutNftImg1"
                   width="363"
                   height="487"
                   className="left"
                 />
-                <LazyLoadImage
+                <LazyImage
                   src={aboutNftImg2}
                   alt="aboutNftImg2"
                   width="519"
@@ -268,7 +262,7 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <LazyLoadImage
+                    <LazyImage
                       alt={"killer master"}
                       width="224"
                       src={team5}
@@ -287,7 +281,7 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <LazyLoadImage
+                    <LazyImage
                       alt={"code expert"}
                       width="224"
                       src={team2}
@@ -306,7 +300,7 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <LazyLoadImage alt={"Diamond"} width="224" src={team3} />
+                    <LazyImage alt={"Diamond"} width="224" src={team3}/>
                   </a>
                 </div>
                 <div className="team__content">
@@ -321,7 +315,7 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <LazyLoadImage alt={"Coin"} width="224" src={team4} />
+                    <LazyImage alt={"Coin"} width="224" src={team4}/>
                   </a>
                 </div>
                 <div className="team__content">
@@ -364,7 +358,7 @@ const About = () => {
               <div className="services__wrapper">
                 <div className="services__item">
                   <div className="services__icon">
-                    <IoShareSocialOutline size={45} color="#0ef0ad" />
+                    <IoShareSocialOutline size={45} color="#0ef0ad"/>
                   </div>
                   <div className="services__content">
                     <h4 className="title">
@@ -378,7 +372,7 @@ const About = () => {
                 </div>
                 <div className="services__item">
                   <div className="services__icon">
-                    <MdOutlineGames size={45} color="#0ef0ad" />
+                    <MdOutlineGames size={45} color="#0ef0ad"/>
                   </div>
                   <div className="services__content">
                     <h4 className="title">
@@ -392,7 +386,7 @@ const About = () => {
                 </div>
                 <div className="services__item">
                   <div className="services__icon">
-                    <AiOutlineSafetyCertificate size={45} color="#0ef0ad" />
+                    <AiOutlineSafetyCertificate size={45} color="#0ef0ad"/>
                   </div>
                   <div className="services__content">
                     <h4 className="title">
@@ -406,7 +400,7 @@ const About = () => {
                 </div>
                 <div className="services__item">
                   <div className="services__icon">
-                    <LuLayoutPanelLeft size={45} color="#0ef0ad" />
+                    <LuLayoutPanelLeft size={45} color="#0ef0ad"/>
                   </div>
                   <div className="services__content">
                     <h4 className="title">
@@ -423,24 +417,24 @@ const About = () => {
             <div className="col-lg-6">
               <div className="services__images" ref={serviceImgs}>
                 <div className="services__images-item active">
-                  <LazyLoadImage alt={"services_img04"} src={services_img04} />
+                  <LazyImage alt={"services_img04"} src={services_img04}/>
                 </div>
                 <div className="services__images-item ">
-                  <LazyLoadImage alt={"services_img02"} src={services_img02} />
+                  <LazyImage alt={"services_img02"} src={services_img02}/>
                 </div>
                 <div className="services__images-item ">
-                  <LazyLoadImage alt={"services_img03"} src={services_img03} />
+                  <LazyImage alt={"services_img03"} src={services_img03}/>
                 </div>
                 <div className="services__images-item ">
-                  <LazyLoadImage alt={"services_img01"} src={services_img01} />
+                  <LazyImage alt={"services_img01"} src={services_img01}/>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <Brands />
-      <Subscribe />
+      <Brands/>
+      <Subscribe/>
     </>
   );
 };

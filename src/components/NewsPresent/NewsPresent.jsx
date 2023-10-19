@@ -1,10 +1,10 @@
-import { MdOutlineNorthEast } from "react-icons/md";
+import {MdOutlineNorthEast} from "react-icons/md";
 import "./NewsPresent.css";
 import SimpleSlider from "../SimpleSlider";
-import { settingsBlog } from "../../features/SliderConfig";
-import { dataNews } from "../../data/dataNews";
-import { ellipse7, ellipse8 } from "../Images";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import {settingsBlog} from "../../features/SliderConfig";
+import {dataNews} from "../../data/dataNews";
+import {ellipse7, ellipse8} from "../Images";
+import LazyImage from "../LazyImage";
 
 const NewsPresent = () => {
   return (
@@ -46,7 +46,7 @@ const NewsPresent = () => {
         <div className="row cus-mar present-wrap">
           <SimpleSlider setting={settingsBlog}>
             {dataNews?.slice(1, 5).map((newsItem) => {
-              const { id, title, data, imgMain } = newsItem;
+              const {id, title, data, imgMain} = newsItem;
               return (
                 <div
                   key={id}
@@ -55,7 +55,7 @@ const NewsPresent = () => {
                   <div className="single-box">
                     <div className="position-relative d-grid align-items-center">
                       <div className="img-box">
-                        <LazyLoadImage
+                        <LazyImage
                           alt={title}
                           width="636"
                           height="400"
@@ -74,7 +74,7 @@ const NewsPresent = () => {
                           <a
                             className="end-area mt-8 d-center"
                             href="/blog-single">
-                            <MdOutlineNorthEast />
+                            <MdOutlineNorthEast/>
                           </a>
                         </div>
                       </div>
