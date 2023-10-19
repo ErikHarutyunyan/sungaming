@@ -190,7 +190,7 @@ const GamesThumb = () => {
                         <div className="single-box">
                           <div className="img-area">
                             <LazyImage
-                              alt="img"
+                              alt={title}
                               loading="lazy"
                               src={imgMain}
                               wrapperClassName="img-area"
@@ -198,12 +198,13 @@ const GamesThumb = () => {
                           </div>
                           <div className="footer-area mb-5 text-center">
                             <div className="logo-area logoGame">
-                              <img
-                                alt="img"
+                              <LazyImage
+                                alt={title}
                                 loading="lazy"
                                 width="80"
                                 height="80"
                                 src={imgSmall}
+                                wrapperClassName="img-area"
                               />
                             </div>
                             <h3 className="visible-slowly-bottom my-3">
