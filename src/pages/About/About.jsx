@@ -84,7 +84,7 @@ const About = () => {
         }
         rightImg={ab}
       />
-      <AboutValues/>
+      <AboutValues />
       <section className="our-vision">
         <div className="container">
           <div className="row justify-content-center">
@@ -104,7 +104,7 @@ const About = () => {
             <div className="col-lg-4 col-md-6">
               <div className="single-vision">
                 <div className="icon one">
-                  <IoDiamondOutline size={35} color="white"/>
+                  <IoDiamondOutline size={35} color="white" />
                 </div>
                 <div className="content">
                   <h4 className="title">Uniqueness</h4>
@@ -117,7 +117,7 @@ const About = () => {
             <div className="col-lg-4 col-md-6">
               <div className="single-vision">
                 <div className="icon two">
-                  <MdOutlineDiversity1 size={35} color="white"/>
+                  <MdOutlineDiversity1 size={35} color="white" />
                 </div>
                 <div className="content">
                   <h4 className="title">Diversity</h4>
@@ -130,7 +130,7 @@ const About = () => {
             <div className="col-lg-4 col-md-6">
               <div className="single-vision">
                 <div className="icon three">
-                  <IoAccessibilityOutline size={35} color="white"/>
+                  <IoAccessibilityOutline size={35} color="white" />
                 </div>
                 <div className="content">
                   <h4 className="title">Accessibility</h4>
@@ -262,11 +262,7 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <LazyImage
-                      alt={"killer master"}
-                      width="224"
-                      src={team5}
-                    />
+                    <LazyImage alt={"killer master"} width="224" src={team5} />
                   </a>
                 </div>
                 <div className="team__content">
@@ -281,11 +277,7 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <LazyImage
-                      alt={"code expert"}
-                      width="224"
-                      src={team2}
-                    />
+                    <LazyImage alt={"code expert"} width="224" src={team2} />
                   </a>
                 </div>
                 <div className="team__content">
@@ -300,7 +292,7 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <LazyImage alt={"Diamond"} width="224" src={team3}/>
+                    <LazyImage alt={"Diamond"} width="224" src={team3} />
                   </a>
                 </div>
                 <div className="team__content">
@@ -315,7 +307,7 @@ const About = () => {
               <div className="team__item">
                 <div className="team__thumb">
                   <a href="/team-details">
-                    <LazyImage alt={"Coin"} width="224" src={team4}/>
+                    <LazyImage alt={"Coin"} width="224" src={team4} />
                   </a>
                 </div>
                 <div className="team__content">
@@ -358,7 +350,7 @@ const About = () => {
               <div className="services__wrapper">
                 <div className="services__item">
                   <div className="services__icon">
-                    <IoShareSocialOutline size={45} color="#0ef0ad"/>
+                    <IoShareSocialOutline size={45} color="#0ef0ad" />
                   </div>
                   <div className="services__content">
                     <h4 className="title">
@@ -372,7 +364,7 @@ const About = () => {
                 </div>
                 <div className="services__item">
                   <div className="services__icon">
-                    <MdOutlineGames size={45} color="#0ef0ad"/>
+                    <MdOutlineGames size={45} color="#0ef0ad" />
                   </div>
                   <div className="services__content">
                     <h4 className="title">
@@ -386,7 +378,7 @@ const About = () => {
                 </div>
                 <div className="services__item">
                   <div className="services__icon">
-                    <AiOutlineSafetyCertificate size={45} color="#0ef0ad"/>
+                    <AiOutlineSafetyCertificate size={45} color="#0ef0ad" />
                   </div>
                   <div className="services__content">
                     <h4 className="title">
@@ -400,7 +392,7 @@ const About = () => {
                 </div>
                 <div className="services__item">
                   <div className="services__icon">
-                    <LuLayoutPanelLeft size={45} color="#0ef0ad"/>
+                    <LuLayoutPanelLeft size={45} color="#0ef0ad" />
                   </div>
                   <div className="services__content">
                     <h4 className="title">
@@ -417,24 +409,24 @@ const About = () => {
             <div className="col-lg-6">
               <div className="services__images" ref={serviceImgs}>
                 <div className="services__images-item active">
-                  <LazyImage alt={"services_img04"} src={services_img04}/>
+                  <LazyImage alt={"services_img04"} src={services_img04} />
                 </div>
                 <div className="services__images-item ">
-                  <LazyImage alt={"services_img02"} src={services_img02}/>
+                  <LazyImage alt={"services_img02"} src={services_img02} />
                 </div>
                 <div className="services__images-item ">
-                  <LazyImage alt={"services_img03"} src={services_img03}/>
+                  <LazyImage alt={"services_img03"} src={services_img03} />
                 </div>
                 <div className="services__images-item ">
-                  <LazyImage alt={"services_img01"} src={services_img01}/>
+                  <LazyImage alt={"services_img01"} src={services_img01} />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <Brands/>
-      <Subscribe/>
+      <Brands />
+      <Subscribe />
     </>
   );
 };

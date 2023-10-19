@@ -42343,9 +42343,13 @@ li {
 
 .our-games .thumb-img {
   margin-bottom: -70px;
-  transition: all 0.8s;
+  transition: all 0.8s !important;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+}
+
+.our-games .default-img {
+  height: 100%;;
 }
 
 .our-games .shape-area img {

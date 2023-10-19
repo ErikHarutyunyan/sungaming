@@ -12,6 +12,9 @@
   backface-visibility: hidden;
   perspective: 1000px;
 }
+.about__three-images .default-img img{
+  width: 100%;
+}
 
 .breadcrumb__img img {
   max-height: 412px;

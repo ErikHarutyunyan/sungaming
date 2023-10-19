@@ -38,12 +38,16 @@
   cursor: pointer;
 }
 
+.newsImg-a .default-img {
+  height: 100%;
+}
+
 .newsImg-a img {
   max-height: 23.4rem;
   -o-object-fit: cover;
   object-fit: cover;
   display: block;
-  transition: transform 0.34s ease-in-out;
+  transition: transform 0.34s ease-in-out !important;
 }
 
 .newsImg-a img:hover {

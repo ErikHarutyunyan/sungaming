@@ -22,7 +22,7 @@ import CounterActive from "../../components/CounterActive/CounterActive.jsx";
 import BannerPages from "../../components/BannerPages/BannerPages.jsx";
 import { bannerGameCut, gameShape1, gameShape2 } from "../../components/Images";
 import { IconResponse } from "../../components/Icons/Icons";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import LazyImage from "../../components/LazyImage";
 
 const gamesPerRow = 4;
 
@@ -82,7 +82,6 @@ const Games = () => {
           <img src={bannerGameCut} alt="bannerGame" />
         </div>
       </BannerPages>
-
       <section className="our-game-features pt-120 pb-120 game-utils">
         <div className="container">
           <div className="row justify-content-center">
@@ -178,15 +177,15 @@ const Games = () => {
       </section>
       <section className="our-games overflow-hidden index-two position-relative pt-120 pb-120">
         <div className="shape-area">
-          <img
-            src={gameShape1}
+          <LazyImage
             alt="gameShape1"
             className="shape-1 gameShape gameShape1"
+            src={gameShape1}
           />
-          <img
-            src={gameShape2}
+          <LazyImage
             alt="gameShape1"
             className="shape-3 gameShape gameShape1"
+            src={gameShape2}
           />
         </div>
         <div className="container singletab position-relative cus-z1">
@@ -301,11 +300,16 @@ const Games = () => {
                           className={` game-section-block`}>
                           <div className="single-box">
                             <div className="position-relative d-center head">
-                              <LazyLoadImage
+                              <LazyImage
                                 alt={title}
                                 src={imgMain}
                                 className="w-100 thumb-img"
                               />
+                              {/* <img
+                                alt={title}
+                                src={imgMain}
+                                className="w-100 thumb-img"
+                              /> */}
                               <h3 className="gameTitle">{title}</h3>
                             </div>
                             <div className="link-item py-3">

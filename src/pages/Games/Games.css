@@ -3,7 +3,7 @@
   --pink: #09926a;
   --blue: #222434;
 }
-.loading .gamesBtn {
+.loading .gamesBtn button{
   color: var(--pink);
 }
 .our-games .game-section-block:hover .buttonPlay {
