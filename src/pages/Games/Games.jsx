@@ -393,7 +393,7 @@ const Games = () => {
                   {next < menuItems?.length && (
                     <div className="text-center mt-10 mt-sm-15">
                       <div
-                        className="loading py-3 px-8 d-inline-flex align-items-center gap-2"
+                        className="loading gamesBtn py-3 px-8 d-inline-flex align-items-center gap-2"
                         onClick={handleMoreGames}>
                         <div className="icon-box d-center">
                           <button className="">Load more</button>

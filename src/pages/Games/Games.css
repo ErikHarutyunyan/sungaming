@@ -3,7 +3,9 @@
   --pink: #09926a;
   --blue: #222434;
 }
-
+.loading .gamesBtn {
+  color: var(--pink);
+}
 .our-games .game-section-block:hover .buttonPlay {
   opacity: 1;
   transition: opacity 0.5s ease;
