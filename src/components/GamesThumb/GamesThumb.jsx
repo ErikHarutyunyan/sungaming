@@ -201,8 +201,8 @@ const GamesThumb = () => {
                               <LazyImage
                                 alt={title}
                                 loading="lazy"
-                                width="80"
-                                height="80"
+                                width="80px"
+                                height="80px"
                                 src={imgSmall}
                                 wrapperClassName="img-area"
                               />
