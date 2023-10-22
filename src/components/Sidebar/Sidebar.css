@@ -21,18 +21,18 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
-  row-gap: 40px;
+  /* row-gap: 40px; */
 }
-img.logoSidebar {
+/* img.logoSidebar {
   max-width: 170px;
   width: 100%;
   height: auto;
   position: absolute;
   top: 20px;
   left: 50px;
-}
+} */
 .sidebar_wrapper ul {
-  gap: 20px;
+  gap: 30px;
 }
 
 .sidebar_wrapper a {
@@ -97,11 +97,11 @@ img.logoSidebar {
   .sidebar_aside {
     width: 100%;
   }
-  .sidebar_wrapper {
+  /* .sidebar_wrapper {
     row-gap: 20px;
   }
   .sidebar_wrapper ul li a {
     font-size: 28px;
     line-height: 34.4px;
-  }
+  } */
 }

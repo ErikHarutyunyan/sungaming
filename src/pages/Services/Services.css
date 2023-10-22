@@ -43,6 +43,7 @@
   }
   .services-solution .single-box {
     height: 100%;
+    overflow: hidden;
   }
   .services-solution .col-sm-6 {
     max-height: 240px;
