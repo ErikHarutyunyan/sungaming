@@ -11,6 +11,8 @@ import {
   CAREERS,
 } from "../../router/route-path";
 
+import logoSidebar from "../../assets/img/sungamin512.png";
+
 const Sidebar = ({ sideBar = false, showHideSidebar = () => {} }) => {
   return (
     <>
@@ -28,7 +30,12 @@ const Sidebar = ({ sideBar = false, showHideSidebar = () => {} }) => {
             transition={{ type: "spring", bounce: 0, duration: 0.8 }}
             className={"sidebar_aside"}>
             <div className={"sidebar_wrapper"}>
-              {" "}
+              <img
+                src={logoSidebar}
+                className="logoSidebar"
+                alt="logoSidebar"
+                fetchPriority="high"
+              />
               <ul className="navbar-nav gap-4 py-4 py-lg-0 align-self-center ">
                 <motion.li
                   onClick={showHideSidebar}

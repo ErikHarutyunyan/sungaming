@@ -1,10 +1,12 @@
-import {MdOutlineNorthEast} from "react-icons/md";
+import { MdOutlineNorthEast } from "react-icons/md";
 import SimpleSlider from "../SimpleSlider";
-import {settingsBlog} from "../../features/SliderConfig";
-import {dataNews} from "../../data/dataNews";
-import {ellipse7, ellipse8} from "../Images";
+import { settingsBlog } from "../../features/SliderConfig";
+import { dataNews } from "../../data/dataNews";
+import { ellipse7, ellipse8 } from "../Images";
 import LazyImage from "../LazyImage";
 import "./NewsPresent.css";
+import { NEWS } from "../../router/route-path";
+import { Link } from "react-router-dom";
 const NewsPresent = () => {
   return (
     <section className=" about-block  recently-completed blogs gaming-character">
@@ -45,7 +47,7 @@ const NewsPresent = () => {
         <div className="row cus-mar present-wrap">
           <SimpleSlider setting={settingsBlog}>
             {dataNews?.slice(1, 5).map((newsItem) => {
-              const {id, title, data, imgMain} = newsItem;
+              const { id, title, data, imgMain, path } = newsItem;
               return (
                 <div
                   key={id}
@@ -54,12 +56,14 @@ const NewsPresent = () => {
                   <div className="single-box">
                     <div className="position-relative d-grid align-items-center">
                       <div className="img-box">
-                        <LazyImage
-                          alt={title}
-                          width="636"
-                          height="400"
-                          src={imgMain}
-                        />
+                        <Link to={`${NEWS}/${path}`} state={{ data: newsItem }}>
+                          <LazyImage
+                            alt={title}
+                            width="636"
+                            height="400"
+                            src={imgMain}
+                          />
+                        </Link>
                       </div>
                       <div className="position-absolute cus-position bottom-0 start-0">
                         <div className="content-box p-3 p-sm-6">
@@ -67,13 +71,16 @@ const NewsPresent = () => {
                             <h5>News</h5>
                             <span>{data}</span>
                           </div>
-                          <a href="/blog-single">
+                          <Link
+                            to={`${NEWS}/${path}`}
+                            state={{ data: newsItem }}>
                             <h4 className="mt-3">{title}</h4>
-                          </a>
+                          </Link>
+
                           <a
                             className="end-area mt-8 d-center"
                             href="/blog-single">
-                            <MdOutlineNorthEast/>
+                            <MdOutlineNorthEast />
                           </a>
                         </div>
                       </div>
