@@ -28,7 +28,8 @@
 
 .close {
   position: absolute;
-  top: 20px;
+  top: 10px;
+  z-index: 999;
 }
 
 @media (max-width: 800px) {

@@ -29,7 +29,7 @@ const OVERLAY_STYLES = {
 const DefaultModal = ({ children, onClose }) => {
   return (
     <>
-      <div style={OVERLAY_STYLES} />
+      <div style={OVERLAY_STYLES} onClick={onClose} />
       <div style={MODAL_STYLES}>
         <button
           onClick={onClose}
@@ -62,7 +62,7 @@ const OnboardModal = ({
     } else if (video) {
       return (
         <>
-          <div style={OVERLAY_STYLES} />
+          <div style={OVERLAY_STYLES} onClick={onClose} />
           <VideoModal videoPath={video} onClose={onClose} />
         </>
       );
