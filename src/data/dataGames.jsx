@@ -131,6 +131,8 @@ import {
 import { v4 as uuidv4 } from "uuid";
 import { IconsCasino, IconsSlot, IconsTable } from "../components/Icons";
 
+import njVideo from "../assets/video/njVideo.mp4"
+
 export const dataGames = [
   {
     id: uuidv4(),
@@ -172,7 +174,7 @@ NinjaGambit promises an immersive gameplay experience. Challenge other players, 
     ],
     platforms: ["PC", "iOS", "Android"],
     featured: true,
-    video: "../assets/video/njVideo.mp4",
+    video: njVideo,
   },
   {
     id: uuidv4(),

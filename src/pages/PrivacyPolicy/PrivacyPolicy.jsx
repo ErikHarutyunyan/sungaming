@@ -1,10 +1,21 @@
 // Styles
 import BannerPages from "../../components/BannerPages/BannerPages";
 import { privacyBanner } from "../../components/Images";
-
+import { useForm } from "react-hook-form";
 import "./PrivacyPolicy.css";
 
 const PrivacyPolicy = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    mode: "onChange",
+  });
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
   return (
     <>
       <BannerPages
@@ -22,8 +33,8 @@ const PrivacyPolicy = () => {
               <div className="col-lg-10">
                 <div className="top-wrapper">
                   <h4>
-                    We&apos;re always looking for new ways to provide privacy for our
-                    customers.
+                    We&apos;re always looking for new ways to provide privacy
+                    for our customers.
                   </h4>
                   <p>
                     At sungamecasino, accessible from
@@ -47,9 +58,9 @@ const PrivacyPolicy = () => {
                       Third-party ad servers or ad networks uses technologies
                       like cookies, JavaScript, or Web Beacons that are used in
                       their respective advertisements and links that appear on
-                      sungamecasino, which are sent directly to users&apos; browser.
-                      They automatically receive your IP address when this
-                      occurs. These technologies are used to measure the
+                      sungamecasino, which are sent directly to users&apos;
+                      browser. They automatically receive your IP address when
+                      this occurs. These technologies are used to measure the
                       effectiveness of their advertising campaigns and/or to
                       personalize the advertising content that you see on
                       websites that you visit. Note that sungamecasino has no
@@ -60,16 +71,16 @@ const PrivacyPolicy = () => {
                   <div className="safe-data">
                     <h4>Third Party Privacy Policies</h4>
                     <p>
-                      sungamecasino&apos;s Privacy Policy does not apply to other
-                      advertisers or websites. Thus, we are advising you to
-                      consult the respective Privacy Policies of these
+                      sungamecasino&apos;s Privacy Policy does not apply to
+                      other advertisers or websites. Thus, we are advising you
+                      to consult the respective Privacy Policies of these
                       third-party ad servers for more detailed information. It
                       may include their practices and instructions about how to
                       opt-out of certain options. You can choose to disable
                       cookies through your individual browser options. To know
                       more detailed information about cookie management with
-                      specific web browsers, it can be found at the browsers&apos;
-                      respective websites. What Are Cookies?
+                      specific web browsers, it can be found at the
+                      browsers&apos; respective websites. What Are Cookies?
                     </p>
                   </div>
                   <div className="cookies">
@@ -85,8 +96,8 @@ const PrivacyPolicy = () => {
                       clicks. These are not linked to any information that is
                       personally identifiable. The purpose of the information is
                       for analyzing trends, administering the site, tracking
-                      users&apos; movement on the website, and gathering demographic
-                      information.
+                      users&apos; movement on the website, and gathering
+                      demographic information.
                     </p>
                   </div>
                   <div className="safe-data">
@@ -144,10 +155,9 @@ const PrivacyPolicy = () => {
                   concerns.We will try our best to provide optimized solutions.
                 </p>
               </div>
-          
             </div>
             <div className="col-lg-5 me-20  mt-lg-0">
-              <form action="#" className="p-4">
+              <form netlify className="p-4" onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-inside p-4">
                   <div className="row">
                     <div className="col-sm-12">
@@ -158,6 +168,10 @@ const PrivacyPolicy = () => {
                           id="conname"
                           placeholder="Enter Your Name"
                           autoComplete="off"
+                          {...register("Name", {
+                            required: true,
+                            pattern: /^[A-Za-z\s\-']{2,50}$/,
+                          })}
                         />
                       </div>
                     </div>
@@ -169,6 +183,10 @@ const PrivacyPolicy = () => {
                           id="conemail"
                           placeholder="Enter your email"
                           autoComplete="off"
+                          {...register("Email", {
+                            required: true,
+                            pattern: /^\S+@\S+$/i,
+                          })}
                         />
                       </div>
                     </div>
@@ -180,6 +198,10 @@ const PrivacyPolicy = () => {
                           id="consubject"
                           placeholder="Enter Subject"
                           autoComplete="off"
+                          {...register("Subject", {
+                            required: true,
+                            pattern: /^[A-Za-z\s\-']{2,50}$/,
+                          })}
                         />
                       </div>
                     </div>
@@ -190,6 +212,10 @@ const PrivacyPolicy = () => {
                           cols="4"
                           rows="4"
                           id="conmessage"
+                          {...register("Message", {
+                            required: true,
+                            pattern: /^[A-Za-z\s\-']{2,50}$/,
+                          })}
                           placeholder="Please type your Message here..."></textarea>
                       </div>
                     </div>
