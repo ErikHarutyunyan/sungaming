@@ -64,7 +64,6 @@ const Games = () => {
     });
     setMenuItems(newItems);
   };
-
   // eslint-disable-next-line no-unused-vars
   const [toggled, toggle] = useReducer((state) => !state, true);
 

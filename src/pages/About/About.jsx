@@ -1,13 +1,19 @@
-// Styles
+import  { useEffect, useRef, useState } from "react";
 import "./About.css";
 import BannerPages from "../../components/BannerPages/BannerPages.jsx";
+import Subscribe from "../../components/Subscribe";
+import Brands from "../../components/Brands";
+import AboutValues from "../../components/AboutValues/AboutValues";
+import LazyImage from "../../components/LazyImage";
 
-import {IoAccessibilityOutline, IoDiamondOutline, IoShareSocialOutline,} from "react-icons/io5";
-
-import {MdOutlineDiversity1, MdOutlineGames} from "react-icons/md";
-import {AiOutlineSafetyCertificate} from "react-icons/ai";
-import {LuLayoutPanelLeft} from "react-icons/lu";
-import {useEffect, useRef, useState} from "react";
+import {
+  IoAccessibilityOutline,
+  IoDiamondOutline,
+  IoShareSocialOutline,
+} from "react-icons/io5";
+import { MdOutlineDiversity1, MdOutlineGames } from "react-icons/md";
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import { LuLayoutPanelLeft } from "react-icons/lu";
 import {
   ab,
   aboutBanner,
@@ -24,21 +30,12 @@ import {
   team5,
 } from "../../components/Images";
 
-import Subscribe from "../../components/Subscribe";
-import Brands from "../../components/Brands";
-import AboutValues from "../../components/AboutValues/AboutValues";
-import LazyImage from "../../components/LazyImage";
-
 const About = () => {
   const serviceImgs = useRef(null);
-
-  // State to keep track of the active slide
   const [activeSlide, setActiveSlide] = useState(0);
 
-  // Function to add the active class to the current slide
   const updateActiveSlide = () => {
     if (serviceImgs.current) {
-      // Remove active class from all child elements
       serviceImgs.current.childNodes.forEach((child, index) => {
         if (child.classList.contains("active")) {
           child.classList.remove("active");
@@ -50,24 +47,20 @@ const About = () => {
     }
   };
 
-  // Function to handle slide change
   const nextSlide = () => {
     setActiveSlide(
       (prevSlide) => (prevSlide + 1) % serviceImgs.current.childNodes.length
     );
   };
 
-  // Call the updateActiveSlide function when the component mounts and whenever activeSlide changes
   useEffect(() => {
     updateActiveSlide();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSlide]);
 
-  // Call the nextSlide function to change the slide
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000); // Change slide every 2 seconds (adjust as needed)
+    }, 3000); // Change slide every 3 seconds
 
     return () => clearInterval(interval);
   }, []);

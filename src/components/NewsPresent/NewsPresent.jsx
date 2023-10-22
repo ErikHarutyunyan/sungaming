@@ -1,11 +1,10 @@
 import {MdOutlineNorthEast} from "react-icons/md";
-import "./NewsPresent.css";
 import SimpleSlider from "../SimpleSlider";
 import {settingsBlog} from "../../features/SliderConfig";
 import {dataNews} from "../../data/dataNews";
 import {ellipse7, ellipse8} from "../Images";
 import LazyImage from "../LazyImage";
-
+import "./NewsPresent.css";
 const NewsPresent = () => {
   return (
     <section className=" about-block  recently-completed blogs gaming-character">

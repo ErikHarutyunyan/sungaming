@@ -21,8 +21,8 @@ export const Footer = () => {
                     <MdOutlineLocationOn className="material-symbols-outlined" />
                   </div>
                   <div className="text-area">
-                    <h5 className="mb-2">London</h5>
-                    <span>Al. Brucknera Aleksandra 63, Wrocław 51-410</span>
+                    <h5 className="mb-2">Yerevan</h5>
+                    <span>Armenia</span>
                   </div>
                 </div>
               </div>

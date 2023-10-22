@@ -28,7 +28,8 @@ const Subscribe = () => {
           <div className="col-xl-7 col-lg-6 col-md-12">
             <form
               className="form-contact mt-8 mt-lg-0 py-8 px-4 px-sm-8"
-              onSubmit={handleSubmit(onSubmit)}>
+              onSubmit={handleSubmit(onSubmit)}
+              netlify>
               <div className="input-area p-4 d-grid d-sm-flex align-items-center justify-content-between">
                 <input
                   type="text"

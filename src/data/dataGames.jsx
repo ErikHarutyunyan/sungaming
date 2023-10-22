@@ -172,7 +172,7 @@ NinjaGambit promises an immersive gameplay experience. Challenge other players, 
     ],
     platforms: ["PC", "iOS", "Android"],
     featured: true,
-    video: "Crypto Casino Club NFT Collection Trailer #1",
+    video: "../assets/video/njVideo.mp4",
   },
   {
     id: uuidv4(),
