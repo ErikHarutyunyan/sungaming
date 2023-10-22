@@ -12,7 +12,6 @@
   will-change: opacity, transform;
 }
 
-
 .sidebar_wrapper {
   position: relative;
   padding: 5rem 2rem 5rem;
@@ -28,6 +27,9 @@ img.logoSidebar {
   max-width: 170px;
   width: 100%;
   height: auto;
+  position: absolute;
+  top: 20px;
+  left: 50px;
 }
 .sidebar_wrapper ul {
   gap: 20px;
@@ -94,11 +96,6 @@ img.logoSidebar {
 @media (max-width: 480px) {
   .sidebar_aside {
     width: 100%;
-  }
-  img.logoSidebar {
-    max-width: 140px;
-    width: 100%;
-    height: auto;
   }
   .sidebar_wrapper {
     row-gap: 20px;
