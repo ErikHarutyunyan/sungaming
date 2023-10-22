@@ -44156,7 +44156,7 @@ li {
 
 .services-solution .single-box img {
   width: 100%;
-  opacity: 0.25;
+  opacity: 0.25 !important;
   height: 100%;
 }
 

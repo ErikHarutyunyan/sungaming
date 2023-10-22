@@ -58,7 +58,7 @@ import {
   mummyImg5,
   mummyImg6,
   mummySmall,
-  njGambitBg,
+  njGambitBg2,
   njGambitSmall,
   njGambitImg1,
   njGambitImg2,
@@ -137,11 +137,11 @@ export const dataGames = [
     title: "Ninja Gambit",
     subTitle:
       "Welcome to NinjaGambit, the ultimate NFT-based card battle game!",
-    imgMain: njGambitBg,
+    imgMain: njGambitBg2,
     imgSmall: njGambitSmall,
     imgMore: [
       njGambitImg4,
-      njGambitBg,
+      njGambitBg2,
       njGambitImg1,
       njGambitImg2,
       njGambitImg3,

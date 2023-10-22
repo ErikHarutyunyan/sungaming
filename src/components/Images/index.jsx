@@ -83,6 +83,7 @@ import brand8 from "../../assets/img/brands/MiGEA.png";
 import brand9 from "../../assets/img/brands/SIGMA-AMERICAS-logo.png";
 // Games
 import njGambitBg from "../../assets/img/games/njGambitBg.gif";
+import njGambitBg2 from "../../assets/img/games/njGambitBg2.gif";
 import njGambitSmall from "../../assets/img/games/nftIcon2.jpg";
 import njGambitImg1 from "../../assets/img/games/njGambit.gif";
 import njGambitImg2 from "../../assets/img/games/njGambit1.gif";
@@ -313,6 +314,7 @@ export {
   brand8,
   brand9,
   // games
+  njGambitBg2,
   njGambitBg,
   njGambitSmall,
   njGambitImg1,

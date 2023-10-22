@@ -9,6 +9,7 @@ const LazyImage = ({
   width,
   height,
   className,
+  fetchPriority,
 }) => {
   return (
     <LazyLoadImage
@@ -19,6 +20,7 @@ const LazyImage = ({
       effect="blur"
       className={className}
       wrapperClassName={wrapperClassName}
+      fetchPriority={fetchPriority}
     />
   );
 };
