@@ -14,7 +14,7 @@ import AboutValues from "../../components/AboutValues/AboutValues";
 const Careers = () => {
   return (
     <>
-      <section className="banner-section inner-banner position-relative about career">
+      <section className="banner-section inner-banner position-relative career">
         <div className="shape-area">
           <img src={bubble} className="shape-1" alt="icon" />
           <img src={ellipse7} className="shape-2" alt="icon" />
