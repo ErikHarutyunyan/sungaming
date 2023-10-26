@@ -9,7 +9,9 @@ export default defineConfig({
     react(),
     pluginPurgeCSS({
       // Specify the content paths to be checked for used CSS classes
-      content: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.css"],
+      // content: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.css"],
+      // content: ["index.html", "**/*.jsx", "**/*.js", "**/*.css"],
+      css: ["**/*.css"],
       // Whitelist specific CSS classes or patterns
       // whitelist: ["my-whitelisted-class"],
     }),

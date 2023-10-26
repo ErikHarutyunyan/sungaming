@@ -76,7 +76,7 @@ function Home() {
             alt="elipse5"
             width="9"
             height="9"
-            decoding="async"
+            loading="lazy"
             data-nimg="1"
             className="ellipse-3"
           />
