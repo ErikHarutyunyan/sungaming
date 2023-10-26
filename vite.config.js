@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import pluginPurgeCSS from "vite-plugin-purge";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
-// import pluginPurgeCSS from "vite-plugin-purge";
+import viteCompression from "vite-plugin-compression";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -31,7 +31,8 @@ export default defineConfig({
       },
       avif: {
         lossless: true,
-      }
+      },
     }),
+    viteCompression(),
   ],
 });
