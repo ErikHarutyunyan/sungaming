@@ -39,7 +39,7 @@
   text-transform: capitalize;
   font-weight: 600;
   background-color: transparent;
-  color: var(--bs-white);
+  color: #fff;
   position: relative;
   display: flex;
   align-items: center;
