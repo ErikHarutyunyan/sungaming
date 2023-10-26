@@ -14,7 +14,7 @@
 
 .form-info {
   position: absolute;
-  top: 15px;
+  top: 20px;
   left: 20px;
 }
 
@@ -28,6 +28,7 @@
 }
 
 .form-control {
+  padding: 8px 0;
   padding-left: 40px;
 }
 

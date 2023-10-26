@@ -1,7 +1,6 @@
 import "./LoadingOpen.css";
 
-const LoadingOpen = ({ loadingProgress }) => {
-  console.log("loadingProgress :", loadingProgress);
+const LoadingOpen = () => {
   return (
     <section className="loadWrapper">
       <div className="hexagon" aria-label="Animated hexagonal ripples">
