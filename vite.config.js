@@ -7,14 +7,14 @@ import viteCompression from "vite-plugin-compression";
 export default defineConfig({
   plugins: [
     react(),
-    pluginPurgeCSS({
+    // pluginPurgeCSS({
       // Specify the content paths to be checked for used CSS classes
       // content: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.css"],
       // content: ["index.html", "**/*.jsx", "**/*.js", "**/*.css"],
-      css: ["**/*.css"],
+      // css: ["**/*.css"],
       // Whitelist specific CSS classes or patterns
       // whitelist: ["my-whitelisted-class"],
-    }),
+    // }),
     ViteImageOptimizer({
       png: {
         quality: 80,
