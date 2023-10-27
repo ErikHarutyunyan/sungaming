@@ -7,11 +7,11 @@
 .our-games button.box-style.btn-box {
   max-width: 121px;
 }
-.our-games .btn-box {
+.tablinks .btn-box {
   color: #3fca90;
 }
 .our-games .tablinks button {
-  
+
 }
 .tabcontents .loading {
   cursor: pointer;
