@@ -10,6 +10,7 @@ const LazyImage = ({
   height,
   className,
   fetchPriority,
+  onClick
 }) => {
   return (
     <LazyLoadImage
@@ -21,6 +22,7 @@ const LazyImage = ({
       className={className}
       wrapperClassName={wrapperClassName}
       fetchPriority={fetchPriority}
+      onClick={onClick}
     />
   );
 };

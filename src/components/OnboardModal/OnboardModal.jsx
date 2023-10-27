@@ -34,7 +34,7 @@ const DefaultModal = ({ children, onClose }) => {
         <button
           onClick={onClose}
           type="button"
-          className="close"
+          className="close default"
           data-dismiss="modal"
           aria-label="Close">
           <span aria-hidden="true">×</span>

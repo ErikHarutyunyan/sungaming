@@ -1,100 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Sun Gaming Offline</title>
-  </head>
-  <style>
+</head>
+<style>
     body {
-      background: -webkit-linear-gradient(
-        -45deg,
-        #303141 0,
-        #303141 25%,
-        #222434 50%,
-        #161829 75%,
-        #161829 100%
-      );
-      display: flex;
-      height: 100vh;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      font-family: monospace;
+        background: -webkit-linear-gradient(
+                -45deg,
+                #303141 0,
+                #303141 25%,
+                #222434 50%,
+                #161829 75%,
+                #161829 100%
+        );
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: monospace;
     }
+
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
     }
 
     .slotcontainer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
     }
 
     .slot {
-      width: 100px;
-      height: 150px;
-      border: 1px solid black;
-      border-radius: 7.5px;
-      display: inline-block;
-      overflow: hidden;
-      position: relative;
-      background: #fafafa;
-      box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.4) inset;
+        width: 100px;
+        height: 150px;
+        border: 1px solid black;
+        border-radius: 7.5px;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        background: #fafafa;
+        box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.4) inset;
     }
 
     .slot .symbols {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: top 5s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: top 5s;
     }
 
     .slot .symbol {
-      width: 100px;
-      height: 150px;
-      font-size: 60px;
-      line-height: 100px;
-      display: block;
-      text-align: center;
-      padding-top: 25px;
+        width: 100px;
+        height: 150px;
+        font-size: 60px;
+        line-height: 100px;
+        display: block;
+        text-align: center;
+        padding-top: 25px;
     }
 
     button {
-      margin: 0 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      background: none;
-      outline: none;
-      border: 2px solid #303141;
-      color: #fff;
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background: none;
+        outline: none;
+        border: 2px solid #303141;
+        color: #fff;
     }
-  </style>
-  <body>
-    <svg
-      version="1.1"
-      id="Layer_1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      x="0px"
-      y="0px"
-      width="144px"
-      height="144px"
-      viewBox="0 0 144 144"
-      enable-background="new 0 0 144 144"
-      xml:space="preserve">
+</style>
+<body>
+<svg
+        enable-background="new 0 0 144 144"
+        height="144px"
+        id="Layer_1"
+        version="1.1"
+        viewBox="0 0 144 144"
+        width="144px"
+        x="0px"
+        xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0px">
       <image
-        id="image0"
-        width="144"
-        height="144"
-        x="0"
-        y="0"
-        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAAIGNIUk0AAHomAACAhAAA+gAAAIDo
+              height="144"
+              href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAAIGNIUk0AAHomAACAhAAA+gAAAIDo
 AAB1MAAA6mAAADqYAAAXcJy6UTwAAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAACxMAAAsTAQCa
 nBgAAAAHdElNRQfnCgkMHRgVN9ufAAAAXnRFWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMACmlwdGMK
 ICAgICAgMjgKMzg0MjQ5NGQwNDA0MDAwMDAwMDAwMDBmMWMwMjZlMDAwMzUyNDY0NzFjMDIwMDAw
@@ -547,157 +543,160 @@ a+q5VahxIjW6w7VAeUMtOJ3cKbnDKcotTruHSKkcABQcn8lzvJnyrMXKI5vmWDPaR9mPVmxS9+SJ
 h3djf7O0yK2q8xXJqGcPcf7fhv/3BCoOj80qyLGDh72u37wRkJqWqjlqT6mYTZxqQgmtzbkm1NF4
 Zfv5VzA0b9w0MaRymNGUmU71/n+/Cem/+Bf/U/g/dbL+mBJM1DcAAAAldEVYdGRhdGU6Y3JlYXRl
 ADIwMjMtMTAtMjBUMTk6MDY6NDIrMDI6MDAq5yyyAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTEw
-LTIwVDE5OjA2OjQyKzAyOjAwW7qUDgAAAABJRU5ErkJggg==" />
+LTIwVDE5OjA2OjQyKzAyOjAwW7qUDgAAAABJRU5ErkJggg=="
+              id="image0"
+              width="144"
+              x="0"
+              y="0"/>
     </svg>
-    <h1>Sun Gaming OFFLINE</h1>
-    <p>This page is not available offline.</p>
+<h1>Sun Gaming OFFLINE</h1>
+<p>This page is not available offline.</p>
 
-    <div class="container">
-      <div class="slotcontainer">
+<div class="container">
+    <div class="slotcontainer">
         <div class="slot">
-          <div class="symbols" id="slot1Symbols"></div>
+            <div class="symbols" id="slot1Symbols"></div>
         </div>
 
         <div class="slot">
-          <div class="symbols" id="slot2Symbols"></div>
+            <div class="symbols" id="slot2Symbols"></div>
         </div>
 
         <div class="slot">
-          <div class="symbols" id="slot3Symbols"></div>
+            <div class="symbols" id="slot3Symbols"></div>
         </div>
-      </div>
+    </div>
 
-      <div style="display: flex">
+    <div style="display: flex">
         <button onclick="spin()">Spin</button>
         <button onclick="reset();">Reset</button>
-      </div>
     </div>
-    <script>
-      const slotSymbols = [
+</div>
+<script>
+    const slotSymbols = [
         [
-          "😀",
-          "😁",
-          "😂",
-          "😃",
-          "😄",
-          "😅",
-          "😆",
-          "😇",
-          "😈",
-          "😉",
-          "😊",
-          "🙂",
+            "😀",
+            "😁",
+            "😂",
+            "😃",
+            "😄",
+            "😅",
+            "😆",
+            "😇",
+            "😈",
+            "😉",
+            "😊",
+            "🙂",
         ],
         [
-          "🍎",
-          "🍏",
-          "🍐",
-          "🍊",
-          "🍋",
-          "🍌",
-          "🍉",
-          "🍇",
-          "🍓",
-          "🍈",
-          "🍒",
-          "🍑",
+            "🍎",
+            "🍏",
+            "🍐",
+            "🍊",
+            "🍋",
+            "🍌",
+            "🍉",
+            "🍇",
+            "🍓",
+            "🍈",
+            "🍒",
+            "🍑",
         ],
         [
-          "⭐️",
-          "🌟",
-          "✨",
-          "💫",
-          "⚡️",
-          "☄️",
-          "🌠",
-          "🌌",
-          "🌙",
-          "🌕",
-          "🌖",
-          "🌗",
+            "⭐️",
+            "🌟",
+            "✨",
+            "💫",
+            "⚡️",
+            "☄️",
+            "🌠",
+            "🌌",
+            "🌙",
+            "🌕",
+            "🌖",
+            "🌗",
         ],
-      ];
+    ];
 
-      function createSymbolElement(symbol) {
+    function createSymbolElement(symbol) {
         const div = document.createElement("div");
         div.classList.add("symbol");
         div.textContent = symbol;
         return div;
-      }
+    }
 
-      let spun = false;
-      function spin() {
+    let spun = false;
+
+    function spin() {
         if (spun) {
-          reset();
+            reset();
         }
         const slots = document.querySelectorAll(".slot");
         let completedSlots = 0;
 
         slots.forEach((slot, index) => {
-          const symbols = slot.querySelector(".symbols");
-          const symbolHeight = symbols.querySelector(".symbol")?.clientHeight;
-          const symbolCount = symbols.childElementCount;
+            const symbols = slot.querySelector(".symbols");
+            const symbolHeight = symbols.querySelector(".symbol")?.clientHeight;
+            const symbolCount = symbols.childElementCount;
 
-          symbols.innerHTML = "";
+            symbols.innerHTML = "";
 
-          symbols.appendChild(createSymbolElement("❓"));
+            symbols.appendChild(createSymbolElement("❓"));
 
-          for (let i = 0; i < 3; i++) {
-            slotSymbols[index].forEach((symbol) => {
-              symbols.appendChild(createSymbolElement(symbol));
-            });
-          }
+            for (let i = 0; i < 3; i++) {
+                slotSymbols[index].forEach((symbol) => {
+                    symbols.appendChild(createSymbolElement(symbol));
+                });
+            }
 
-          const totalDistance = symbolCount * symbolHeight;
-          const randomOffset =
-            -Math.floor(Math.random() * (symbolCount - 1) + 1) * symbolHeight;
-          symbols.style.top = `${randomOffset}px`;
+            const totalDistance = symbolCount * symbolHeight;
+            const randomOffset =
+                -Math.floor(Math.random() * (symbolCount - 1) + 1) * symbolHeight;
+            symbols.style.top = `${randomOffset}px`;
 
-          symbols.addEventListener(
-            "transitionend",
-            () => {
-              completedSlots++;
-              if (completedSlots === slots.length) {
-                logDisplayedSymbols();
-              }
-            },
-            { once: true }
-          );
+            symbols.addEventListener(
+                "transitionend",
+                () => {
+                    completedSlots++;
+                    if (completedSlots === slots.length) {
+                        logDisplayedSymbols();
+                    }
+                },
+                {once: true}
+            );
         });
 
         spun = true;
-      }
+    }
 
-      function reset() {
+    function reset() {
         const slots = document.querySelectorAll(".slot");
 
         slots.forEach((slot) => {
-          const symbols = slot.querySelector(".symbols");
-          symbols.style.transition = "none";
-          symbols.style.top = "0";
-          symbols.offsetHeight;
-          symbols.style.transition = "";
+            const symbols = slot.querySelector(".symbols");
+            symbols.style.transition = "none";
+            symbols.style.top = "0";
+            symbols.offsetHeight;
+            symbols.style.transition = "";
         });
-      }
+    }
 
-      function logDisplayedSymbols() {
+    function logDisplayedSymbols() {
         const slots = document.querySelectorAll(".slot");
         const displayedSymbols = [];
 
         slots.forEach((slot, index) => {
-          const symbols = slot.querySelector(".symbols");
-          const symbolIndex =
-            Math.floor(
-              Math.abs(parseInt(symbols.style.top, 10)) / slot.clientHeight
-            ) % slotSymbols[index].length;
-          const displayedSymbol = slotSymbols[index][symbolIndex];
-          displayedSymbols.push(displayedSymbol);
+            const symbols = slot.querySelector(".symbols");
+            const symbolIndex =
+                Math.floor(
+                    Math.abs(parseInt(symbols.style.top, 10)) / slot.clientHeight
+                ) % slotSymbols[index].length;
+            const displayedSymbol = slotSymbols[index][symbolIndex];
+            displayedSymbols.push(displayedSymbol);
         });
+    }
 
-        console.log(displayedSymbols);
-      }
-
-      spin();
-    </script>
-  </body>
+    spin();
+</script>
+</body>
 </html>
