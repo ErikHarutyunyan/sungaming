@@ -32,6 +32,10 @@
   border: 1px solid var(--p500);
 }
 
+.tabcontents .loading:hover {
+  border: 1px solid var(--p500);
+}
+
 .tabcontents .loading:before {
   content: "";
   position: absolute;
