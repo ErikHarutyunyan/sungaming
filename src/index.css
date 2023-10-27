@@ -16635,6 +16635,7 @@ li {
 
 .header-section .navbar .navbar-brand img {
   max-width: 120px;
+  object-fit: cover;
 }
 
 @media (max-width: 1199px) {
