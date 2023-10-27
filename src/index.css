@@ -3292,7 +3292,6 @@ fieldset:disabled .btn {
   filter: var(--bs-btn-close-white-filter);
 }
 
-
 .clearfix:after {
   display: block;
   clear: both;
@@ -21822,4 +21821,7 @@ li {
 }
 .lazy-load-image-background.blur.lazy-load-image-loaded.default-img {
   width: 100%;
+}
+span.icon-area.pe-none {
+  display: flex;
 }
