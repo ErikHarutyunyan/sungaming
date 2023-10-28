@@ -68,7 +68,8 @@ const Contact = () => {
                 className="p-4 p-sm-8"
                 // onSubmit={handleSubmit(onSubmit)}
                 onSubmit="submit"
-                name="contact">
+                name="contact"
+                method="post">
                 <h3>Write A Message</h3>
                 <div className="form-inside mt-6 p-4">
                   <div className="row">
@@ -92,7 +93,7 @@ const Contact = () => {
                       <div className="single-input text-start">
                         <label htmlFor="email">Email</label>
                         <input
-                          type="text"
+                          type="email"
                           id="email"
                           placeholder="Enter your email"
                           autoComplete="off"

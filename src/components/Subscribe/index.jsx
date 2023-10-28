@@ -32,7 +32,7 @@ const Subscribe = () => {
               onSubmit="submit"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              method="POST"
+              method="post"
               name="subscribe-form">
               <div className="input-area p-4 d-grid d-sm-flex align-items-center justify-content-between">
                 <input

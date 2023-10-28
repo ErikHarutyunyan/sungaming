@@ -186,7 +186,7 @@ const PrivacyPolicy = () => {
                       <div className="single-input text-start">
                         <label htmlFor="contactEmail">Email</label>
                         <input
-                          type="text"
+                          type="email"
                           id="contactEmail"
                           placeholder="Enter your email"
                           name="contact-email"
