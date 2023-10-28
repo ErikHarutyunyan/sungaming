@@ -66,7 +66,9 @@ const Contact = () => {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 className="p-4 p-sm-8"
-                onSubmit={handleSubmit(onSubmit)}>
+                // onSubmit={handleSubmit(onSubmit)}
+                onSubmit="submit"
+                name="contact">
                 <h3>Write A Message</h3>
                 <div className="form-inside mt-6 p-4">
                   <div className="row">
@@ -78,6 +80,7 @@ const Contact = () => {
                           id="name"
                           placeholder="Enter Your Name"
                           autoComplete="off"
+                          name="contact-name"
                           {...register("Name", {
                             required: true,
                             pattern: /^[A-Za-z\s\-']{2,50}$/,
@@ -93,6 +96,7 @@ const Contact = () => {
                           id="email"
                           placeholder="Enter your email"
                           autoComplete="off"
+                          name="contact-email"
                           {...register("Email", {
                             required: true,
                             pattern: /^\S+@\S+$/i,
@@ -108,6 +112,7 @@ const Contact = () => {
                           id="subject"
                           placeholder="Enter Subject"
                           autoComplete="off"
+                          name="contact-subject"
                           {...register("Subject", {
                             required: true,
                             pattern: /^[A-Za-z\s\-']{2,50}$/,
@@ -122,6 +127,7 @@ const Contact = () => {
                           cols="4"
                           rows="4"
                           id="message"
+                          name="contact-message"
                           placeholder="Please type your Message here..."
                           {...register("Message", {
                             required: true,
