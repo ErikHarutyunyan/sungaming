@@ -176,10 +176,11 @@ const PrivacyPolicy = () => {
                           placeholder="Enter Your Name"
                           name="privacy-contact-name"
                           autoComplete="off"
-                          {...register("Name", {
-                            required: true,
-                            pattern: /^[A-Za-z\s\-']{2,50}$/,
-                          })}
+                          required
+                          // {...register("Name", {
+                          //   required: true,
+                          //   pattern: /^[A-Za-z\s\-']{2,50}$/,
+                          // })}
                         />
                       </div>
                     </div>
@@ -192,10 +193,11 @@ const PrivacyPolicy = () => {
                           placeholder="Enter your email"
                           name="privacy-contact-email"
                           autoComplete="off"
-                          {...register("Email", {
-                            required: true,
-                            pattern: /^\S+@\S+$/i,
-                          })}
+                          required
+                          // {...register("Email", {
+                          //   required: true,
+                          //   pattern: /^\S+@\S+$/i,
+                          // })}
                         />
                       </div>
                     </div>
@@ -207,11 +209,12 @@ const PrivacyPolicy = () => {
                           id="contactSubject"
                           placeholder="Enter Subject"
                           name="privacy-contact-subject"
-                          autoComplete="off"
-                          {...register("Subject", {
-                            required: true,
-                            pattern: /^[A-Za-z\s\-']{2,50}$/,
-                          })}
+                          required
+                          // autoComplete="off"
+                          // {...register("Subject", {
+                          //   required: true,
+                          //   pattern: /^[A-Za-z\s\-']{2,50}$/,
+                          // })}
                         />
                       </div>
                     </div>
@@ -225,10 +228,11 @@ const PrivacyPolicy = () => {
                           rows="4"
                           id="contactMessage"
                           name="privacy-contact-message"
-                          {...register("Message", {
-                            required: true,
-                            pattern: /^[A-Za-z\s\-']{2,50}$/,
-                          })}
+                          required
+                          // {...register("Message", {
+                          //   required: true,
+                          //   pattern: /^[A-Za-z\s\-']{2,50}$/,
+                          // })}
                           placeholder="Please type your Message here..."></textarea>
                       </div>
                     </div>

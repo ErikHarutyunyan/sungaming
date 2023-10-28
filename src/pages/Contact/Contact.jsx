@@ -81,10 +81,11 @@ const Contact = () => {
                           placeholder="Enter Your Name"
                           autoComplete="off"
                           name="contact-name"
-                          {...register("Name", {
-                            required: true,
-                            pattern: /^[A-Za-z\s\-']{2,50}$/,
-                          })}
+                          required
+                          // {...register("Name", {
+                          //   required: true,
+                          //   pattern: /^[A-Za-z\s\-']{2,50}$/,
+                          // })}
                         />
                       </div>
                     </div>
@@ -97,10 +98,11 @@ const Contact = () => {
                           placeholder="Enter your email"
                           autoComplete="off"
                           name="contact-email"
-                          {...register("Email", {
-                            required: true,
-                            pattern: /^\S+@\S+$/i,
-                          })}
+                          required
+                          // {...register("Email", {
+                          //   required: true,
+                          //   pattern: /^\S+@\S+$/i,
+                          // })}
                         />
                       </div>
                     </div>
@@ -113,10 +115,11 @@ const Contact = () => {
                           placeholder="Enter Subject"
                           autoComplete="off"
                           name="contact-subject"
-                          {...register("Subject", {
-                            required: true,
-                            pattern: /^[A-Za-z\s\-']{2,50}$/,
-                          })}
+                          required
+                          // {...register("Subject", {
+                          //   required: true,
+                          //   pattern: /^[A-Za-z\s\-']{2,50}$/,
+                          // })}
                         />
                       </div>
                     </div>
@@ -129,10 +132,12 @@ const Contact = () => {
                           id="message"
                           name="contact-message"
                           placeholder="Please type your Message here..."
-                          {...register("Message", {
-                            required: true,
-                            pattern: /^[A-Za-z\s\-']{2,50}$/,
-                          })}></textarea>
+                          required
+                          // {...register("Message", {
+                          //   required: true,
+                          //   pattern: /^[A-Za-z\s\-']{2,50}$/,
+                          // })}
+                        ></textarea>
                       </div>
                     </div>
                     <div className="col-sm-12 mt-4">

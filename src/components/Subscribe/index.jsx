@@ -38,14 +38,15 @@ const Subscribe = () => {
                   type="email"
                   name="subscribe-email"
                   placeholder="Enter Your Email"
-                  {...register("Email", {
-                    required: true,
-                    pattern: /^\S+@\S+$/i,
-                  })}
+                  required
+                  // {...register("Email", {
+                  //   required: true,
+                  //   pattern: /^\S+@\S+$/i,
+                  // })}
                 />
-                {errors.email && (
+                {/* {errors.email && (
                   <p>Email is required and must be in a valid format.</p>
-                )}
+                )} */}
 
                 <div className="btn-area alt-bg mt-6 mt-sm-0">
                   <button
