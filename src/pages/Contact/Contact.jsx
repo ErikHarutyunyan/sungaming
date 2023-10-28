@@ -63,13 +63,11 @@ const Contact = () => {
           <div className="row justify-content-center">
             <div className="col-lg-7">
               <form
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
                 className="p-4 p-sm-8"
                 // onSubmit={handleSubmit(onSubmit)}
                 onSubmit="submit"
-                name="contact"
-                method="post">
+                method="post"
+                name="contact">
                 <input type="hidden" name="form-name" value="contact" />
                 <h3>Write A Message</h3>
                 <div className="form-inside mt-6 p-4">

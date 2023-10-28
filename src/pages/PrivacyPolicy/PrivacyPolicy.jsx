@@ -158,12 +158,12 @@ const PrivacyPolicy = () => {
             </div>
             <div className="col-lg-5 me-20  mt-lg-0">
               <form
-                name="privacy-contact"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
                 className="p-4"
+                onSubmit="submit"
+                method="post"
+                name="privacy-contact"
                 // onSubmit={handleSubmit(onSubmit)}
-                onSubmit="submit">
+              >
                 <input type="hidden" name="form-name" value="privacy-contact" />
                 <div className="form-inside p-4">
                   <div className="row">

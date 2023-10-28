@@ -30,8 +30,6 @@ const Subscribe = () => {
               className="form-contact mt-8 mt-lg-0 py-8 px-4 px-sm-8"
               // onSubmit={handleSubmit(onSubmit)}
               onSubmit="submit"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
               method="post"
               name="subscribe-form">
               <input type="hidden" name="form-name" value="subscribe-form" />
