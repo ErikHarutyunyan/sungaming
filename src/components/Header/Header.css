@@ -130,6 +130,7 @@ li {
   .navbar-brand img {
     width: 100%;
     height: 100%;
+    height: 34px;
   }
   .navbar {
     padding-top: 0.5rem;
