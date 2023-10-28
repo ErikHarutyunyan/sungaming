@@ -34,10 +34,11 @@ const Subscribe = () => {
               data-netlify-honeypot="bot-field"
               method="post"
               name="subscribe-form">
+              <input type="hidden" name="form-name" value="subscribe-form" />
               <div className="input-area p-4 d-grid d-sm-flex align-items-center justify-content-between">
                 <input
-                  type="text"
-                  name="subscribe-name"
+                  type="email"
+                  name="subscribe-email"
                   placeholder="Enter Your Email"
                   {...register("Email", {
                     required: true,

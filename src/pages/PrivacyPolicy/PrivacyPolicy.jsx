@@ -164,6 +164,7 @@ const PrivacyPolicy = () => {
                 className="p-4"
                 // onSubmit={handleSubmit(onSubmit)}
                 onSubmit="submit">
+                <input type="hidden" name="form-name" value="privacy-contact" />
                 <div className="form-inside p-4">
                   <div className="row">
                     <div className="col-sm-12">
@@ -173,7 +174,7 @@ const PrivacyPolicy = () => {
                           type="text"
                           id="contactName"
                           placeholder="Enter Your Name"
-                          name="contact-name"
+                          name="privacy-contact-name"
                           autoComplete="off"
                           {...register("Name", {
                             required: true,
@@ -189,7 +190,7 @@ const PrivacyPolicy = () => {
                           type="email"
                           id="contactEmail"
                           placeholder="Enter your email"
-                          name="contact-email"
+                          name="privacy-contact-email"
                           autoComplete="off"
                           {...register("Email", {
                             required: true,
@@ -205,7 +206,7 @@ const PrivacyPolicy = () => {
                           type="text"
                           id="contactSubject"
                           placeholder="Enter Subject"
-                          name="contact-subject"
+                          name="privacy-contact-subject"
                           autoComplete="off"
                           {...register("Subject", {
                             required: true,
@@ -223,7 +224,7 @@ const PrivacyPolicy = () => {
                           cols="4"
                           rows="4"
                           id="contactMessage"
-                          name="contact-message"
+                          name="privacy-contact-message"
                           {...register("Message", {
                             required: true,
                             pattern: /^[A-Za-z\s\-']{2,50}$/,

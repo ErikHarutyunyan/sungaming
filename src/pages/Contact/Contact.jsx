@@ -70,6 +70,7 @@ const Contact = () => {
                 onSubmit="submit"
                 name="contact"
                 method="post">
+                <input type="hidden" name="form-name" value="contact" />
                 <h3>Write A Message</h3>
                 <div className="form-inside mt-6 p-4">
                   <div className="row">
