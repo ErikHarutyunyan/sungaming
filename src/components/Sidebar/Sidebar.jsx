@@ -34,7 +34,7 @@ const Sidebar = ({ sideBar = false, showHideSidebar = () => {} }) => {
                 src={logoSidebar}
                 className="logoSidebar"
                 alt="logoSidebar"
-                fetchPriority="high"
+                fetchpriority="high"
               /> */}
               <ul className="navbar-nav gap-4 py-4 py-lg-0 align-self-center ">
                 <motion.li

@@ -1,5 +1,6 @@
 // Styles
 import "./Games.css";
+import "../../components/GamesThumb/GamesThumb.css";
 
 import { FaStudiovinari } from "react-icons/fa";
 import { PiLightbulbLight } from "react-icons/pi";
@@ -181,10 +182,10 @@ const Games = () => {
             className="shape-1 gameShape gameShape1"
             src={gameShape1}
           />
-          <LazyImage
-            alt="gameShape1"
-            className="shape-3 gameShape gameShape1"
+          <img
             src={gameShape2}
+            alt="gameShape3"
+            className="shape-3 gameShape gameShape1"
           />
         </div>
         <div className="container singletab position-relative cus-z1">

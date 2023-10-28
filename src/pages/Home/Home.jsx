@@ -222,7 +222,7 @@ function Home() {
                                   width="392"
                                   height="491"
                                   src={imgMain}
-                                  fetchPriority="high"
+                                  fetchpriority="high"
                                 />
                               </div>
                               <div className="app-download-title pt-5 pb-3 text-center">

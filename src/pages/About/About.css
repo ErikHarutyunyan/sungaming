@@ -12,7 +12,7 @@
   backface-visibility: hidden;
   perspective: 1000px;
 }
-.about__three-images .default-img img{
+.about__three-images .default-img img {
   width: 100%;
 }
 
@@ -854,8 +854,8 @@
 .about__three-images:after {
   content: "";
   position: absolute;
-  left: 25%;
-  top: 47%;
+  left: 31%;
+  top: 58%;
   width: 75px;
   height: 75px;
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.32);
@@ -866,15 +866,15 @@
 
 @media (max-width: 1500px) {
   .about__three-images:after {
-    left: 23%;
-    top: 46%;
+    left: 29%;
+    top: 51%;
   }
 }
 
 @media (max-width: 1199.98px) {
   .about__three-images:after {
-    left: 24%;
-    top: 48%;
+    left: 31%;
+    top: 62%;
   }
 }
 
@@ -1446,10 +1446,12 @@ textPath {
   height: 80px;
   margin-bottom: 43px;
   border-radius: 50%;
-  display: inline-block;
+  display: inline-flex;
   text-align: center;
   line-height: 80px;
   position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 .our-vision .single-vision .icon img {
@@ -1734,10 +1736,12 @@ textPath {
 }
 
 @media (max-width: 767px) {
-   .gaming-character.ongoing-values .about-values .slick-arrow {
+  .gaming-character.ongoing-values .about-values .slick-arrow {
     display: flex !important;
   }
-  .gaming-character.ongoing-values .about-values .slick-arrow.bottom-right.arafat-next {
+  .gaming-character.ongoing-values
+    .about-values
+    .slick-arrow.bottom-right.arafat-next {
     left: 27%;
   }
 }

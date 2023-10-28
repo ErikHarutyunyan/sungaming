@@ -29,7 +29,8 @@ const Subscribe = () => {
             <form
               className="form-contact mt-8 mt-lg-0 py-8 px-4 px-sm-8"
               onSubmit={handleSubmit(onSubmit)}
-              netlify>
+              data-netlify="true"
+              data-netlify-honeypot="bot-field">
               <div className="input-area p-4 d-grid d-sm-flex align-items-center justify-content-between">
                 <input
                   type="text"

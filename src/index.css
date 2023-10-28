@@ -17694,15 +17694,15 @@ li {
   color: var(--n0);
 }
 
-/* .our-games {
-  background-color: var(--n800);
+.our-games {
+  /* background-color: var(--n800);
   background-image: url(/images/our-games-bg.png);
   background-position: bottom;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   background-size: cover;
   z-index: 0;
   position: relative;
-} */
+}
 
 /* .our-games:after, */
 .our-games:before {

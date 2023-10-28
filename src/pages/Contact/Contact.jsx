@@ -63,7 +63,8 @@ const Contact = () => {
           <div className="row justify-content-center">
             <div className="col-lg-7">
               <form
-                netlify
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
                 className="p-4 p-sm-8"
                 onSubmit={handleSubmit(onSubmit)}>
                 <h3>Write A Message</h3>
@@ -140,7 +141,7 @@ const Contact = () => {
               </form>
             </div>
             <div className="col-lg-5 mt-7 mt-lg-0">
-              <div className="py-8 py-sm-15 px-3 px-sm-6 get-in-touch">
+              <div className="py-8 py-sm-15 px-6 get-in-touch">
                 <h3>Get in Touch</h3>
                 <div className="single-content d-grid mt-5 mt-sm-10">
                   <div className="single-content d-grid py-5 py-sm-7 gap-3 gap-sm-5">

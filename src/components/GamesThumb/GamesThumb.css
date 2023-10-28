@@ -29,7 +29,6 @@
 
 .tabcontents .loading:hover button {
   color: white;
-  border: 1px solid var(--p500);
 }
 
 .tabcontents .loading:hover {
