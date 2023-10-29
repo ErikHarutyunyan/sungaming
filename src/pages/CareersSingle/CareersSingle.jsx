@@ -19,7 +19,7 @@ const CareersSingle = () => {
 	// const [email, setEmail] = useState('');
 	// const [vacancy, setVacancy] = useState('');
 	// const [message, setMessage] = useState('');
-	// const [file, setFile] = useState({});
+	const [file, setFile] = useState({});
 
 	const [isOpen, setIsOpen] = useState(false);
 	const hiddenFileInput = useRef(null);
@@ -46,44 +46,55 @@ const CareersSingle = () => {
 	// to handle the user-selected file
 	const handleChange = (event) => {
 		const fileUploaded = event.target.files[0];
-		// setFile(event.target.files[0]);
+		setFile(event.target.files[0]);
 		setFileName(fileUploaded.name);
 	};
 
 	const navigate = useNavigate();
 
 	// const encode = (data) => {
-	// 	const formData = new FormData();
-	// 	Object.keys(data).forEach((k) => {
-	// 		formData.append(k, data[k]);
-	// 	});
-	// 	return formData;
+	// 	return Object.keys(data)
+	// 		.map(
+	// 			(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
+	// 		)
+	// 		.join('&');
 	// };
+	const encode = (data) => {
+		// console.log('data: ', data)
+		const formData = new FormData();
+		Object.keys(data).forEach((k) => {
+			formData.append(k, data[k]);
+		});
+		return formData;
+	};
 
-	const handleSubmit = async (event) => {
-		event.preventDefault();
-		// const data = {
-		// 	'form-name': 'careers',
-		// 	name,
-		// 	email,
-		// 	vacancy,
-		// 	message,
-		// 	file,
-		// };
-		// let formData = encode(data)
-		// console.log("first",formData)
-		const myForm = event.target;
-		const formData = new FormData(myForm);
-		// console.log('first', new URLSearchParams(formData).toString());
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+
+		const data = {
+			name: e.target.name.value,
+			email: e.target.email.value,
+			vacancy: e.target.message.value,
+			message: e.target.message.value,
+			file,
+		};
+		// const myForm = e.target;
+		// const formData = new FormData(myForm);
+		// // console.log('first', new URLSearchParams(formData).toString());
+		// fetch('/', {
+		// 	method: 'POST',
+		// 	headers: { 'Content-Type': 'multipart/form-data; boundary=random' },
+		// 	body: formData,
+		// })
 		fetch('/', {
 			method: 'POST',
-			headers: { 'Content-Type': 'multipart/form-data; boundary=random' },
-			body: formData,
+			// headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: encode({ 'form-name': 'careers', ...data }),
 		})
 			.then(() => console.log('Form successfully submitted'))
 			.catch((error) => alert(error));
 
-		navigate('/success');
+		// navigate('/success');
 	};
 
 	// const handleChangeValues = (e) => {
@@ -238,9 +249,8 @@ const CareersSingle = () => {
 																id="modalContactInput1"
 																className="form-control validate mt-3"
 																placeholder="Full Name"
-																name="careers-name"
+																name="name"
 																required
-															
 															/>
 														</div>
 														<div className="md-form mb-3">
@@ -253,9 +263,8 @@ const CareersSingle = () => {
 																id="modalContactInput2"
 																className="form-control validate mt-3"
 																placeholder="Email"
-																name="careers-email"
+																name="email"
 																required
-															
 															/>
 														</div>
 														<div className="md-form mb-3">
@@ -268,8 +277,8 @@ const CareersSingle = () => {
 																id="modalContactInput3"
 																className="form-control validate mt-3"
 																placeholder="Vacancy"
+																name="vacancy"
 																required
-															
 															/>
 														</div>
 														<div className="md-form mb-3">
@@ -283,9 +292,8 @@ const CareersSingle = () => {
 																className="md-textarea form-control mt-3"
 																rows="4"
 																placeholder="Message"
-																name="careers-message"
-																required
-															></textarea>
+																name="message"
+																required></textarea>
 														</div>
 														<div className="md-form ">
 															<ImAttachment size={24} color="#09926a" />
