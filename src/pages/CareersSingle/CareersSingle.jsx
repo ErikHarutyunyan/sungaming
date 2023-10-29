@@ -53,7 +53,7 @@ const CareersSingle = () => {
 		console.log('first', new URLSearchParams(formData).toString());
 		fetch('/', {
 			method: 'POST',
-			body: new URLSearchParams(formData).toString(),
+			body: formData,
 		})
 			.then(() => console.log('Form successfully submitted'))
 			.catch((error) => alert(error));
