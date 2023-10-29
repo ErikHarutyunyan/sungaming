@@ -84,3 +84,9 @@ section.error:after {
   background-position: center;
   background-size: cover;
 }
+
+@media (max-width: 500px) {
+  h1.error_title{
+    font-size: 150px;
+  }
+}
