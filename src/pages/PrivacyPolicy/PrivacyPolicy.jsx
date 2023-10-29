@@ -1,20 +1,41 @@
 // Styles
-import { useForm } from 'react-hook-form';
+// import { useForm } from 'react-hook-form';
 import BannerPages from '../../components/BannerPages/BannerPages';
 import { privacyBanner } from '../../components/Images';
 import './PrivacyPolicy.css';
+import { useNavigate } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
-	const {
-		register,
-		handleSubmit,
-		formState: { errors },
-	} = useForm({
-		mode: 'onChange',
-	});
-	const onSubmit = (data) => {
-		console.log(data);
+	// const {
+	// 	register,
+	// 	handleSubmit,
+	// 	formState: { errors },
+	// } = useForm({
+	// 	mode: 'onChange',
+	// });
+	// const onSubmit = (data) => {
+	// 	console.log(data);
+	// };
+
+  const navigate = useNavigate();
+
+	const handleSubmit = async (event) => {
+		event.preventDefault();
+
+		const myForm = event.target;
+		const formData = new FormData(myForm);
+
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: new URLSearchParams(formData).toString(),
+		})
+			.then(() => console.log('Form successfully submitted'))
+			.catch((error) => alert(error));
+
+		navigate('/success');
 	};
+
 
 	return (
 		<>
@@ -159,10 +180,11 @@ const PrivacyPolicy = () => {
 						<div className="col-lg-5 me-20  mt-lg-0">
 							<form
 								className="p-4"
-								onSubmit="submit"
 								method="post"
 								name="privacy-contact"
 								action="/success/"
+                data-netlify="true"
+                onSubmit={handleSubmit}
 								// onSubmit={handleSubmit(onSubmit)}
 							>
 								<input type="hidden" name="form-name" value="privacy-contact" />

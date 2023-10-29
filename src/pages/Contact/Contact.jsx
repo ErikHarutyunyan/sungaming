@@ -84,7 +84,6 @@ const Contact = () => {
 							<form
 								className="p-4 p-sm-8"
 								// onSubmit={handleSubmit(onSubmit)}
-								// onSubmit="submit"
                 data-netlify="true"
                 onSubmit={handleSubmit}
 								method="post"

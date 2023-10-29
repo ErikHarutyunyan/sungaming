@@ -1,19 +1,41 @@
 // Styles
 // import "./Subscribe.css"
 
-import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+
+// import { useForm } from "react-hook-form";
 
 const Subscribe = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    mode: "onChange",
-  });
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors },
+  // } = useForm({
+  //   mode: "onChange",
+  // });
+  // const onSubmit = (data) => {
+  //   console.log(data);
+  // };
+
+	const navigate = useNavigate();
+
+	const handleSubmit = async (event) => {
+		event.preventDefault();
+
+		const myForm = event.target;
+		const formData = new FormData(myForm);
+
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: new URLSearchParams(formData).toString(),
+		})
+			.then(() => console.log('Form successfully submitted'))
+			.catch((error) => alert(error));
+
+		navigate('/success');
+	};
+
 
   return (
     <section className="subscribe">
@@ -29,10 +51,11 @@ const Subscribe = () => {
             <form
               className="form-contact mt-8 mt-lg-0 py-8 px-4 px-sm-8"
               // onSubmit={handleSubmit(onSubmit)}
-              onSubmit="submit"
               method="post"
               name="subscribe-form"
               action="/success/"
+              data-netlify="true"
+              onSubmit={handleSubmit}
               >
               <input type="hidden" name="form-name" value="subscribe-form" />
               <div className="input-area p-4 d-grid d-sm-flex align-items-center justify-content-between">
