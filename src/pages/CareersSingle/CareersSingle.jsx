@@ -85,8 +85,7 @@ const CareersSingle = () => {
 			file,
 		};
 
-		const formData = new FormData();
-		formData.append(data);
+		const formData = new FormData(data);
 		// console.log('first', new URLSearchParams(formData).toString());
 		fetch('/', {
 			method: 'POST',
