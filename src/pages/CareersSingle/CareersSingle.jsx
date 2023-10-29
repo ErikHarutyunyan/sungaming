@@ -60,12 +60,18 @@ const CareersSingle = () => {
 	// 		.join('&');
 	// };
 	const encode = (data) => {
-		// console.log('data: ', data)
-		const formData = new FormData();
-		Object.keys(data).forEach((k) => {
-			formData.append(k, data[k]);
-		});
-		return formData;
+		console.log('data: ', data);
+		let qwe = Object.keys(data)
+			.map(
+				(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
+			)
+			.join('&');
+		console.log('vax', qwe);
+		// const formData = new FormData();
+		// Object.keys(data).forEach((k) => {
+		// 	formData.append(k, data[k]);
+		// });
+		// return formData;
 	};
 
 	const handleSubmit = async (e) => {
@@ -78,23 +84,21 @@ const CareersSingle = () => {
 			message: e.target.message.value,
 			file,
 		};
-		// const myForm = e.target;
-		// const formData = new FormData(myForm);
-		// // console.log('first', new URLSearchParams(formData).toString());
-		// fetch('/', {
-		// 	method: 'POST',
-		// 	headers: { 'Content-Type': 'multipart/form-data; boundary=random' },
-		// 	body: formData,
-		// })
+
+		const formData = new FormData();
+		formData.append(data);
+		// console.log('first', new URLSearchParams(formData).toString());
 		fetch('/', {
 			method: 'POST',
-			// headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: encode({ 'form-name': 'careers', ...data }),
+			headers: {
+				'Content-Type': 'multipart/form-data',
+			},
+			body: formData,
 		})
 			.then(() => console.log('Form successfully submitted'))
 			.catch((error) => alert(error));
 
-		// navigate('/success');
+		navigate('/success');
 	};
 
 	// const handleChangeValues = (e) => {
