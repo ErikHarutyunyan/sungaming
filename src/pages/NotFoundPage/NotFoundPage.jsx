@@ -1,7 +1,7 @@
 // Styles
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { HOME } from "../../router/route-path";
 import "./NotFoundPage.css";
-import {HOME} from "../../router/route-path";
 
 const NotFoundPage = () => {
   return (
@@ -12,13 +12,13 @@ const NotFoundPage = () => {
           <div className="error_info">
             <h2 className="error_subtitle">Oops...</h2>
             <p className="error_description">
-              We&apos;re sorry, but <br/>
+              We&apos;re sorry, but <br />
               something went wrong.
             </p>
             <Link
               to={HOME}
               className="box-style btn-box d-center go_home theme_button">
-              Homepage
+              Home
             </Link>
           </div>
         </div>

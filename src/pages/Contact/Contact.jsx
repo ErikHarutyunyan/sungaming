@@ -67,7 +67,9 @@ const Contact = () => {
                 // onSubmit={handleSubmit(onSubmit)}
                 onSubmit="submit"
                 method="post"
-                name="contact">
+                name="contact"
+                action="/success/"
+                >
                 <input type="hidden" name="form-name" value="contact" />
                 <h3>Write A Message</h3>
                 <div className="form-inside mt-6 p-4">

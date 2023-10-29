@@ -11,6 +11,7 @@ import Integration from "./Integration";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Services from "./Services";
 import TermsConditions from "./TermsConditions";
+import Success from "./Success";
 import NewsSingle from "./NewsSingle";
 
 export {
@@ -27,5 +28,6 @@ export {
   PrivacyPolicy,
   Services,
   TermsConditions,
+  Success,
   NotFoundPage,
 };

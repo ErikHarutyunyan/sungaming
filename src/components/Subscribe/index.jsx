@@ -31,7 +31,9 @@ const Subscribe = () => {
               // onSubmit={handleSubmit(onSubmit)}
               onSubmit="submit"
               method="post"
-              name="subscribe-form">
+              name="subscribe-form"
+              action="/success/"
+              >
               <input type="hidden" name="form-name" value="subscribe-form" />
               <div className="input-area p-4 d-grid d-sm-flex align-items-center justify-content-between">
                 <input

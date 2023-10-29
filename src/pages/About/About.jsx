@@ -1,19 +1,18 @@
-import  { useEffect, useRef, useState } from "react";
-import "./About.css";
-import BannerPages from "../../components/BannerPages/BannerPages.jsx";
-import Subscribe from "../../components/Subscribe";
+import { useEffect, useRef, useState } from "react";
+import AboutValues from "../../components/AboutValues";
+import BannerPages from "../../components/BannerPages";
 import Brands from "../../components/Brands";
-import AboutValues from "../../components/AboutValues/AboutValues";
 import LazyImage from "../../components/LazyImage";
+import Subscribe from "../../components/Subscribe";
 
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import {
   IoAccessibilityOutline,
   IoDiamondOutline,
   IoShareSocialOutline,
 } from "react-icons/io5";
-import { MdOutlineDiversity1, MdOutlineGames } from "react-icons/md";
-import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { LuLayoutPanelLeft } from "react-icons/lu";
+import { MdOutlineDiversity1, MdOutlineGames } from "react-icons/md";
 import {
   ab,
   aboutBanner,
@@ -30,6 +29,7 @@ import {
   team5,
 } from "../../components/Images";
 
+import "./About.css";
 const About = () => {
   const serviceImgs = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);

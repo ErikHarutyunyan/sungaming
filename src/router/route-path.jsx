@@ -11,4 +11,5 @@ export const INTEGRATION = "/integration";
 export const PRIVACY = "/privacy";
 export const SERVICES = "/services";
 export const TERMS = "/terms";
+export const SUCCESS = "success";
 export const NOT_FOUND_PAGE = "*";

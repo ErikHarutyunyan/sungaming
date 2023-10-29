@@ -40,29 +40,6 @@ a.go_home.theme_button {
   overflow: hidden;
 }
 
-/* a.go_home.theme_button:before {
-  content: "";
-  position: absolute;
-  top: 36px;
-  left: 49px;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-radius: 100%;
-  background-color: var(--p300);
-  transition: all 0.7s ease;
-  z-index: -1;
-} */
-
-/* a.go_home.theme_button:hover {
-  color: #fff;
-} */
-
-/* a.go_home.theme_button:hover:before {
-  width: 300%;
-  height: 300%;
-  background-color: var(--p500);
-} */
 
 h1.error_title {
   float: none;

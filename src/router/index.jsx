@@ -18,6 +18,7 @@ import {
   NOT_FOUND_PAGE,
   PRIVACY,
   SERVICES,
+  SUCCESS,
 } from "./route-path";
 // Pages
 import {
@@ -33,6 +34,7 @@ import {
   NotFoundPage,
   PrivacyPolicy,
   Services,
+  Success,
 } from "../pages";
 
 const router = createBrowserRouter(
@@ -55,6 +57,7 @@ const router = createBrowserRouter(
         <Route path={CAREERS} element={<Careers />} />
         <Route path={CAREERS_SINGLE} element={<CareersSingle />} />
       </Route>
+      <Route path={SUCCESS} element={<Success />} />
       <Route path={NOT_FOUND_PAGE} element={<NotFoundPage />} />
     </>
   )
