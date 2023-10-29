@@ -50,7 +50,6 @@ const CareersSingle = () => {
 
 		const myForm = event.target;
 		const formData = new FormData(myForm);
-
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -112,9 +111,7 @@ const CareersSingle = () => {
 									</div>
 									<ul className="d-flex gap-6">
 										<li className="d-flex align-items-center gap-2">
-											<li className="d-flex align-items-center gap-2">
-												<MdWorkOutline size={24} />
-											</li>
+											<MdWorkOutline size={24} />
 											<span className="fs-seven">{data.term}</span>
 										</li>
 										<li className="d-flex align-items-center gap-2">
@@ -145,7 +142,7 @@ const CareersSingle = () => {
 									</h3>
 									<ul className="ms-4 d-grid gap-1">
 										{data.qual.map((item, index) => {
-											return <li key={`${item}_${index}`}>{item}</li>;
+											return <li key={`${item}-${index}`}>{item}</li>;
 										})}
 									</ul>
 								</div>
