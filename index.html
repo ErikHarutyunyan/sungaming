@@ -134,12 +134,20 @@
 			<input type="text" name="privacy-contact-subject" />
 			<textarea name="privacy-contact-message"></textarea>
 		</form>
-		<form name="careers" netlify netlify-honeypot="bot-field" hidden>
+		<form
+			name="careers"
+			enctype="multipart/form-data"
+			netlify
+			netlify-honeypot="bot-field"
+			hidden>
 			<input type="text" name="careers-name" />
 			<input type="email" name="careers-email" />
 			<input type="text" name="careers-vacancy" />
 			<textarea name="careers-message"></textarea>
-			<input type="file" name="careers-file" accept=".jpg,.jpeg,.png,.doc,.docx,.pdf,.html,.ppt,.pptx,.odp"/>
+			<input
+				type="file"
+				name="careers-file"
+				accept=".jpg,.jpeg,.png,.doc,.docx,.pdf,.html,.ppt,.pptx,.odp" />
 		</form>
 		<div id="root"></div>
 		<div id="portal"></div>
