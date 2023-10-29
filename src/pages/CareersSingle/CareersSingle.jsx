@@ -40,6 +40,7 @@ const CareersSingle = () => {
 	// to handle the user-selected file
 	const handleChange = (event) => {
 		const fileUploaded = event.target.files[0];
+		hiddenFileInput.current.value = fileUploaded;
 		setFileName(fileUploaded.name);
 	};
 
