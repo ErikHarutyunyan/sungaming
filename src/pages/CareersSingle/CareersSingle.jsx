@@ -15,6 +15,12 @@ import { HOME } from '../../router/route-path';
 import './CareersSingle.css';
 
 const CareersSingle = () => {
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+	const [vacancy, setVacancy] = useState('');
+	const [message, setMessage] = useState('');
+	const [file, setFile] = useState({});
+
 	const [isOpen, setIsOpen] = useState(false);
 	const hiddenFileInput = useRef(null);
 	const [fileName, setFileName] = useState('');
@@ -40,25 +46,58 @@ const CareersSingle = () => {
 	// to handle the user-selected file
 	const handleChange = (event) => {
 		const fileUploaded = event.target.files[0];
+		setFile(event.target.files[0]);
 		setFileName(fileUploaded.name);
 	};
 
 	const navigate = useNavigate();
 
+	const encode = (data) => {
+		const formData = new FormData();
+		Object.keys(data).forEach((k) => {
+			formData.append(k, data[k]);
+		});
+		return formData;
+	};
+
 	const handleSubmit = async (event) => {
 		event.preventDefault();
-
-		const myForm = event.target;
-		const formData = new FormData(myForm);
-		console.log('first', new URLSearchParams(formData).toString());
+		const data = {
+			'form-name': 'careers',
+			name,
+			email,
+			vacancy,
+			message,
+			file,
+		};
+		// const myForm = event.target;
+		// const formData = new FormData(myForm);
+		// console.log('first', new URLSearchParams(formData).toString());
 		fetch('/', {
 			method: 'POST',
-			body: formData,
+			// headers: { "Content-Type": 'multipart/form-data; boundary=random' },
+			body: encode(data),
 		})
 			.then(() => console.log('Form successfully submitted'))
 			.catch((error) => alert(error));
 
 		navigate('/success');
+	};
+
+	const handleChangeValues = (e) => {
+		const { name, value } = e.target;
+		if (name === 'careers-name') {
+			return setName(value);
+		}
+		if (name === 'careers-email') {
+			return setEmail(value);
+		}
+		if (name === 'careers-vacancy') {
+			return setVacancy(value);
+		}
+		if (name === 'careers-message') {
+			return setMessage(value);
+		}
 	};
 
 	return (
@@ -199,6 +238,7 @@ const CareersSingle = () => {
 																placeholder="Full Name"
 																name="careers-name"
 																required
+																onChange={handleChangeValues}
 															/>
 														</div>
 														<div className="md-form mb-3">
@@ -213,6 +253,7 @@ const CareersSingle = () => {
 																placeholder="Email"
 																name="careers-email"
 																required
+																onChange={handleChangeValues}
 															/>
 														</div>
 														<div className="md-form mb-3">
@@ -225,8 +266,8 @@ const CareersSingle = () => {
 																id="modalContactInput3"
 																className="form-control validate mt-3"
 																placeholder="Vacancy"
-																name="careers-vacancy"
 																required
+																onChange={handleChangeValues}
 															/>
 														</div>
 														<div className="md-form mb-3">
@@ -241,7 +282,8 @@ const CareersSingle = () => {
 																rows="4"
 																placeholder="Message"
 																name="careers-message"
-																required></textarea>
+																required
+																onChange={handleChangeValues}></textarea>
 														</div>
 														<div className="md-form ">
 															<ImAttachment size={24} color="#09926a" />
