@@ -17503,8 +17503,8 @@ li {
 }
 
 .footer-section .contact-location .icon-area {
-  min-width: 60px;
-  height: 60px;
+  min-width: 50px;
+  height: 50px;
   background: var(--n700);
   border-radius: 30px;
 }

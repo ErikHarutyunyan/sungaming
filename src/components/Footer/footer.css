@@ -1,11 +1,15 @@
-@media (max-width: 1200px) {
-.info-office{
-    justify-content: space-between;
-    gap:1.5rem;
+.contact-location .text-area span{
+    font-size: 15px;
 }
+
+@media (max-width: 1200px) {
+	.info-office {
+		justify-content: space-between;
+		gap: 1.5rem;
+	}
 }
 @media (max-width: 767px) {
-.info-office{
-    gap:0.8rem;
-}
+	.info-office {
+		gap: 0.8rem;
+	}
 }

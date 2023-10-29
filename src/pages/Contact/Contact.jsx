@@ -9,6 +9,7 @@ import BannerPages from '../../components/BannerPages/BannerPages';
 import { Link, useNavigate } from 'react-router-dom';
 import { ABOUT } from '../../router/route-path.jsx';
 
+import { MdOutlineMailOutline } from 'react-icons/md';
 import AccordionBox from '../../components/Accardion/index.jsx';
 import { contactUs, faqFramer, faqIcon } from '../../components/Images';
 
@@ -84,8 +85,8 @@ const Contact = () => {
 							<form
 								className="p-4 p-sm-8"
 								// onSubmit={handleSubmit(onSubmit)}
-                data-netlify="true"
-                onSubmit={handleSubmit}
+								data-netlify="true"
+								onSubmit={handleSubmit}
 								method="post"
 								name="contact"
 								action="/success/">
@@ -182,13 +183,21 @@ const Contact = () => {
 											<h4>Have any Questions</h4>
 										</div>
 										<p className="d-flex gap-5">
-											<span>(374) 0010133</span>
+											<span>(374) 0010033</span>
+										</p>
+									</div>
+									<div className="single-content d-grid py-5 py-sm-8 gap-2">
+										<div className="check d-center justify-content-start gap-3">
+											<MdOutlineMailOutline size={30} color="white" />
+											<h4>Email Address</h4>
+										</div>
+										<p className="d-flex">
+											<span>01sungaming33@gmail.com</span>
 										</p>
 									</div>
 									<div className="single-content d-grid py-5 py-sm-8 gap-2">
 										<div className="check d-center justify-content-start gap-3">
 											<SlLocationPin size={30} color="white" />
-
 											<h4>Contact Address</h4>
 										</div>
 										<p className="d-flex">
@@ -200,8 +209,9 @@ const Contact = () => {
 											<AiOutlineClockCircle size={30} color="white" />
 											<h4>Opening Hours</h4>
 										</div>
-										<p className="d-flex">
-											<span>Mon-Fri: 09: 00-18: 00 Sat-Sun: Weekend</span>
+										<p className="d-block">
+											<span>Mon-Fri: 09:00 - 18:00</span>
+											<p className="d-block">Sat-Sun: Weekend</p>
 										</p>
 									</div>
 								</div>
@@ -297,68 +307,71 @@ const Contact = () => {
 							<div className="col-xl-7 col-lg-7">
 								<div className="accordion" id="accordionFaqs">
 									<AccordionBox
-										title={'What services does Our Gaming Studio offer?'}>
-										Our Gaming Studio provides a wide range of services,
-										including game development, graphic design, sound
-										production, and more. We specialize in creating captivating
-										and immersive gaming experiences.
+										title={
+											'What is Sun Gaming, and what services do you offer?'
+										}>
+										Sun Gaming is a premier casino provider and development
+										company. We specialize in creating and delivering a wide
+										range of casino solutions. Our services include game
+										development, software solutions, and consulting services to
+										enhance your gaming business.
 									</AccordionBox>
 									<AccordionBox
 										title={
-											' What sets Our Gaming Studio apart from other game development companies?'
+											'What types of casino games can I expect from Sun Gaming?'
 										}>
-										At Our Gaming Studio, we combine creativity, technical
-										expertise, and a passion for gaming to deliver exceptional
-										results. Our commitment to quality, innovation, and client
-										satisfaction sets us apart in the industry.
+										At Sun Gaming, we develop a diverse portfolio of casino
+										games, including slots, table games, poker, and specialty
+										games. Our experienced team ensures that our games are
+										designed to be engaging, innovative, and equipped with the
+										latest technology for an exceptional gaming experience.
 									</AccordionBox>
 									<AccordionBox
 										title={
-											' How can I stay updated on the latest projects and news from Our Gaming Studio?'
+											'Can you tailor your casino software to suit our specific needs and branding?'
 										}>
-										You can stay informed about our latest projects, news, and
-										updates by visiting our website&apos;s &quot;News&apos; or
-										&quot;Blog&quot; section. Additionally, follow us on our
-										social media channels, including Facebook, Twitter, and
-										Instagram, to get real-time updates.
+										Yes, we provide customizable casino software solutions to
+										match your unique requirements. Whether you need specific
+										features, branding, or a personalized user experience, we
+										collaborate closely with our clients to create a tailored
+										solution aligned with your business goals.
 									</AccordionBox>
 									<AccordionBox
 										title={
-											'Does Our Gaming Studio support responsible gaming practices?'
+											'Is Sun Gaming a licensed and compliant casino provider?'
 										}>
-										Yes, we are committed to promoting responsible gaming. We
-										design our games with player well-being in mind and
-										encourage responsible gaming behavior. If you or someone you
-										know needs assistance with responsible gaming, please refer
-										to our dedicated resources and support.
+										Yes, Sun Gaming is fully committed to legal compliance in
+										the gaming industry. We are licensed and operate in
+										accordance with the regulatory standards of various
+										jurisdictions. Our products are designed to be secure, fair,
+										and compliant with industry regulations.
 									</AccordionBox>
 									<AccordionBox
 										title={
-											'How can I contact Our Gaming Studio for collaboration or inquiries?'
+											'What distinguishes Sun Gaming from other casino development companies?'
 										}>
-										Contacting Our Gaming Studio is easy! You can reach out to
-										us through the &apos;Contact&apos; section on our website.
-										Simply fill out the provided form with your details and
-										message, and our team will promptly get in touch with you.
-										Additionally, you can find our contact information,
-										including email and phone number, in the footer of our
-										website for direct communication. We look forward to hearing
-										from you!
+										Sun Gaming stands out due to our dedication to innovation,
+										quality, and customer satisfaction. We continuously strive
+										to push the boundaries of technology and design to deliver
+										outstanding gaming experiences. Our experienced team and
+										unwavering commitment to excellence make us a preferred
+										choice for casino development.
 									</AccordionBox>
 									<AccordionBox
 										title={
-											'What is the typical timeline for game development projects at Our Gaming Studio?'
+											'Can I explore your portfolio of casino games before making a decision?'
 										}>
-										The timeline for game development projects at Our Gaming
-										Studio can vary depending on the complexity and scope of the
-										project. We work closely with our clients to establish
-										project milestones and timelines during the initial planning
-										phase. Smaller projects may take a few months, while larger,
-										more intricate games can take a year or longer. Rest
-										assured, we are dedicated to delivering high-quality games
-										efficiently, and we keep our clients updated throughout the
-										development process to ensure transparency and meet project
-										deadlines.
+										Absolutely! You can browse our portfolio of casino games on
+										our website to get a sense of the quality and variety of our
+										offerings. Feel free to reach out if you have specific
+										questions about any of our games or if you would like to
+										request a demo.
+									</AccordionBox>
+									<AccordionBox
+										title={
+											'How can I get in touch with Sun Gaming to discuss my casino development needs?'
+										}>
+										You can contact Sun Gaming by visiting our &quot;Contact&quot; page on our website. Fill out the contact form with your details and inquiry, and our team will respond promptly. Alternatively, you can reach out to us via the provided email or phone contact details for more immediate assistance. We look forward to assisting you with your casino development projects.
 									</AccordionBox>
 								</div>
 							</div>

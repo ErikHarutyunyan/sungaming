@@ -52,7 +52,7 @@ const Service = () => {
               <div className="single-box box-style box-second py-5 py-sm-8 d-flex gap-4 gap-md-6 justify-content-between align-items-center">
                 <div className="content-box">
                   <button>
-                    <h3 className="visible-slowly-bottom mb-3">
+                    <h3 className="visible-slowly-bottom mb-3 text-sm-start">
                       Free Bet and Tournament Service
                     </h3>
                   </button>
@@ -68,7 +68,7 @@ const Service = () => {
               <div className="single-box box-style box-second py-5 py-sm-8 d-flex gap-4 gap-md-6 justify-content-between align-items-center">
                 <div className="content-box">
                   <button>
-                    <h3 className="visible-slowly-bottom mb-3">
+                    <h3 className="visible-slowly-bottom mb-3 text-sm-start">
                       Seamless API integration
                     </h3>
                   </button>
@@ -85,7 +85,7 @@ const Service = () => {
               <div className="single-box box-style box-second py-5 py-sm-8 d-flex gap-4 gap-md-6 justify-content-between align-items-center">
                 <div className="content-box">
                   <button>
-                    <h3 className="visible-slowly-bottom mb-3">
+                    <h3 className="visible-slowly-bottom mb-3 text-sm-start">
                       24/7 product support
                     </h3>
                   </button>
@@ -101,7 +101,7 @@ const Service = () => {
               <div className="single-box box-style box-second py-5 py-sm-8 d-flex gap-4 gap-md-6 justify-content-between align-items-center">
                 <div className="content-box">
                   <button>
-                    <h3 className="visible-slowly-bottom mb-3">
+                    <h3 className="visible-slowly-bottom mb-3 text-sm-start">
                       Provable fairness system
                     </h3>
                   </button>
