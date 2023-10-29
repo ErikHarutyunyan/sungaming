@@ -59,21 +59,27 @@ const CareersSingle = () => {
 	// 		)
 	// 		.join('&');
 	// };
-	const encode = (data) => {
-		console.log('data: ', data);
-		let qwe = Object.keys(data)
-			.map(
-				(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
-			)
-			.join('&');
-		console.log('vax', qwe);
-		// const formData = new FormData();
-		// Object.keys(data).forEach((k) => {
-		// 	formData.append(k, data[k]);
-		// });
-		// return formData;
-	};
+	// const encode = (data) => {
+	// 	console.log('data: ', data);
+	// 	let qwe = Object.keys(data)
+	// 		.map(
+	// 			(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
+	// 		)
+	// 		.join('&');
+	// 	console.log('vax', qwe);
+	// 	// const formData = new FormData();
+	// 	// Object.keys(data).forEach((k) => {
+	// 	// 	formData.append(k, data[k]);
+	// 	// });
+	// 	// return formData;
+	// };
+	const encodeData = (data) => {
+		const formData = new FormData();
 
+		Object.keys(data).forEach((key) => formData.append(key, data[key]));
+
+		return formData;
+	};
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
@@ -85,14 +91,14 @@ const CareersSingle = () => {
 			file,
 		};
 
-		const formData = new FormData(data);
+		// const formData = new FormData(data);
 		// console.log('first', new URLSearchParams(formData).toString());
 		fetch('/', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'multipart/form-data',
 			},
-			body: formData,
+			body: encodeData(data),
 		})
 			.then(() => console.log('Form successfully submitted'))
 			.catch((error) => alert(error));
