@@ -187,7 +187,7 @@ const CareersSingle = () => {
 														name="careers">
 														<div className="md-form mb-3">
 															<div className="form-info">
-																<AiOutlineUser size={24} color="#09926a" />
+																<AiOutlineUser size={20} color="#09926a" />
 															</div>
 															<input
 																type="text"
@@ -200,7 +200,7 @@ const CareersSingle = () => {
 														</div>
 														<div className="md-form mb-3">
 															<div className="form-info">
-																<AiOutlineMail size={24} color="#09926a" />
+																<AiOutlineMail size={21} color="#09926a" />
 															</div>
 
 															<input
@@ -214,7 +214,7 @@ const CareersSingle = () => {
 														</div>
 														<div className="md-form mb-3">
 															<div className="form-info">
-																<PiUserFocusLight size={29} color="#09926a" />
+																<PiUserFocusLight size={25} color="#09926a" />
 															</div>
 
 															<input
@@ -228,7 +228,7 @@ const CareersSingle = () => {
 														</div>
 														<div className="md-form mb-3">
 															<div className="form-info">
-																<FiMessageSquare size={28} color="#09926a" />
+																<FiMessageSquare size={21} color="#09926a" />
 															</div>
 
 															<textarea
@@ -276,7 +276,9 @@ const CareersSingle = () => {
 												</div>
 												<div className="modal-footer d-flex justify-content-center">
 													<div className="btn-area mt-6 ">
-														<button className="w-25 justify-content-center box-style text-nowrap btn-box">
+														<button
+															type="submit"
+															className="w-25 justify-content-center box-style text-nowrap btn-box">
 															Apply
 														</button>
 													</div>

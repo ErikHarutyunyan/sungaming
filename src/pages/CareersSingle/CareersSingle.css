@@ -14,8 +14,11 @@
 
 .form-info {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .md-form {
