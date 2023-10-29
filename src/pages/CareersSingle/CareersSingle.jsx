@@ -15,12 +15,6 @@ import { HOME } from '../../router/route-path';
 import './CareersSingle.css';
 
 const CareersSingle = () => {
-	// const [name, setName] = useState('');
-	// const [email, setEmail] = useState('');
-	// const [vacancy, setVacancy] = useState('');
-	// const [message, setMessage] = useState('');
-	const [file, setFile] = useState({});
-
 	const [isOpen, setIsOpen] = useState(false);
 	const hiddenFileInput = useRef(null);
 	const [fileName, setFileName] = useState('');
@@ -46,82 +40,27 @@ const CareersSingle = () => {
 	// to handle the user-selected file
 	const handleChange = (event) => {
 		const fileUploaded = event.target.files[0];
-		setFile(event.target.files[0]);
 		setFileName(fileUploaded.name);
 	};
 
 	const navigate = useNavigate();
+	const handleSubmit = async (event) => {
+		event.preventDefault();
 
-	// const encode = (data) => {
-	// 	return Object.keys(data)
-	// 		.map(
-	// 			(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
-	// 		)
-	// 		.join('&');
-	// };
-	// const encode = (data) => {
-	// 	console.log('data: ', data);
-	// 	let qwe = Object.keys(data)
-	// 		.map(
-	// 			(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
-	// 		)
-	// 		.join('&');
-	// 	console.log('vax', qwe);
-	// 	// const formData = new FormData();
-	// 	// Object.keys(data).forEach((k) => {
-	// 	// 	formData.append(k, data[k]);
-	// 	// });
-	// 	// return formData;
-	// };
-	const encodeData = (data) => {
-		const formData = new FormData();
+		const myForm = event.target;
+		const formData = new FormData(myForm);
 
-		Object.keys(data).forEach((key) => formData.append(key, data[key]));
-
-		return formData;
-	};
-	const handleSubmit = async (e) => {
-		e.preventDefault();
-
-		const data = {
-			name: e.target.name.value,
-			email: e.target.email.value,
-			vacancy: e.target.message.value,
-			message: e.target.message.value,
-			file,
-		};
-
-		// const formData = new FormData(data);
-		// console.log('first', new URLSearchParams(formData).toString());
 		fetch('/', {
 			method: 'POST',
-			headers: {
-				'Content-Type': 'multipart/form-data',
-			},
-			body: encodeData(data),
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: new URLSearchParams(formData).toString(),
 		})
 			.then(() => console.log('Form successfully submitted'))
 			.catch((error) => alert(error));
 
 		navigate('/success');
 	};
-
-	// const handleChangeValues = (e) => {
-	// 	const { name, value } = e.target;
-	// 	if (name === 'careers-name') {
-	// 		return setName(value);
-	// 	}
-	// 	if (name === 'careers-email') {
-	// 		return setEmail(value);
-	// 	}
-	// 	if (name === 'careers-vacancy') {
-	// 		return setVacancy(value);
-	// 	}
-	// 	if (name === 'careers-message') {
-	// 		return setMessage(value);
-	// 	}
-	// };
-
+	
 	return (
 		<>
 			<section className="banner-section inner-banner position-relative about career">
