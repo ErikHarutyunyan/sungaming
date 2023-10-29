@@ -84,8 +84,8 @@ const Contact = () => {
 							<form
 								className="p-4 p-sm-8"
 								// onSubmit={handleSubmit(onSubmit)}
-                data-netlify="true"
-                onSubmit={handleSubmit}
+								data-netlify="true"
+								onSubmit={handleSubmit}
 								method="post"
 								name="contact"
 								action="/success/">
