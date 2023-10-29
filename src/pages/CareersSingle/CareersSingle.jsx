@@ -174,11 +174,16 @@ const CareersSingle = () => {
 											onClose={() => setIsOpen(false)}>
 											<div className="modal-content modal-career">
 												<form
-													action="/success/"
 													data-netlify="true"
 													onSubmit={handleSubmit}
 													method="post"
-													name="careers">
+													name="careers"
+													action="/success/">
+													<input
+														type="hidden"
+														name="form-name"
+														value="careers"
+													/>
 													<div className="modal-header text-center">
 														<h4 className="modal-title w-100 font-weight-bold">
 															Apply For The Position Now!

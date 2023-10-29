@@ -119,6 +119,27 @@
     </script>
   </head>
   <body>
+    <form name="subscribe-form" netlify netlify-honeypot="bot-field" hidden>
+      <input type="email" name="subscribe-email" />
+    </form>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="contact-name" />
+      <input type="email" name="contact-email" />
+      <input type="text" name="contact-subject" />
+      <textarea name="contact-message"></textarea>
+    </form>
+     <form name="privacy-contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="privacy-contact-name" />
+      <input type="email" name="privacy-contact-email" />
+      <input type="text" name="privacy-contact-subject" />
+      <textarea name="privacy-contact-message"></textarea>
+    </form>
+    <form name="careers" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="careers-name" />
+      <input type="email" name="careers-email" />
+      <input type="text" name="careers-vacancy" />
+      <textarea name="careers-message"></textarea>
+    </form>
     <div id="root"></div>
     <div id="portal"></div>
     <script>
