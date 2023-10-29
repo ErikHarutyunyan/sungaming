@@ -171,7 +171,6 @@ const CareersSingle = () => {
 											onClose={() => setIsOpen(false)}>
 											<div className="modal-content modal-career">
 												<form
-													encType="multipart/form-data"
 													data-netlify="true"
 													onSubmit={handleSubmit}
 													method="post"
@@ -271,7 +270,7 @@ const CareersSingle = () => {
 																ref={hiddenFileInput}
 																accept=".jpg,.jpeg,.png,.doc,.docx,.pdf,.html,.ppt,.pptx,.odp"
 																style={{ display: 'none' }}
-																name="careers-file"
+																name="file"
 																required
 															/>
 														</div>
