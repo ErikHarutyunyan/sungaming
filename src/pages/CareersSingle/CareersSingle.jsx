@@ -40,7 +40,6 @@ const CareersSingle = () => {
 	// to handle the user-selected file
 	const handleChange = (event) => {
 		const fileUploaded = event.target.files[0];
-		hiddenFileInput.current.value = fileUploaded;
 		setFileName(fileUploaded.name);
 	};
 
@@ -172,6 +171,7 @@ const CareersSingle = () => {
 											onClose={() => setIsOpen(false)}>
 											<div className="modal-content modal-career">
 												<form
+													encType="multipart/form-data"
 													data-netlify="true"
 													onSubmit={handleSubmit}
 													method="post"
