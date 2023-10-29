@@ -173,18 +173,18 @@ const CareersSingle = () => {
 											open={isOpen}
 											onClose={() => setIsOpen(false)}>
 											<div className="modal-content modal-career">
-												<div className="modal-header text-center">
-													<h4 className="modal-title w-100 font-weight-bold">
-														Apply For The Position Now!
-													</h4>
-												</div>
-												<div className="modal-body d-center row mt-5">
-													<form
-														action="/success/"
-														data-netlify="true"
-														onSubmit={handleSubmit}
-														method="post"
-														name="careers">
+												<form
+													action="/success/"
+													data-netlify="true"
+													onSubmit={handleSubmit}
+													method="post"
+													name="careers">
+													<div className="modal-header text-center">
+														<h4 className="modal-title w-100 font-weight-bold">
+															Apply For The Position Now!
+														</h4>
+													</div>
+													<div className="modal-body d-center row mt-5">
 														<div className="md-form mb-3">
 															<div className="form-info">
 																<AiOutlineUser size={20} color="#09926a" />
@@ -272,17 +272,17 @@ const CareersSingle = () => {
 																required
 															/>
 														</div>
-													</form>
-												</div>
-												<div className="modal-footer d-flex justify-content-center">
-													<div className="btn-area mt-6 ">
-														<button
-															type="submit"
-															className="w-25 justify-content-center box-style text-nowrap btn-box">
-															Apply
-														</button>
 													</div>
-												</div>
+													<div className="modal-footer d-flex justify-content-center">
+														<div className="btn-area mt-6 ">
+															<button
+																type="submit"
+																className="w-25 justify-content-center box-style text-nowrap btn-box">
+																Apply
+															</button>
+														</div>
+													</div>
+												</form>
 											</div>
 										</OnboardModal>
 									</div>

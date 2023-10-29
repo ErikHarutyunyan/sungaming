@@ -55,6 +55,7 @@ const About = () => {
 
   useEffect(() => {
     updateActiveSlide();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSlide]);
 
   useEffect(() => {
