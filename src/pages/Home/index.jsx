@@ -1,2 +1,3 @@
-import Home from "./Home.lazy";
-export default Home;
+// Style
+import './Home.css';
+export { default } from './Home.lazy';

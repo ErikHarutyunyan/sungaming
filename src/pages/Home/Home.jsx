@@ -27,10 +27,8 @@ import {
 // Other
 import { featuredGames } from '../../data/dataGames';
 import { settingsFeatured } from '../../features/SliderConfig';
-// Style
-import './Home.css';
 
-function Home() {
+const Home = () => {
 	return (
 		<>
 			<section className="banner-section homeBanner index-one overflow-hidden">
@@ -270,6 +268,6 @@ function Home() {
 			<Subscribe />
 		</>
 	);
-}
+};
 
 export default Home;

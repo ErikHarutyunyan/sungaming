@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+// Route
 import { Link, NavLink } from 'react-router-dom';
 import { HOME } from '../../router/route-path';
 // Component
@@ -8,7 +9,7 @@ import { menuLinks } from '../../data/dataMenu';
 // Image
 import { logo } from '../Images';
 
-export const Header = () => {
+const Header = () => {
 	const [isSticky, setIsSticky] = useState(false);
 	const [sideBar, setSideBar] = useState(false);
 	const refBurger = useRef(null);
@@ -106,3 +107,5 @@ export const Header = () => {
 		</>
 	);
 };
+
+export default Header;
