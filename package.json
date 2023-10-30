@@ -33,6 +33,7 @@
     "sharp": "^0.32.6",
     "svgo": "^3.0.2",
     "three": "0.135.0",
+    "typewriter-effect": "^2.21.0",
     "uuid": "^9.0.1",
     "yet-another-react-lightbox": "^3.14.0"
   },

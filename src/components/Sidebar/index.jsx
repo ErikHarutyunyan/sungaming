@@ -1,4 +1,4 @@
 // Styles
-import Sidebar from "./Sidebar.jsx"
+import './Sidebar.css';
 
-export default Sidebar
+export { Sidebar } from './Sidebar';

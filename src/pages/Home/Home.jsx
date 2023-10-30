@@ -1,4 +1,18 @@
+// Route
 import { Link } from 'react-router-dom';
+import { GAMES } from '../../router/route-path';
+// Pckage
+import Typewriter from 'typewriter-effect';
+// Components
+import Brands from '../../components/Brands';
+import CounterActive from '../../components/CounterActive/CounterActive.jsx';
+import GamesThumb from '../../components/GamesThumb/GamesThumb';
+import LazyImage from '../../components/LazyImage/LazyImage';
+import NewsPresent from '../../components/NewsPresent/NewsPresent';
+import Service from '../../components/Service/index.jsx';
+import SimpleSlider from '../../components/SimpleSlider';
+import Subscribe from '../../components/Subscribe';
+// Images
 import {
 	console1,
 	console2,
@@ -10,20 +24,12 @@ import {
 	planet,
 	topBottom,
 } from '../../components/Images';
-import './Home.css';
-
-import Typewriter from 'typewriter-effect';
-import Brands from '../../components/Brands';
-import CounterActive from '../../components/CounterActive/CounterActive.jsx';
-import GamesThumb from '../../components/GamesThumb/GamesThumb';
-import LazyImage from '../../components/LazyImage/LazyImage';
-import NewsPresent from '../../components/NewsPresent/NewsPresent';
-import Service from '../../components/Service/index.jsx';
-import SimpleSlider from '../../components/SimpleSlider';
-import Subscribe from '../../components/Subscribe';
+// Other
 import { featuredGames } from '../../data/dataGames';
 import { settingsFeatured } from '../../features/SliderConfig';
-import { GAMES } from '../../router/route-path';
+// Style
+import './Home.css';
+
 function Home() {
 	return (
 		<>
@@ -173,7 +179,7 @@ function Home() {
 													options={{
 														strings: [
 															'Building Sun Gaming Worlds',
-															"Establishing Sun Gaming's casino provider.",
+															'Establishing Sun Gaming casino provider.',
 														],
 														autoStart: true,
 														loop: true,
