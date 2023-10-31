@@ -66,8 +66,6 @@ const Header = () => {
 							loading="lazy"
 							width="122"
 							height="23"
-							decoding="async"
-							data-nimg="1"
 							className="logo-text"
 						/>
 					</Link>

@@ -1,5 +1,5 @@
-.contact-location .text-area span{
-    font-size: 15px;
+.contact-location .text-area span {
+	font-size: 15px;
 }
 
 @media (max-width: 1200px) {
@@ -12,4 +12,23 @@
 	.info-office {
 		gap: 0.8rem;
 	}
+}
+
+footer a.active {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s;
+	color: var(--p300);
+}
+footer a.active::before {
+	position: absolute;
+	content: '';
+	transform: rotate(-50deg);
+	opacity: 1;
+	transition: 0.3s;
+	background-color: var(--p300);
+	width: 30px;
+	height: 1px;
 }

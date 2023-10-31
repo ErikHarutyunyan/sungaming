@@ -1,4 +1,3 @@
-import "./TemplateName.css"
 
 const TemplateName = () => {
   return (

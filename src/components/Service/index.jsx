@@ -1,3 +1,3 @@
-import Service from "./Service.jsx"
-
-export default Service
+// Style
+import './Service.css';
+export { default } from './Service';

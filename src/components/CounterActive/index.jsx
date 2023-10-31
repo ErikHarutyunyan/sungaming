@@ -1,4 +1,3 @@
-
-import CounterActive from "./CounterActive.jsx"
-
-export default CounterActive
+// Style
+import './CounterActive.css';
+export { default } from './CounterActive';

@@ -1,92 +1,44 @@
 // Route
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { CAREERS, PRIVACY } from '../../router/route-path';
-// Icons
-import {
-	MdOutlineLocationOn,
-	MdOutlineMailOutline,
-	MdOutlinePhone,
-	MdSchedule,
-} from 'react-icons/md';
+// data
+import { dataOffice, dataSocial } from '../../data/dataProduct';
 
 export const Footer = () => {
 	return (
 		<footer className="footer-section">
 			<div className="container">
 				<div className="row cus-mar info-office pb-120 pt-120">
-					<div className="col-xl-3 col-md-5 col-sm-8 visible-from-bottom">
-						<div className="single-box">
-							<h4 className="mb-4">Office</h4>
-							<div className="contact-location d-grid gap-6">
-								<div className="single-area d-flex gap-4">
-									<div className="icon-area d-center">
-										<MdOutlineLocationOn
-											size={22}
-											className="material-symbols-outlined"
-										/>
-									</div>
-									<div className="text-area">
-										<h5 className="mb-2">Yerevan</h5>
-										<span>Armenia</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="col-xl-3 col-md-5 col-sm-8 visible-from-bottom">
-						<div className="single-box">
-							<h4 className="mb-4">Email address</h4>
-							<div className="contact-location d-grid gap-6">
-								<div className="single-area d-flex gap-4 align-items-center">
-									<div className="icon-area d-center">
-										<MdOutlineMailOutline
-											size={22}
-											className="material-symbols-outlined"
-										/>
-									</div>
-									<div className="text-area">
-										<span>01sungaming33@gmail.com</span>
+					{dataOffice.map((data) => {
+						const { id, text, mainText, subText, icon } = data;
+						console.log('subText :', subText);
+						return (
+							<div
+								key={id}
+								className="col-xl-3 col-md-5 col-sm-8 visible-from-bottom">
+								<div className="single-box">
+									<h4 className="mb-4">{text}</h4>
+									<div className="contact-location d-grid gap-6">
+										<div className="single-area d-flex align-items-center gap-4">
+											<div className="icon-area d-center">{icon}</div>
+											<div className="text-area">
+												{mainText ? <h5 className="mb-2">{mainText}</h5> : null}
+												{subText
+													? subText.map((item, i) => {
+															return (
+																<span className="d-block" key={`${id}_${i}`}>
+																	{item}
+																</span>
+															);
+													})
+													: null}
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div className="col-xl-3 col-md-5 col-sm-8 visible-from-bottom">
-						<div className="single-box">
-							<h4 className="mb-4">Phone Number</h4>
-							<div className="contact-location d-grid gap-6">
-								<div className="single-area d-flex gap-4 align-items-center">
-									<div className="icon-area d-center">
-										<MdOutlinePhone
-											size={22}
-											className="material-symbols-outlined"
-										/>
-									</div>
-									<div className="text-area">
-										<span>(374) 0010033</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="col-xl-3 col-md-5 col-sm-8 visible-from-bottom">
-						<div className="single-box">
-							<h4 className="mb-4">Working Hours</h4>
-							<div className="contact-location d-grid gap-6">
-								<div className="single-area d-flex gap-4 align-items-center">
-									<div className="icon-area d-center">
-										<MdSchedule
-											size={22}
-											className="material-symbols-outlined"
-										/>
-									</div>
-									<div className="text-area">
-										<span>Mon-Fri: 09:00 - 18:00 Sat-Sun: Weekend</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+						);
+					})}
 				</div>
 				<div className="footer-bottom p-5">
 					<div className="container">
@@ -101,8 +53,20 @@ export const Footer = () => {
 							</div>
 							<div className="col-md-4">
 								<div className="copyright d-flex gap-3 align-items-center justify-content-center justify-content-md-end">
-									<Link to={PRIVACY}>Privacy</Link>
-									<Link to={CAREERS}>Careers</Link>
+									<NavLink
+										className={({ isActive }) =>
+											isActive ? 'active' : 'inactive'
+										}
+										to={PRIVACY}>
+										Privacy
+									</NavLink>
+									<NavLink
+										className={({ isActive }) =>
+											isActive ? 'active' : 'inactive'
+										}
+										to={CAREERS}>
+										Careers
+									</NavLink>
 								</div>
 							</div>
 						</div>
@@ -111,7 +75,9 @@ export const Footer = () => {
 								<a
 									aria-label="Facebook"
 									className="d-center"
-									href="https://www.facebook.com">
+									target="_blank"
+									href={dataSocial.facebook.url}
+									rel="noreferrer">
 									<svg
 										stroke="currentColor"
 										fill="currentColor"
@@ -128,7 +94,9 @@ export const Footer = () => {
 								<a
 									aria-label="Instagram"
 									className="d-center"
-									href="https://www.instagram.com">
+									target="_blank"
+									href={dataSocial.instagram.url}
+									rel="noreferrer">
 									<svg
 										stroke="currentColor"
 										fill="currentColor"
@@ -145,7 +113,9 @@ export const Footer = () => {
 								<a
 									aria-label="Linkedin"
 									className="d-center"
-									href="https://www.linkedin.com">
+									target="_blank"
+									href={dataSocial.linkedin.url}
+									rel="noreferrer">
 									<svg
 										stroke="currentColor"
 										fill="currentColor"

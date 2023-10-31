@@ -1,4 +1,4 @@
 // Styles
-import TemplateName from "./TemplateName.jsx"
+import './TemplateName.css';
 
-export default TemplateName
+export { default } from './TemplateName';
