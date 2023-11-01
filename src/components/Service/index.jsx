@@ -1,3 +1,4 @@
 // Style
-import './Service.css';
+// import './Service.css';
+
 export { default } from './Service';

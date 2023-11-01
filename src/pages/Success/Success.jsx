@@ -1,6 +1,6 @@
 // Styles
 import { light } from '../../components/Images';
-import LazyImage from '../../components/LazyImage/LazyImage';
+import LazyImage from '../../components/LazyImage';
 
 import { useNavigate } from 'react-router-dom';
 import './Success.css';

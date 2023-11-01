@@ -1,17 +1,18 @@
 // Route
 import { Link } from 'react-router-dom';
 import { GAMES } from '../../router/route-path';
-// Pckage
+// Package
 import Typewriter from 'typewriter-effect';
 // Components
 import Brands from '../../components/Brands';
-import CounterActive from '../../components/CounterActive/CounterActive.jsx';
-import GamesThumb from '../../components/GamesThumb/GamesThumb';
-import LazyImage from '../../components/LazyImage/LazyImage';
+import CounterActive from '../../components/CounterActive';
+import GamesThumb from '../../components/GamesThumb';
+import LazyImage from '../../components/LazyImage';
 import NewsPresent from '../../components/NewsPresent/NewsPresent';
-import Service from '../../components/Service/index.jsx';
+import Service from '../../components/Service';
 import SimpleSlider from '../../components/SimpleSlider';
 import Subscribe from '../../components/Subscribe';
+
 // Images
 import {
 	console1,
@@ -24,7 +25,8 @@ import {
 	planet,
 	topBottom,
 } from '../../components/Images';
-// Other
+// Data and Configuration
+import { counterData } from '../../data/dataCounters';
 import { featuredGames } from '../../data/dataGames';
 import { settingsFeatured } from '../../features/SliderConfig';
 
@@ -244,7 +246,8 @@ const Home = () => {
 															<div className="link-item-featured app-download d-flex gap-5 align-items-center">
 																<Link
 																	className="text-decoration-underline"
-																	to={`${GAMES}/${path}`}>
+																	to={`${GAMES}/${path}`}
+																	state={{ data: featuredItem }}>
 																	Details Game
 																</Link>
 															</div>
@@ -261,7 +264,7 @@ const Home = () => {
 				</div>
 			</section>
 			<Service />
-			<CounterActive />
+			<CounterActive counterData={counterData} />
 			<GamesThumb />
 			<NewsPresent />
 			<Brands />

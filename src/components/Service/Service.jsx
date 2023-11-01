@@ -1,9 +1,13 @@
-import { BiSolidTimeFive } from 'react-icons/bi';
+// Route
 import { Link } from 'react-router-dom';
-import { IconAPI, IconDb, IconSec } from '../Icons/Icons';
-import { serviceThumb, star } from '../Images/';
-import LazyImage from '../LazyImage/LazyImage';
 import { SERVICES } from './../../router/route-path';
+// Component
+import LazyImage from '../LazyImage';
+// Icons
+import { BiSolidTimeFive } from 'react-icons/bi';
+import { IconAPI, IconDb, IconSec } from '../Icons/index';
+// Images
+import { serviceThumb, star } from '../Images';
 
 const Service = () => {
 	return (
@@ -36,6 +40,7 @@ const Service = () => {
 									src={serviceThumb}
 									width="526"
 									height="366"
+									className="asd"
 								/>
 							</div>
 							<div className="link-item">
@@ -62,7 +67,7 @@ const Service = () => {
 									</p>
 								</div>
 								<button className="end-area d-center">
-									<IconDb size={20} color={'#fff'} />
+									<IconDb size={20} color="#fff" />
 								</button>
 							</div>
 							<div className="single-box box-style box-second py-5 py-sm-8 d-flex gap-4 gap-md-6 justify-content-between align-items-center">
@@ -79,7 +84,7 @@ const Service = () => {
 									</p>
 								</div>
 								<button className="end-area d-center">
-									<IconAPI size={20} color={'#fff'} />
+									<IconAPI size={20} color="#fff" />
 								</button>
 							</div>
 							<div className="single-box box-style box-second py-5 py-sm-8 d-flex gap-4 gap-md-6 justify-content-between align-items-center">
@@ -95,7 +100,7 @@ const Service = () => {
 									</p>
 								</div>
 								<button className="end-area d-center">
-									<BiSolidTimeFive size={20} color={'#fff'} />
+									<BiSolidTimeFive size={20} color="#fff" />
 								</button>
 							</div>
 							<div className="single-box box-style box-second py-5 py-sm-8 d-flex gap-4 gap-md-6 justify-content-between align-items-center">
@@ -113,7 +118,7 @@ const Service = () => {
 									</p>
 								</div>
 								<button className="end-area d-center">
-									<IconSec size={20} color={'#fff'} />
+									<IconSec size={20} color="#fff" />
 								</button>
 							</div>
 						</div>

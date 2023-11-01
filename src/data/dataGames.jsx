@@ -944,12 +944,13 @@ dataGames.forEach((game) => {
 	game.path = game.title.toLowerCase().replace(/\s+/g, '-');
 });
 
+/* prettier-ignore */
 export const categoryIcons = {
-	sports: <MdSportsSoccer key="sport" size={25} />,
-	slots: <IconsSlot key="slot" size={27} />,
-	casino: <IconsCasino key="casino" size={38} />,
-	tables: <IconsTable key="table" size={35} />,
-	crypto: <RiNftLine key="crypto" size={27} />,
+	sports: (<MdSportsSoccer key="sport" size={25} />),
+	slots: (<IconsSlot key="slot" size={27} />),
+	casino: (<IconsCasino key="casino" size={38} />),
+	tables: (<IconsTable key="table" size={35} />),
+	crypto: (<RiNftLine key="crypto" size={27} />),
 };
 
 export const featuredGames = dataGames.filter((game) => game.featured === true);

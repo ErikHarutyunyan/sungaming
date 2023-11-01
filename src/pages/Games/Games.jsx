@@ -11,7 +11,7 @@ import { Suspense, useReducer, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useMeasure from 'react-use-measure';
 import BannerPages from '../../components/BannerPages/BannerPages.jsx';
-import CounterActive from '../../components/CounterActive/CounterActive.jsx';
+import CounterActive from '../../components/CounterActive';
 import { IconResponse } from '../../components/Icons/Icons';
 import { bannerGameCut, gameShape1, gameShape2 } from '../../components/Images';
 import LazyImage from '../../components/LazyImage';

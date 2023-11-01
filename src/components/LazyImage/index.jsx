@@ -1,4 +1,4 @@
 // Styles
-import LazyImage from "./LazyImage.jsx"
+// import './LazyImage.css';
 
-export default LazyImage
+export { default } from './LazyImage';

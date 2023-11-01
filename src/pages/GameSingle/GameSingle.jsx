@@ -1,26 +1,23 @@
-import { MotionConfig, motion, useMotionValue } from 'framer-motion';
-import { Suspense, useState } from 'react';
-import { IoCheckmark, IoPlay } from 'react-icons/io5';
+import { useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
-import useMeasure from 'react-use-measure';
+// Package
 import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 // Components
 import Brands from '../../components/Brands';
-import CounterActive from '../../components/CounterActive/CounterActive';
+import CounterActive from '../../components/CounterActive';
 import LazyImage from '../../components/LazyImage';
 import OnboardModal from '../../components/OnboardModal/OnboardModal';
-import { Shapes } from '../../components/Shapes/Shapes';
+import PlayButton from '../../components/PlayButton';
 import SimpleSlider from '../../components/SimpleSlider';
 import Subscribe from '../../components/Subscribe';
-
-// Helpers
+// Data and Configuration
+import { counterData } from '../../data/dataCounters';
 import { dataGames } from '../../data/dataGames';
 import { settingsGameSingle } from '../../features/SliderConfig';
-import { transition } from '../../settings/gameButtonSetings';
-
-// Images
+// Images and Icons
+import { IoCheckmark, IoPlay } from 'react-icons/io5';
 import {
 	bubble,
 	circle,
@@ -29,35 +26,21 @@ import {
 	lineImg,
 	objectImg,
 } from '../../components/Images';
-// Styles
-import './GameSingle.css';
 
 const GameSingle = () => {
-	console.log('object');
 	const [isOpen, setIsOpen] = useState(false);
+	const [indexImages, setIndexImages] = useState(-1);
 	const { id: title } = useParams();
 	const location = useLocation();
 	let data = location.state?.data;
 	if (!data) {
-		const singleGame = dataGames.find((game) => {
+		data = dataGames.find((game) => {
 			return game.path === title;
 		});
-		data = singleGame;
 	}
-	const [ref, bounds] = useMeasure({ scroll: false });
-	const [isHover, setIsHover] = useState(false);
-	const [isPress, setIsPress] = useState(false);
-	const mouseX = useMotionValue(0);
-	const mouseY = useMotionValue(0);
-	const resetMousePosition = () => {
-		mouseX.set(0);
-		mouseY.set(0);
-	};
-
-	const images = [...data.imgMore].map((src) => ({ src }));
-
-	console.log('images :', images);
-	const [indexImages, setIndexImages] = useState(-1);
+	const images = data.imgMore
+		? [...data.imgMore].map((src) => ({ src }))
+		: null;
 
 	return (
 		<>
@@ -93,43 +76,50 @@ const GameSingle = () => {
 									</h2>
 									<p>{data.desc}</p>
 								</div>
-								<div className="single-content">
-									<ul className="ms-10 d-grid gap-4">
-										{data.features?.map((feature, i) => {
-											return (
-												<li key={`${feature}_${i}`}>
-													<IoCheckmark
-														size={20}
-														color={'#0ef0ad'}
-														className="fCheck"
-													/>
-													{feature}
-												</li>
-											);
-										})}
-									</ul>
-								</div>
+								{data.features.length ? (
+									<div className="single-content">
+										<ul className="ms-10 d-grid gap-4">
+											{data.features.map((feature, i) => {
+												return (
+													<li key={`${feature}_${i}`}>
+														<IoCheckmark
+															size={20}
+															color="#0ef0ad"
+															className="fCheck"
+														/>
+														{feature}
+													</li>
+												);
+											})}
+										</ul>
+									</div>
+								) : null}
 							</div>
 						</div>
 						<div className="col-xl-5 col-lg-6 col-md-10 mt-8 mt-lg-0">
 							<div className="single-box cus-scrollbar gameSingleCart tab-content position-relative text-center p-3 p-md-10">
-								<span className="feature-tag d-none d-sm-flex d-center categoryTag">
-									{data.category[0]}
-								</span>
+								{data.category[0] ? (
+									<span className="feature-tag d-none d-sm-flex d-center categoryTag">
+										{data.category[0]}
+									</span>
+								) : null}
 								<div className="singleGameImg">
 									<LazyImage alt={data.title} src={data.imgMain} />
 								</div>
 								<div className="main-content gameSingleContent py-4">
 									<h3 className="visible-slowly-bottom mb-4">{data.title}</h3>
-									<ul className="d-flex flex-wrap gameCategory mt-8 fs-seven align-items-center gap-5 gap-md-10">
-										{data.platforms?.map((platform, index) => {
-											return <li key={`${platform}_${index}`}>{platform} </li>;
-										})}
-									</ul>
-
-									{data.info && (
+									{data.platforms.length !== 0 ? (
+										<ul className="d-flex flex-wrap gameCategory mt-8 fs-seven align-items-center gap-5 gap-md-10">
+											{data.platforms.map((platform, index) => {
+												return (
+													<li key={`${platform}_${index}`}>{platform} </li>
+												);
+											})}
+										</ul>
+									) : null}
+									{data.info.length !== 0 ? (
 										<div className="review-box infoData mt-4 mt-md-8 mb-5 mb-md-8 w-100 p-2 p-sm-4 d-center gap-3 justify-content-evenly">
-											{data?.info?.map((item, index) => (
+											{data.info.map((item, index) => (
 												<div className="single-area" key={`${item}_${index}`}>
 													{Object.keys(item).map((key) => (
 														<div key={key}>
@@ -142,66 +132,8 @@ const GameSingle = () => {
 												</div>
 											))}
 										</div>
-									)}
-
-									<MotionConfig transition={transition}>
-										<motion.a
-											href={data.url}
-											target="_blank"
-											className="buttonPlaySingle"
-											ref={ref}
-											initial={false}
-											animate={isHover ? 'hover' : 'rest'}
-											whileTap="press"
-											variants={{
-												rest: { scale: 1 },
-												hover: { scale: 1.1 },
-												press: { scale: 1.05 },
-											}}
-											onHoverStart={() => {
-												resetMousePosition();
-												setIsHover(true);
-											}}
-											onHoverEnd={() => {
-												resetMousePosition();
-												setIsHover(false);
-											}}
-											onTapStart={() => setIsPress(true)}
-											onTap={() => setIsPress(false)}
-											onTapCancel={() => setIsPress(false)}
-											onPointerMove={(e) => {
-												mouseX.set(e.clientX - bounds.x - bounds.width / 2);
-												mouseY.set(e.clientY - bounds.y - bounds.height / 2);
-											}}>
-											<motion.div
-												className="shapesPlay"
-												variants={{
-													rest: { opacity: 0 },
-													hover: { opacity: 1 },
-												}}>
-												<div className="pink blush" />
-												<div className="blue blush" />
-												<div className="containerr">
-													<Suspense fallback={null}>
-														<Shapes
-															isHover={isHover}
-															isPress={isPress}
-															mouseX={mouseX}
-															mouseY={mouseY}
-														/>
-													</Suspense>
-												</div>
-											</motion.div>
-											<motion.div
-												variants={{
-													hover: { scale: 1.1 },
-													press: { scale: 0.85 },
-												}}
-												className="labelPlay">
-												Play Demo
-											</motion.div>
-										</motion.a>
-									</MotionConfig>
+									) : null}
+									<PlayButton url={data.url} />
 								</div>
 							</div>
 						</div>
@@ -209,7 +141,7 @@ const GameSingle = () => {
 				</div>
 			</section>
 			{data.video ? (
-				<section className="our-focus bg-transparent game-trailers position-relative overflow-hidden pt-120 pb-10">
+				<section className="our-focus bg-transparent game-trailers position-relative overflow-hidden pt-120 pb-20">
 					<div className="shape-area">
 						<img src={lineImg} className="shape-1" alt="icon" />
 						<img src={objectImg} className="shape-2" alt="icon" />
@@ -293,30 +225,30 @@ const GameSingle = () => {
 					</div>
 				</section>
 			) : null}
-			<CounterActive className={`bg-800`} />
-			<section className="gaming-character ongoing-values bg-transparent gallery pt-20 pb-120">
-				<div className="container">
-					<div className="row section-text justify-content-center">
-						<div className="col-lg-7 text-center">
-							<span className="fs-two heading">Gallery</span>
+			<CounterActive className={`bg-800`} counterData={counterData} />
+			{data.imgMore.length !== 0 ? (
+				<section className="gaming-character ongoing-values bg-transparent gallery pt-20 pb-120">
+					<div className="container">
+						<div className="row section-text justify-content-center">
+							<div className="col-lg-7 text-center">
+								<span className="fs-two heading">Gallery</span>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className="container-fluid">
-					<div className="row justify-content-end">
-						<div className="col-lg-12">
-							{data.imgMore.length !== 0 ? (
+					<div className="container-fluid">
+						<div className="row justify-content-end">
+							<div className="col-lg-12">
 								<SimpleSlider
-									className={'gallery-carousel'}
+									className="gallery-carousel"
 									setting={settingsGameSingle}>
-									{data.imgMore?.map((imgMore, index) => {
+									{data.imgMore.map((imgMore, index) => {
 										return (
 											<div
 												key={`img_${index}`}
 												className="slide-area slick-slide slick-cloned">
 												<div className="single-slider">
 													<LazyImage
-														alt={'gallery'}
+														alt="gallery"
 														src={imgMore}
 														onClick={() => {
 															setIndexImages(index);
@@ -327,11 +259,11 @@ const GameSingle = () => {
 										);
 									})}
 								</SimpleSlider>
-							) : null}
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			) : null}
 			<Brands />
 			<Subscribe />
 			<Lightbox

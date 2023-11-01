@@ -1,20 +1,23 @@
-import { motion } from 'framer-motion';
 import { useState } from 'react';
+// Route
 import { Link } from 'react-router-dom';
+import { GAMES } from '../../router/route-path.jsx';
+// Package
+import { motion } from 'framer-motion';
+// Data
 import {
 	allCategoriesGames,
 	categoryIcons,
 	dataGames,
 } from '../../data/dataGames';
-import { GAMES } from '../../router/route-path.jsx';
+// Images
 import {
 	allGameBg,
 	ourGamesShape1,
 	ourGamesShape2,
 	ourGamesShape3,
 } from '../Images';
-import LazyImage from '../LazyImage/LazyImage';
-import './GamesThumb.css';
+import LazyImage from '../LazyImage';
 
 const gamesPerRow = 6;
 
@@ -111,11 +114,11 @@ const GamesThumb = () => {
 												? `${category}_category nav-link d-center box-style btn-box active_category`
 												: `${category}_category nav-link d-center box-style btn-box`
 										}>
-										{categoryIcons[category.toLowerCase()] !== undefined && (
+										{categoryIcons[category.toLowerCase()] !== undefined ? (
 											<span className="icon-area pe-none">
 												{categoryIcons[category.toLowerCase()]}
 											</span>
-										)}
+										) : null}
 										{category}
 									</button>
 								</li>
@@ -128,10 +131,11 @@ const GamesThumb = () => {
 						<div className="tabcontents tab-content">
 							<div className={`tabitem active`}>
 								<div className="row  cus-mar justify-content-center">
-									{menuItems
-										?.slice(0, next)
-										?.map(({ id, title, imgMain, imgSmall, desc, path }) => (
+									{menuItems?.slice(0, next)?.map((game) => {
+										const { id, title, imgMain, imgSmall, desc, path } = game;
+										return (
 											<motion.div
+												key={id}
 												animate={{
 													opacity: 1,
 													y: 0,
@@ -172,7 +176,6 @@ const GamesThumb = () => {
 														duration: 0.5,
 													},
 												}}
-												key={id}
 												className={`col-xl-4 col-sm-6 col-8 d-center`}>
 												<div className="single-box">
 													<div className="img-area">
@@ -201,15 +204,17 @@ const GamesThumb = () => {
 														<div className="btn-area alt-bg">
 															<Link
 																className="box-style btn-box mt-4 d-center"
-																to={`${GAMES}/${path}`}>
+																to={`${GAMES}/${path}`}
+																state={{ data: game }}>
 																Learn More
 															</Link>
 														</div>
 													</div>
 												</div>
 											</motion.div>
-										))}
-									{next < menuItems?.length && (
+										);
+									})}
+									{next < menuItems?.length ? (
 										<div className="text-center mt-10 mt-sm-15">
 											<div
 												className="loading py-3 px-8 d-inline-flex align-items-center gap-2"
@@ -219,7 +224,7 @@ const GamesThumb = () => {
 												</div>
 											</div>
 										</div>
-									)}
+									) : null}
 								</div>
 							</div>
 						</div>

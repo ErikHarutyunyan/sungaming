@@ -4,14 +4,13 @@ import { CAREERS, PRIVACY } from '../../router/route-path';
 // data
 import { dataOffice, dataSocial } from '../../data/dataProduct';
 
-export const Footer = () => {
+const Footer = () => {
 	return (
 		<footer className="footer-section">
 			<div className="container">
 				<div className="row cus-mar info-office pb-120 pt-120">
 					{dataOffice.map((data) => {
 						const { id, text, mainText, subText, icon } = data;
-						console.log('subText :', subText);
 						return (
 							<div
 								key={id}
@@ -30,7 +29,8 @@ export const Footer = () => {
 																	{item}
 																</span>
 															);
-													})
+															// eslint-disable-next-line no-mixed-spaces-and-tabs
+													  })
 													: null}
 											</div>
 										</div>
@@ -135,3 +135,4 @@ export const Footer = () => {
 		</footer>
 	);
 };
+export default Footer;

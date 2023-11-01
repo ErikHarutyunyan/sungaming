@@ -1,3 +1,9 @@
-import { IconsCasino, IconsSlot, IconsTable } from "./Icons.jsx";
-
-export { IconsCasino, IconsSlot, IconsTable };
+export {
+	IconAPI,
+	IconDb,
+	IconResponse,
+	IconSec,
+	IconsCasino,
+	IconsSlot,
+	IconsTable,
+} from './Icons';

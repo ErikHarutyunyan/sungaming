@@ -2,13 +2,13 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 import { menuLinks } from '../../data/dataMenu';
 
-export const Sidebar = ({ sideBar = false, showHideSidebar }) => {
+export const Sidebar = ({ sideBar = false, showHideSidebar = (f) => f }) => {
 	return (
 		<>
-			{sideBar ? (
-				<>
-					<div className="bg-blur" />
-					<AnimatePresence>
+			<>
+				{sideBar ? <div className="bg-blur" /> : null}
+				<AnimatePresence>
+					{sideBar ? (
 						<motion.aside
 							initial={{ x: '100%' }}
 							animate={{
@@ -67,9 +67,9 @@ export const Sidebar = ({ sideBar = false, showHideSidebar }) => {
 								</ul>
 							</div>
 						</motion.aside>
-					</AnimatePresence>
-				</>
-			) : null}
+					) : null}
+				</AnimatePresence>
+			</>
 		</>
 	);
 };

@@ -1,4 +1,4 @@
 // Styles
-import LoadRoute from "./LoadRoute.jsx"
+import './LoadRoute.css';
 
-export default LoadRoute
+export { default } from './LoadRoute.jsx';

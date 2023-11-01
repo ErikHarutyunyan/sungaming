@@ -1,4 +1,4 @@
 // Styles
-import GamesThumb from "./GamesThumb.jsx"
+import './GamesThumb.css';
 
-export default GamesThumb
+export { default } from './GamesThumb.jsx';
