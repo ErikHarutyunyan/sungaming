@@ -153,6 +153,10 @@ h3.gameTitle {
   font-size: 22px;
 }
 
+.games-thumb.our-games .shape-area img.shape-1 {
+  left: 5%;
+}
+
 .game-section-block-wrp {
   width: 100%;
   display: grid;
@@ -281,6 +285,7 @@ h3.gameTitle {
   top: 35%;
   left: 35%;
 } */
+
 
 .gameBannerWrapImg {
   position: absolute;

@@ -1,51 +1,42 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 // Styles
 import '../../components/GamesThumb/GamesThumb.css';
 import './Games.css';
 
+// Route
+import { motion } from 'framer-motion';
+import { GAMES } from '../../router/route-path';
+
+// Components
+import BannerPages from '../../components/BannerPages';
+import CounterActive from '../../components/CounterActive';
+import LazyImage from '../../components/LazyImage';
+import PlayButton from '../../components/PlayButton';
+import Subscribe from '../../components/Subscribe';
+// Images and Icons
 import { FaStudiovinari } from 'react-icons/fa';
 import { MdSecurity } from 'react-icons/md';
 import { PiLightbulbLight } from 'react-icons/pi';
-
-import { MotionConfig, motion, useMotionValue } from 'framer-motion';
-import { Suspense, useReducer, useState } from 'react';
-import { Link } from 'react-router-dom';
-import useMeasure from 'react-use-measure';
-import BannerPages from '../../components/BannerPages/BannerPages.jsx';
-import CounterActive from '../../components/CounterActive';
 import { IconResponse } from '../../components/Icons/Icons';
 import { bannerGameCut, gameShape1, gameShape2 } from '../../components/Images';
-import LazyImage from '../../components/LazyImage';
-import { Shapes } from '../../components/Shapes/Shapes.jsx';
-import Subscribe from '../../components/Subscribe';
+// Data and Configuration
 import {
 	allCategoriesGames,
 	categoryIcons,
 	dataGames,
 } from '../../data/dataGames';
-import { GAMES } from '../../router/route-path';
-import { transition } from '../../settings/gameButtonSetings.js';
 
 const gamesPerRow = 4;
 
 const Games = () => {
 	const [next, setNext] = useState(gamesPerRow);
 	const [menuItems, setMenuItems] = useState(dataGames);
-	const [ref, bounds] = useMeasure({ scroll: false });
-	const [isHover, setIsHover] = useState(false);
-	const [isPress, setIsPress] = useState(false);
-	const mouseX = useMotionValue(0);
-	const mouseY = useMotionValue(0);
+	const [isActive, setIsActive] = useState('category_0');
 
 	const handleMoreGames = () => {
 		setNext(next + gamesPerRow);
 	};
-
-	const resetMousePosition = () => {
-		mouseX.set(0);
-		mouseY.set(0);
-	};
-
-	const [isActive, setIsActive] = useState('category_0');
 
 	const handleClick = (e) => {
 		setIsActive(e.target.id);
@@ -57,16 +48,15 @@ const Games = () => {
 			return;
 		}
 		const newItems = dataGames.filter((item) => {
-			if (item.category.length > 1 && item.category.includes(category))
+			if (item.category.length > 1 && item.category.includes(category)) {
 				return item.category.filter(
 					(categoryItem) => categoryItem === category,
 				);
-			else return item.category[0] == category;
+			}
+			return item.category[0] == category;
 		});
 		setMenuItems(newItems);
 	};
-	// eslint-disable-next-line no-unused-vars
-	const [toggled, toggle] = useReducer((state) => !state, true);
 
 	return (
 		<>
@@ -175,7 +165,7 @@ const Games = () => {
 					</div>
 				</div>
 			</section>
-			<section className="our-games overflow-hidden index-two position-relative pt-120 pb-120">
+			<section className="our-games games-thumb overflow-hidden index-two position-relative pt-120 pb-120">
 				<div className="shape-area">
 					<LazyImage
 						alt="gameShape1"
@@ -217,7 +207,6 @@ const Games = () => {
 											className="nav-item pointer"
 											key={index}
 											onClick={(e) => {
-												toggle();
 												const className = e.target.className;
 												if (!className.includes('active_category')) {
 													filterItems(
@@ -233,12 +222,11 @@ const Games = () => {
 														? `${category}_category nav-link d-center box-style btn-box active_category`
 														: `${category}_category nav-link d-center box-style btn-box`
 												}>
-												{categoryIcons[category.toLowerCase()] !==
-													undefined && (
+												{categoryIcons[category.toLowerCase()] !== undefined ? (
 													<span className="icon-area pe-none">
 														{categoryIcons[category.toLowerCase()]}
 													</span>
-												)}
+												) : null}
 												{category}
 											</button>
 										</li>
@@ -252,7 +240,7 @@ const Games = () => {
 							<div className="tabcontents visible-from-bottom">
 								<div className="tabitem active">
 									<div className="col-12 cus-mar game-section-block-wrp">
-										{menuItems?.slice(0, next)?.map((item) => {
+										{menuItems.slice(0, next).map((item) => {
 											const { id, title, imgMain, path, url } = item;
 											return (
 												<motion.div
@@ -305,91 +293,18 @@ const Games = () => {
 																src={imgMain}
 																className="w-100 thumb-img"
 															/>
-															{/* <img
-                                alt={title}
-                                src={imgMain}
-                                className="w-100 thumb-img"
-                              /> */}
 															<h3 className="gameTitle">{title}</h3>
 														</div>
 														<div className="link-item py-3">
 															<Link
 																className=" px-5 text-decoration-underline"
 																to={`${GAMES}/${path}`}
-																params={{ item }}>
+																state={{ data: item }}>
 																More Details
 															</Link>
 														</div>
 													</div>
-													<MotionConfig transition={transition}>
-														<motion.a
-															href={url}
-															target="_blank"
-															className="buttonPlay"
-															style={{ position: 'absolute' }}
-															ref={ref}
-															initial={false}
-															animate={isHover ? 'hover' : 'rest'}
-															whileTap="press"
-															variants={{
-																rest: {
-																	scale: 1,
-																},
-																hover: {
-																	scale: 1.1,
-																},
-																press: {
-																	scale: 0.95,
-																},
-															}}
-															onHoverStart={() => {
-																resetMousePosition();
-																setIsHover(true);
-															}}
-															onHoverEnd={() => {
-																resetMousePosition();
-																setIsHover(false);
-															}}
-															onTapStart={() => setIsPress(true)}
-															onTap={() => setIsPress(false)}
-															onTapCancel={() => setIsPress(false)}
-															onPointerMove={(e) => {
-																mouseX.set(
-																	e.clientX - bounds.x - bounds.width / 2,
-																);
-																mouseY.set(
-																	e.clientY - bounds.y - bounds.height / 2,
-																);
-															}}>
-															<motion.div
-																className="shapesPlay"
-																variants={{
-																	rest: { opacity: 0 },
-																	hover: { opacity: 1 },
-																}}>
-																<div className="pink blush" />
-																<div className="blue blush" />
-																<div className="containerr">
-																	<Suspense fallback={null}>
-																		<Shapes
-																			isHover={isHover}
-																			isPress={isPress}
-																			mouseX={mouseX}
-																			mouseY={mouseY}
-																		/>
-																	</Suspense>
-																</div>
-															</motion.div>
-															<motion.div
-																variants={{
-																	hover: { scale: 1.1 },
-																	press: { scale: 0.85 },
-																}}
-																className="labelPlay">
-																Play Demo
-															</motion.div>
-														</motion.a>
-													</MotionConfig>
+													<PlayButton url={url} single />
 												</motion.div>
 											);
 										})}

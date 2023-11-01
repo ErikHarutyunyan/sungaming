@@ -1,11 +1,11 @@
-.brands img {
+.brands .thumb img {
   filter: grayscale(1);
   object-fit: scale-down;
   max-width: 120px;
   width: 100%;
   max-height: 80px;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.5 !important;
 }
 .brands .thumb {
   display: flex;

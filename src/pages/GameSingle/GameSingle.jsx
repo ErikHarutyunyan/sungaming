@@ -4,6 +4,8 @@ import { useLocation, useParams } from 'react-router-dom';
 import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
+// Style
+import './GameSingle.css';
 // Components
 import Brands from '../../components/Brands';
 import CounterActive from '../../components/CounterActive';

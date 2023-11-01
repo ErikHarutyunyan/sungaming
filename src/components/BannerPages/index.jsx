@@ -1,4 +1,4 @@
 // Styles
-import BannerPages from "./BannerPages.jsx"
+import './BannerPages.css';
 
-export default BannerPages
+export { default } from './BannerPages';

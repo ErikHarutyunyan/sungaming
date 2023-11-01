@@ -4,7 +4,7 @@ import useMeasure from 'react-use-measure';
 import { transition } from '../../settings/gameButtonSetings';
 import { Shapes } from '../Shapes/Shapes';
 
-const PlayButton = ({ url }) => {
+const PlayButton = ({ url, single = false }) => {
 	const [ref, bounds] = useMeasure({ scroll: false });
 	const [isHover, setIsHover] = useState(false);
 	const [isPress, setIsPress] = useState(false);
@@ -14,12 +14,13 @@ const PlayButton = ({ url }) => {
 		mouseX.set(0);
 		mouseY.set(0);
 	};
+	const presVariants = single ? 0.95 : 1.05;
 	return (
 		<MotionConfig transition={transition}>
 			<motion.a
 				href={url}
 				target="_blank"
-				className="buttonPlaySingle"
+				className={single ? 'buttonPlay' : 'buttonPlaySingle'}
 				ref={ref}
 				initial={false}
 				animate={isHover ? 'hover' : 'rest'}
@@ -27,7 +28,7 @@ const PlayButton = ({ url }) => {
 				variants={{
 					rest: { scale: 1 },
 					hover: { scale: 1.1 },
-					press: { scale: 1.05 },
+					press: { scale: presVariants },
 				}}
 				onHoverStart={() => {
 					resetMousePosition();

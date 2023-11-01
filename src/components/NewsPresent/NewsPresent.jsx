@@ -1,12 +1,15 @@
-import { MdOutlineNorthEast } from 'react-icons/md';
+// Route
 import { Link } from 'react-router-dom';
+import { NEWS } from '../../router/route-path';
+// Components
+import SimpleSlider from '../SimpleSlider';
+import LazyImage from '../LazyImage';
+// Images and Icons
+import { MdOutlineNorthEast } from 'react-icons/md';
+import { ellipse7, ellipse8 } from '../Images';
+// Data and Configuration
 import { dataNews } from '../../data/dataNews';
 import { settingsBlog } from '../../features/SliderConfig';
-import { NEWS } from '../../router/route-path';
-import { ellipse7, ellipse8 } from '../Images';
-import LazyImage from '../LazyImage';
-import SimpleSlider from '../SimpleSlider';
-import './NewsPresent.css';
 
 const NewsPresent = () => {
 	return (

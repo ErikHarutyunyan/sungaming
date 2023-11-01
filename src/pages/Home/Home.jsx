@@ -8,11 +8,10 @@ import Brands from '../../components/Brands';
 import CounterActive from '../../components/CounterActive';
 import GamesThumb from '../../components/GamesThumb';
 import LazyImage from '../../components/LazyImage';
-import NewsPresent from '../../components/NewsPresent/NewsPresent';
+import NewsPresent from '../../components/NewsPresent';
 import Service from '../../components/Service';
 import SimpleSlider from '../../components/SimpleSlider';
 import Subscribe from '../../components/Subscribe';
-
 // Images
 import {
 	console1,

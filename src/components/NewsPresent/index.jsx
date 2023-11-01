@@ -1,4 +1,4 @@
-// Styles
-import NewsPresent from "./NewsPresent.jsx"
+// Style
+import './NewsPresent.css';
 
-export default NewsPresent
+export { default } from './NewsPresent';
