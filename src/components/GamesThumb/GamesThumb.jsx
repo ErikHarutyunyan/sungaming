@@ -25,7 +25,6 @@ const GamesThumb = () => {
 	const [menuItems, setMenuItems] = useState(dataGames);
 	const [isActive, setIsActive] = useState('category_0');
 	const [next, setNext] = useState(gamesPerRow);
-
 	const handleClick = (e, category) => {
 		const className = e.target.className;
 		if (!className.includes('active_category')) {

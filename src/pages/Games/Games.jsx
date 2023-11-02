@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 // Styles
 import '../../components/GamesThumb/GamesThumb.css';
 import './Games.css';
-
 // Route
 import { motion } from 'framer-motion';
 import { GAMES } from '../../router/route-path';
-
 // Components
 import BannerPages from '../../components/BannerPages';
 import CounterActive from '../../components/CounterActive';
@@ -30,6 +28,7 @@ import {
 const gamesPerRow = 4;
 
 const Games = () => {
+	console.log("Games");
 	const [next, setNext] = useState(gamesPerRow);
 	const [menuItems, setMenuItems] = useState(dataGames);
 	const [isActive, setIsActive] = useState('category_0');
@@ -44,8 +43,7 @@ const Games = () => {
 
 	const filterItems = (category) => {
 		if (category[0] === 'All Games') {
-			setMenuItems(dataGames);
-			return;
+			return setMenuItems(dataGames);
 		}
 		const newItems = dataGames.filter((item) => {
 			if (item.category.length > 1 && item.category.includes(category)) {

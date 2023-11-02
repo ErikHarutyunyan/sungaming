@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import LoadRoute from '../../components/LoadRoute';
+import LoadRoute from '../../components/Loading/LoadRoute';
 const LazyGameSingle = lazy(() => import('./GameSingle'));
 
 const GameSingle = (props) => (

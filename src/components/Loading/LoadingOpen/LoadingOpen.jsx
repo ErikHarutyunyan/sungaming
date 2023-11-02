@@ -1,5 +1,3 @@
-import "./LoadingOpen.css";
-
 const LoadingOpen = () => {
   return (
     <section className="loadWrapper">
