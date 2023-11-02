@@ -154,7 +154,7 @@ export const dataGames = [
 		desc: `NinjaGambit is an innovative NFT card battle game that combines strategy, luck, and the power of blockchain technology. In this battle NFT cards, each representing a formidable ninja character with its unique abilities and attributes. Join us in this exciting adventure and prove yourself as the ultimate ninja warrior.
 
 NinjaGambit promises an immersive gameplay experience. Challenge other players, complete quests, and strive to climb the global leaderboards. Each decision you make, every ability you employ, and every battle you win brings you closer to becoming the ultimate ninja warrior.`,
-		url: 'https://sgaming.netlify.app/3card_poker/',
+		url: 'https://ninjagambit.netlify.app/',
 		logo: '',
 		category: ['Crypto'],
 		info: [

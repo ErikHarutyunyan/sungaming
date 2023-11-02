@@ -1,63 +1,21 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 // Styles
 import '../../components/GamesThumb/GamesThumb.css';
 import './Games.css';
-
-// Route
-import { motion } from 'framer-motion';
-import { GAMES } from '../../router/route-path';
-
 // Components
 import BannerPages from '../../components/BannerPages';
 import CounterActive from '../../components/CounterActive';
 import LazyImage from '../../components/LazyImage';
-import PlayButton from '../../components/PlayButton';
 import Subscribe from '../../components/Subscribe';
 // Images and Icons
 import { FaStudiovinari } from 'react-icons/fa';
 import { MdSecurity } from 'react-icons/md';
 import { PiLightbulbLight } from 'react-icons/pi';
-import { IconResponse } from '../../components/Icons/Icons';
+import { IconResponse } from '../../components/Icons';
 import { bannerGameCut, gameShape1, gameShape2 } from '../../components/Images';
 // Data and Configuration
-import {
-	allCategoriesGames,
-	categoryIcons,
-	dataGames,
-} from '../../data/dataGames';
-
-const gamesPerRow = 4;
+import GamesThumb from '../../components/GamesThumb';
 
 const Games = () => {
-	const [next, setNext] = useState(gamesPerRow);
-	const [menuItems, setMenuItems] = useState(dataGames);
-	const [isActive, setIsActive] = useState('category_0');
-
-	const handleMoreGames = () => {
-		setNext(next + gamesPerRow);
-	};
-
-	const handleClick = (e) => {
-		setIsActive(e.target.id);
-	};
-
-	const filterItems = (category) => {
-		if (category[0] === 'All Games') {
-			setMenuItems(dataGames);
-			return;
-		}
-		const newItems = dataGames.filter((item) => {
-			if (item.category.length > 1 && item.category.includes(category)) {
-				return item.category.filter(
-					(categoryItem) => categoryItem === category,
-				);
-			}
-			return item.category[0] == category;
-		});
-		setMenuItems(newItems);
-	};
-
 	return (
 		<>
 			<BannerPages
@@ -198,132 +156,7 @@ const Games = () => {
 							</div>
 						</div>
 					</div>
-					<div className="row justify-content-center">
-						<div className="col-lg-9 text-center">
-							<ul className="nav tablinks flex-wrap d-center mb-6 mb-sm-10 d-inline-flex gap-4 p-3 tab-area">
-								{allCategoriesGames.map((category, index) => {
-									return (
-										<li
-											className="nav-item pointer"
-											key={index}
-											onClick={(e) => {
-												const className = e.target.className;
-												if (!className.includes('active_category')) {
-													filterItems(
-														category === 'All Games' ? [category] : category,
-													);
-													handleClick(e);
-												}
-											}}>
-											<button
-												id={`category_${index}`}
-												className={
-													isActive === `category_${index}`
-														? `${category}_category nav-link d-center box-style btn-box active_category`
-														: `${category}_category nav-link d-center box-style btn-box`
-												}>
-												{categoryIcons[category.toLowerCase()] !== undefined ? (
-													<span className="icon-area pe-none">
-														{categoryIcons[category.toLowerCase()]}
-													</span>
-												) : null}
-												{category}
-											</button>
-										</li>
-									);
-								})}
-							</ul>
-						</div>
-					</div>
-					<div className="row justify-content-center">
-						<div className="col-lg-12">
-							<div className="tabcontents visible-from-bottom">
-								<div className="tabitem active">
-									<div className="col-12 cus-mar game-section-block-wrp">
-										{menuItems.slice(0, next).map((item) => {
-											const { id, title, imgMain, path, url } = item;
-											return (
-												<motion.div
-													animate={{
-														opacity: 1,
-														y: 0,
-														transition: {
-															ease: 'easeInOut',
-															delay: 0.2,
-															stiffness: 10,
-															duration: 0.5,
-														},
-													}}
-													initial={{
-														opacity: 0,
-														y: 50,
-														transition: {
-															ease: 'easeInOut',
-															delay: 0.2,
-															stiffness: 10,
-															duration: 0.5,
-														},
-													}}
-													transition={{
-														stiffness: 400,
-														damping: 10,
-														transition: {
-															ease: 'easeInOut',
-															delay: 0.2,
-															stiffness: 10,
-															duration: 0.5,
-														},
-													}}
-													exit={{
-														y: -50,
-														opacity: 0,
-														transition: {
-															ease: 'easeInOut',
-															delay: 0.2,
-															stiffness: 10,
-															duration: 0.5,
-														},
-													}}
-													key={id}
-													className={` game-section-block`}>
-													<div className="single-box">
-														<div className="position-relative d-center head">
-															<LazyImage
-																alt={title}
-																src={imgMain}
-																className="w-100 thumb-img"
-															/>
-															<h3 className="gameTitle">{title}</h3>
-														</div>
-														<div className="link-item py-3">
-															<Link
-																className=" px-5 text-decoration-underline"
-																to={`${GAMES}/${path}`}
-																state={{ data: item }}>
-																More Details
-															</Link>
-														</div>
-													</div>
-													<PlayButton url={url} single />
-												</motion.div>
-											);
-										})}
-									</div>
-									{next < menuItems?.length && (
-										<div className="text-center mt-10 mt-sm-15">
-											<div
-												className="loading gamesBtn py-3 px-8 d-inline-flex align-items-center gap-2"
-												onClick={handleMoreGames}>
-												<div className="icon-box d-center">
-													<button className="">Load more</button>
-												</div>
-											</div>
-										</div>
-									)}
-								</div>
-							</div>
-						</div>
-					</div>
+					<GamesThumb style="2" viewItems={5} />
 				</div>
 			</section>
 			<CounterActive />

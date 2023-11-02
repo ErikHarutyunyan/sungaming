@@ -14,6 +14,7 @@ import SimpleSlider from '../../components/SimpleSlider';
 import Subscribe from '../../components/Subscribe';
 // Images
 import {
+	allGameBg,
 	console1,
 	console2,
 	ellipse1,
@@ -21,6 +22,9 @@ import {
 	ellipse4,
 	ellipse5,
 	ellipse6,
+	ourGamesShape1,
+	ourGamesShape2,
+	ourGamesShape3,
 	planet,
 	topBottom,
 } from '../../components/Images';
@@ -264,7 +268,57 @@ const Home = () => {
 			</section>
 			<Service />
 			<CounterActive counterData={counterData} />
-			<GamesThumb />
+			<section
+				className="our-games all-games overflow-hidden pt-120 pb-120"
+				style={{ backgroundImage: `url(${allGameBg})` }}>
+				<div className="shape-area">
+					<img
+						src={ourGamesShape1}
+						alt="icon"
+						loading="lazy"
+						width="204"
+						height="177"
+						className="shape-1"
+					/>
+					<img
+						src={ourGamesShape2}
+						alt="icon"
+						loading="lazy"
+						width="151"
+						height="151"
+						className="shape-4"
+					/>
+					<img
+						src={ourGamesShape3}
+						alt="icon"
+						loading="lazy"
+						width="172"
+						height="170"
+						className="shape-3"
+					/>
+				</div>
+				<div className="container singletab">
+					<div className="row justify-content-center">
+						<div className="col-lg-6">
+							<div className="section-text text-center">
+								<h4 className="sub-title">
+									Crafting Unforgettable <span>Gaming Experiences</span>
+								</h4>
+								<span className="fs-two heading mb-6">
+									Our Games are <span>Vibrant</span> Worlds With
+									<span>Charming</span> Characters
+								</span>
+								<p>
+									Our projects feature unique mechanics, fine-tuned gameplay,
+									and an eye-catching visual style. Over 100 million people play
+									our games every month.
+								</p>
+							</div>
+						</div>
+					</div>
+					<GamesThumb style="1" viewItems={6} />
+				</div>
+			</section>
 			<NewsPresent />
 			<Brands />
 			<Subscribe />

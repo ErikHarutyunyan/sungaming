@@ -1,4 +1,4 @@
-import { loadIcon } from '../Images';
+import { loadIcon } from '../../Images';
 
 const LoadRoute = () => {
 	return (

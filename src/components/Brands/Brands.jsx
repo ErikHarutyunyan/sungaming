@@ -24,7 +24,6 @@ const Brands = () => {
 					<div className="col-lg-12">
 						<div className="all-items brand-wrap mb-7 d-flex gap-4 justify-content-between flex-wrap">
 							{dataBrands.map((brand, index) => {
-								console.log('brand :', brand);
 								return (
 									<div key={`${index}_${brand}`} className="thumb">
 										<LazyImage

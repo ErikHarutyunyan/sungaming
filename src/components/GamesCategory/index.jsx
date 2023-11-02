@@ -1,8 +1,4 @@
 // Styles
-import "./GamesCategory.css";
+import './GamesCategory.css';
 
-const GamesCategory = () => {
-  return <section>GamesCategory</section>;
-};
-
-export default GamesCategory;
+export { default } from './GamesCategory';

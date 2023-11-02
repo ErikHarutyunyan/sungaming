@@ -1,4 +1,7 @@
 import { useNavigate } from 'react-router-dom';
+import useFetch from '../../hooks/useFetch';
+// Component
+import LoadingForm from '../Loading/LoadingForm';
 
 // import { useForm } from "react-hook-form";
 
@@ -15,6 +18,7 @@ const Subscribe = () => {
 	// };
 
 	const navigate = useNavigate();
+	const { loading, error, submitForm } = useFetch();
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
@@ -22,15 +26,10 @@ const Subscribe = () => {
 		const myForm = event.target;
 		const formData = new FormData(myForm);
 
-		fetch('/', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: new URLSearchParams(formData).toString(),
-		})
-			.then(() => console.log('Form successfully submitted'))
-			.catch((error) => alert(error));
-
-		navigate('/success');
+		submitForm('/', formData, () => {
+			console.log('Form successfully submitted');
+			navigate('/success');
+		});
 	};
 
 	return (
@@ -43,40 +42,45 @@ const Subscribe = () => {
 							For further info &amp; support, <a href="contact">Contact us</a>
 						</p>
 					</div>
-					<div className="col-xl-7 col-lg-6 col-md-12">
-						<form
-							className="form-contact mt-8 mt-lg-0 py-8 px-4 px-sm-8"
-							method="post"
-							name="subscribe-form"
-							action="/success/"
-							data-netlify="true"
-							onSubmit={handleSubmit}
-							// onSubmit={handleSubmit(onSubmit)}
-						>
-							<input type="hidden" name="form-name" value="subscribe-form" />
-							<div className="input-area p-4 d-grid d-sm-flex align-items-center justify-content-between">
-								<input
-									type="email"
-									name="subscribe-email"
-									placeholder="Enter Your Email"
-									required
-									// {...register("Email", {
-									//   required: true,
-									//   pattern: /^\S+@\S+$/i,
-									// })}
-								/>
-								{/* {errors.email && (
-                  <p>Email is required and must be in a valid format.</p>
-                )} */}
-								<div className="btn-area alt-bg mt-6 mt-sm-0">
-									<button
-										type={'submit'}
-										className="box-style btn-box d-center">
-										Subscribe
-									</button>
+					<div className="col-xl-7 col-lg-6 col-md-12 position-relative overflow-hidden">
+						{error ? <span className="err">Error: {error.message}</span> : null}
+						{loading ? (
+							<LoadingForm />
+						) : (
+							<form
+								className="form-contact mt-8 mt-lg-0 py-8 px-4 px-sm-8"
+								method="post"
+								name="subscribe-form"
+								action="/success/"
+								data-netlify="true"
+								onSubmit={handleSubmit}
+								// onSubmit={handleSubmit(onSubmit)}
+							>
+								<input type="hidden" name="form-name" value="subscribe-form" />
+								<div className="input-area p-4 d-grid d-sm-flex align-items-center justify-content-between">
+									<input
+										type="email"
+										name="subscribe-email"
+										placeholder="Enter Your Email"
+										required
+										// {...register("Email", {
+										//   required: true,
+										//   pattern: /^\S+@\S+$/i,
+										// })}
+									/>
+									{/* {errors.email && (
+							    <p>Email is required and must be in a valid format.</p>
+							  )} */}
+									<div className="btn-area alt-bg mt-6 mt-sm-0">
+										<button
+											type={'submit'}
+											className="box-style btn-box d-center">
+											Subscribe
+										</button>
+									</div>
 								</div>
-							</div>
-						</form>
+							</form>
+						)}
 					</div>
 				</div>
 			</div>

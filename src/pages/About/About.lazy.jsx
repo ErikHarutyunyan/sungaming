@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import LoadRoute from "../../components/LoadRoute/LoadRoute";
+import LoadRoute from "../../components/Loading/LoadRoute";
 
 const LazyAbout = lazy(() => import("./About"));
 

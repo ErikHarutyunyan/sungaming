@@ -1,222 +1,224 @@
 /* eslint-disable react-refresh/only-export-components */
-import { MdOutlineArrowBack, MdOutlineArrowForward } from "react-icons/md";
-import { memo } from "react";
+import { memo } from 'react';
+import { MdOutlineArrowBack, MdOutlineArrowForward } from 'react-icons/md';
 
 const PrevArrow = memo(function PrevArrow(props) {
-  const { onClick } = props;
-  return (
-    <button
-      onClick={onClick}
-      type="button"
-      aria-label="Slide Prev"
-      className="arafat-prev slick-arrow box-style">
-      <MdOutlineArrowBack />
-    </button>
-  );
+	const { onClick } = props;
+	return (
+		<button
+			onClick={onClick}
+			type="button"
+			aria-label="Slide Prev"
+			className="arafat-prev slick-arrow box-style">
+			<MdOutlineArrowBack />
+		</button>
+	);
 });
 
 const NextArrow = memo(function NextArrow(props) {
-  const { onClick } = props;
-  return (
-    <button
-      onClick={onClick}
-      type="button"
-      aria-label="Slide Next"
-      className="arafat-next slick-arrow box-style">
-      <MdOutlineArrowForward />
-    </button>
-  );
+	const { onClick } = props;
+	return (
+		<button
+			onClick={onClick}
+			type="button"
+			aria-label="Slide Next"
+			className="arafat-next slick-arrow box-style">
+			<MdOutlineArrowForward />
+		</button>
+	);
 });
 
 const ServicePrevArrow = memo(function ServicePrevArrow(props) {
-  const { onClick } = props;
-  return (
-    <button
-      onClick={onClick}
-      type="button"
-      aria-label="Slide Prev"
-      className="arafat-prev slick-arrow box-style top-right">
-      <MdOutlineArrowBack />
-    </button>
-  );
+	const { onClick } = props;
+	return (
+		<button
+			onClick={onClick}
+			type="button"
+			aria-label="Slide Prev"
+			className="arafat-prev slick-arrow box-style top-right">
+			<MdOutlineArrowBack />
+		</button>
+	);
 });
 
 const ServiceNextArrow = memo(function ServiceNextArrow(props) {
-  const { onClick } = props;
-  return (
-    <button
-      onClick={onClick}
-      type="button"
-      aria-label="Slide Next"
-      className="arafat-next slick-arrow box-style top-right">
-      <MdOutlineArrowForward />
-    </button>
-  );
+	const { onClick } = props;
+	return (
+		<button
+			onClick={onClick}
+			type="button"
+			aria-label="Slide Next"
+			className="arafat-next slick-arrow box-style top-right">
+			<MdOutlineArrowForward />
+		</button>
+	);
 });
 
 const BlogPrevArrow = memo(function BlogPrevArrow(props) {
-  const { onClick } = props;
+	const { onClick } = props;
 
-  return (
-    <button
-      onClick={onClick}
-      type="button"
-      className="arafat-prev slick-arrow box-style bottom-right">
-      <MdOutlineArrowBack />
-    </button>
-  );
+	return (
+		<button
+			onClick={onClick}
+			type="button"
+			className="arafat-prev slick-arrow box-style bottom-right">
+			<MdOutlineArrowBack />
+		</button>
+	);
 });
 
 const BlogNextArrow = memo(function BlogNextArrow(props) {
-  const { onClick } = props;
+	const { onClick } = props;
 
-  return (
-    <button
-      onClick={onClick}
-      type="button"
-      className="arafat-next slick-arrow box-style bottom-right">
-      <MdOutlineArrowForward />
-    </button>
-  );
+	return (
+		<button
+			onClick={onClick}
+			type="button"
+			className="arafat-next slick-arrow box-style bottom-right">
+			<MdOutlineArrowForward />
+		</button>
+	);
 });
-
+/* prettier-ignore */
 export const settingsFeatured = {
   // dots: true,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
+  nextArrow: (<NextArrow />),
+  prevArrow: (<PrevArrow />),
 };
+/* prettier-ignore */
 export const settingsServices = {
-  // dots: true,
-  infinite: true,
-  // autoplay: true,
-  speed: 600,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  adaptiveHeight: false,
-  nextArrow: <ServiceNextArrow />,
-  prevArrow: <ServicePrevArrow />,
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
+	// dots: true,
+	infinite: true,
+	// autoplay: true,
+	speed: 600,
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	adaptiveHeight: false,
+	nextArrow: (<ServiceNextArrow />),
+	prevArrow: (<ServicePrevArrow />),
+	responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+			},
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			},
+		},
+	],
 };
+/* prettier-ignore */
 export const settingsBlog = {
-  dots: true,
-  infinite: true,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  adaptiveHeight: false,
-  dotsClass: "section-dots",
-  appendDots: (dots) => <ul style={{ display: "block" }}>{dots}</ul>,
-  customPaging: (i) => (
-    <span className="dot" role="button" title={`${i}`}>
-      <span className="string">{i} </span>
-    </span>
-  ),
-  nextArrow: <BlogNextArrow />,
-  prevArrow: <BlogPrevArrow />,
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
+	dots: true,
+	infinite: true,
+	slidesToShow: 2,
+	slidesToScroll: 1,
+	adaptiveHeight: false,
+	dotsClass: 'section-dots',
+	appendDots: (dots) => <ul style={{ display: 'block' }}>{dots}</ul>,
+	customPaging: (i) => (
+		<span className="dot" role="button" title={`${i}`}>
+			<span className="string">{i} </span>
+		</span>
+	),
+	nextArrow: (<BlogNextArrow />),
+	prevArrow: (<BlogPrevArrow />),
+	responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+			},
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			},
+		},
+	],
 };
-
+/* prettier-ignore */
 export const settingsGameSingle = {
-  dots: true,
-  infinite: true,
-  autoplay: true,
-  autoplaySpeed: 1500,
-  cssEase: "ease-in-out",
-  speed: 600,
-  pauseOnHover: true,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  adaptiveHeight: false,
-  dotsClass: "section-dots",
-  appendDots: (dots) => <ul style={{ display: "block" }}>{dots}</ul>,
-  customPaging: (i) => (
-    <span className="dot" role="button" title={`${i}`}>
-      <span className="string">{i} </span>
-    </span>
-  ),
-  nextArrow: <BlogNextArrow />,
-  prevArrow: <BlogPrevArrow />,
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
+	dots: true,
+	infinite: true,
+	autoplay: true,
+	autoplaySpeed: 1500,
+	cssEase: 'ease-in-out',
+	speed: 600,
+	pauseOnHover: true,
+	slidesToShow: 2,
+	slidesToScroll: 1,
+	adaptiveHeight: false,
+	dotsClass: 'section-dots',
+	appendDots: (dots) => <ul style={{ display: 'block' }}>{dots}</ul>,
+	customPaging: (i) => (
+		<span className="dot" role="button" title={`${i}`}>
+			<span className="string">{i} </span>
+		</span>
+	),
+	nextArrow: (<BlogNextArrow />),
+	prevArrow: (<BlogPrevArrow />),
+	responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+			},
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			},
+		},
+	],
 };
-
+/* prettier-ignore */
 export const settingsAbout = {
-  infinite: true,
-  autoplay: true,
-  speed: 600,
-  slidesToShow: 6,
-  slidesToScroll: 1,
-  adaptiveHeight: false,
-  nextArrow: <BlogNextArrow />,
-  prevArrow: <BlogPrevArrow />,
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
+	infinite: true,
+	autoplay: true,
+	speed: 600,
+	slidesToShow: 6,
+	slidesToScroll: 1,
+	adaptiveHeight: false,
+	nextArrow: (<BlogNextArrow />),
+	prevArrow: (<BlogPrevArrow />),
+	responsive: [
+		{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 4,
+				slidesToScroll: 1,
+			},
+		},
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1,
+			},
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			},
+		},
+	],
 };
