@@ -12,6 +12,7 @@ import { ABOUT } from '../../router/route-path.jsx';
 import { MdOutlineMailOutline } from 'react-icons/md';
 import AccordionBox from '../../components/Accardion/index.jsx';
 import { contactUs, faqFramer, faqIcon } from '../../components/Images';
+import ShapeArea from '../../components/ShapeArea/ShapeArea.jsx';
 
 // import { useForm } from 'react-hook-form';
 const Contact = () => {
@@ -279,10 +280,10 @@ const Contact = () => {
 					loading="lazy"></iframe>
 			</div>
 			<section className="faqs-section position-relative">
-				<div className="shape-area">
+				<ShapeArea>
 					<img src={faqFramer} className="shape-1" alt="icon" />
 					<img src={faqFramer} className="shape-2" alt="icon" />
-				</div>
+				</ShapeArea>
 				<div className="overlay pt-120 pb-120">
 					<div className="container position-relative cus-z1">
 						<div className="row d-flex justify-content-center">
@@ -371,7 +372,13 @@ const Contact = () => {
 										title={
 											'How can I get in touch with Sun Gaming to discuss my casino development needs?'
 										}>
-										You can contact Sun Gaming by visiting our &quot;Contact&quot; page on our website. Fill out the contact form with your details and inquiry, and our team will respond promptly. Alternatively, you can reach out to us via the provided email or phone contact details for more immediate assistance. We look forward to assisting you with your casino development projects.
+										You can contact Sun Gaming by visiting our
+										&quot;Contact&quot; page on our website. Fill out the
+										contact form with your details and inquiry, and our team
+										will respond promptly. Alternatively, you can reach out to
+										us via the provided email or phone contact details for more
+										immediate assistance. We look forward to assisting you with
+										your casino development projects.
 									</AccordionBox>
 								</div>
 							</div>

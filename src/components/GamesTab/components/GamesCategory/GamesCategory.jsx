@@ -1,6 +1,6 @@
 import { useState } from 'react';
 // Data
-import { allCategoriesGames, categoryIcons } from '../../data/dataGames';
+import { allCategoriesGames, categoryIcons } from '../../../../data/dataGames';
 
 const GamesCategory = ({
 	dataGames = [],

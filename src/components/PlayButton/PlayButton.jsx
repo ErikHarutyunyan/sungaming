@@ -4,7 +4,7 @@ import useMeasure from 'react-use-measure';
 import { transition } from '../../settings/gameButtonSetings';
 import { Shapes } from '../Shapes/Shapes';
 
-const PlayButton = ({ url, single = false }) => {
+const PlayButton = ({ url, single = false, nameClass }) => {
 	const [ref, bounds] = useMeasure({ scroll: false });
 	const [isHover, setIsHover] = useState(false);
 	const [isPress, setIsPress] = useState(false);
@@ -16,11 +16,13 @@ const PlayButton = ({ url, single = false }) => {
 	};
 	const presVariants = single ? 0.95 : 1.05;
 	return (
-		<MotionConfig transition={transition}>
+		<MotionConfig transition={transition} className={nameClass}>
 			<motion.a
 				href={url}
 				target="_blank"
-				className={single ? 'buttonPlay' : 'buttonPlaySingle'}
+				className={
+					single ? `buttonPlay ${nameClass}` : `buttonPlaySingle ${nameClass}`
+				}
 				ref={ref}
 				initial={false}
 				animate={isHover ? 'hover' : 'rest'}

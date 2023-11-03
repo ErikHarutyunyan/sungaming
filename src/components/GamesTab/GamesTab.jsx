@@ -2,12 +2,12 @@ import { useState } from 'react';
 // Data
 import { dataGames } from '../../data/dataGames';
 // Component
-import GameCard from '../GameCard/';
-import GamesCategory from '../GamesCategory';
+import GameCard from './components/GameCard';
+import GamesCategory from './components/GamesCategory';
 
 const gamesPerRow = 5;
 
-const GamesThumb = ({ style = '1', viewItems = 6 }) => {
+const GamesTab = ({ style = '1', viewItems = 6 }) => {
 	const [gameItems, setGameItems] = useState(dataGames);
 	const [next, setNext] = useState(viewItems);
 
@@ -32,4 +32,4 @@ const GamesThumb = ({ style = '1', viewItems = 6 }) => {
 	);
 };
 
-export default GamesThumb;
+export default GamesTab;

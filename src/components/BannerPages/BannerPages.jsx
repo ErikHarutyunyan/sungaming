@@ -4,6 +4,7 @@ import { HOME } from '../../router/route-path.jsx';
 // Images and Iconns
 import { FiChevronRight } from 'react-icons/fi';
 import { bubble, ellipse7 } from '../Images';
+import ShapeArea from '../ShapeArea/ShapeArea.jsx';
 
 const BannerPages = ({
 	bg,
@@ -19,10 +20,10 @@ const BannerPages = ({
 		<section
 			className={`banner-section inner-banner position-relative banner-page ${classNames}`}
 			style={{ backgroundImage: `url(${bg})` }}>
-			<div className="shape-area">
+			<ShapeArea>
 				<img src={bubble} className="shape-1" alt="icon" />
 				<img src={ellipse7} className="shape-2" alt="icon" />
-			</div>
+			</ShapeArea>
 			<div className="container position-relative z-2">
 				<div className="banner-content row justify-content-between">
 					<div className="col-lg-6 col-md-10">

@@ -8,14 +8,15 @@ import { BiSolidTimeFive } from 'react-icons/bi';
 import { IconAPI, IconDb, IconSec } from '../Icons/index';
 // Images
 import { serviceThumb, star } from '../Images';
+import ShapeArea from '../ShapeArea';
 
 const Service = () => {
 	return (
 		<section className="our-services index-two pt-120 pb-120">
 			<div className="container position-relative">
-				<div className="shape-area d-none d-lg-block position-absolute">
+				<ShapeArea nameClass="d-none d-lg-block position-absolute">
 					<img alt="Icon" src={star} loading="lazy" width="109" height="91" />
-				</div>
+				</ShapeArea>
 				<div className="row justify-content-between">
 					<div className="col-lg-5">
 						<div className="section-header">

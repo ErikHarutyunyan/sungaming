@@ -6,7 +6,7 @@ import Typewriter from 'typewriter-effect';
 // Components
 import Brands from '../../components/Brands';
 import CounterActive from '../../components/CounterActive';
-import GamesThumb from '../../components/GamesThumb';
+import GamesTab from '../../components/GamesTab';
 import LazyImage from '../../components/LazyImage';
 import NewsPresent from '../../components/NewsPresent';
 import Service from '../../components/Service';
@@ -29,6 +29,7 @@ import {
 	topBottom,
 } from '../../components/Images';
 // Data and Configuration
+import ShapeArea from '../../components/ShapeArea';
 import { counterData } from '../../data/dataCounters';
 import { featuredGames } from '../../data/dataGames';
 import { settingsFeatured } from '../../features/SliderConfig';
@@ -37,7 +38,7 @@ const Home = () => {
 	return (
 		<>
 			<section className="banner-section homeBanner index-one overflow-hidden">
-				<div className="shape-area">
+				<ShapeArea>
 					<img
 						src={planet}
 						alt="planet"
@@ -62,7 +63,7 @@ const Home = () => {
 						height="318"
 						className="shape-3"
 					/>
-				</div>
+				</ShapeArea>
 				<div className="ellipse-area ellipse-one position-absolute">
 					<img
 						src={ellipse6}
@@ -271,7 +272,7 @@ const Home = () => {
 			<section
 				className="our-games all-games overflow-hidden pt-120 pb-120"
 				style={{ backgroundImage: `url(${allGameBg})` }}>
-				<div className="shape-area">
+				<ShapeArea>
 					<img
 						src={ourGamesShape1}
 						alt="icon"
@@ -296,7 +297,7 @@ const Home = () => {
 						height="170"
 						className="shape-3"
 					/>
-				</div>
+				</ShapeArea>
 				<div className="container singletab">
 					<div className="row justify-content-center">
 						<div className="col-lg-6">
@@ -316,7 +317,7 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
-					<GamesThumb style="1" viewItems={6} />
+					<GamesTab style="1" viewItems={6} />
 				</div>
 			</section>
 			<NewsPresent />

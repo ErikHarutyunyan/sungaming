@@ -2,19 +2,20 @@
 import { Link } from 'react-router-dom';
 import { NEWS } from '../../router/route-path';
 // Components
-import SimpleSlider from '../SimpleSlider';
 import LazyImage from '../LazyImage';
+import SimpleSlider from '../SimpleSlider';
 // Images and Icons
 import { MdOutlineNorthEast } from 'react-icons/md';
 import { ellipse7, ellipse8 } from '../Images';
 // Data and Configuration
 import { dataNews } from '../../data/dataNews';
 import { settingsBlog } from '../../features/SliderConfig';
+import ShapeArea from '../ShapeArea';
 
 const NewsPresent = () => {
 	return (
 		<section className=" about-block  recently-completed blogs gaming-character">
-			<div className="shape-area">
+			<ShapeArea>
 				<img
 					src={ellipse7}
 					alt="ellipse7"
@@ -31,7 +32,7 @@ const NewsPresent = () => {
 					width="128"
 					height="152"
 				/>
-			</div>
+			</ShapeArea>
 			<div className="container pt-120 pb-120">
 				<div className="row section-header justify-content-center">
 					<div className="col-lg-6 text-center">

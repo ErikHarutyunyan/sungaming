@@ -1,5 +1,5 @@
 // Styles
-import '../../components/GamesThumb/GamesThumb.css';
+import '../../components/GamesTab/GamesTab.css';
 import './Games.css';
 // Components
 import BannerPages from '../../components/BannerPages';
@@ -13,7 +13,8 @@ import { PiLightbulbLight } from 'react-icons/pi';
 import { IconResponse } from '../../components/Icons';
 import { bannerGameCut, gameShape1, gameShape2 } from '../../components/Images';
 // Data and Configuration
-import GamesThumb from '../../components/GamesThumb';
+import GamesTab from '../../components/GamesTab';
+import ShapeArea from '../../components/ShapeArea';
 
 const Games = () => {
 	return (
@@ -124,7 +125,7 @@ const Games = () => {
 				</div>
 			</section>
 			<section className="our-games games-thumb overflow-hidden index-two position-relative pt-120 pb-120">
-				<div className="shape-area">
+				<ShapeArea>
 					<LazyImage
 						alt="gameShape1"
 						className="shape-1 gameShape gameShape1"
@@ -135,7 +136,7 @@ const Games = () => {
 						alt="gameShape3"
 						className="shape-3 gameShape gameShape1"
 					/>
-				</div>
+				</ShapeArea>
 				<div className="container singletab position-relative cus-z1">
 					<div className="row justify-content-center">
 						<div className="col-xl-6 col-lg-7">
@@ -156,7 +157,7 @@ const Games = () => {
 							</div>
 						</div>
 					</div>
-					<GamesThumb style="2" viewItems={5} />
+					<GamesTab style="2" viewItems={5} />
 				</div>
 			</section>
 			<CounterActive />

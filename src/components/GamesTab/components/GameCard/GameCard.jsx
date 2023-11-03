@@ -2,16 +2,18 @@
 import { motion } from 'framer-motion';
 // Route
 import { Link } from 'react-router-dom/dist';
-import { GAMES } from '../../router/route-path';
+import { GAMES } from '../../../../router/route-path';
 // Components
-import LazyImage from '../LazyImage';
-import PlayButton from '../PlayButton';
+import LazyImage from '../../../LazyImage';
+import PlayButton from '../../../PlayButton';
+// import PlayButton from '../PlayButton';
 
 const GameCardStyle1 = ({
 	gameItems = [],
 	next = 6,
 	handleMoreGames = (f) => f,
 }) => {
+	console.log('first');
 	return (
 		<div className="row justify-content-center">
 			<div className="col-lg-10">
@@ -122,6 +124,14 @@ const GameCardStyle2 = ({
 	next = 6,
 	handleMoreGames = (f) => f,
 }) => {
+	// const [isHovered, setIsHovered] = useState(false);
+	// const handleMouseEnter = () => {
+	// 	setIsHovered(true);
+	// };
+
+	// const handleMouseLeave = () => {
+	// 	setIsHovered(false);
+	// };
 	return (
 		<div className="row justify-content-center">
 			<div className="col-lg-12">
@@ -132,6 +142,8 @@ const GameCardStyle2 = ({
 								const { id, title, imgMain, path, url } = item;
 								return (
 									<motion.div
+										// onMouseEnter={handleMouseEnter}
+										// onMouseLeave={handleMouseLeave}
 										animate={{
 											opacity: 1,
 											y: 0,
@@ -192,7 +204,7 @@ const GameCardStyle2 = ({
 												</Link>
 											</div>
 										</div>
-										<PlayButton url={url} single />
+										<PlayButton url={url} single nameClass="d-none" />
 									</motion.div>
 								);
 							})}

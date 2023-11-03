@@ -10,7 +10,7 @@ import './GameSingle.css';
 import Brands from '../../components/Brands';
 import CounterActive from '../../components/CounterActive';
 import LazyImage from '../../components/LazyImage';
-import OnboardModal from '../../components/OnboardModal/OnboardModal';
+import OnboardModal from '../../components/Modal/OnboardModal';
 import PlayButton from '../../components/PlayButton';
 import SimpleSlider from '../../components/SimpleSlider';
 import Subscribe from '../../components/Subscribe';
@@ -28,6 +28,7 @@ import {
 	lineImg,
 	objectImg,
 } from '../../components/Images';
+import ShapeArea from '../../components/ShapeArea';
 
 const GameSingle = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +44,7 @@ const GameSingle = () => {
 	const images = data.imgMore
 		? [...data.imgMore].map((src) => ({ src }))
 		: null;
-
+	console.log('data.video', data.video);
 	return (
 		<>
 			<section
@@ -51,10 +52,10 @@ const GameSingle = () => {
 				style={{
 					backgroundImage: `url(${circle}), url(${gameDetails}), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5))`,
 				}}>
-				<div className="shape-area">
+				<ShapeArea>
 					<img src={bubble} className="shape-1" alt="icon" />
 					<img src={ellipse7} className="shape-2" alt="icon" />
-				</div>
+				</ShapeArea>
 				<div className="container position-relative">
 					<div className="banner-content row justify-content-start">
 						<div className="col-lg-8 col-md-10 justify-content-center">
@@ -144,10 +145,10 @@ const GameSingle = () => {
 			</section>
 			{data.video ? (
 				<section className="our-focus bg-transparent game-trailers position-relative overflow-hidden pt-120 pb-20">
-					<div className="shape-area">
+					<ShapeArea>
 						<img src={lineImg} className="shape-1" alt="icon" />
 						<img src={objectImg} className="shape-2" alt="icon" />
-					</div>
+					</ShapeArea>
 					<div className="container">
 						<div className="row justify-content-center">
 							<div className="col-lg-8">

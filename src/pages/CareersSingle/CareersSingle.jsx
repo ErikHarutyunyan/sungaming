@@ -8,7 +8,8 @@ import { MdWorkOutline } from 'react-icons/md';
 import { PiUserFocusLight } from 'react-icons/pi';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { bubble, ellipse7 } from '../../components/Images';
-import OnboardModal from '../../components/OnboardModal/OnboardModal';
+import OnboardModal from '../../components/Modal/OnboardModal';
+import ShapeArea from '../../components/ShapeArea';
 import Subscribe from '../../components/Subscribe';
 import { dataCareers } from '../../data/dataCareers';
 import { HOME } from '../../router/route-path';
@@ -60,14 +61,14 @@ const CareersSingle = () => {
 
 		navigate('/success');
 	};
-	
+
 	return (
 		<>
 			<section className="banner-section inner-banner position-relative about career">
-				<div className="shape-area">
+				<ShapeArea>
 					<img src={bubble} className="shape-1" alt="icon" />
 					<img src={ellipse7} className="shape-2" alt="icon" />
-				</div>
+				</ShapeArea>
 				<div className="container position-relative">
 					<div className="banner-content row justify-content-between">
 						<div className="col-lg-6 col-md-10">
