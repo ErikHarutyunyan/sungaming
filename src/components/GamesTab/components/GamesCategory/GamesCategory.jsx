@@ -31,7 +31,7 @@ const GamesCategory = ({
 
 	return (
 		<div className="row justify-content-center">
-			<div className="col-lg-9 text-center">
+			<div className="col-lg-10 text-center">
 				<ul className="nav tablinks flex-wrap d-center mb-10 d-inline-flex gap-4 p-3 tab-area">
 					{Array.from(allCategoriesGames, (category, index) => (
 						<li

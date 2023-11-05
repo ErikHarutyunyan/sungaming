@@ -1,6 +1,5 @@
 .counter-section .display-one,
 .counters span {
-  color: var(--p300);
   font-weight: inherit;
   width: auto;
   padding: 0;

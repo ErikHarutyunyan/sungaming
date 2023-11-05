@@ -1,7 +1,7 @@
-// Styles
+// Route
 import { Link } from "react-router-dom";
 import { HOME } from "../../router/route-path";
-import "./NotFoundPage.css";
+
 
 const NotFoundPage = () => {
   return (

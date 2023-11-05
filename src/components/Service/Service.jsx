@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import { SERVICES } from './../../router/route-path';
 // Component
-import LazyImage from '../LazyImage';
+import LazyImage from '../Images/LazyImage';
 // Icons
 import { BiSolidTimeFive } from 'react-icons/bi';
 import { IconAPI, IconDb, IconSec } from '../Icons/index';

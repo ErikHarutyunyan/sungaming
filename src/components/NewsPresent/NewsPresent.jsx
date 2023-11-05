@@ -2,8 +2,8 @@
 import { Link } from 'react-router-dom';
 import { NEWS } from '../../router/route-path';
 // Components
-import LazyImage from '../LazyImage';
-import SimpleSlider from '../SimpleSlider';
+import LazyImage from '../Images/LazyImage';
+import SimpleSlider from '../Slides/SimpleSlider';
 // Images and Icons
 import { MdOutlineNorthEast } from 'react-icons/md';
 import { ellipse7, ellipse8 } from '../Images';

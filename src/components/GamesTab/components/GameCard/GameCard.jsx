@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom/dist';
 import { GAMES } from '../../../../router/route-path';
 // Components
-import LazyImage from '../../../LazyImage';
+import LazyImage from '../../../Images/LazyImage';
 import PlayButton from '../../../PlayButton';
 // import PlayButton from '../PlayButton';
 
@@ -13,7 +13,6 @@ const GameCardStyle1 = ({
 	next = 6,
 	handleMoreGames = (f) => f,
 }) => {
-	console.log('first');
 	return (
 		<div className="row justify-content-center">
 			<div className="col-lg-10">

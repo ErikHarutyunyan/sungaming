@@ -1,45 +1,52 @@
-// Styles
-import BannerPages from '../../components/BannerPages/BannerPages';
-import './News.css';
-
+import { useCallback, useMemo, useState } from 'react';
+// Route
+import { Link } from 'react-router-dom';
+import { CONTACT, NEWS } from '../../router/route-path';
+// Packages
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+// Components
+import BannerPages from '../../components/BannerPages';
+import LazyImage from '../../components/Images/LazyImage';
+import Subscribe from '../../components/Subscribe';
+// Data and Configuration
+import { allCategoriesNews, dataNews } from '../../data/dataNews';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
+// Images and Icons
 import {
 	AiOutlinePhone,
 	AiOutlineRight,
 	AiOutlineSearch,
 } from 'react-icons/ai';
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
-import { Link } from 'react-router-dom';
 import { newsBg } from '../../components/Images';
-import LazyImage from '../../components/LazyImage';
-import Subscribe from '../../components/Subscribe';
-import { allCategoriesNews, dataNews } from '../../data/dataNews';
-import { useMediaQuery } from '../../hooks/useMediaQuery';
-import { CONTACT, NEWS } from '../../router/route-path';
+import { dataOffice, dataSocial } from '../../data/dataProduct';
+import { scrollUp } from '../../helpers';
 
 const News = () => {
 	const newsCount = dataNews.length;
 	const [searchResults, setSearchResults] = useState(dataNews);
 	const media = useMediaQuery('(max-width: 991px)');
 
-	const scrollUp = () => {
-		if (media) window.scrollTo(0, 200);
-	};
+	const up = useCallback(() => {
+		if (media) scrollUp(0, 200);
+		else scrollUp(0, 490);
+	}, [media]);
 
-	// Function to handle category selection
-	const handleCategorySelect = (categoryName) => {
-		const filteredNews =
-			categoryName === 'All'
-				? dataNews
-				: dataNews.filter((news) => news.category.includes(categoryName));
-		setSearchResults(filteredNews);
-		scrollUp();
-	};
+	const handleCategorySelect = useCallback(
+		(categoryName) => {
+			const filteredNews =
+				categoryName === 'All'
+					? dataNews
+					: dataNews.filter((news) => news.category.includes(categoryName));
+			setSearchResults(filteredNews);
+			up();
+		},
+		[up],
+	);
 
-	const handleSearchInputChange = (event) => {
+	const handleSearchInputChange = useCallback((event) => {
+		event.preventDefault();
 		const query = event.target.value;
-		// Filter dataNews based on the search query
 		const filteredResults = dataNews.filter((news) => {
 			const titleMatches = news.title
 				.toLowerCase()
@@ -56,84 +63,88 @@ const News = () => {
 				? dataNews
 				: filteredResults,
 		);
-	};
+	}, []);
+
+	const memoizedSearchResults = useMemo(() => {
+		return searchResults?.map((news) => {
+			const { id, imgMain, title, shortInfo, data, path } = news;
+			return (
+				<motion.div
+					animate={{
+						opacity: 1,
+						y: 0,
+						transition: {
+							ease: 'easeInOut',
+							delay: 0.2,
+							stiffness: 10,
+							duration: 0.5,
+						},
+					}}
+					initial={{
+						opacity: 0,
+						y: 50,
+						transition: {
+							ease: 'easeInOut',
+							delay: 0.2,
+							stiffness: 10,
+							duration: 0.5,
+						},
+					}}
+					transition={{
+						stiffness: 400,
+						damping: 10,
+						transition: {
+							ease: 'easeInOut',
+							delay: 0.2,
+							stiffness: 10,
+							duration: 0.5,
+						},
+					}}
+					exit={{
+						y: -50,
+						opacity: 0,
+						transition: {
+							ease: 'easeInOut',
+							delay: 0.2,
+							stiffness: 10,
+							duration: 0.5,
+						},
+					}}
+					className="newsItem"
+					key={id}>
+					<div className="newsImg-a">
+						<Link to={`${NEWS}/${path}`} state={{ data: news }}>
+							<LazyImage alt={title} src={imgMain} />
+						</Link>
+					</div>
+					<i>{data}</i>
+					<h6>{title}</h6>
+					<p>{shortInfo}</p>
+					<Link to={`${NEWS}/${path}`} state={{ data: news }}>
+						Read More
+					</Link>
+				</motion.div>
+			);
+		});
+	}, [searchResults]);
+
 	return (
 		<>
 			<BannerPages
-				page={'News'}
+				page="News"
 				bg={newsBg}
-				titleSecond={'News'}
+				titleSecond="News"
 				classNames="newsBanner"
-				desc={'Your Premier Destination for Online Entertainment!'}
+				desc="Your Premier Destination for Online Entertainment!"
 			/>
 			<section className="recently-completed blogs blog-section pb-120">
 				<div className="container pt-120">
 					<h1 className="pb-10">News</h1>
-
 					<div className="row">
 						<div className="col-xl-8 col-lg-7">
 							<div className="news-section">
-								{searchResults?.length > 0 ? (
-									searchResults?.map((news) => {
-										const { id, imgMain, title, shortInfo, data, path } = news;
-										return (
-											<motion.div
-												animate={{
-													opacity: 1,
-													y: 0,
-													transition: {
-														ease: 'easeInOut',
-														delay: 0.2,
-														stiffness: 10,
-														duration: 0.5,
-													},
-												}}
-												initial={{
-													opacity: 0,
-													y: 50,
-													transition: {
-														ease: 'easeInOut',
-														delay: 0.2,
-														stiffness: 10,
-														duration: 0.5,
-													},
-												}}
-												transition={{
-													stiffness: 400,
-													damping: 10,
-													transition: {
-														ease: 'easeInOut',
-														delay: 0.2,
-														stiffness: 10,
-														duration: 0.5,
-													},
-												}}
-												exit={{
-													y: -50,
-													opacity: 0,
-													transition: {
-														ease: 'easeInOut',
-														delay: 0.2,
-														stiffness: 10,
-														duration: 0.5,
-													},
-												}}
-												className="newsItem"
-												key={id}>
-												<div className="newsImg-a">
-													<Link to={`${NEWS}/${path}`} state={{ data: news }}>
-														<LazyImage alt={title} src={imgMain} />
-													</Link>
-												</div>
-												<i>{data}</i>
-												<h6>{title}</h6>
-												<p>{shortInfo}</p>
-												<Link to={`${NEWS}/${path}`} state={{ data: news }}>
-													Read More
-												</Link>
-											</motion.div>
-										);
-									})
+								{memoizedSearchResults.length > 0 ? (
+									memoizedSearchResults
 								) : (
 									<p>No search results found</p>
 								)}
@@ -161,9 +172,8 @@ const News = () => {
 									<div className="sidebar-area p-5">
 										<h3 className="visible-slowly-bottom mb-6">Category</h3>
 										<ul className="underwriters d-grid gap-3">
-											<li>
+											<li className="pointer">
 												<a
-													href="javascript:void(0)"
 													className="d-center justify-content-between"
 													onClick={() => handleCategorySelect('All')}>
 													<div className="d-flex gap-1">
@@ -180,9 +190,8 @@ const News = () => {
 
 											{allCategoriesNews?.map((category, index) => {
 												return (
-													<li key={index}>
+													<li key={index} className="pointer">
 														<a
-															href="javascript:void(0)"
 															className="d-center justify-content-between"
 															onClick={() => handleCategorySelect(category[0])}>
 															<div className="d-flex gap-1">
@@ -206,7 +215,7 @@ const News = () => {
 										<ul className="d-flex gap-4 social-area">
 											<li>
 												<a
-													href="https://www.facebook.com"
+													href={dataSocial.facebook.url}
 													aria-label="Facebook"
 													className="d-center">
 													<svg
@@ -223,7 +232,7 @@ const News = () => {
 											</li>
 											<li>
 												<a
-													href="https://www.instagram.com"
+													href={dataSocial.instagram.url}
 													aria-label="Instagram"
 													className="d-center">
 													<svg
@@ -240,7 +249,7 @@ const News = () => {
 											</li>
 											<li>
 												<a
-													href="https://www.linkedin.com"
+													href={dataSocial.linkedin.url}
 													aria-label="Linkedin"
 													className="d-center">
 													<svg
@@ -273,11 +282,9 @@ const News = () => {
 												<AiOutlineRight />
 											</Link>
 										</div>
-										<a
-											href="javascript:void(0)"
-											className="d-center mt-8 call-number gap-2">
+										<a className="d-center mt-8 call-number gap-2">
 											<AiOutlinePhone size={20} />
-											+000 (123) 456 88
+											{dataOffice[2].subText[0]}
 										</a>
 									</div>
 								</div>

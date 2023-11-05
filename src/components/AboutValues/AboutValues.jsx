@@ -1,3 +1,6 @@
+// Components
+import SimpleSlider from '../Slides/SimpleSlider';
+// Icons
 import {
 	FaBalanceScale,
 	FaCertificate,
@@ -7,9 +10,9 @@ import {
 	FaSmile,
 	FaUsers,
 } from 'react-icons/fa';
+// Configs
 import { settingsAbout } from '../../features/SliderConfig';
-import SimpleSlider from '../SimpleSlider';
-// import './AboutValues.css';
+
 const AboutValues = () => {
 	return (
 		<section className="gaming-character ongoing-values pt-120 pb-120">
@@ -33,10 +36,7 @@ const AboutValues = () => {
 			<div className="container-fluid">
 				<div className="row justify-content-end">
 					<div className="col-lg-12">
-						<div
-							className={
-								'ongoing-values-carousel about-values slick-initialized slick-slider slick-dotted'
-							}>
+						<div className="ongoing-values-carousel about-values slick-initialized slick-slider slick-dotted">
 							<SimpleSlider setting={settingsAbout}>
 								<div className="single-box p-5 py-sm-10 px-sm-8 box-style box-first">
 									<div className="icon-box d-center">

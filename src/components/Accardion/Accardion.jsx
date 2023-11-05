@@ -1,7 +1,6 @@
 import {Children, createContext, useContext, useState} from "react";
-
+// Package
 import {AnimatePresence, motion} from "framer-motion";
-import "./Accardion.css";
 
 const AccordionContext = createContext({});
 const useAccordion = () => useContext(AccordionContext);

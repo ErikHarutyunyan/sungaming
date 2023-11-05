@@ -1,0 +1,8 @@
+p.name-area {
+	text-align: center;
+}
+
+.services-page .display-one,
+.counters span {
+	color: var(--p300);
+}

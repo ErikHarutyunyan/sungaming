@@ -12,7 +12,7 @@ import {
   news9,
 } from "../components/Images";
 
-const dataNews = [
+export const dataNews = [
   {
     id: uuidv4(), // Generate a unique ID
     imgMain: news1,
@@ -790,7 +790,7 @@ dataNews.forEach((newsItem) => {
   newsItem.path = newsItem.title.toLowerCase().replace(/\s+/g, "-");
 });
 
-const allCategoriesNews = Array.from(
+export const allCategoriesNews = Array.from(
   dataNews.reduce((categories, news) => {
     news.category.forEach((category) => {
       categories.set(category, (categories.get(category) || 0) + 1);
@@ -799,4 +799,4 @@ const allCategoriesNews = Array.from(
   }, new Map())
 );
 
-export { dataNews, allCategoriesNews };
+// export { dataNews, allCategoriesNews };

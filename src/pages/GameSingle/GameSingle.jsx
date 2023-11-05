@@ -4,18 +4,17 @@ import { useLocation, useParams } from 'react-router-dom';
 import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
-// Style
-import './GameSingle.css';
 // Components
 import Brands from '../../components/Brands';
-import CounterActive from '../../components/CounterActive';
-import LazyImage from '../../components/LazyImage';
-import OnboardModal from '../../components/Modal/OnboardModal';
+import CounterActive from '../../components/Counter/CounterActive';
+import LazyImage from '../../components/Images/LazyImage';
+import { OnboardModal } from '../../components/Modal';
 import PlayButton from '../../components/PlayButton';
-import SimpleSlider from '../../components/SimpleSlider';
+import ShapeArea from '../../components/ShapeArea';
+import SimpleSlider from '../../components/Slides/SimpleSlider';
 import Subscribe from '../../components/Subscribe';
 // Data and Configuration
-import { counterData } from '../../data/dataCounters';
+import { counterActiveData } from '../../data/dataCounters';
 import { dataGames } from '../../data/dataGames';
 import { settingsGameSingle } from '../../features/SliderConfig';
 // Images and Icons
@@ -28,7 +27,6 @@ import {
 	lineImg,
 	objectImg,
 } from '../../components/Images';
-import ShapeArea from '../../components/ShapeArea';
 
 const GameSingle = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +42,7 @@ const GameSingle = () => {
 	const images = data.imgMore
 		? [...data.imgMore].map((src) => ({ src }))
 		: null;
-	console.log('data.video', data.video);
+
 	return (
 		<>
 			<section
@@ -228,7 +226,7 @@ const GameSingle = () => {
 					</div>
 				</section>
 			) : null}
-			<CounterActive className={`bg-800`} counterData={counterData} />
+			<CounterActive className={`bg-800`} counterData={counterActiveData} />
 			{data.imgMore.length !== 0 ? (
 				<section className="gaming-character ongoing-values bg-transparent gallery pt-20 pb-120">
 					<div className="container">
@@ -269,16 +267,18 @@ const GameSingle = () => {
 			) : null}
 			<Brands />
 			<Subscribe />
-			<Lightbox
-				styles={{
-					container: { backgroundColor: 'rgba(0, 0, 0, .9)' },
-				}}
-				index={indexImages}
-				slides={images}
-				open={indexImages >= 0}
-				close={() => setIndexImages(-1)}
-				plugins={[Zoom]}
-			/>
+			{data.imgMore.length !== 0 ? (
+				<Lightbox
+					styles={{
+						container: { backgroundColor: 'rgba(0, 0, 0, .9)' },
+					}}
+					index={indexImages}
+					slides={images}
+					open={indexImages >= 0}
+					close={() => setIndexImages(-1)}
+					plugins={[Zoom]}
+				/>
+			) : null}
 		</>
 	);
 };

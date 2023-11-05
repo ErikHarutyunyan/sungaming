@@ -1,6 +1,6 @@
+import { v4 as uuidv4 } from 'uuid';
 import { MdSportsSoccer } from 'react-icons/md';
 import { RiNftLine } from 'react-icons/ri';
-import { v4 as uuidv4 } from 'uuid';
 import { IconsCasino, IconsSlot, IconsTable } from '../components/Icons';
 import {
 	aladdinBig,
@@ -216,7 +216,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		],
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: false,
-		video: 'https://www.youtube.com/embed/FAajXAuUcVA',
+		video:
+			'https://www.youtube.com/embed/FAajXAuUcVA?modestbranding=1&;showinfo=0&;autohide=1&;rel=0;',
 	},
 	{
 		id: uuidv4(),
@@ -251,7 +252,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		],
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: false,
-		video: 'https://www.youtube.com/embed/w8noQPqSBX8',
+		video:
+			'https://www.youtube.com/embed/w8noQPqSBX8?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -290,7 +292,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		],
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: false,
-		video: 'https://www.youtube.com/embed/eU5yb7GrRUM',
+		video:
+			'https://www.youtube.com/embed/eU5yb7GrRUM?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -324,7 +327,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		],
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: true,
-		video: 'https://www.youtube.com/embed/tstYZwMMocE',
+		video:
+			'https://www.youtube.com/embed/tstYZwMMocE?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -364,7 +368,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		],
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: false,
-		video: 'https://www.youtube.com/embed/FAajXAuUcVA',
+		video:
+			'https://www.youtube.com/embed/FAajXAuUcVA?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -398,7 +403,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		],
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: false,
-		video: 'https://www.youtube.com/embed/EmNS0TsMUZM',
+		video:
+			'https://www.youtube.com/embed/EmNS0TsMUZM?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -469,7 +475,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		],
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: false,
-		video: 'https://www.youtube.com/embed/ch53RK7IcsQ',
+		video:
+			'https://www.youtube.com/embed/ch53RK7IcsQ?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -501,7 +508,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		],
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: true,
-		video: 'https://www.youtube.com/embed/FAajXAuUcVA',
+		video:
+			'https://www.youtube.com/embed/FAajXAuUcVA?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -538,7 +546,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		desc: "Get ready for some wild jungle action in Crazy Monkey Scatter, a thrilling casino game that's full of adventure! Venture deep into the heart of the tropical rainforest and join our playful primate friend on a quest for treasures. Spin the reels and encounter bananas, coconuts, and cheeky monkeys on your journey. But watch out for the Crazy Monkey Scatter symbol – when it appears, it triggers a frenzy of excitement with free spins and bonus features that can lead to incredible payouts. Whether you're a seasoned slot enthusiast or just looking for a fun and vibrant game, Crazy Monkey Scatter offers non-stop entertainment and the chance to swing from the trees with a bundle of winnings!",
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: true,
-		video: 'https://www.youtube.com/embed/7IW3lbJMymI',
+		video:
+			'https://www.youtube.com/embed/7IW3lbJMymI?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -571,7 +580,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		desc: "Experience the thrill of the racetrack in our Harness Racing game! Step into the world of high-speed, high-stakes horse racing where finely tuned trotters and pacers compete for victory. Place your bets and watch as these remarkable equine athletes speed around the track, guided by skilled drivers in their sulkies. Will your chosen horse outpace the competition and cross the finish line first? With the excitement of live commentary and the potential for impressive payouts, Harness Racing delivers the excitement of the racetrack right to your casino experience. Whether you're a racing aficionado or simply seeking heart-pounding action, Harness Racing promises an exhilarating ride for both newcomers and seasoned bettors.",
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: true,
-		video: 'https://www.youtube.com/embed/QKOp_e93Eaw',
+		video:
+			'https://www.youtube.com/embed/QKOp_e93Eaw?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -603,7 +613,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		],
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: false,
-		video: 'https://www.youtube.com/embed/3w-RTO4P8LQ?si=VQFFuFyHEk22kY8U',
+		video:
+			'https://www.youtube.com/embed/3w-RTO4P8LQ?si=VQFFuFyHEk22kY8U?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -643,7 +654,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		desc: "Embark on an ancient adventure with our Mummy Slot game! Journey back in time to the mystical world of pharaohs, pyramids, and hidden treasures. Spin the reels adorned with hieroglyphics, scarab beetles, and mysterious mummies as you uncover the secrets of the past. With each spin, you have the chance to unearth incredible riches, including jackpots that rival the treasures of the Egyptian tombs. Whether you're an archaeology enthusiast or simply seeking spine-tingling thrills, Mummy Slot offers an unforgettable casino experience filled with ancient mystique and the potential for dazzling wins. So, grab your torch, explore the ancient chambers, and let the Mummy Slot take you on an adventure of a lifetime!",
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: false,
-		video: 'https://www.youtube.com/embed/RpvUsbTOnq8',
+		video:
+			'https://www.youtube.com/embed/RpvUsbTOnq8?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -706,7 +718,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		],
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: true,
-		video: 'https://www.youtube.com/embed/TT7Lzppritw',
+		video:
+			'https://www.youtube.com/embed/TT7Lzppritw?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -787,7 +800,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		desc: "Embark on an epic Space Adventure in this out-of-this-world casino game! Launch into the cosmos and explore the vastness of the universe as you spin the reels adorned with futuristic spaceships, mysterious planets, and cosmic treasures. Navigate through asteroid fields and wormholes to uncover incredible bonuses and extraterrestrial rewards. With every spin, you're one step closer to discovering the secrets of the galaxy and winning cosmic-sized prizes. Whether you're an interstellar explorer or just seeking thrilling casino action, Space Adventure promises an astronomical gaming experience that's truly stellar. So, suit up, strap in, and prepare to take your casino journey to new frontiers!",
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: false,
-		video: 'https://www.youtube.com/embed/DlutWt72X90?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
+		video:
+			'https://www.youtube.com/embed/DlutWt72X90?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 	{
 		id: uuidv4(),
@@ -934,7 +948,8 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
 		desc: "Take a spin on the Wheel of Fortune tables and unleash your luck! Inspired by the iconic TV game show, these tables offer a chance to test your fortune and intuition. Place your bets on various outcomes and watch as the colorful wheel spins, creating moments of suspense and excitement. Will you land on a big win or trigger a thrilling bonus round? With the anticipation of the spinning wheel and the potential for incredible payouts, the Wheel of Fortune tables provide an electrifying and engaging casino experience that's bound to keep you on the edge of your seat. Come and give the wheel a whirl, and see if fortune smiles upon you!",
 		platforms: ['PC', 'iOS', 'Android'],
 		featured: false,
-		video: 'https://www.youtube.com/embed/1GVr8lewL30',
+		video:
+			'https://www.youtube.com/embed/1GVr8lewL30?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1',
 	},
 ];
 
@@ -953,7 +968,7 @@ export const categoryIcons = {
 
 export const featuredGames = dataGames.filter((game) => game.featured === true);
 
-const allCategoriesGames = Array.from(
+export const allCategoriesGames = Array.from(
 	dataGames.reduce((categories, game) => {
 		game.category.forEach((category) => {
 			categories.add(category);
@@ -964,4 +979,4 @@ const allCategoriesGames = Array.from(
 
 allCategoriesGames.unshift('All Games');
 
-export { allCategoriesGames };
+// export { allCategoriesGames };

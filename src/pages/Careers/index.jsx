@@ -1,2 +1,4 @@
-import Careers from './Careers.lazy';
-export default Careers;
+// Styles
+import './Careers.css';
+
+export { default } from './Careers.lazy';

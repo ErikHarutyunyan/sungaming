@@ -1,19 +1,25 @@
-// Styles
 import { useRef, useState } from 'react';
+// Route
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { HOME } from '../../router/route-path';
+// Components
+import LoadingStep from '../../components/Loading/LoadingStep';
+import { OnboardModal } from '../../components/Modal';
+import ShapeArea from '../../components/ShapeArea';
+import Subscribe from '../../components/Subscribe';
+// Images and Icons
 import { AiOutlineMail, AiOutlineUser } from 'react-icons/ai';
 import { FiChevronRight, FiMessageSquare } from 'react-icons/fi';
 import { ImAttachment } from 'react-icons/im';
 import { IoTimeOutline } from 'react-icons/io5';
 import { MdWorkOutline } from 'react-icons/md';
 import { PiUserFocusLight } from 'react-icons/pi';
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { bubble, ellipse7 } from '../../components/Images';
-import OnboardModal from '../../components/Modal/OnboardModal';
-import ShapeArea from '../../components/ShapeArea';
-import Subscribe from '../../components/Subscribe';
-import { dataCareers } from '../../data/dataCareers';
-import { HOME } from '../../router/route-path';
-import './CareersSingle.css';
+// Data and Configuration
+import { dataCareers, dataCareersIcon } from '../../data/dataCareers';
+import { isJSON } from '../../helpers';
+// hooks
+import useFetch from '../../hooks/useFetch';
 
 const CareersSingle = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +28,12 @@ const CareersSingle = () => {
 	const { id: title } = useParams();
 	const location = useLocation();
 	let data = location.state?.data;
-	if (!data) {
+
+	if (data !== null) {
+		if (isJSON(data)) {
+			data = JSON.parse(data);
+		}
+	} else {
 		const singleCareer = dataCareers.find((career) => {
 			return career.path === title;
 		});
@@ -45,21 +56,18 @@ const CareersSingle = () => {
 	};
 
 	const navigate = useNavigate();
+	const { loading, error, submitForm } = useFetch();
+
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 
 		const myForm = event.target;
 		const formData = new FormData(myForm);
 
-		fetch('/', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: new URLSearchParams(formData).toString(),
-		})
-			.then(() => console.log('Form successfully submitted'))
-			.catch((error) => alert(error));
-
-		navigate('/success');
+		submitForm('/', formData, () => {
+			console.log('Form successfully submitted');
+			navigate('/success');
+		});
 	};
 
 	return (
@@ -108,7 +116,7 @@ const CareersSingle = () => {
 							<div className="content-wrapper d-grid gap-4 gap-sm-8">
 								<div className="d-flex gap-6 align-items-center">
 									<div className="end-area">
-										<span className="fs-seven p-1 px-2">{data.area}</span>
+										<span className="fs-six p-1 px-2 fw-semibold">{data.area}</span>
 									</div>
 									<ul className="d-flex gap-6">
 										<li className="d-flex align-items-center gap-2">
@@ -152,7 +160,7 @@ const CareersSingle = () => {
 						<div className="col-xl-4 col-lg-5 col-md-7 mt-8 mt-lg-0 alt-bg">
 							<div className="apply-area cus-scrollbar text-center py-15 px-8">
 								<div className="careers-icon icon-box mb-6 mb-sm-10 d-inline-flex d-center">
-									{data.icon}
+									{dataCareersIcon[data.role].icon}
 								</div>
 								<div className="section-text">
 									<h2 className="visible-slowly-bottom mb-3">
@@ -183,108 +191,124 @@ const CareersSingle = () => {
 														value="careers"
 													/>
 													<div className="modal-header text-center">
-														<h4 className="modal-title w-100 font-weight-bold">
-															Apply For The Position Now!
-														</h4>
-													</div>
-													<div className="modal-body d-center row mt-5">
-														<div className="md-form mb-3">
-															<div className="form-info">
-																<AiOutlineUser size={20} color="#09926a" />
+																<h4 className="modal-title w-100 font-weight-bold">
+																	Apply For The Position Now!
+																</h4>
 															</div>
-															<input
-																type="text"
-																id="modalContactInput1"
-																className="form-control validate mt-3"
-																placeholder="Full Name"
-																name="name"
-																required
-															/>
-														</div>
-														<div className="md-form mb-3">
-															<div className="form-info">
-																<AiOutlineMail size={21} color="#09926a" />
+													{error ? (
+														<span className="err">Error: {error.message}</span>
+													) : null}
+													{loading ? (
+														<LoadingStep />
+													) : (
+														<>
+															
+															<div className="modal-body d-center row mt-5">
+																<div className="md-form mb-3">
+																	<div className="form-info">
+																		<AiOutlineUser size={20} color="#09926a" />
+																	</div>
+																	<input
+																		type="text"
+																		id="modalContactInput1"
+																		className="form-control validate mt-3"
+																		placeholder="Full Name"
+																		name="name"
+																		required
+																	/>
+																</div>
+																<div className="md-form mb-3">
+																	<div className="form-info">
+																		<AiOutlineMail size={21} color="#09926a" />
+																	</div>
+
+																	<input
+																		type="email"
+																		id="modalContactInput2"
+																		className="form-control validate mt-3"
+																		placeholder="Email"
+																		name="email"
+																		required
+																	/>
+																</div>
+																<div className="md-form mb-3">
+																	<div className="form-info">
+																		<PiUserFocusLight
+																			size={25}
+																			color="#09926a"
+																		/>
+																	</div>
+
+																	<input
+																		type="text"
+																		id="modalContactInput3"
+																		className="form-control validate mt-3"
+																		placeholder="Vacancy"
+																		name="vacancy"
+																		required
+																	/>
+																</div>
+																<div className="md-form mb-3">
+																	<div className="form-info">
+																		<FiMessageSquare
+																			size={21}
+																			color="#09926a"
+																		/>
+																	</div>
+
+																	<textarea
+																		type="text"
+																		id="modalContactTextarea"
+																		className="md-textarea form-control mt-3"
+																		rows="4"
+																		placeholder="Message"
+																		name="message"
+																		required></textarea>
+																</div>
+																<div className="md-form ">
+																	<ImAttachment size={24} color="#09926a" />
+																	<label
+																		className="ms-2 pointer d-inline-flex align-items-center"
+																		onClick={handleClick}>
+																		{fileName ? (
+																			<>
+																				<p className="attachFile text-truncate">
+																					File: {fileName}
+																				</p>
+																				<button
+																					type="button"
+																					onClick={reset}
+																					className="closeFile mx-2 d-inline">
+																					<span className="small">x</span>
+																				</button>
+																			</>
+																		) : (
+																			'Click Attach CV'
+																		)}
+																	</label>
+
+																	<input
+																		type="file"
+																		onChange={handleChange}
+																		ref={hiddenFileInput}
+																		accept=".jpg,.jpeg,.png,.doc,.docx,.pdf,.html,.ppt,.pptx,.odp"
+																		style={{ display: 'none' }}
+																		name="file"
+																		required
+																	/>
+																</div>
 															</div>
-
-															<input
-																type="email"
-																id="modalContactInput2"
-																className="form-control validate mt-3"
-																placeholder="Email"
-																name="email"
-																required
-															/>
-														</div>
-														<div className="md-form mb-3">
-															<div className="form-info">
-																<PiUserFocusLight size={25} color="#09926a" />
+															<div className="modal-footer d-flex justify-content-center">
+																<div className="btn-area mt-6 ">
+																	<button
+																		type="submit"
+																		className="w-25 justify-content-center box-style text-nowrap btn-box">
+																		Apply
+																	</button>
+																</div>
 															</div>
-
-															<input
-																type="text"
-																id="modalContactInput3"
-																className="form-control validate mt-3"
-																placeholder="Vacancy"
-																name="vacancy"
-																required
-															/>
-														</div>
-														<div className="md-form mb-3">
-															<div className="form-info">
-																<FiMessageSquare size={21} color="#09926a" />
-															</div>
-
-															<textarea
-																type="text"
-																id="modalContactTextarea"
-																className="md-textarea form-control mt-3"
-																rows="4"
-																placeholder="Message"
-																name="message"
-																required></textarea>
-														</div>
-														<div className="md-form ">
-															<ImAttachment size={24} color="#09926a" />
-															<label
-																className="ms-2 pointer d-inline-flex align-items-center"
-																onClick={handleClick}>
-																{fileName ? (
-																	<>
-																		<p className="attachFile text-truncate">
-																			File: {fileName}
-																		</p>
-																		<button
-																			type="button"
-																			onClick={reset}
-																			className="closeFile mx-2 d-inline">
-																			<span className="small">x</span>
-																		</button>
-																	</>
-																) : (
-																	'Click Attach CV'
-																)}
-															</label>
-
-															<input
-																type="file"
-																onChange={handleChange}
-																ref={hiddenFileInput}
-																accept=".jpg,.jpeg,.png,.doc,.docx,.pdf,.html,.ppt,.pptx,.odp"
-																style={{ display: 'none' }}
-																name="file"
-																required
-															/>
-														</div>
-													</div>
-													<div className="modal-footer d-flex justify-content-center">
-														<div className="btn-area mt-6 ">
-															<button
-																type="submit"
-																className="w-25 justify-content-center box-style text-nowrap btn-box">
-																Apply
-															</button>
-														</div>
-													</div>
+														</>
+													)}
 												</form>
 											</div>
 										</OnboardModal>

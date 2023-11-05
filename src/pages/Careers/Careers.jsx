@@ -1,18 +1,27 @@
-// Styles
-import './Careers.css';
-
+// Route
+import { useNavigate } from 'react-router-dom';
+import { CAREERS, HOME } from '../../router/route-path';
+// Components
+import AboutValues from '../../components/AboutValues';
+import NewsPresent from '../../components/NewsPresent';
+import ShapeArea from '../../components/ShapeArea';
+import Subscribe from '../../components/Subscribe';
+// Images and Icons
 import { FiChevronRight } from 'react-icons/fi';
 import { IoTimeOutline } from 'react-icons/io5';
 import { MdWorkOutline } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { bubble, ellipse7 } from '../../components/Images';
-import Subscribe from '../../components/Subscribe';
+// Data
 import { dataCareers } from '../../data/dataCareers';
-import { CAREERS, HOME } from '../../router/route-path';
-
-import AboutValues from '../../components/AboutValues/AboutValues';
-import ShapeArea from '../../components/ShapeArea';
 const Careers = () => {
+	const navigate = useNavigate();
+
+	const handleClick = (e, path, item) => {
+		e.preventDefault();
+		let careerData = JSON.stringify(item);
+		navigate(`${CAREERS}/${path}`, { state: { data: careerData } });
+	};
 	return (
 		<>
 			<section className="banner-section inner-banner position-relative career">
@@ -79,42 +88,44 @@ const Careers = () => {
 								item;
 							return (
 								<div className="col-md-6" key={id}>
-									<div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
-										<div className="content-box d-flex flex-wrap gap-4 gap-md-6">
-											{icon && (
-												<div className="icon-box d-inline-flex d-center">
-													{icon}
-												</div>
-											)}
+									<Link onClick={(e) => handleClick(e, path, item)}>
+										<div className="single-box flex-wrap box-style box-second p-3 p-md-6 d-flex gap-4 gap-md-6 justify-content-between">
+											<div className="content-box d-flex flex-wrap gap-4 gap-md-6">
+												{icon ? (
+													<div className="icon-box d-inline-flex d-center">
+														{icon}
+													</div>
+												) : null}
 
-											<div className="info-box">
-												<Link to={`${CAREERS}/${path}`} params={{ item }}>
+												<div className="info-box">
 													<h5>{title}</h5>
-												</Link>
-												<a href="career-details.html"></a>
-												<span className="fs-seven mt-2">{location}</span>
-												<ul className="d-flex gap-6 mt-6">
-													<li className="d-flex align-items-center gap-2">
-														<MdWorkOutline size={24} />
-														<span className="fs-seven">{term}</span>
-													</li>
-													<li className="d-flex align-items-center gap-2">
-														<IoTimeOutline size={24} />
-														<span className="fs-seven">{types}</span>
-													</li>
-												</ul>
+													<span className="fs-seven mt-2">{location}</span>
+													<ul className="d-flex gap-6 mt-6">
+														<li className="d-flex align-items-center gap-2">
+															<MdWorkOutline size={24} />
+															<span className="fs-seven">{term}</span>
+														</li>
+														<li className="d-flex align-items-center gap-2">
+															<IoTimeOutline size={24} />
+															<span className="fs-seven">{types}</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div className="end-area">
+												<span className="fs-six p-1 px-2 fw-medium">
+													{area}
+												</span>
 											</div>
 										</div>
-										<div className="end-area">
-											<span className="fs-seven p-1 px-2">{area}</span>
-										</div>
-									</div>
+									</Link>
 								</div>
 							);
 						})}
 					</div>
 				</div>
 			</section>
+			<NewsPresent />
 			<Subscribe />
 		</>
 	);

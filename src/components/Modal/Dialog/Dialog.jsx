@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import LoadingOpen from '../../Loading/LoadingOpen';
-import './Dialog.css';
+
 
 const IFRAME_STYLES = {
 	position: 'fixed',

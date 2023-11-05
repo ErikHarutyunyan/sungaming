@@ -1,10 +1,9 @@
-// Styles
-import '../../components/GamesTab/GamesTab.css';
-import './Games.css';
 // Components
 import BannerPages from '../../components/BannerPages';
-import CounterActive from '../../components/CounterActive';
-import LazyImage from '../../components/LazyImage';
+import CounterActive from '../../components/Counter/CounterActive';
+import GamesTab from '../../components/GamesTab';
+import LazyImage from '../../components/Images/LazyImage';
+import ShapeArea from '../../components/ShapeArea';
 import Subscribe from '../../components/Subscribe';
 // Images and Icons
 import { FaStudiovinari } from 'react-icons/fa';
@@ -13,8 +12,7 @@ import { PiLightbulbLight } from 'react-icons/pi';
 import { IconResponse } from '../../components/Icons';
 import { bannerGameCut, gameShape1, gameShape2 } from '../../components/Images';
 // Data and Configuration
-import GamesTab from '../../components/GamesTab';
-import ShapeArea from '../../components/ShapeArea';
+import { counterActiveData } from '../../data/dataCounters';
 
 const Games = () => {
 	return (
@@ -124,7 +122,7 @@ const Games = () => {
 					</div>
 				</div>
 			</section>
-			<section className="our-games games-thumb overflow-hidden index-two position-relative pt-120 pb-120">
+			<section className="our-games games-thumb overflow-hidden index-two position-relative pt-10 pb-120">
 				<ShapeArea>
 					<LazyImage
 						alt="gameShape1"
@@ -160,7 +158,7 @@ const Games = () => {
 					<GamesTab style="2" viewItems={5} />
 				</div>
 			</section>
-			<CounterActive />
+			<CounterActive counterData={counterActiveData} />
 			<Subscribe />
 		</>
 	);

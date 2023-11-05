@@ -1,9 +1,15 @@
-// Styles
-// import { useForm } from 'react-hook-form';
-import BannerPages from '../../components/BannerPages/BannerPages';
-import { privacyBanner } from '../../components/Images';
-import './PrivacyPolicy.css';
+// Route
 import { useNavigate } from 'react-router-dom';
+// import { useForm } from 'react-hook-form';
+
+// Components
+import BannerPages from '../../components/BannerPages';
+import LoadingStep from '../../components/Loading/LoadingStep';
+// Images
+import { privacyBanner } from '../../components/Images';
+
+// hook
+import useFetch from '../../hooks/useFetch';
 
 const PrivacyPolicy = () => {
 	// const {
@@ -17,25 +23,19 @@ const PrivacyPolicy = () => {
 	// 	console.log(data);
 	// };
 
-  const navigate = useNavigate();
+	const navigate = useNavigate();
+	const { loading, error, submitForm } = useFetch();
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 
 		const myForm = event.target;
 		const formData = new FormData(myForm);
-
-		fetch('/', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: new URLSearchParams(formData).toString(),
-		})
-			.then(() => console.log('Form successfully submitted'))
-			.catch((error) => alert(error));
-
-		navigate('/success');
+		submitForm('/', formData, () => {
+			console.log('Form successfully submitted');
+			navigate('/success');
+		});
 	};
-
 
 	return (
 		<>
@@ -44,8 +44,8 @@ const PrivacyPolicy = () => {
 				titleSecond="Policy"
 				desc="We're always looking for new ways to provide privacy for our customers."
 				bg={privacyBanner}
-				classNames={'about privacy'}
-				page={'Privacy'}
+				classNames="about privacy"
+				page="Privacy"
 			/>
 			<section className="privacy-content">
 				<div className="overlay pt-120">
@@ -177,97 +177,105 @@ const PrivacyPolicy = () => {
 								</p>
 							</div>
 						</div>
-						<div className="col-lg-5 me-20  mt-lg-0">
+						<div className="col-lg-5 me-20  mt-lg-0 position-relative">
+							{error ? (
+								<span className="err">Error: {error.message}</span>
+							) : null}
+
 							<form
-								className="p-4"
+								className="p-4 position-relative overflow-hidden"
 								method="post"
 								name="privacy-contact"
 								action="/success/"
-                data-netlify="true"
-                onSubmit={handleSubmit}
+								data-netlify="true"
+								onSubmit={handleSubmit}
 								// onSubmit={handleSubmit(onSubmit)}
 							>
 								<input type="hidden" name="form-name" value="privacy-contact" />
-								<div className="form-inside p-4">
-									<div className="row">
-										<div className="col-sm-12">
-											<div className="single-input text-start">
-												<label htmlFor="contactName">Name</label>
-												<input
-													type="text"
-													id="contactName"
-													placeholder="Enter Your Name"
-													name="privacy-contact-name"
-													autoComplete="off"
-													required
-													// {...register("Name", {
-													//   required: true,
-													//   pattern: /^[A-Za-z\s\-']{2,50}$/,
-													// })}
-												/>
+								{loading ? (
+									<LoadingStep />
+								) : (
+									<div className="form-inside p-4">
+										<div className="row">
+											<div className="col-sm-12">
+												<div className="single-input text-start">
+													<label htmlFor="contactName">Name</label>
+													<input
+														type="text"
+														id="contactName"
+														placeholder="Enter Your Name"
+														name="privacy-contact-name"
+														autoComplete="off"
+														required
+														// {...register("Name", {
+														//   required: true,
+														//   pattern: /^[A-Za-z\s\-']{2,50}$/,
+														// })}
+													/>
+												</div>
 											</div>
-										</div>
-										<div className="col-sm-12">
-											<div className="single-input text-start">
-												<label htmlFor="contactEmail">Email</label>
-												<input
-													type="email"
-													id="contactEmail"
-													placeholder="Enter your email"
-													name="privacy-contact-email"
-													autoComplete="off"
-													required
-													// {...register("Email", {
-													//   required: true,
-													//   pattern: /^\S+@\S+$/i,
-													// })}
-												/>
+											<div className="col-sm-12">
+												<div className="single-input text-start">
+													<label htmlFor="contactEmail">Email</label>
+													<input
+														type="email"
+														id="contactEmail"
+														placeholder="Enter your email"
+														name="privacy-contact-email"
+														autoComplete="off"
+														required
+														// {...register("Email", {
+														//   required: true,
+														//   pattern: /^\S+@\S+$/i,
+														// })}
+													/>
+												</div>
 											</div>
-										</div>
-										<div className="col-sm-12">
-											<div className="single-input text-start">
-												<label htmlFor="contactSubject">Subject</label>
-												<input
-													type="text"
-													id="contactSubject"
-													placeholder="Enter Subject"
-													name="privacy-contact-subject"
-													required
-													// autoComplete="off"
-													// {...register("Subject", {
-													//   required: true,
-													//   pattern: /^[A-Za-z\s\-']{2,50}$/,
-													// })}
-												/>
+											<div className="col-sm-12">
+												<div className="single-input text-start">
+													<label htmlFor="contactSubject">Subject</label>
+													<input
+														type="text"
+														id="contactSubject"
+														placeholder="Enter Subject"
+														name="privacy-contact-subject"
+														required
+														// autoComplete="off"
+														// {...register("Subject", {
+														//   required: true,
+														//   pattern: /^[A-Za-z\s\-']{2,50}$/,
+														// })}
+													/>
+												</div>
 											</div>
-										</div>
-										<div className="col-sm-12">
-											<div className="single-input text-start">
-												<label htmlFor="contactMessage">
-													Leave us a message
-												</label>
-												<textarea
-													cols="4"
-													rows="4"
-													id="contactMessage"
-													name="privacy-contact-message"
-													required
-													// {...register("Message", {
-													//   required: true,
-													//   pattern: /^[A-Za-z\s\-']{2,50}$/,
-													// })}
-													placeholder="Please type your Message here..."></textarea>
+											<div className="col-sm-12">
+												<div className="single-input text-start">
+													<label htmlFor="contactMessage">
+														Leave us a message
+													</label>
+													<textarea
+														cols="4"
+														rows="4"
+														id="contactMessage"
+														name="privacy-contact-message"
+														required
+														// {...register("Message", {
+														//   required: true,
+														//   pattern: /^[A-Za-z\s\-']{2,50}$/,
+														// })}
+														placeholder="Please type your Message here..."></textarea>
+												</div>
 											</div>
-										</div>
-										<div className="col-sm-12 mt-4">
-											<div className="btn-area">
-												<button className="box-style btn-box">
-													Send Massage
-												</button>
+											<div className="col-sm-12 mt-4">
+												<div className="btn-area">
+													<button className="box-style btn-box">
+														Send Massage
+													</button>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								)}
 							</form>
 						</div>
 					</div>

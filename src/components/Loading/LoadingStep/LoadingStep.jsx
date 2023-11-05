@@ -1,4 +1,4 @@
-const LoadingForm = () => {
+const LoadingStep = () => {
 	return (
 		<div className="formLoader">
 			<ul className="formLoading">
@@ -9,4 +9,4 @@ const LoadingForm = () => {
 		</div>
 	);
 };
-export default LoadingForm;
+export default LoadingStep;

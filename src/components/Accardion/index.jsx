@@ -1,4 +1,4 @@
 // Styles
-import Accardion from "./Accardion.jsx"
+import './Accardion.css';
 
-export default Accardion
+export { default } from './Accardion.jsx';

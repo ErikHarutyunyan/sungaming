@@ -18215,13 +18215,13 @@ li {
   color: var(--p300);
 }
 
-.job-opens .end-area .fs-seven,
+.job-opens .end-area .fs-six,
 .job-opens .icon-box {
   background: var(--n500);
   border-radius: 12px;
 }
 
-.job-opens .end-area .fs-seven {
+.job-opens .end-area .fs-six {
   background: var(--p300);
   color: var(--n800);
   white-space: nowrap;

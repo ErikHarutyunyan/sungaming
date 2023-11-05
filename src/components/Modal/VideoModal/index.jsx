@@ -1,4 +1,4 @@
 // Styles
-import VideoModal from "./VideoModal.jsx"
+import './VideoModal.css';
 
-export default VideoModal
+export { default } from './VideoModal.jsx';

@@ -2,7 +2,7 @@ import { HiOutlineCode } from 'react-icons/hi';
 import { MdDraw } from 'react-icons/md';
 import { v4 as uuidv4 } from 'uuid';
 
-const dataCareers = [
+export const dataCareers = [
 	{
 		id: uuidv4(),
 		title: 'Senior React JS Developer',
@@ -11,8 +11,6 @@ const dataCareers = [
 		term: 'Permanent',
 		types: 'Full time',
 		location: 'Yerevan',
-		// prettier-ignore
-		icon: (<HiOutlineCode size={28} color="#0ef0ad" />),
 		level: 'Senior',
 		respons: [
 			'Develop new user-facing features using React.js',
@@ -41,8 +39,6 @@ const dataCareers = [
 		term: 'Permanent',
 		types: 'Full time',
 		location: 'Yerevan',
-		// prettier-ignore
-		icon: (<MdDraw size={28} color="#0ef0ad" />),
 		level: 'Senior',
 		respons: [
 			"Create visually stunning and intuitive user interfaces that align with the company's brand identity",
@@ -74,4 +70,13 @@ dataCareers.forEach((careers) => {
 		.replace(/-+/g, '-');
 });
 
-export { dataCareers };
+export const dataCareersIcon = {
+	// prettier-ignore
+	developer : {
+		icon : (<HiOutlineCode size={28} color="#0ef0ad" />)
+	},
+	// prettier-ignore
+	designer: {
+		icon: (<MdDraw size={28} color="#0ef0ad" />)
+	},
+};

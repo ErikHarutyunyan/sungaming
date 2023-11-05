@@ -1,20 +1,19 @@
-// Styles
-import './Contact.css';
-
-import { AiOutlineClockCircle } from 'react-icons/ai';
-import { IoCallOutline } from 'react-icons/io5';
-import { SlLocationPin } from 'react-icons/sl';
-import BannerPages from '../../components/BannerPages/BannerPages';
-
+// Route
 import { Link, useNavigate } from 'react-router-dom';
 import { ABOUT } from '../../router/route-path.jsx';
-
-import { MdOutlineMailOutline } from 'react-icons/md';
-import AccordionBox from '../../components/Accardion/index.jsx';
-import { contactUs, faqFramer, faqIcon } from '../../components/Images';
-import ShapeArea from '../../components/ShapeArea/ShapeArea.jsx';
-
 // import { useForm } from 'react-hook-form';
+// Components
+import AccordionBox from '../../components/Accardion/index.jsx';
+import BannerPages from '../../components/BannerPages';
+import Brands from '../../components/Brands';
+import LoadingStep from '../../components/Loading/LoadingStep/LoadingStep.jsx';
+import ShapeArea from '../../components/ShapeArea/ShapeArea.jsx';
+// Images and Icons
+import { contactUs, faqFramer, faqIcon } from '../../components/Images';
+// hooks
+import { dataOffice } from '../../data/dataProduct.jsx';
+import useFetch from '../../hooks/useFetch.js';
+
 const Contact = () => {
 	// const [isOpen, setIsOpen] = useState(false);
 
@@ -34,21 +33,18 @@ const Contact = () => {
 
 	const navigate = useNavigate();
 
+	const { loading, error, submitForm } = useFetch();
+
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 
 		const myForm = event.target;
 		const formData = new FormData(myForm);
 
-		fetch('/', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: new URLSearchParams(formData).toString(),
-		})
-			.then(() => console.log('Form successfully submitted'))
-			.catch((error) => alert(error));
-
-		navigate('/success');
+		submitForm('/', formData, () => {
+			console.log('Form successfully submitted');
+			navigate('/success');
+		});
 	};
 
 	return (
@@ -82,103 +78,134 @@ const Contact = () => {
 						</div>
 					</div>
 					<div className="row justify-content-center">
-						<div className="col-lg-7">
+						<div className="col-lg-7 position-relative contact-form">
 							<form
-								className="p-4 p-sm-8"
 								// onSubmit={handleSubmit(onSubmit)}
 								data-netlify="true"
 								onSubmit={handleSubmit}
 								method="post"
 								name="contact"
-								action="/success/">
+								action="/success/"
+								className={`p-4 p-sm-8 ${loading ? 'h-100' : ''}`}>
 								<input type="hidden" name="form-name" value="contact" />
 								<h3>Write A Message</h3>
-								<div className="form-inside mt-6 p-4">
-									<div className="row">
-										<div className="col-sm-12">
-											<div className="single-input text-start">
-												<label htmlFor="name">Name</label>
-												<input
-													type="text"
-													id="name"
-													placeholder="Enter Your Name"
-													autoComplete="off"
-													name="contact-name"
-													required
-													// {...register("Name", {
-													//   required: true,
-													//   pattern: /^[A-Za-z\s\-']{2,50}$/,
-													// })}
-												/>
+								{error ? (
+									<span className="err">Error: {error.message}</span>
+								) : null}
+								{loading ? (
+									<LoadingStep />
+								) : (
+									<div className="form-inside mt-6 p-4">
+										<div className="row">
+											<div className="col-sm-12">
+												<div className="single-input text-start">
+													<label htmlFor="name">Name</label>
+													<input
+														type="text"
+														id="name"
+														placeholder="Enter Your Name"
+														autoComplete="off"
+														name="contact-name"
+														required
+														// {...register("Name", {
+														//   required: true,
+														//   pattern: /^[A-Za-z\s\-']{2,50}$/,
+														// })}
+													/>
+												</div>
 											</div>
-										</div>
-										<div className="col-sm-12">
-											<div className="single-input text-start">
-												<label htmlFor="email">Email</label>
-												<input
-													type="email"
-													id="email"
-													placeholder="Enter your email"
-													autoComplete="off"
-													name="contact-email"
-													required
-													// {...register("Email", {
-													//   required: true,
-													//   pattern: /^\S+@\S+$/i,
-													// })}
-												/>
+											<div className="col-sm-12">
+												<div className="single-input text-start">
+													<label htmlFor="email">Email</label>
+													<input
+														type="email"
+														id="email"
+														placeholder="Enter your email"
+														autoComplete="off"
+														name="contact-email"
+														required
+														// {...register("Email", {
+														//   required: true,
+														//   pattern: /^\S+@\S+$/i,
+														// })}
+													/>
+												</div>
 											</div>
-										</div>
-										<div className="col-sm-12">
-											<div className="single-input text-start">
-												<label htmlFor="subject">Subject</label>
-												<input
-													type="text"
-													id="subject"
-													placeholder="Enter Subject"
-													autoComplete="off"
-													name="contact-subject"
-													required
-													// {...register("Subject", {
-													//   required: true,
-													//   pattern: /^[A-Za-z\s\-']{2,50}$/,
-													// })}
-												/>
+											<div className="col-sm-12">
+												<div className="single-input text-start">
+													<label htmlFor="subject">Subject</label>
+													<input
+														type="text"
+														id="subject"
+														placeholder="Enter Subject"
+														autoComplete="off"
+														name="contact-subject"
+														required
+														// {...register("Subject", {
+														//   required: true,
+														//   pattern: /^[A-Za-z\s\-']{2,50}$/,
+														// })}
+													/>
+												</div>
 											</div>
-										</div>
-										<div className="col-sm-12">
-											<div className="single-input text-start">
-												<label htmlFor="message">Leave us a message</label>
-												<textarea
-													cols="4"
-													rows="4"
-													id="message"
-													name="contact-message"
-													placeholder="Please type your Message here..."
-													required
-													// {...register("Message", {
-													//   required: true,
-													//   pattern: /^[A-Za-z\s\-']{2,50}$/,
-													// })}
-												></textarea>
+											<div className="col-sm-12">
+												<div className="single-input text-start">
+													<label htmlFor="message">Leave us a message</label>
+													<textarea
+														cols="4"
+														rows="4"
+														id="message"
+														name="contact-message"
+														placeholder="Please type your Message here..."
+														required
+														// {...register("Message", {
+														//   required: true,
+														//   pattern: /^[A-Za-z\s\-']{2,50}$/,
+														// })}
+													></textarea>
+												</div>
 											</div>
-										</div>
-										<div className="col-sm-12 mt-4">
-											<div className="btn-area">
-												<button className="box-style btn-box" type="submit">
-													Send Massage
-												</button>
+											<div className="col-sm-12 mt-4">
+												<div className="btn-area">
+													<button className="box-style btn-box" type="submit">
+														Send Massage
+													</button>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								)}
 							</form>
 						</div>
 						<div className="col-lg-5 mt-7 mt-lg-0">
 							<div className="py-8 py-sm-15 px-6 get-in-touch">
 								<h3>Get in Touch</h3>
+								<h4>Have any Questions</h4>
 								<div className="single-content d-grid mt-5 mt-sm-10">
-									<div className="single-content d-grid py-5 py-sm-7 gap-3 gap-sm-5">
+									{dataOffice.map((data) => {
+										const { id, text, mainText, subText, icon } = data;
+										return (
+											<div
+												key={id}
+												className="single-content d-grid py-5 py-sm-5 gap-3 ">
+												<div className="check d-center justify-content-start gap-3">
+													{icon}
+													<h4>{text}</h4>
+												</div>
+												<p className="d-flex gap-2">
+													{subText
+														? subText.map((item, i) => {
+																return <span key={`${id}_${i}`}>{item}</span>;
+																// eslint-disable-next-line no-mixed-spaces-and-tabs
+														  })
+														: null}
+
+													{mainText && `- ${mainText}`}
+												</p>
+											</div>
+										);
+									})}
+									{/* <div className="single-content d-grid py-5 py-sm-5 gap-3 ">
 										<div className="check d-center justify-content-start gap-3">
 											<IoCallOutline size={30} color="white" />
 											<h4>Have any Questions</h4>
@@ -187,7 +214,7 @@ const Contact = () => {
 											<span>(374) 0010033</span>
 										</p>
 									</div>
-									<div className="single-content d-grid py-5 py-sm-8 gap-2">
+									<div className="single-content d-grid py-5 py-sm-5 gap-3">
 										<div className="check d-center justify-content-start gap-3">
 											<MdOutlineMailOutline size={30} color="white" />
 											<h4>Email Address</h4>
@@ -196,7 +223,7 @@ const Contact = () => {
 											<span>01sungaming33@gmail.com</span>
 										</p>
 									</div>
-									<div className="single-content d-grid py-5 py-sm-8 gap-2">
+									<div className="single-content d-grid py-5 py-sm-5 gap-3">
 										<div className="check d-center justify-content-start gap-3">
 											<SlLocationPin size={30} color="white" />
 											<h4>Contact Address</h4>
@@ -205,7 +232,7 @@ const Contact = () => {
 											<span>Yerevan. Armenia</span>
 										</p>
 									</div>
-									<div className="single-content d-grid py-5 py-sm-8 gap-2">
+									<div className="single-content d-grid py-5 py-sm-5 gap-3">
 										<div className="check d-center justify-content-start gap-3">
 											<AiOutlineClockCircle size={30} color="white" />
 											<h4>Opening Hours</h4>
@@ -214,7 +241,7 @@ const Contact = () => {
 											<span>Mon-Fri: 09:00 - 18:00</span>
 											<p className="d-block">Sat-Sun: Weekend</p>
 										</p>
-									</div>
+									</div> */}
 								</div>
 								<ul className="d-flex justify-content-center gap-4 social-area py-4 py-sm-8 mt-5 mt-sm-10">
 									<li>
@@ -408,6 +435,7 @@ const Contact = () => {
 					</div>
 				</div>
 			</section>
+			<Brands />
 		</>
 	);
 };

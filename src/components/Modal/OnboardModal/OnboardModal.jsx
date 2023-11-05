@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 import ReactDOM from 'react-dom';
-import Dialog from '../Dialog/Dialog';
+import Dialog from '../Dialog';
 import VideoModal from '../VideoModal';
-import './OnboardModal.css';
+
 
 const MODAL_STYLES = {
 	position: 'fixed',
@@ -53,7 +53,6 @@ const OnboardModal = ({
 	iframe = null,
 	setDialog,
 }) => {
-	// Use useMemo unconditionally
 	const componentToRender = useMemo(() => {
 		if (!open) return null; // Early return if not open
 
@@ -66,9 +65,8 @@ const OnboardModal = ({
 					<VideoModal videoPath={video} onClose={onClose} />
 				</>
 			);
-		} else {
-			return <DefaultModal onClose={onClose}>{children}</DefaultModal>;
 		}
+		return <DefaultModal onClose={onClose}>{children}</DefaultModal>;
 	}, [open, iframe, video, onClose, children, setDialog]);
 
 	return ReactDOM.createPortal(

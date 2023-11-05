@@ -1,2 +1,4 @@
-import News from './News.lazy';
-export default News;
+// Styles
+import './News.css';
+
+export { default } from './News.lazy';

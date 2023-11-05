@@ -1,8 +1,9 @@
+// Route
 import { useNavigate } from 'react-router-dom';
-import useFetch from '../../hooks/useFetch';
 // Component
-import LoadingForm from '../Loading/LoadingForm';
-
+import LoadingStep from '../Loading/LoadingStep';
+// hook
+import useFetch from '../../hooks/useFetch';
 // import { useForm } from "react-hook-form";
 
 const Subscribe = () => {
@@ -45,7 +46,7 @@ const Subscribe = () => {
 					<div className="col-xl-7 col-lg-6 col-md-12 position-relative overflow-hidden">
 						{error ? <span className="err">Error: {error.message}</span> : null}
 						{loading ? (
-							<LoadingForm />
+							<LoadingStep />
 						) : (
 							<form
 								className="form-contact mt-8 mt-lg-0 py-8 px-4 px-sm-8"

@@ -1,4 +1,4 @@
 // Styles
-import Dialog from "./Dialog.jsx"
+import './Dialog.css';
 
-export default Dialog
+export { default } from './Dialog.jsx';

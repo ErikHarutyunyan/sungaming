@@ -1,2 +1,4 @@
-import Contact from './Contact.lazy';
-export default Contact;
+// Styles
+import './Contact.css';
+
+export { default } from './Contact.lazy';

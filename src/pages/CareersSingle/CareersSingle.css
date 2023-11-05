@@ -30,7 +30,7 @@
 	font-weight: 600;
 }
 
-.modal-content.modal-career  .form-control {
+.modal-content.modal-career .form-control {
 	padding: 8px 0;
 	padding-left: 38px;
 }
@@ -44,4 +44,12 @@
 	max-width: 500px;
 	min-width: 300px;
 	width: 100%;
+}
+
+.modal-career .formLoader {
+	min-height: 480px;
+}
+
+.modal-career .formLoader .formLoading {
+	transform: translateX(-53%);
 }

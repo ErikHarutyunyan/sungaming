@@ -1,5 +1,5 @@
 import { dataBrands } from '../../data/dataBrands';
-import LazyImage from '../LazyImage';
+import LazyImage from '../Images/LazyImage';
 
 const Brands = () => {
 	return (

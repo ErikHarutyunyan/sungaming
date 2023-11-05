@@ -1,31 +1,31 @@
+import { useState } from 'react';
 import ReactPlayer from 'react-player';
-import LoadingForm from '../../Loading/LoadingForm';
-import './VideoModal.css';
+import LoadingStep from '../../Loading/LoadingStep';
 
 const VideoModal = ({ onClose, videoPath }) => {
-console.log('videoPath :', videoPath);
+	const [videoLoad, setVideoLoad] = useState(false);
 	return (
-		<div className="player-wrapper">
-			<button
-				onClick={onClose}
-				type="button"
-				className="close"
-				data-dismiss="modal"
-				aria-label="Close">
-				<span aria-hidden="true">×</span>
-			</button>
-			<ReactPlayer onLoad={LoadingForm} className="react-player" url={`${videoPath}`} controls />
-			{/* <iframe
-				className="modal__video-style"
-				onLoad={LoadingForm}
-				loading="lazy"
-				width="800"
-				height="500"
-				src={videoPath}
-				title="YouTube video player"
-				frameBorder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen></iframe> */}
+		<div className="video-wrapper">
+			<div className="player-wrapper">
+				<button
+					onClick={onClose}
+					type="button"
+					className="close"
+					data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				{!videoLoad ? <LoadingStep /> : null}
+				<ReactPlayer
+					playing={videoLoad}
+					width="100%"
+					height="100%"
+					className="react-player"
+					url={`${videoPath}`}
+					controls
+					onReady={() => setVideoLoad(true)}
+				/>
+			</div>
 		</div>
 	);
 };

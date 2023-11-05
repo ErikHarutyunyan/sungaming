@@ -1,2 +1,4 @@
-import About from './About.lazy';
-export default About;
+// Style
+import './About.css';
+
+export { default } from './About.lazy';

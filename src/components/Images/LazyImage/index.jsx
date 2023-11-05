@@ -1,4 +1,4 @@
 // Styles
-// import './LazyImage.css';
+// import './Images/LazyImage.css';
 
 export { default } from './LazyImage';

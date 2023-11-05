@@ -1,10 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
+// Packages
+import Typewriter from 'typewriter-effect';
+// Components
 import AboutValues from '../../components/AboutValues';
 import BannerPages from '../../components/BannerPages';
 import Brands from '../../components/Brands';
-import LazyImage from '../../components/LazyImage';
+import LazyImage from '../../components/Images/LazyImage';
+import CustomSlider from '../../components/Slides/CustomSlider';
 import Subscribe from '../../components/Subscribe';
-
+// Images and Icons
 import { AiOutlineSafetyCertificate } from 'react-icons/ai';
 import {
 	IoAccessibilityOutline,
@@ -13,7 +16,6 @@ import {
 } from 'react-icons/io5';
 import { LuLayoutPanelLeft } from 'react-icons/lu';
 import { MdOutlineDiversity1, MdOutlineGames } from 'react-icons/md';
-import Typewriter from 'typewriter-effect';
 import {
 	ab,
 	aboutBanner,
@@ -29,50 +31,15 @@ import {
 	team4,
 	team5,
 } from '../../components/Images';
-import './About.css';
+
 const About = () => {
-	const serviceImgs = useRef(null);
-	const [activeSlide, setActiveSlide] = useState(0);
-
-	const updateActiveSlide = () => {
-		if (serviceImgs.current) {
-			serviceImgs.current.childNodes.forEach((child, index) => {
-				if (child.classList.contains('active')) {
-					child.classList.remove('active');
-				}
-				if (index === activeSlide) {
-					child.classList.add('active');
-				}
-			});
-		}
-	};
-
-	const nextSlide = () => {
-		setActiveSlide(
-			(prevSlide) => (prevSlide + 1) % serviceImgs.current.childNodes.length,
-		);
-	};
-
-	useEffect(() => {
-		updateActiveSlide();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [activeSlide]);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			nextSlide();
-		}, 3000); // Change slide every 3 seconds
-
-		return () => clearInterval(interval);
-	}, []);
-
 	return (
 		<>
 			<BannerPages
-				page={'About'}
+				page="About"
 				bg={aboutBanner}
-				title={'Our Simple Is Motto Fun For'}
-				titleSecond={'Everyone'}
+				title="Our Simple Is Motto Fun For"
+				titleSecond="Everyone"
 				desc={
 					'We continue to open doors to new worlds every day and we are working excitedly for creating new games and unique ideas!'
 				}
@@ -259,7 +226,7 @@ const About = () => {
 							<div className="team__item">
 								<div className="team__thumb">
 									<a href="/team-details">
-										<LazyImage alt={'killer master'} width="224" src={team5} />
+										<LazyImage alt="killer master" width="224" src={team5} />
 									</a>
 								</div>
 								<div className="team__content">
@@ -274,7 +241,7 @@ const About = () => {
 							<div className="team__item">
 								<div className="team__thumb">
 									<a href="/team-details">
-										<LazyImage alt={'code expert'} width="224" src={team2} />
+										<LazyImage alt="code expert" width="224" src={team2} />
 									</a>
 								</div>
 								<div className="team__content">
@@ -289,7 +256,7 @@ const About = () => {
 							<div className="team__item">
 								<div className="team__thumb">
 									<a href="/team-details">
-										<LazyImage alt={'Diamond'} width="224" src={team3} />
+										<LazyImage alt="Diamond" width="224" src={team3} />
 									</a>
 								</div>
 								<div className="team__content">
@@ -304,7 +271,7 @@ const About = () => {
 							<div className="team__item">
 								<div className="team__thumb">
 									<a href="/team-details">
-										<LazyImage alt={'Coin'} width="224" src={team4} />
+										<LazyImage alt="Coin" width="224" src={team4} />
 									</a>
 								</div>
 								<div className="team__content">
@@ -403,22 +370,16 @@ const About = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-6">
-							<div className="services__images" ref={serviceImgs}>
-								<div className="services__images-item active">
-									<LazyImage alt={'services_img04'} src={services_img04} />
-								</div>
-								<div className="services__images-item ">
-									<LazyImage alt={'services_img02'} src={services_img02} />
-								</div>
-								<div className="services__images-item ">
-									<LazyImage alt={'services_img03'} src={services_img03} />
-								</div>
-								<div className="services__images-item ">
-									<LazyImage alt={'services_img01'} src={services_img01} />
-								</div>
-							</div>
-						</div>
+						<CustomSlider
+							parentClassName="services__images"
+							itemClassName="services__images-item"
+							images={[
+								services_img01,
+								services_img02,
+								services_img03,
+								services_img04,
+							]}
+						/>
 					</div>
 				</div>
 			</section>

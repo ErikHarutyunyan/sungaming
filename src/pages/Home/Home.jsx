@@ -5,14 +5,14 @@ import { GAMES } from '../../router/route-path';
 import Typewriter from 'typewriter-effect';
 // Components
 import Brands from '../../components/Brands';
-import CounterActive from '../../components/CounterActive';
+import CounterActive from '../../components/Counter/CounterActive';
 import GamesTab from '../../components/GamesTab';
-import LazyImage from '../../components/LazyImage';
+import LazyImage from '../../components/Images/LazyImage';
 import NewsPresent from '../../components/NewsPresent';
 import Service from '../../components/Service';
-import SimpleSlider from '../../components/SimpleSlider';
+import SimpleSlider from '../../components/Slides/SimpleSlider';
 import Subscribe from '../../components/Subscribe';
-// Images
+// Images and Icons
 import {
 	allGameBg,
 	console1,
@@ -30,7 +30,7 @@ import {
 } from '../../components/Images';
 // Data and Configuration
 import ShapeArea from '../../components/ShapeArea';
-import { counterData } from '../../data/dataCounters';
+import { counterActiveData } from '../../data/dataCounters';
 import { featuredGames } from '../../data/dataGames';
 import { settingsFeatured } from '../../features/SliderConfig';
 
@@ -268,7 +268,7 @@ const Home = () => {
 				</div>
 			</section>
 			<Service />
-			<CounterActive counterData={counterData} />
+			<CounterActive counterData={counterActiveData} />
 			<section
 				className="our-games all-games overflow-hidden pt-120 pb-120"
 				style={{ backgroundImage: `url(${allGameBg})` }}>

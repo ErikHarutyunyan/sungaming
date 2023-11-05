@@ -1,4 +1,4 @@
 // Styles
-import AboutValues from "./AboutValues.jsx"
+import './AboutValues.css';
 
-export default AboutValues
+export { default } from './AboutValues.jsx';

@@ -1,7 +1,6 @@
 .formLoader {
 	overflow: hidden;
 	height: 100%;
-	/* position: absolute; */
 	width: 100%;
 	min-height: 150px;
 }

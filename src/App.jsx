@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { RouterProvider } from 'react-router-dom';
-import OnboardModal from './components/Modal/OnboardModal';
+import { OnboardModal } from './components/Modal';
 import router from './router';
 
 const dialogStatus = localStorage.getItem('isDialog');

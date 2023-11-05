@@ -1,13 +1,14 @@
-// Styles
-import { useLocation, useParams } from 'react-router-dom';
-import { bubble, ellipse7 } from '../../components/Images';
-import ShapeArea from '../../components/ShapeArea';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+// Components
+// Images
+// Data
+import BannerPages from '../../components/BannerPages';
 import { dataNews } from '../../data/dataNews';
-import './NewsSingle.css';
 
 const NewsSingle = () => {
 	const location = useLocation();
 	const { id: title } = useParams();
+	const navigate = useNavigate();
 	let data = location.state?.data;
 	if (!data) {
 		const singleNews = dataNews.find((news) => {
@@ -17,15 +18,11 @@ const NewsSingle = () => {
 	}
 	return (
 		<>
-			<section
-				className="banner-section inner-banner position-relative store newsDetails "
-				style={{
-					backgroundImage: `url(${data.imgMain}), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3))`,
-				}}>
-				<ShapeArea>
-					<img src={bubble} className="shape-1" alt="icon" />
-					<img src={ellipse7} className="shape-2" alt="icon" />
-				</ShapeArea>
+			<BannerPages
+				classNames="store newsDetails"
+				gradientImage="linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3))"
+				bg={data.imgMain}
+				resetChild>
 				<div className="container position-relative">
 					<div className="banner-content row justify-content-center">
 						<div className="col-lg-8 col-md-10 justify-content-center">
@@ -37,11 +34,19 @@ const NewsSingle = () => {
 						</div>
 					</div>
 				</div>
-			</section>
+			</BannerPages>
 			<section>
 				<div className="container pt-20">
 					<div className="row">
-						<p>{data.data}</p>
+						<div className="head">
+							<p>{data.data}</p>
+							<button
+								onClick={() => {
+									navigate(-1);
+								}}>
+								&#8656; Back
+							</button>
+						</div>
 						<div dangerouslySetInnerHTML={{ __html: data.desc }} />
 					</div>
 				</div>
