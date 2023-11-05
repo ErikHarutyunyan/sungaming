@@ -1,2 +1,4 @@
-import Success from './Success.lazy';
-export default Success;
+// Styles
+import './Success.css';
+
+export { default } from './Success.lazy';

@@ -1,9 +1,9 @@
-// Styles
-import { light } from '../../components/Images';
-import LazyImage from '../../components/Images/LazyImage';
-
 import { useNavigate } from 'react-router-dom';
-import './Success.css';
+// Components
+import LazyImage from '../../components/Images/LazyImage';
+// Images
+import { light } from '../../components/Images';
+
 
 const Success = () => {
 	const navigate = useNavigate();

@@ -4,7 +4,7 @@ import { HOME } from '../../router/route-path.jsx';
 // Images and Iconns
 import { FiChevronRight } from 'react-icons/fi';
 import { bubble, ellipse7 } from '../Images';
-import ShapeArea from '../ShapeArea/ShapeArea.jsx';
+import ShapeArea from '../ShapeArea';
 
 const BannerPages = ({
 	bg,

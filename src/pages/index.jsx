@@ -7,7 +7,6 @@ import CareersSingle from "./CareersSingle";
 import Contact from "./Contact";
 import Games from "./Games";
 import GameSingle from "./GameSingle";
-import Integration from "./Integration";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Services from "./Services";
 import TermsConditions from "./TermsConditions";
@@ -24,7 +23,6 @@ export {
   Contact,
   Games,
   GameSingle,
-  Integration,
   PrivacyPolicy,
   Services,
   TermsConditions,

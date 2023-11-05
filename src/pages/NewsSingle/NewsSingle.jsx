@@ -1,8 +1,7 @@
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 // Components
-// Images
-// Data
 import BannerPages from '../../components/BannerPages';
+// Data
 import { dataNews } from '../../data/dataNews';
 
 const NewsSingle = () => {

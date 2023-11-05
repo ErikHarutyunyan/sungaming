@@ -1,4 +1,4 @@
 // Styles
-import './PrivacyPolicy.css';
+// import './PrivacyPolicy.css';
 
 export { default } from './PrivacyPolicy.lazy';

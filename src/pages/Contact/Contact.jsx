@@ -3,11 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ABOUT } from '../../router/route-path.jsx';
 // import { useForm } from 'react-hook-form';
 // Components
-import AccordionBox from '../../components/Accardion/index.jsx';
+import AccordionBox from '../../components/Accordion';
 import BannerPages from '../../components/BannerPages';
 import Brands from '../../components/Brands';
-import LoadingStep from '../../components/Loading/LoadingStep/LoadingStep.jsx';
-import ShapeArea from '../../components/ShapeArea/ShapeArea.jsx';
+import LoadingStep from '../../components/Loading/LoadingStep';
+import ShapeArea from '../../components/ShapeArea';
 // Images and Icons
 import { contactUs, faqFramer, faqIcon } from '../../components/Images';
 // hooks
