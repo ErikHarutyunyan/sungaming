@@ -29,7 +29,6 @@ const News = () => {
 
 	const up = useCallback(() => {
 		if (media) scrollUp(0, 200);
-		else scrollUp(0, 490);
 	}, [media]);
 
 	const handleCategorySelect = useCallback(
