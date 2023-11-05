@@ -204,6 +204,16 @@
   display: flex;
   align-items: center;
 }
+/* .yarl__button {
+  color: #00ffa6 !important;
+} */
 .yarl__button {
-  color: #00ffa6;
+  color: #0ef0ad !important;
+}
+
+.yarl__button:hover { 
+  color: #73f6cf !important;
+}
+.yarl__button:disabled{
+  opacity: 0.3 !important;
 }
