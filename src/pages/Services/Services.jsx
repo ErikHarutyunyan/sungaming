@@ -35,7 +35,7 @@ const Services = () => {
 					'Our systematic approach to art development ensures high delivery standards for games and game-based solutions, from look development to engine integration.'
 				}
 			/>
-			<section className="services pt-120 pb-120">
+			<section className="services services-solutions pt-120 pb-120">
 				<div className="container">
 					<div className="row section-header justify-content-center">
 						<div className="col-lg-7 text-center">

@@ -6,6 +6,14 @@
   border: none;
 }
 
+.services-solutions > img {
+  filter: blur(0px);
+}
+
+.services-solutions .default-img.lazy-load-image-background.blur.lazy-load-image-loaded{
+  filter: blur(0px) 
+}
+
 .number:before {
   content: none;
 }
