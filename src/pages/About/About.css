@@ -888,8 +888,8 @@
   width: 363px;
   height: 487px;
   object-fit: cover;
-  -webkit-mask-image: url("../../assets/img/mask_bg2.png");
-  mask-image: url("../../assets/img/mask_bg2.png");
+  -webkit-mask-image: url("../../assets/img/mask_bg2.webp");
+  mask-image: url("../../assets/img/mask_bg2.webp");
   -webkit-mask-position: top left;
   mask-position: top left;
   -webkit-mask-repeat: no-repeat;
@@ -935,8 +935,8 @@
   width: 519px;
   height: 382px;
   object-fit: cover;
-  -webkit-mask-image: url("../../assets/img/mask_bg.png");
-  mask-image: url("../../assets/img/mask_bg.png");
+  -webkit-mask-image: url("../../assets/img/mask_bg.webp");
+  mask-image: url("../../assets/img/mask_bg.webp");
   -webkit-mask-position: top left;
   mask-position: top left;
   -webkit-mask-repeat: no-repeat;
@@ -1033,7 +1033,6 @@
   .about__dots {
     right: 12px;
     top: 7px;
-    /* animation: none; */
   }
 }
 
@@ -1424,7 +1423,7 @@ textPath {
 
 .our-vision {
   padding: 112px 0px 86px;
-  /* background: url(../images/our-vision.jpg); */
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

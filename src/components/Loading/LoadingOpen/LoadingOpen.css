@@ -112,13 +112,7 @@
 .hexagon__sector:after {
   transform: rotate(-150deg);
 }
-/* Dark theme */
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #17181c;
-    --fg: #e3e4e8;
-  }
-} */
+
 /* Animations */
 @keyframes moveOut1 {
   from {

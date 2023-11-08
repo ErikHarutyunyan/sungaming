@@ -242,51 +242,6 @@ h3.gameTitle {
   height: calc(100% - 60px);
 }
 
-/* .game-section-block:nth-child(23),
-.game-section-block:nth-child(41),
-.game-section-block:nth-child(5) .buttonPlay {
-  top: 35%;
-  left: 35%;
-}
-
-.game-section-block:nth-child(14),
-.game-section-block:nth-child(32),
-.game-section-block:nth-child(50) .buttonPlay {
-  top: 35%;
-  left: 35%;
-} */
-
-/* .game-section-block:nth-child(5) .buttonPlay {
-  top: 35%;
-  left: 35%;
-}
-
-.game-section-block:nth-child(23) .buttonPlay {
-  top: 35%;
-  left: 35%;
-}
-
-.game-section-block:nth-child(41) .buttonPlay {
-  top: 35%;
-  left: 35%;
-}
-
-.game-section-block:nth-child(14) .buttonPlay {
-  top: 35%;
-  left: 35%;
-}
-
-.game-section-block:nth-child(32) .buttonPlay {
-  top: 35%;
-  left: 35%;
-}
-
-.game-section-block:nth-child(50) .buttonPlay {
-  top: 35%;
-  left: 35%;
-} */
-
-
 .gameBannerWrapImg {
   position: absolute;
   top: 20%;
@@ -325,16 +280,10 @@ h3.gameTitle {
     grid-row: auto;
     grid-column: auto;
   }
-  /* .game-section-block .buttonPlay {
-    top: 40% !important;
-    left: 50% !important;
-  } */
 }
 
 @media (max-width: 991px) {
   .banner-section.game {
-    /* background-image: none !important; */
-    /* background-size: 60% !important; */
   }
   .game-section-block-wrp {
     grid-template-columns: repeat(2, 1fr);

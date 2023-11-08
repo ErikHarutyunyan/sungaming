@@ -205,43 +205,6 @@ const Contact = () => {
 											</div>
 										);
 									})}
-									{/* <div className="single-content d-grid py-5 py-sm-5 gap-3 ">
-										<div className="check d-center justify-content-start gap-3">
-											<IoCallOutline size={30} color="white" />
-											<h4>Have any Questions</h4>
-										</div>
-										<p className="d-flex gap-5">
-											<span>(374) 0010033</span>
-										</p>
-									</div>
-									<div className="single-content d-grid py-5 py-sm-5 gap-3">
-										<div className="check d-center justify-content-start gap-3">
-											<MdOutlineMailOutline size={30} color="white" />
-											<h4>Email Address</h4>
-										</div>
-										<p className="d-flex">
-											<span>01sungaming33@gmail.com</span>
-										</p>
-									</div>
-									<div className="single-content d-grid py-5 py-sm-5 gap-3">
-										<div className="check d-center justify-content-start gap-3">
-											<SlLocationPin size={30} color="white" />
-											<h4>Contact Address</h4>
-										</div>
-										<p className="d-flex">
-											<span>Yerevan. Armenia</span>
-										</p>
-									</div>
-									<div className="single-content d-grid py-5 py-sm-5 gap-3">
-										<div className="check d-center justify-content-start gap-3">
-											<AiOutlineClockCircle size={30} color="white" />
-											<h4>Opening Hours</h4>
-										</div>
-										<p className="d-block">
-											<span>Mon-Fri: 09:00 - 18:00</span>
-											<p className="d-block">Sat-Sun: Weekend</p>
-										</p>
-									</div> */}
 								</div>
 								<ul className="d-flex justify-content-center gap-4 social-area py-4 py-sm-8 mt-5 mt-sm-10">
 									<li>
