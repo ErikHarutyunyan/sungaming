@@ -5,6 +5,8 @@ import Header from './../components/Header';
 
 const Layout = () => {
 	let getKey = useCallback((location, matches) => {
+ console.log('matches :', matches);
+ console.log('location :', location);
 		let match = matches.find((m) => m.handle?.scrollMode);
 		if (match?.handle?.scrollMode === 'pathname') {
 			return location.pathname;

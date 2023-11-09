@@ -47,7 +47,7 @@ const CustomSlider = ({
 				{images.map((img, index) => {
 					return (
 						<div key={`${img}_${index}`} className={itemClassName}>
-							<LazyImage alt={img} src={img} />
+							<img alt={img} src={img} />
 						</div>
 					);
 				})}

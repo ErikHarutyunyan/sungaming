@@ -854,8 +854,8 @@
 .about__three-images:after {
   content: "";
   position: absolute;
-  left: 31%;
-  top: 58%;
+  left: 24.6%;
+  top: 47.1%;
   width: 75px;
   height: 75px;
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.32);
@@ -866,15 +866,15 @@
 
 @media (max-width: 1500px) {
   .about__three-images:after {
-    left: 29%;
-    top: 51%;
+    left: 23.5%;
+    top: 49%;
   }
 }
 
 @media (max-width: 1199.98px) {
   .about__three-images:after {
-    left: 31%;
-    top: 62%;
+    left: 24%;
+    top: 49%;
   }
 }
 
