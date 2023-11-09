@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import LazyImage from '../../Images/LazyImage';
 
 const CustomSlider = ({
 	parentClassName = '',
