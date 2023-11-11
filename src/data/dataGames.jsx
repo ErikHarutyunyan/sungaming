@@ -1,7 +1,8 @@
-import { v4 as uuidv4 } from "uuid";
 import { MdSportsSoccer } from "react-icons/md";
 import { RiNftLine } from "react-icons/ri";
+import { v4 as uuidv4 } from "uuid";
 import { IconsCasino, IconsSlot, IconsTable } from "../components/Icons";
+// image
 import {
   aladdinBig,
   aladdinImg1,
@@ -130,6 +131,11 @@ import {
   wfImg2,
   wfSmall,
 } from "../components/Images";
+// video
+import ng from "../assets/video/njVideo.mp4";
+import pot from "../assets/video/potVideo.mp4";
+import frut from "../assets/video/the_fruits.mp4";
+import uf from "../assets/video/ufVideo.mp4";
 
 export const dataGames = [
   {
@@ -172,7 +178,7 @@ NinjaGambit promises an immersive gameplay experience. Challenge other players, 
     ],
     platforms: ["PC", "iOS", "Android"],
     featured: true,
-    video: "/src/assets/video/njVideo.mp4",
+    video: ng,
   },
   {
     id: uuidv4(),
@@ -831,7 +837,7 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
     desc: "Experience a burst of fruity fun with The Fruits Slots! This colorful and vibrant slot machine game takes you to an orchard of excitement, where juicy fruits spin across the reels in a whirlwind of flavor. Match fruits like cherries, oranges, and watermelons to create winning combinations and enjoy delicious payouts. With each spin, you're in for a fruity surprise, as you chase the ultimate fruit salad of prizes. Whether you're a slot aficionado or just looking for a taste of fruity fortune, The Fruits Slots offers a refreshing and delightful casino experience that will have you craving more. So, grab a virtual fruit basket and spin the reels for a sweet and juicy adventure!",
     platforms: ["PC", "iOS", "Android"],
     featured: false,
-    video: "/src/assets/video/the_fruits.mp4",
+    video: frut,
   },
   {
     id: uuidv4(),
@@ -872,7 +878,7 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
     desc: "Unlock the secrets of riches with The Gold Pot, a casino game that promises a journey to wealth and prosperity! Venture deep into a magical realm filled with shimmering treasures, enchanted forests, and the elusive gold pot that could change your fortunes forever. Spin the reels adorned with symbols of wealth and good luck, and aim to strike it rich with each spin. With every turn, you'll get closer to uncovering the hidden gold pot and its bountiful rewards. Whether you're a seasoned treasure hunter or just seeking the thrill of the hunt, The Gold Pot offers a golden opportunity for big wins in a whimsical and enchanting casino adventure!",
     platforms: ["PC", "iOS", "Android"],
     featured: false,
-    video: "/src/assets/video/potVideo.mp4",
+    video: pot,
   },
   {
     id: uuidv4(),
@@ -914,7 +920,7 @@ Whether you're a poker pro or just looking for a quick and thrilling card game, 
     desc: "Get ready for the ultimate touchdown in Ultimate Football Slots! Step onto the virtual field and experience the thrill of the game with this action-packed slot machine. Spin the reels adorned with footballs, helmets, and cheerleaders as you aim to score big. Watch for special bonus symbols that can trigger exciting features and free spins, giving you a chance to win like a true MVP. Whether you're a devoted football fan or just seeking some high-energy casino action, Ultimate Football Slots delivers a winning combination of excitement and potential for big rewards. So, strap on your virtual cleats and get ready to tackle your way to victory in this game of gridiron glory!",
     platforms: ["PC", "iOS", "Android"],
     featured: false,
-    video: "/src/assets/video/ufVideo.mp4",
+    video: uf,
   },
   {
     id: uuidv4(),
