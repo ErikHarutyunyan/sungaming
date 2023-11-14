@@ -66,7 +66,7 @@ const GameSingle = () => {
 					</div>
 				</div>
 			</section>
-			<section className="our-games bg-transparent top-features pt-120 pb-120">
+			<section className="our-games single-game bg-transparent top-features pt-120 pb-120">
 				<div className="container">
 					<div className="row justify-content-between">
 						<div className="col-xl-6 col-lg-6">

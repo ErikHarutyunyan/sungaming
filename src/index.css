@@ -17670,10 +17670,10 @@ li {
 }
 
 /* .our-games:after, */
-.our-games:before {
+.our-games.single-game:before {
   position: absolute;
   content: "";
-  background-image: url(./assets/img/singleGame.png);
+  background-image: url(./assets/img/singleGame.webp);
   background-size: auto;
   background-repeat: no-repeat;
   z-index: -1;
@@ -17822,17 +17822,6 @@ li {
   color: var(--n50);
 }
 
-.our-games.index-two {
-  background-image: url(/images/our-games-bg-2.png);
-  background-position: 50%;
-}
-
-.our-games.index-two:before {
-  background-image: url(/images/abs-items/realistic-black.png);
-  width: 728px;
-  height: 728px;
-  right: -6%;
-}
 
 .our-games.index-two .single-box ul {
   row-gap: 8px;
@@ -21321,7 +21310,7 @@ li {
   .fs-five,
   h5,
   h5>a {
-    font-size: 16px;
+     font-size: 16px;
     line-height: 20.8px;
   }
 
