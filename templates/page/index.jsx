@@ -1,2 +1,2 @@
-import TemplateName from './TemplateName.lazy';
+import TemplateName from "./TemplateName.lazy";
 export default TemplateName;

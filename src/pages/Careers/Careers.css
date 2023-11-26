@@ -4,8 +4,8 @@
     left: 0;
     animation: rotate 35s linear infinite;
   }
-   .banner-section .shape-area .shape-1 {
-   display: none;
+  .banner-section .shape-area .shape-1 {
+    display: none;
   }
 }
 

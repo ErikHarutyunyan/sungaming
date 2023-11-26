@@ -1,4 +1,4 @@
 // Styles
-import './GamesTab.css';
+import "./GamesTab.css";
 
-export { default } from './GamesTab.jsx';
+export { default } from "./GamesTab.jsx";

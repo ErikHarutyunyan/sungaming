@@ -1,4 +1,4 @@
 // Styles
-import './Success.css';
+import "./Success.css";
 
-export { default } from './Success.lazy';
+export { default } from "./Success.lazy";

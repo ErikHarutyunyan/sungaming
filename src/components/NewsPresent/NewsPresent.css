@@ -1,11 +1,12 @@
-.present-wrap {
-}
-
 .present-wrap .slick-slide > div {
-  margin: 0 10px;
+  margin: 0 0.625rem;
 }
 .present-wrap .slick-list {
-  margin: 0 -10px;
+  margin: 0 -0.625rem;
   justify-content: center;
   align-items: center;
+}
+
+.present-wrap .content-box:hover svg {
+  fill: #303141;
 }

@@ -1,4 +1,4 @@
 // Styles
-import './CustomSlider.css';
+import "./CustomSlider.css";
 
-export { default } from './CustomSlider';
+export { default } from "./CustomSlider";

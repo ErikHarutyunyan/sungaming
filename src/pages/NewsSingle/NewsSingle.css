@@ -1,77 +1,77 @@
 .banner-section.store.newsDetails {
-	background-blend-mode: overlay;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.banner-section.banner-page.newsDetails .shape-area .shape-2{
-  top:30%;
+.banner-section.banner-page.newsDetails .shape-area .shape-2 {
+  top: 30%;
 }
 .newsDetails:before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 50%;
-	height: 1.5rem;
-	clip-path: polygon(0 0, 0 100%, 100% 100%);
-	background-color: var(--p400);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1.5rem;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  background-color: var(--p400);
 }
 .newsDetails:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 50%;
-	height: 1.5rem;
-	clip-path: polygon(100% 0, 0 100%, 100% 100%);
-	background-color: var(--p400);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 1.5rem;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  background-color: var(--p400);
 }
 
 .firstLetter:not(:focus):first-letter {
-	float: left;
-	margin: 0.05em 0.1em 0 0;
-	text-transform: uppercase;
-	font-weight: 700;
-	background-color: transparent;
-	color: var(--p300);
-	font-size: 57px;
-	height: 55px;
-	line-height: 55px;
-	margin: 10px 10px 0 0;
-	text-align: left;
-	min-width: 60px;
+  float: left;
+  margin: 0.05em 0.1em 0 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: transparent;
+  color: var(--p300);
+  font-size: 3.5625rem;
+  height: 3.4375rem;
+  line-height: 3.4375rem;
+  margin: 0.625rem 0.625rem 0 0;
+  text-align: left;
+  min-width: 3.75rem;
 }
 
 .postContent {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 0 20px;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
 }
 
 p.newsText {
-	font-size: 17px;
-	line-height: 30px;
-	letter-spacing: 1px;
+  font-size: 1.0625rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.0625rem;
 }
 
 p.newsText:not(.firstLetter) {
-	display: flex;
-	column-gap: 10px;
+  display: flex;
+  column-gap: 0.625rem;
 }
 blockquote {
-	margin: 20px 0;
-	padding-left: 1.5rem;
-	border-left: 5px solid var(--p300);
+  margin: 1.25rem 0;
+  padding-left: 1.5rem;
+  border-left: 0.3125rem solid var(--p300);
 }
 
 .head {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .head button {
-	color: var(--p300);
-  font-size: 16px;
+  color: var(--p300);
+  font-size: 1rem;
 }

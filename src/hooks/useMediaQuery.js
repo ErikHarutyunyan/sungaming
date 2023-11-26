@@ -1,42 +1,42 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 
-export function useMediaQuery(query) {
-  const getMatches = (query) => {
-    // Prevents SSR issues
+const useMediaQuery = (query) => {
+  const getMatches = useMemo(() => {
     if (typeof window !== "undefined") {
-      return window.matchMedia(query).matches;
+      return (query) => window.matchMedia(query).matches;
     }
-    return false;
-  };
+    return () => false;
+  }, []);
 
-  const [matches, setMatches] = useState(getMatches(query));
+  const [matches, setMatches] = useState(() => getMatches(query));
 
-  function handleChange() {
+  const handleChange = useCallback(() => {
     setMatches(getMatches(query));
-  }
+  }, [getMatches, query]);
 
   useEffect(() => {
     const matchMedia = window.matchMedia(query);
 
-    // Triggered at the first client-side load and if query changes
     handleChange();
 
-    // Listen matchMedia
+    const listener = () => handleChange();
+
     if (matchMedia.addListener) {
-      matchMedia.addListener(handleChange);
+      matchMedia.addListener(listener);
     } else {
-      matchMedia.addEventListener("change", handleChange);
+      matchMedia.addEventListener("change", listener);
     }
 
     return () => {
       if (matchMedia.removeListener) {
-        matchMedia.removeListener(handleChange);
+        matchMedia.removeListener(listener);
       } else {
-        matchMedia.removeEventListener("change", handleChange);
+        matchMedia.removeEventListener("change", listener);
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
+  }, [query, handleChange]);
 
   return matches;
-}
+};
+
+export default useMediaQuery;

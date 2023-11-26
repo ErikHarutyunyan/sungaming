@@ -12,14 +12,16 @@
 .loadWrapper {
   background: var(--bg);
   color: var(--fg);
-  font: bold 1em/1.5 "Comfortaa", sans-serif;
+  font:
+    bold 1em/1.5 "Comfortaa",
+    sans-serif;
   display: grid;
   place-items: center;
   align-content: center;
   height: 100vh;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-size: calc(20px + (30 - 20) * (100vw - 320px) / (1280 - 320));
+  font-size: calc(1.25rem + (30 - 20) * (100vw - 20rem) / (1280 - 320));
 }
 .hexagon {
   margin-bottom: 1.5em;
@@ -211,7 +213,9 @@
 .loadText {
   font-weight: 600;
   color: #fff;
-  font: bold 1em/1.5 "Comfortaa", sans-serif;
+  font:
+    bold 1em/1.5 "Comfortaa",
+    sans-serif;
   letter-spacing: 0.1em;
   animation: fadeIn 2s infinite;
   transition: all 0.3s ease-in-out;

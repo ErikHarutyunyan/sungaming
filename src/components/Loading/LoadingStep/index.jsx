@@ -1,4 +1,4 @@
 // Styles
-import './LoadingStep.css';
+import "./LoadingStep.css";
 
-export { default } from './LoadingStep';
+export { default } from "./LoadingStep";

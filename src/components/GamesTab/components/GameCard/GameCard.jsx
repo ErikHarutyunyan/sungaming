@@ -1,11 +1,11 @@
 // Packages
 import { motion } from "framer-motion";
 // Route
+import { GAMES } from "router/route-path";
 import { Link } from "react-router-dom/dist";
-import { GAMES } from "../../../../router/route-path";
 // Components
-import LazyImage from "../../../Images/LazyImage";
-import PlayButton from "../../../PlayButton";
+import LazyImage from "images/LazyImage";
+import PlayButton from "components/PlayButton";
 
 const GameCardStyle1 = ({
   gameItems = [],

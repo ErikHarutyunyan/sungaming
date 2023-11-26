@@ -1,21 +1,13 @@
 // Packages
 import Typewriter from "typewriter-effect";
 // Components
-import AboutValues from "../../components/AboutValues";
-import BannerPages from "../../components/BannerPages";
-import Brands from "../../components/Brands";
-import LazyImage from "../../components/Images/LazyImage";
-import CustomSlider from "../../components/Slides/CustomSlider";
-import Subscribe from "../../components/Subscribe";
+import AboutValues from "components/AboutValues";
+import BannerPages from "components/BannerPages";
+import Brands from "components/Brands";
+import CustomSlider from "components/Slides/CustomSlider";
+import Subscribe from "components/Subscribe";
+import LazyImage from "images/LazyImage";
 // Images and Icons
-import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import {
-  IoAccessibilityOutline,
-  IoDiamondOutline,
-  IoShareSocialOutline,
-} from "react-icons/io5";
-import { LuLayoutPanelLeft } from "react-icons/lu";
-import { MdOutlineDiversity1, MdOutlineGames } from "react-icons/md";
 import {
   ab,
   aboutBanner,
@@ -30,7 +22,15 @@ import {
   team3,
   team4,
   team5,
-} from "../../components/Images";
+} from "images";
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import {
+  IoAccessibilityOutline,
+  IoDiamondOutline,
+  IoShareSocialOutline,
+} from "react-icons/io5";
+import { LuLayoutPanelLeft } from "react-icons/lu";
+import { MdOutlineDiversity1, MdOutlineGames } from "react-icons/md";
 
 const About = () => {
   return (
@@ -131,7 +131,8 @@ const About = () => {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 150 150"
-                    version="1.1">
+                    version="1.1"
+                  >
                     <path id="textPath" d="M 0,75 a 75,75 0 1,1 0,1 z"></path>
                     <text>
                       <textPath href="#textPath">
@@ -164,7 +165,8 @@ const About = () => {
                     height="35"
                     viewBox="0 0 109 35"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path d="M9 0H0V7H9V0Z" fill="currentcolor"></path>
                     <path d="M24 0H15V7H24V0Z" fill="currentcolor"></path>
                     <path d="M38 0H29V7H38V0Z" fill="currentcolor"></path>

@@ -13,7 +13,6 @@ Sun Gaming proudly stands as a prominent software provider for online casino gam
 Our development stack incorporates the latest and most robust technologies in the industry:
 
 - **React**: A JavaScript library for building dynamic user interfaces, ensuring a fast and responsive gaming experience.
-  
 - **react-router-dom**: Enabling seamless navigation and routing for a smooth user experience.
 
 - **typewriter-effect**: Adding a dynamic and engaging typewriter effect to captivate users.

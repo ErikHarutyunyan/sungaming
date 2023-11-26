@@ -1,4 +1,4 @@
 // Styles
-import './GameCard.css';
+import "./GameCard.css";
 
-export { default } from './GameCard';
+export { default } from "./GameCard";

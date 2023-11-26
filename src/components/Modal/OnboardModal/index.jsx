@@ -1,4 +1,4 @@
 // Styles
-import './OnboardModal.css';
+import "./OnboardModal.css";
 
-export { default } from './OnboardModal.jsx';
+export { default } from "./OnboardModal.jsx";

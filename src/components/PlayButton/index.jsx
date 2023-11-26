@@ -1,4 +1,4 @@
 // Styles
-import './PlayButton.css';
+import "./PlayButton.css";
 
-export { default } from './PlayButton';
+export { default } from "./PlayButton";

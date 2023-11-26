@@ -1,4 +1,4 @@
 // Styles
-import './GamesCategory.css';
+import "./GamesCategory.css";
 
-export { default } from './GamesCategory';
+export { default } from "./GamesCategory";

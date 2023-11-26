@@ -1,7 +1,6 @@
 // Route
 import { Link } from "react-router-dom";
-import { HOME } from "../../router/route-path";
-
+import { HOME } from "router/route-path";
 
 const NotFoundPage = () => {
   return (
@@ -17,7 +16,8 @@ const NotFoundPage = () => {
             </p>
             <Link
               to={HOME}
-              className="box-style btn-box d-center go_home theme_button">
+              className="box-style btn-box d-center go_home theme_button"
+            >
               Home
             </Link>
           </div>

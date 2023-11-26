@@ -1,4 +1,4 @@
 // Styles
-import './CounterShare.css';
+import "./CounterShare.css";
 
-export { default } from './CounterShare.jsx';
+export { default } from "./CounterShare.jsx";

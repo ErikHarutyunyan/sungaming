@@ -1,4 +1,4 @@
 // Styles
-import './NotFoundPage.css';
+import "./NotFoundPage.css";
 
-export { default } from './NotFoundPage.lazy';
+export { default } from "./NotFoundPage.lazy";

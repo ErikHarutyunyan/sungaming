@@ -1,4 +1,4 @@
 // Styles
-import './Accordion.css';
+import "./Accordion.css";
 
-export { default } from './Accordion.jsx';
+export { default } from "./Accordion.jsx";

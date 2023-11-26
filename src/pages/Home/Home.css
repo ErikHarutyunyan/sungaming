@@ -3,26 +3,26 @@
 }
 
 .homeBanner .game-carousel .thumb img {
-  height: 320px;
+  height: 20rem;
   object-fit: cover;
 }
 
 .homeBanner.banner-section .banner-content {
-  padding-bottom: 50px;
+  padding-bottom: 3.125rem;
 }
 
 .homeBanner .slick-track {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 .homeBanner .fs-four {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--n20);
 }
 
 @media (max-width: 991px) {
   .homeBanner.banner-section .overlay .banner-content {
-    padding: 120px 0 110px;
-    padding-bottom: 50px;
+    padding: 7.5rem 0 6.875rem;
+    padding-bottom: 3.125rem;
   }
 }

@@ -1,30 +1,31 @@
 import { useCallback, useMemo, useState } from "react";
 // Route
 import { Link } from "react-router-dom";
-import { CONTACT, NEWS } from "../../router/route-path";
+import { CONTACT, NEWS } from "router/route-path";
 // Packages
 import { motion } from "framer-motion";
 // Components
-import BannerPages from "../../components/BannerPages";
-import LazyImage from "../../components/Images/LazyImage";
-import Subscribe from "../../components/Subscribe";
+import BannerPages from "components/BannerPages";
+import Subscribe from "components/Subscribe";
+import LazyImage from "images/LazyImage";
 // Data and Configuration
-import { allCategoriesNews, dataNews } from "../../data/dataNews";
-import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { allCategoriesNews, dataNews } from "data/dataNews";
+import useMediaQuery from "hooks/useMediaQuery";
 // Images and Icons
+import { dataOffice, dataSocial } from "data/dataProduct";
+import { scrollUp } from "helpers";
+import { newsBg } from "images";
 import {
   AiOutlinePhone,
   AiOutlineRight,
   AiOutlineSearch,
 } from "react-icons/ai";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import { newsBg } from "../../components/Images";
-import { dataOffice, dataSocial } from "../../data/dataProduct";
-import { scrollUp } from "../../helpers";
 
 const News = () => {
   const newsCount = dataNews.length;
   const [searchResults, setSearchResults] = useState(dataNews);
+  const [categoryActive, setCategoryActive] = useState("All");
   const media = useMediaQuery("(max-width: 991px)");
 
   const up = useCallback(() => {
@@ -38,6 +39,8 @@ const News = () => {
           ? dataNews
           : dataNews.filter((news) => news.category.includes(categoryName));
       setSearchResults(filteredNews);
+      categoryName !== "All" && setCategoryActive(categoryName);
+
       up();
     },
     [up]
@@ -173,7 +176,9 @@ const News = () => {
                     <h3 className="visible-slowly-bottom mb-6">Category</h3>
                     <ul className="underwriters d-grid gap-3">
                       <li
-                        className="pointer news-category"
+                        className={`pointer news-category ${
+                          categoryActive === "All" && "active"
+                        }`}
                         onClick={() => handleCategorySelect("All")}
                       >
                         <a className="d-center justify-content-between">
@@ -192,7 +197,9 @@ const News = () => {
                         return (
                           <li
                             key={index}
-                            className="pointer news-category"
+                            className={`pointer news-category ${
+                              categoryActive === category[0] && "active"
+                            }`}
                             onClick={() => handleCategorySelect(category[0])}
                           >
                             <a className="d-center justify-content-between">

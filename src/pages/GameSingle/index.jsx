@@ -1,4 +1,4 @@
 // Style
-import './GameSingle.css';
+import "./GameSingle.css";
 
-export { default } from './GameSingle.lazy';
+export { default } from "./GameSingle.lazy";

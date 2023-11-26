@@ -10,7 +10,7 @@ import {
   news7,
   news8,
   news9,
-} from "../components/Images";
+} from "images";
 
 export const dataNews = [
   {
@@ -796,7 +796,5 @@ export const allCategoriesNews = Array.from(
       categories.set(category, (categories.get(category) || 0) + 1);
     });
     return categories;
-  }, new Map())
+  }, new Map()),
 );
-
-// export { dataNews, allCategoriesNews };

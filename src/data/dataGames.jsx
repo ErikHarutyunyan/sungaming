@@ -1,7 +1,7 @@
 import { MdSportsSoccer } from "react-icons/md";
 import { RiNftLine } from "react-icons/ri";
 import { v4 as uuidv4 } from "uuid";
-import { IconsCasino, IconsSlot, IconsTable } from "../components/Icons";
+import { IconsCasino, IconsSlot, IconsTable } from "components/Icons";
 // image
 import {
   aladdinBig,
@@ -130,12 +130,12 @@ import {
   wfImg1,
   wfImg2,
   wfSmall,
-} from "../components/Images";
+} from "images";
 // video
-import ng from "../assets/video/njVideo.mp4";
-import pot from "../assets/video/potVideo.mp4";
-import frut from "../assets/video/the_fruits.mp4";
-import uf from "../assets/video/ufVideo.mp4";
+import ng from "assets/video/njVideo.mp4";
+import pot from "assets/video/potVideo.mp4";
+import frut from "assets/video/the_fruits.mp4";
+import uf from "assets/video/ufVideo.mp4";
 
 export const dataGames = [
   {
@@ -978,9 +978,7 @@ export const allCategoriesGames = Array.from(
       categories.add(category);
     });
     return categories;
-  }, new Set())
+  }, new Set()),
 );
 
 allCategoriesGames.unshift("All Games");
-
-// export { allCategoriesGames };

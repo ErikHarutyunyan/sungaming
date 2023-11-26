@@ -1,4 +1,4 @@
 // Styles
-import './Games.css';
+import "./Games.css";
 
-export { default } from './Games.lazy';
+export { default } from "./Games.lazy";

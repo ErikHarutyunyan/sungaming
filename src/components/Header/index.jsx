@@ -1,4 +1,4 @@
 // Styles
-import './Header.css';
+import "./Header.css";
 
-export { default } from './Header';
+export { default } from "./Header";

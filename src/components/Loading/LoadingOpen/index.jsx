@@ -1,4 +1,4 @@
 // Styles
-import './LoadingOpen.css';
+import "./LoadingOpen.css";
 
-export { default } from './LoadingOpen.jsx';
+export { default } from "./LoadingOpen.jsx";

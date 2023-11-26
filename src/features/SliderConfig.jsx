@@ -1,83 +1,89 @@
 /* eslint-disable react-refresh/only-export-components */
-import { memo } from 'react';
-import { MdOutlineArrowBack, MdOutlineArrowForward } from 'react-icons/md';
+import { memo } from "react";
+import { MdOutlineArrowBack, MdOutlineArrowForward } from "react-icons/md";
 
 const PrevArrow = memo(function PrevArrow(props) {
-	const { onClick } = props;
-	return (
-		<button
-			onClick={onClick}
-			type="button"
-			aria-label="Slide Prev"
-			className="arafat-prev slick-arrow box-style">
-			<MdOutlineArrowBack />
-		</button>
-	);
+  const { onClick } = props;
+  return (
+    <button
+      onClick={onClick}
+      type="button"
+      aria-label="Slide Prev"
+      className="arafat-prev slick-arrow box-style"
+    >
+      <MdOutlineArrowBack />
+    </button>
+  );
 });
 
 const NextArrow = memo(function NextArrow(props) {
-	const { onClick } = props;
-	return (
-		<button
-			onClick={onClick}
-			type="button"
-			aria-label="Slide Next"
-			className="arafat-next slick-arrow box-style">
-			<MdOutlineArrowForward />
-		</button>
-	);
+  const { onClick } = props;
+  return (
+    <button
+      onClick={onClick}
+      type="button"
+      aria-label="Slide Next"
+      className="arafat-next slick-arrow box-style"
+    >
+      <MdOutlineArrowForward />
+    </button>
+  );
 });
 
 const ServicePrevArrow = memo(function ServicePrevArrow(props) {
-	const { onClick } = props;
-	return (
-		<button
-			onClick={onClick}
-			type="button"
-			aria-label="Slide Prev"
-			className="arafat-prev slick-arrow box-style top-right">
-			<MdOutlineArrowBack />
-		</button>
-	);
+  const { onClick } = props;
+  return (
+    <button
+      onClick={onClick}
+      type="button"
+      aria-label="Slide Prev"
+      className="arafat-prev slick-arrow box-style top-right"
+    >
+      <MdOutlineArrowBack />
+    </button>
+  );
 });
 
 const ServiceNextArrow = memo(function ServiceNextArrow(props) {
-	const { onClick } = props;
-	return (
-		<button
-			onClick={onClick}
-			type="button"
-			aria-label="Slide Next"
-			className="arafat-next slick-arrow box-style top-right">
-			<MdOutlineArrowForward />
-		</button>
-	);
+  const { onClick } = props;
+  return (
+    <button
+      onClick={onClick}
+      type="button"
+      aria-label="Slide Next"
+      className="arafat-next slick-arrow box-style top-right"
+    >
+      <MdOutlineArrowForward />
+    </button>
+  );
 });
 
 const BlogPrevArrow = memo(function BlogPrevArrow(props) {
-	const { onClick } = props;
+  const { onClick } = props;
 
-	return (
-		<button
-			onClick={onClick}
-			type="button"
-			className="arafat-prev slick-arrow box-style bottom-right">
-			<MdOutlineArrowBack />
-		</button>
-	);
+  return (
+    <button
+      onClick={onClick}
+      type="button"
+      className="arafat-prev slick-arrow box-style bottom-right"
+    >
+      <MdOutlineArrowBack />
+    </button>
+  );
 });
 
 const BlogNextArrow = memo(function BlogNextArrow(props) {
-	const { onClick } = props;
+  const { onClick } = props;
 
-	return (
-		<button
-			onClick={onClick}
-			type="button"
-			className="arafat-next slick-arrow box-style bottom-right">
-			<MdOutlineArrowForward />
-		</button>
-	);
+  return (
+    <button
+      onClick={onClick}
+      type="button"
+      className="arafat-next slick-arrow box-style bottom-right"
+    >
+      <MdOutlineArrowForward />
+    </button>
+  );
 });
 /* prettier-ignore */
 export const settingsFeatured = {

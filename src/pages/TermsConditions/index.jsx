@@ -1,2 +1,2 @@
-import TermsConditions from './TermsConditions.lazy';
+import TermsConditions from "./TermsConditions.lazy";
 export default TermsConditions;

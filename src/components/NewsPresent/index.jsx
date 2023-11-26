@@ -1,4 +1,4 @@
 // Style
-import './NewsPresent.css';
+import "./NewsPresent.css";
 
-export { default } from './NewsPresent';
+export { default } from "./NewsPresent";

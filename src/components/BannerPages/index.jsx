@@ -1,4 +1,4 @@
 // Styles
-import './BannerPages.css';
+import "./BannerPages.css";
 
-export { default } from './BannerPages';
+export { default } from "./BannerPages";

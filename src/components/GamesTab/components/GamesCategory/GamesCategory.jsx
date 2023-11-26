@@ -1,6 +1,6 @@
 import { memo, useCallback, useMemo, useState } from "react";
 // Data
-import { allCategoriesGames, categoryIcons } from "../../../../data/dataGames";
+import { allCategoriesGames, categoryIcons } from "data/dataGames";
 
 const GamesCategory = memo(
   function GamesCategory({
@@ -9,7 +9,7 @@ const GamesCategory = memo(
     setNext = () => {},
   }) {
     const [isActive, setIsActive] = useState("category_0");
- 
+
     const filterItems = useCallback(
       (category) => {
         if (category[0] === "All Games") return setGameItems(dataGames);
@@ -21,7 +21,7 @@ const GamesCategory = memo(
         });
         setGameItems(newItems);
       },
-      [setGameItems, dataGames]
+      [setGameItems, dataGames],
     );
 
     const handleClick = useCallback(
@@ -33,7 +33,7 @@ const GamesCategory = memo(
           setNext(6);
         }
       },
-      [setIsActive, setNext, filterItems]
+      [setIsActive, setNext, filterItems],
     );
 
     const categoryButtons = useMemo(
@@ -61,7 +61,7 @@ const GamesCategory = memo(
             </button>
           </li>
         )),
-      [handleClick, isActive]
+      [handleClick, isActive],
     );
 
     return (
@@ -81,6 +81,6 @@ const GamesCategory = memo(
       prevProps.setGameItems === nextProps.setGameItems &&
       prevProps.setNext === nextProps.setNext
     );
-  }
+  },
 );
 export default GamesCategory;

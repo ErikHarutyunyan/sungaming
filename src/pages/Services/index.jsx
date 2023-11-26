@@ -1,4 +1,4 @@
 // Styles
-import './Services.css';
+import "./Services.css";
 
-export { default } from './Services.lazy';
+export { default } from "./Services.lazy";

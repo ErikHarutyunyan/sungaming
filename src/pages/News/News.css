@@ -103,16 +103,28 @@
   justify-content: center;
 }
 .input-area.search input {
-  padding: 0px 15px;
+  padding: 0 0.9375rem;
 }
 
 .newsContact {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  column-gap: 5px;
+  column-gap: 0.3125rem;
 }
 
 .news-category:hover svg path:not(:first-child) {
+  fill: var(--n900);
+}
+
+.news-category.active {
+  background-color: var(--p300);
+}
+
+.news-category.active span {
+  color: var(--n900);
+}
+
+.news-category.active svg path:not(:first-child) {
   fill: var(--n900);
 }

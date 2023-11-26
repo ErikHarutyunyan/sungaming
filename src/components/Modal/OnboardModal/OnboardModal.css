@@ -4,15 +4,14 @@
 
 .close {
   position: absolute;
-  top: 15px;
+  top: 0.9375rem;
   z-index: 999;
 }
 .close span {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--p300);
 }
-.close.default{
-  top: 20px;
-  left: 20px;
+.close.default {
+  top: 1.25rem;
+  left: 1.25rem;
 }
-

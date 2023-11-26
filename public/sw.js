@@ -16,7 +16,7 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(urlsToCache);
-    })
+    }),
   );
 });
 
@@ -39,7 +39,7 @@ self.addEventListener("fetch", (event) => {
           return response;
         })
         .catch(() => caches.match("offline.html"));
-    })
+    }),
   );
 });
 
@@ -54,8 +54,8 @@ self.addEventListener("activate", (event) => {
           if (cacheWhitelist.indexOf(cacheName) === -1) {
             return caches.delete(cacheName);
           }
-        })
+        }),
       );
-    })
+    }),
   );
 });

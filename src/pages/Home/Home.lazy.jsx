@@ -1,12 +1,12 @@
-import { lazy, Suspense } from 'react';
-import LoadRoute from '../../components/Loading/LoadRoute';
+import LoadRoute from "components/Loading/LoadRoute";
+import { lazy, Suspense } from "react";
 
-const LazyHome = lazy(() => import('./Home'));
+const LazyHome = lazy(() => import("./Home"));
 
 const Home = (props) => (
-	<Suspense fallback={<LoadRoute />}>
-		<LazyHome {...props} />
-	</Suspense>
+  <Suspense fallback={<LoadRoute />}>
+    <LazyHome {...props} />
+  </Suspense>
 );
 
 export default Home;

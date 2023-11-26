@@ -9,7 +9,9 @@ section.error {
     url("../../assets/img/404Bg1.wepb");
   background-repeat: no-repeat;
   background-size: contain, contain;
-  background-position: top left, bottom right;
+  background-position:
+    top left,
+    bottom right;
 }
 
 .error_content {
@@ -25,17 +27,17 @@ section.error {
 
 a.go_home.theme_button {
   position: relative;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 700;
   font-style: normal;
-  line-height: 21px;
+  line-height: 1.3125rem;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1.3px;
+  letter-spacing: 0.08125rem;
   color: var(--n800);
   border-color: var(--p300);
   background-color: var(--p300);
-  padding: 12px 30px;
+  padding: 0.75rem 1.875rem;
   cursor: pointer;
   overflow: hidden;
 }
@@ -43,7 +45,7 @@ a.go_home.theme_button {
 h1.error_title {
   float: none;
   width: 100%;
-  font-size: 270px;
+  font-size: 16.875rem;
   line-height: 1em;
   margin: 0;
   margin-top: 0 !important;
@@ -56,15 +58,15 @@ h1.error_title {
 }
 
 h2.error_subtitle {
-  margin: 20px 0 0;
-  font-size: 47px;
+  margin: 1.25rem 0 0;
+  font-size: 2.9375rem;
   line-height: 1.1em;
 }
 
 p.error_description {
-  font-size: 19px;
-  margin-top: 20px;
-  margin-bottom: 43px;
+  font-size: 1.1875rem;
+  margin-top: 1.25rem;
+  margin-bottom: 2.6875rem;
   font-weight: 400;
   text-transform: none;
   letter-spacing: 0;
@@ -86,6 +88,6 @@ section.error:after {
 
 @media (max-width: 500px) {
   h1.error_title {
-    font-size: 150px;
+    font-size: 9.375rem;
   }
 }

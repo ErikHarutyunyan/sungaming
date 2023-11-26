@@ -9,7 +9,9 @@ section.success {
     url("../../assets/img/404Bg1.wepb");
   background-repeat: no-repeat;
   background-size: contain, contain;
-  background-position: top left, bottom right;
+  background-position:
+    top left,
+    bottom right;
   background-color: var(--n900);
 }
 
@@ -25,19 +27,19 @@ section.success {
 }
 
 a.go_home.theme_button {
-  width: 200px;
+  width: 12.5rem;
   position: relative;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 700;
   font-style: normal;
-  line-height: 21px;
+  line-height: 1.3125rem;
   text-decoration: none;
   text-transform: math-auto;
-  letter-spacing: 1.3px;
+  letter-spacing: 0.08125rem;
   color: var(--p300);
-  border: 1px solid var(--p300);
+  border: 0.0625rem solid var(--p300);
   background-color: transparent;
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
   cursor: pointer;
   overflow: hidden;
 }
@@ -45,7 +47,7 @@ a.go_home.theme_button {
 h1.success_title {
   float: none;
   width: 100%;
-  font-size: 270px;
+  font-size: 16.875rem;
   line-height: 1em;
   margin: 0;
   margin-top: 0 !important;
@@ -58,15 +60,15 @@ h1.success_title {
 }
 
 h2.success_subtitle {
-  margin: 20px 0 0;
-  font-size: 47px;
+  margin: 1.25rem 0 0;
+  font-size: 2.9375rem;
   line-height: 1.1em;
 }
 
 p.success_description {
-  font-size: 19px;
-  margin-top: 20px;
-  margin-bottom: 43px;
+  font-size: 1.1875rem;
+  margin-top: 1.25rem;
+  margin-bottom: 2.6875rem;
   font-weight: 400;
   text-transform: none;
   letter-spacing: 0;
@@ -92,8 +94,8 @@ section.success:after {
   position: absolute;
   top: 0;
   left: 0;
-  width: 240px;
-  height: 240px;
+  width: 15rem;
+  height: 15rem;
   animation: pulse 2s infinite linear;
   border-radius: 50%;
   animation-duration: 10s;
@@ -110,7 +112,7 @@ section.success:after {
 
 @media (max-width: 420px) {
   .shapes {
-    width: 150px;
-    height: 150px;
+    width: 9.375rem;
+    height: 9.375rem;
   }
 }

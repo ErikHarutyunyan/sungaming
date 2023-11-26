@@ -1,10 +1,13 @@
 /* eslint-disable react/no-unknown-property */
+import { useRef, useLayoutEffect } from "react";
+// Lib & Packages
+import { Canvas, useThree } from "@react-three/fiber";
 import { motion } from "framer-motion-3d";
 import { MotionConfig } from "framer-motion";
-import { useRef, useLayoutEffect } from "react";
-import { transition } from "../../settings/gameButtonSetings.js";
-import { Canvas, useThree } from "@react-three/fiber";
-import { useSmoothTransform } from "../../hooks/use-smooth-transform.js";
+// Settings
+import { transition } from "@/settings/gameButtonSettings.js";
+// Custom Hooks
+import { useSmoothTransform } from "hooks/use-smooth-transform.js";
 
 export function Shapes({ isHover, isPress, mouseX, mouseY }) {
   const lightRotateX = useSmoothTransform(mouseY, spring, mouseToLightRotation);
@@ -16,7 +19,8 @@ export function Shapes({ isHover, isPress, mouseX, mouseY }) {
       <MotionConfig transition={transition}>
         <motion.group
           center={[0, 0, 0]}
-          rotation={[lightRotateX, lightRotateY, 0]}>
+          rotation={[lightRotateX, lightRotateY, 0]}
+        >
           <Lights />
         </motion.group>
         <motion.group
@@ -25,7 +29,8 @@ export function Shapes({ isHover, isPress, mouseX, mouseY }) {
           dispose={null}
           variants={{
             hover: { z: isPress ? -0.9 : 0 },
-          }}>
+          }}
+        >
           <Sphere />
           <Cone />
           <Torus />
@@ -70,7 +75,8 @@ export function Cone() {
           rotateX: -0.2,
           rotateZ: 0.4,
         },
-      }}>
+      }}
+    >
       <coneGeometry args={[0.3, 0.6, 20]} />
       <Material />
     </motion.mesh>
@@ -88,7 +94,8 @@ export function Torus() {
           z: 2,
           rotateY: -0.2,
         },
-      }}>
+      }}
+    >
       <torusGeometry args={[0.2, 0.1, 10, 50]} />
       <Material />
     </motion.mesh>
@@ -107,7 +114,8 @@ export function Icosahedron() {
           y: 0.6,
           rotateZ: -0.5,
         },
-      }}>
+      }}
+    >
       <icosahedronGeometry args={[0.7, 0]} />
       <Material />
     </motion.mesh>
@@ -142,11 +150,7 @@ function Camera({ ...props }) {
   }, [camera, cameraRef, set]);
 
   return (
-    <motion.perspectiveCamera
-      ref={cameraRef}
-      fov={90}
-      position={[0, 0, 3.8]}
-    />
+    <motion.perspectiveCamera ref={cameraRef} fov={90} position={[0, 0, 3.8]} />
   );
 }
 

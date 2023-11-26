@@ -3,7 +3,7 @@
   --pink: #09926a;
   --blue: #222434;
 }
-.loading .gamesBtn button{
+.loading .gamesBtn button {
   color: var(--pink);
 }
 .our-games .game-section-block:hover .buttonPlay {
@@ -18,18 +18,18 @@
   cursor: pointer;
   background-color: var(--p300);
   color: var(--n800);
-  border-radius: 40px;
+  border-radius: 2.5rem;
   outline: none;
   margin: 0 auto;
-  padding: 0px 5px;
-  font-size: 18px;
+  padding: 0 0.3125rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 28px;
-  letter-spacing: -1px;
+  line-height: 1.75rem;
+  letter-spacing: -0.0625rem;
   position: absolute;
   text-align: center;
   transition: none;
-  transform: translateZ(0px);
+  transform: translateZ(0);
   z-index: 99;
   align-self: center;
   top: 40%;
@@ -43,11 +43,11 @@
 
 .shapesPlay {
   position: absolute;
-  top: -1px;
-  left: -1px;
-  right: -1px;
-  bottom: -1px;
-  border-radius: 60px;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  right: -0.0625rem;
+  bottom: -0.0625rem;
+  border-radius: 3.75rem;
   background: linear-gradient(
     60deg,
     var(--blue) 0%,
@@ -58,29 +58,29 @@
 
 .blush {
   position: absolute;
-  bottom: -15px;
-  width: 100px;
-  height: 30px;
-  filter: blur(20px);
+  bottom: -0.9375rem;
+  width: 6.25rem;
+  height: 1.875rem;
+  filter: blur(1.25rem);
 }
 
 .blush.pink {
-  right: 20px;
+  right: 1.25rem;
   background: var(--purple);
 }
 
 .blush.blue {
-  left: 20px;
+  left: 1.25rem;
   background: var(--blue);
 }
 
 .shapesPlay .containerr {
   position: absolute;
-  top: -100px;
-  bottom: -100px;
-  left: -100px;
-  right: -100px;
-  width: calc(100% + 200px);
+  top: -6.25rem;
+  bottom: -6.25rem;
+  left: -6.25rem;
+  right: -6.25rem;
+  width: calc(100% + 12.5rem);
   pointer-events: none;
 }
 
@@ -91,8 +91,8 @@
 }
 
 .labelPlay {
-  width: 130px;
-  padding: 10px 0;
+  width: 8.125rem;
+  padding: 0.625rem 0;
   transform: translateZ(0);
   font-weight: 700;
   z-index: 1;
@@ -103,8 +103,8 @@
 }
 
 .number {
-  padding: 20px 0;
-  width: 88px;
+  padding: 1.25rem 0;
+  width: 5.5rem;
   position: relative;
   transform: translateZ(0);
 }
@@ -113,9 +113,9 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 1px;
-  bottom: 1px;
-  width: 1px;
+  top: 0.0625rem;
+  bottom: 0.0625rem;
+  width: 0.0625rem;
   background-color: #35373f;
 }
 
@@ -128,7 +128,7 @@
 .new {
   color: #fbfaaa;
   position: absolute;
-  top: 20px;
+  top: 1.25rem;
   left: 0;
   right: 0;
   display: block;
@@ -140,7 +140,7 @@
   left: 0;
   right: 0;
   opacity: 0;
-  transform: translateY(38px);
+  transform: translateY(2.375rem);
   pointer-events: none;
   color: #d0d0db;
   display: block;
@@ -148,9 +148,9 @@
 
 h3.gameTitle {
   position: absolute;
-  bottom: 0px;
-  right: 10px;
-  font-size: 22px;
+  bottom: 0;
+  right: 0.625rem;
+  font-size: 1.375rem;
 }
 
 .games-thumb.our-games .shape-area img.shape-1 {
@@ -221,7 +221,7 @@ h3.gameTitle {
 }
 
 .our-games .shape-area img.gameShape1 {
-  width: 260px;
+  width: 16.25rem;
   border-radius: 25%;
 }
 
@@ -239,18 +239,18 @@ h3.gameTitle {
 }
 
 .game-section-block .single-box .head {
-  height: calc(100% - 60px);
+  height: calc(100% - 3.75rem);
 }
 
 .gameBannerWrapImg {
   position: absolute;
   top: 20%;
-  right: 15px;
+  right: 0.9375rem;
   z-index: 1;
   width: 100%;
-  max-width: 500px;
+  max-width: 31.25rem;
   height: 100%;
-  max-height: 320px;
+  max-height: 20rem;
 }
 .gameBannerWrapImg img {
   width: 100%;
@@ -290,25 +290,25 @@ h3.gameTitle {
     grid-gap: 2rem;
   }
   .gameBannerWrapImg {
-    max-width: 310px;
-    max-height: 150px;
+    max-width: 19.375rem;
+    max-height: 9.375rem;
     bottom: 0;
-    right: 20px;
+    right: 1.25rem;
     top: unset;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     opacity: 0.9;
   }
 
   .gameBannerWrapImg img {
     clip-path: unset;
-    border-radius: 50px 50px 0 0;
+    border-radius: 3.125rem 3.125rem 0 0;
   }
 }
 
 @media (max-width: 500px) {
   .gameBannerWrapImg {
     bottom: 0;
-    right: 0px;
+    right: 0;
   }
   .game-section-block-wrp {
     grid-template-columns: repeat(2, 1fr);
@@ -319,18 +319,18 @@ h3.gameTitle {
   }
   h3.gameTitle {
     position: absolute;
-    bottom: -20px;
-    right: 10px;
-    font-size: 16px;
+    bottom: -1.25rem;
+    right: 0.625rem;
+    font-size: 1rem;
   }
   .buttonPlay {
-    padding: 0px 0px;
-    font-size: 16px;
+    padding: 0 0;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 20px;
+    line-height: 1.25rem;
   }
   .labelPlay {
-    width: 120px;
+    width: 7.5rem;
   }
   .game-utils .content-box {
     flex-wrap: wrap;

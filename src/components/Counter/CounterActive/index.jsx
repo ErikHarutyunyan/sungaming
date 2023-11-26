@@ -1,4 +1,4 @@
 // Style
-import './CounterActive.css';
+import "./CounterActive.css";
 
-export { default } from './CounterActive';
+export { default } from "./CounterActive";

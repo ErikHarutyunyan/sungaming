@@ -3,8 +3,8 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
-// import PrivateRouter from './PrivateRouter'
-import Layout from "../layout";
+import Layout from "@/layout";
+
 import {
   ABOUT,
   CAREERS,
@@ -20,6 +20,7 @@ import {
   SERVICES,
   SUCCESS,
 } from "./route-path";
+
 // Pages
 import {
   About,
@@ -35,7 +36,7 @@ import {
   PrivacyPolicy,
   Services,
   Success,
-} from "../pages";
+} from "pages";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -44,11 +45,7 @@ const router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path={GAMES} element={<Games />} />
         <Route path={GAMES_SINGLE} element={<GameSingle />} />
-        <Route
-          path={ABOUT}
-          element={<About />}
-          // handle={{ scrollMode: "pathname" }}
-        ></Route>
+        <Route path={ABOUT} element={<About />} />
         <Route path={CONTACT} element={<Contact />} />
         <Route path={SERVICES} element={<Services />} />
         <Route path={NEWS} element={<News />} />
@@ -59,8 +56,8 @@ const router = createBrowserRouter(
       </Route>
       <Route path={SUCCESS} element={<Success />} />
       <Route path={NOT_FOUND_PAGE} element={<NotFoundPage />} />
-    </>
-  )
+    </>,
+  ),
 );
 
 export default router;

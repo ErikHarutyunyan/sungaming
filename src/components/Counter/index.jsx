@@ -1,4 +1,4 @@
 // Styles
-import './Counter.css';
+import "./Counter.css";
 
-export { default } from './Counter';
+export { default } from "./Counter";

@@ -1,25 +1,24 @@
-
 .AccordionItem {
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  background-color: #fff;
 }
 
 .AccordionHeader {
-    padding: 20px;
-    cursor: pointer;
-    transition: background-color 0.15s ease-in-out;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
 }
 
 .AccordionHeader:hover {
-    background-color: #ffd700;
+  background-color: #ffd700;
 }
 
 .AccordionHeader.active {
-    background-color: #ffd700;
+  background-color: #ffd700;
 }
 
 .AccordionPanel {
-    padding: 20px;
+  padding: 1.25rem;
 }

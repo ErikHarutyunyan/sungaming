@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 // Data
-import { dataGames } from "../../data/dataGames";
+import { dataGames } from "data/dataGames";
 // Component
 import GameCard from "./components/GameCard";
 import GamesCategory from "./components/GamesCategory";
@@ -13,7 +13,7 @@ const GamesTab = ({ style = "1", viewItems = 6 }) => {
 
   const handleMoreGames = useCallback(
     () => setNext((prevCount) => prevCount + gamesPerRow),
-    []
+    [],
   );
 
   return (

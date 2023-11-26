@@ -1,9 +1,9 @@
 export {
-	IconAPI,
-	IconDb,
-	IconResponse,
-	IconSec,
-	IconsCasino,
-	IconsSlot,
-	IconsTable,
-} from './Icons';
+  IconAPI,
+  IconDb,
+  IconResponse,
+  IconSec,
+  IconsCasino,
+  IconsSlot,
+  IconsTable,
+} from "./Icons";

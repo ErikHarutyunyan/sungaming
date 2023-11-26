@@ -1,4 +1,4 @@
 // Styles
-import './TemplateName.css';
+import "./TemplateName.css";
 
-export { default } from './TemplateName';
+export { default } from "./TemplateName";

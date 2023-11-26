@@ -1,24 +1,37 @@
 .brands .thumb img {
   filter: grayscale(1);
   object-fit: scale-down;
-  max-width: 120px;
+  max-width: 7.5rem;
   width: 100%;
-  max-height: 80px;
+  max-height: 5rem;
   height: 100%;
   opacity: 0.5 !important;
 }
+
 .brands .thumb {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@media (max-width:1200px) {
+.brands .thumb span {
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
   .brand-wrap {
     row-gap: 2rem;
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
+
   .brands .thumb {
-    height: 40px;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .brand-wrap {
+    justify-content: center;
+    column-gap: 2rem;
   }
 }

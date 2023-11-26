@@ -1,4 +1,4 @@
 // Style
-import './Brands.css';
+import "./Brands.css";
 
-export { default } from './Brands.jsx';
+export { default } from "./Brands.jsx";

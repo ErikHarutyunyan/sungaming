@@ -1,3 +1,3 @@
-import './Footer.css';
+import "./Footer.css";
 
-export { default } from './Footer';
+export { default } from "./Footer";

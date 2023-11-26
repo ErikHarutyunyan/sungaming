@@ -1,4 +1,4 @@
 // Styles
-import './Sidebar.css';
+import "./Sidebar.css";
 
-export { Sidebar } from './Sidebar';
+export { Sidebar } from "./Sidebar";
