@@ -12,6 +12,7 @@ import LazyImage from "images/LazyImage";
 import { allCategoriesNews, dataNews } from "data/dataNews";
 import useMediaQuery from "hooks/useMediaQuery";
 // Images and Icons
+import SEO from "@/components/SEO";
 import { dataOffice, dataSocial } from "data/dataProduct";
 import { scrollUp } from "helpers";
 import { newsBg } from "images";
@@ -133,6 +134,11 @@ const News = () => {
 
   return (
     <>
+      <SEO
+        title="Sun Gaming | News"
+        description="Your Premier Destination for Online Entertainment!"
+        url="https://sungaming.netlify.app/news"
+      />
       <BannerPages
         page="News"
         bg={newsBg}

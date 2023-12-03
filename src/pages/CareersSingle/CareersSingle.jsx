@@ -1,10 +1,11 @@
 import { useRef, useState } from "react";
 // Route
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import { HOME } from "../../router/route-path";
+import { HOME } from "router/route-path";
 // Components
 import LoadingStep from "components/Loading/LoadingStep";
 import { OnboardModal } from "components/Modal";
+import SEO from "components/SEO";
 import ShapeArea from "components/ShapeArea";
 import Subscribe from "components/Subscribe";
 // Images and Icons
@@ -19,7 +20,7 @@ import { PiUserFocusLight } from "react-icons/pi";
 import { dataCareers, dataCareersIcon } from "data/dataCareers";
 import { isJSON } from "helpers";
 // hooks
-import useFetch from "../../hooks/useFetch";
+import useFetch from "hooks/useFetch";
 
 const CareersSingle = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +28,7 @@ const CareersSingle = () => {
   const [fileName, setFileName] = useState("");
   const { id: title } = useParams();
   const location = useLocation();
+
   let data = location.state?.data;
 
   if (data !== null) {
@@ -39,17 +41,16 @@ const CareersSingle = () => {
     });
     data = singleCareer;
   }
-  // Programatically click the hidden file input element
-  // when the Button component is clicked
+
   const handleClick = () => {
     hiddenFileInput.current.click();
   };
+
   const reset = () => {
     hiddenFileInput.current.value = null;
     setFileName("");
   };
-  // Call a function (passed as a prop from the parent component)
-  // to handle the user-selected file
+
   const handleChange = (event) => {
     const fileUploaded = event.target.files[0];
     setFileName(fileUploaded.name);
@@ -72,6 +73,11 @@ const CareersSingle = () => {
 
   return (
     <>
+      <SEO
+        title={`Sun Gaming | ${data.title}`}
+        description={`Apply For The ${data.title}`}
+        url={`https://sungaming.netlify.app/${location.pathname}`}
+      />
       <section className="banner-section inner-banner position-relative about career">
         <ShapeArea>
           <img src={bubble} className="shape-1" alt="icon" />

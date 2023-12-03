@@ -5,11 +5,12 @@ import { useNavigate } from "react-router-dom";
 // Components
 import BannerPages from "components/BannerPages";
 import LoadingStep from "components/Loading/LoadingStep";
+import SEO from "components/SEO";
 // Images
 import { privacyBanner } from "images";
 
 // hook
-import useFetch from "../../hooks/useFetch";
+import useFetch from "hooks/useFetch";
 
 const PrivacyPolicy = () => {
   // const {
@@ -39,6 +40,11 @@ const PrivacyPolicy = () => {
 
   return (
     <>
+      <SEO
+        title="Sun Gaming | Privacy Policy"
+        description="We're always looking for new ways to provide privacy for our customers."
+        url="https://sungaming.netlify.app/privacy"
+      />
       <BannerPages
         title="Our Privacy"
         titleSecond="Policy"

@@ -1,31 +1,31 @@
-import Home from "./Home";
 import About from "./About";
-import News from "./News";
-import NotFoundPage from "./NotFoundPage";
 import Careers from "./Careers";
 import CareersSingle from "./CareersSingle";
 import Contact from "./Contact";
-import Games from "./Games";
 import GameSingle from "./GameSingle";
+import Games from "./Games";
+import Home from "./Home/Home";
+import News from "./News";
+import NewsSingle from "./NewsSingle";
+import NotFoundPage from "./NotFoundPage";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Services from "./Services";
-import TermsConditions from "./TermsConditions";
 import Success from "./Success";
-import NewsSingle from "./NewsSingle";
+import TermsConditions from "./TermsConditions";
 
 export {
-  Home,
   About,
-  News,
-  NewsSingle,
   Careers,
   CareersSingle,
   Contact,
-  Games,
   GameSingle,
+  Games,
+  Home,
+  News,
+  NewsSingle,
+  NotFoundPage,
   PrivacyPolicy,
   Services,
-  TermsConditions,
   Success,
-  NotFoundPage,
+  TermsConditions,
 };

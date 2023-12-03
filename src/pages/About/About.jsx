@@ -1,6 +1,7 @@
 // Packages
 import Typewriter from "typewriter-effect";
 // Components
+import SEO from "components/SEO";
 import AboutValues from "components/AboutValues";
 import BannerPages from "components/BannerPages";
 import Brands from "components/Brands";
@@ -35,6 +36,11 @@ import { MdOutlineDiversity1, MdOutlineGames } from "react-icons/md";
 const About = () => {
   return (
     <>
+      <SEO
+        title="Sun Gaming | About"
+        description="We continue to open doors to new worlds every day and we are working excitedly for creating new games and unique ideas!"
+        url="https://sungaming.netlify.app/about"
+      />
       <BannerPages
         page="About"
         bg={aboutBanner}

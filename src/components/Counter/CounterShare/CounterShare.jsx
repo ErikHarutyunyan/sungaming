@@ -1,8 +1,8 @@
 // Components
-import Counter from "..";
 import ShapeArea from "components/ShapeArea";
+import Counter from "..";
 // Images
-import { lineImg, objectImg } from "../../Images";
+import { lineImg, objectImg } from "images";
 
 const CounterShare = ({ className = "", counterData = [] }) => {
   return (

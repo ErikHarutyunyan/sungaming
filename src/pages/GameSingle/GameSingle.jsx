@@ -9,14 +9,15 @@ import Brands from "components/Brands";
 import CounterActive from "components/Counter/CounterActive";
 import { OnboardModal } from "components/Modal";
 import PlayButton from "components/PlayButton";
+import SEO from "components/SEO";
 import ShapeArea from "components/ShapeArea";
 import SimpleSlider from "components/Slides/SimpleSlider";
 import Subscribe from "components/Subscribe";
 import LazyImage from "images/LazyImage";
 // Data and Configuration
+import { settingsGameSingle } from "@/features/SliderConfig";
 import { counterActiveData } from "data/dataCounters";
 import { dataGames } from "data/dataGames";
-import { settingsGameSingle } from "../../features/SliderConfig";
 // Images and Icons
 import {
   bubble,
@@ -45,6 +46,13 @@ const GameSingle = () => {
 
   return (
     <>
+      <SEO
+        title={`Sun Gaming | ${data.title}`}
+        description={data.desc}
+        type="article"
+        url={`https://sungaming.netlify.app/${location.pathname}`}
+        img={data.imgMain}
+      />
       <section
         className="banner-section inner-banner position-relative store gameDetails "
         style={{

@@ -1,4 +1,5 @@
 // Components
+import SEO from "components/SEO";
 import BannerPages from "components/BannerPages";
 import Brands from "components/Brands";
 import CounterShare from "components/Counter/CounterShare";
@@ -21,9 +22,15 @@ import { SiBlueprint } from "react-icons/si";
 // Data
 import { counterShareData } from "data/dataCounters";
 
+
 const Services = () => {
   return (
     <>
+      <SEO
+        title="Sun Gaming | Services"
+        description="Our systematic approach to art development ensures high delivery standards for games and game-based solutions, from look development to engine integration."
+        url="https://sungaming.netlify.app/services"
+      />
       <BannerPages
         classNames={"services"}
         page={"Services"}

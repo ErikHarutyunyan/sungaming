@@ -1,9 +1,10 @@
 // Route
 import { useNavigate } from "react-router-dom";
-import { CAREERS, HOME } from "../../router/route-path";
+import { CAREERS, HOME } from "router/route-path";
 // Components
 import AboutValues from "components/AboutValues";
 import NewsPresent from "components/NewsPresent";
+import SEO from "components/SEO";
 import ShapeArea from "components/ShapeArea";
 import Subscribe from "components/Subscribe";
 // Images and Icons
@@ -24,6 +25,12 @@ const Careers = () => {
   };
   return (
     <>
+      <SEO
+        title="Sun Gaming | Careers"
+        description="Join A Team Of Passionate People
+        we are always building towards an efficient and collaborative team of the best game developers around."
+        url="https://sungaming.netlify.app/careers"
+      />
       <section className="banner-section inner-banner position-relative career">
         <ShapeArea>
           <img src={bubble} className="shape-1" alt="icon" />

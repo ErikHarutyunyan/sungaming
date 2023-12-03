@@ -1,6 +1,6 @@
 // Route
 import { Link, useNavigate } from "react-router-dom";
-import { ABOUT } from "../../router/route-path.jsx";
+import { ABOUT } from "router/route-path.jsx";
 // import { useForm } from 'react-hook-form';
 // Components
 import AccordionBox from "components/Accordion";
@@ -11,8 +11,9 @@ import ShapeArea from "components/ShapeArea";
 // Images and Icons
 import { contactUs, faqFramer, faqIcon } from "images";
 // hooks
+import SEO from "@/components/SEO";
 import { dataOffice } from "data/dataProduct.jsx";
-import useFetch from "../../hooks/useFetch.js";
+import useFetch from "hooks/useFetch.js";
 
 const Contact = () => {
   // const [isOpen, setIsOpen] = useState(false);
@@ -49,6 +50,11 @@ const Contact = () => {
 
   return (
     <>
+      <SEO
+        title={`Sun Gaming | Contact Us`}
+        description={`We’d love to talk about how we can work together.Send us a message below and we’ll respond as soon as possible.`}
+        url={`https://sungaming.netlify.app/contact`}
+      />
       <BannerPages
         page={"Contact"}
         bg={contactUs}

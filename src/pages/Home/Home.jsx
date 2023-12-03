@@ -1,3 +1,5 @@
+// Style
+import "./Home.css";
 // Route
 import { Link } from "react-router-dom";
 import { GAMES } from "router/route-path";
@@ -8,6 +10,7 @@ import Brands from "components/Brands";
 import CounterActive from "components/Counter/CounterActive";
 import GamesTab from "components/GamesTab";
 import NewsPresent from "components/NewsPresent";
+import SEO from "components/SEO";
 import Service from "components/Service";
 import SimpleSlider from "components/Slides/SimpleSlider";
 import Subscribe from "components/Subscribe";
@@ -29,14 +32,15 @@ import {
   topBottom,
 } from "images";
 // Data and Configuration
+import { settingsFeatured } from "@/features/SliderConfig";
 import ShapeArea from "components/ShapeArea";
 import { counterActiveData } from "data/dataCounters";
 import { featuredGames } from "data/dataGames";
-import { settingsFeatured } from "../../features/SliderConfig";
 
 const Home = () => {
   return (
     <>
+      <SEO />
       <section className="banner-section homeBanner index-one overflow-hidden">
         <ShapeArea>
           <img

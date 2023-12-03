@@ -2,6 +2,7 @@
 import BannerPages from "components/BannerPages";
 import CounterActive from "components/Counter/CounterActive";
 import GamesTab from "components/GamesTab";
+import SEO from "components/SEO";
 import ShapeArea from "components/ShapeArea";
 import Subscribe from "components/Subscribe";
 import LazyImage from "images/LazyImage";
@@ -17,6 +18,12 @@ import { counterActiveData } from "data/dataCounters";
 const Games = () => {
   return (
     <>
+      <SEO
+        title="Sun Gaming | Games"
+        description="Our projects feature unique mechanics, fine-tuned gameplay, and eye-catching visual style."
+        url="https://sungaming.netlify.app/games"
+        img="https://sungaming.netlify.app/img/gamesPage.png"
+      />
       <BannerPages
         classNames={"game"}
         page={"Games"}
