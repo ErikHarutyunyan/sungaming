@@ -4,9 +4,11 @@ import { defineConfig } from "vite";
 import viteCompression from "vite-plugin-compression";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import pluginPurgeCSS from "vite-plugin-purge";
+import million from 'million/compiler';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    // million.vite({ auto: true }),
     react(),
     pluginPurgeCSS({
       // Specify the content paths to be checked for used CSS classes
