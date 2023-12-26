@@ -37,8 +37,6 @@ import ShapeArea from "components/ShapeArea";
 import { counterActiveData } from "data/dataCounters";
 import { featuredGames } from "data/dataGames";
 
-import { For } from 'million/react';
-
 const Home = () => {
   return (
     <>
@@ -232,7 +230,6 @@ const Home = () => {
                     setting={settingsFeatured}
                     className={"game-carousel pb-20 slick-initialized"}
                   >
-                                      
                     {featuredGames.map((featuredItem) => {
                       const { id, title, imgMain, path } = featuredItem;
                       return (

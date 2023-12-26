@@ -125,5 +125,5 @@ const NewsSingle = block(function News() {
     </>
   );
 });
- 
+
 export default NewsSingle;

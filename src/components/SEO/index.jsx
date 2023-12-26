@@ -41,10 +41,7 @@ const SEO = ({
       {/* Facebook tags */}
       <meta property="og:type" content={type} />
       <meta property="og:locale" content="en_US" />
-      <meta
-        property="og:image"
-        content={img}
-      />
+      <meta property="og:image" content={img} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -52,10 +49,7 @@ const SEO = ({
       {/* Twitter tags */}
       <meta property="twitter:card" content={type} />
       <meta property="twitter:domain" content="https://sungaming.netlify.app" />
-      <meta
-        property="twitter:image"
-        content={img}
-      />
+      <meta property="twitter:image" content={img} />
       <meta property="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />

@@ -22,7 +22,6 @@ import { SiBlueprint } from "react-icons/si";
 // Data
 import { counterShareData } from "data/dataCounters";
 
-
 const Services = () => {
   return (
     <>

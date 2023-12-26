@@ -44,7 +44,7 @@ const News = () => {
 
       up();
     },
-    [up]
+    [up],
   );
 
   const handleSearchInputChange = useCallback((event) => {
@@ -55,7 +55,7 @@ const News = () => {
         .toLowerCase()
         .includes(query.toLowerCase());
       const categoryMatches = news.category.some(
-        (category) => category.toLowerCase().includes(query) // Convert category name to lowercase
+        (category) => category.toLowerCase().includes(query), // Convert category name to lowercase
       );
       const pathMatches = news.path.toLowerCase().includes(query.toLowerCase());
 
@@ -64,7 +64,7 @@ const News = () => {
     setSearchResults(
       filteredResults.length === 0 && query.length === 0
         ? dataNews
-        : filteredResults
+        : filteredResults,
     );
   }, []);
 

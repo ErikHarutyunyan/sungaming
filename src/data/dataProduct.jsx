@@ -5,7 +5,6 @@ import {
   MdSchedule,
 } from "react-icons/md";
 import { v4 as uuidv4 } from "uuid";
-// eslint-disable-next-line no-param-reassign
 export const dataOffice = [
   {
     id: uuidv4(),
@@ -30,14 +29,14 @@ export const dataOffice = [
     text: "Phone Number",
     mainText: null,
     subText: ["(374) 0010033"],
-    icon: (<MdOutlinePhone size={22} className="material-symbols-outlined" />),
+    icon: <MdOutlinePhone size={22} className="material-symbols-outlined" />,
   },
   {
     id: uuidv4(),
     text: "Working Hours",
     mainText: null,
     subText: ["Mon-Fri: 09:00 - 18:00 Sat-Sun: Weekend"],
-    icon: (<MdSchedule size={22} className="material-symbols-outlined" />),
+    icon: <MdSchedule size={22} className="material-symbols-outlined" />,
   },
 ];
 
